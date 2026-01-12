@@ -1,0 +1,35 @@
+$color: #fbff00;
+
+body {
+    background: $color;
+}
+
+img {
+    height: 100px;
+    aspect-ratio: 16 / 9;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100vw;
+    gap: 1rem;
+}
+
+div {
+    width: 10rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-block: 1rem;
+    gap: 2rem;
+}
+
+.backdrop {
+    height: 300px;
+    aspect-ratio: 16 / 9;
+}
+
+.country {
+    flex-direction: column;
+}
