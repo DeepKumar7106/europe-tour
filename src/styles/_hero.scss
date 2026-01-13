@@ -1,0 +1,72 @@
+@import 'config';
+
+#hero {
+    height: 100vh;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: #000;
+
+    }
+}
+
+#heroImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: opacity(40%);
+    mask-image: linear-gradient(to bottom,10% transparent 10%, #fff);
+}
+
+#heroDetails {
+    width: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $accent;
+    & > h1 {
+        color: #fff;
+        text-align: center;
+        font-size: clamp(4rem, 6vw, 10rem);
+        font-family: 800;
+    }   
+
+    & > p {
+        margin-block: 1rem;
+        opacity: 0.7;
+        font-size: clamp(1rem, 1.2vw, 1.3rem);
+    }
+
+    & > #ctaBox {
+        @include center(row);
+        margin-top: 2rem;
+        width: 100%;
+
+        & #learnMore {
+            background: none;
+            color: $primary;
+            border: 2px solid $primary;
+        }
+    }
+
+    & button {
+        height: 50px;
+        width: 150px;
+        border: none;
+        border-radius: 50px;
+        font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+        margin-inline: 1rem;
+        color: $black;
+        font-weight: 500;
+        background: $primary;
+    }
+}
+
+
+
+
+
+

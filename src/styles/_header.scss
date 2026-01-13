@@ -1,0 +1,24 @@
+@import 'config';
+
+header {
+    width: 100%;
+    height: 70px;
+    @include center(row);
+    justify-content: space-between;
+    background-color: $secondary;
+    padding: 1rem;
+}
+
+nav {
+    width: 50%;
+    & ul {
+        width: 100%;
+        @include center(row);
+        justify-content: space-evenly;
+        list-style: none;
+        & li > a{
+            color: $accent;
+            text-decoration: none;
+        }
+    }
+}

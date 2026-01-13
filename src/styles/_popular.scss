@@ -1,0 +1,53 @@
+@import 'config';
+
+#popular {
+    background: $primary;
+    height: 100vh;
+    @include center(column);
+    // border-radius:0 0 200% 200%;
+}
+
+#popularImageWrapper {
+    position: relative;
+    height: 60%;
+    background-color: $accent;
+    &::before {
+        z-index: 2;
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.541);
+    }
+    & > #popularImage {
+        anchor-name: image;
+        height: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+
+    & #imageDeatailTexts {
+        z-index: 3;
+        height: 30%;
+        width: 100%;
+        background: linear-gradient(to bottom, transparent, $accent);
+        color: $accent;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        font-size: clamp(2rem, 2.5vw, 4rem);
+        & p{
+            text-align: left;
+        }
+    }
+}
+
+#countryName {
+    margin-top: 0;
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+
+#cityParagraph {
+    width: 100%;
+}

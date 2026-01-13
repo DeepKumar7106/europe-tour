@@ -1,0 +1,17 @@
+$primary : #ffb703;
+$secondary : #240062;
+$accent : #faf4d3;
+$black : #0c1618;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin center($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction ;
+}

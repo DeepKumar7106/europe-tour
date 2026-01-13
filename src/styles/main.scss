@@ -1,34 +1,12 @@
+@import 'config';
+@import 'header';
+@import 'footer';
+@import 'hero';
+@import 'popular';
+
 body {
-    margin: 0 auto;
-}
-
-#root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.cityWrapper {
- width: 100%;
- text-align: left;   
-}
-
-.cityWrapperText {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-}
-
-.cityImage {
-    height: 200px;
-}
-
-.imageWrapper {
-    display: flex;
-    gap: 20px;
-}
-
-main {
-    display: gird;
-    grid-template-rows: repeat(3, 1fr);
+    // @include center(column);
+    min-height: 100vh;
+    width: 100vw;
+    font-family: "Stack Sans Headline", sans-serif;
 }
