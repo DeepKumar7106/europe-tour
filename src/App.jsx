@@ -1,21 +1,27 @@
-import { countries } from "./js/data"
+import { cities, regions } from "./scripts/data" 
 function App() {
 
-  const countriesList = countries.map(country =>
-    <div className="country" key={country.id}>
-      <img loading="lazy" src={`/country-backdrop/${country.name}.jpg`} alt={country.name} className="backdrop" />
-      <div>
-        <h2>{country.name}</h2>
-        <img loading="lazy" src={`/flags/${country.name}.jpg`} alt={country.name} />
-      </div>
-    </div> 
+  function replaceSpace(name) {
+    return name.replace("-"," " );
+  }
+
+  // console.log(replaceSpace("Hello World"))
+
+  const cityList = regions.map((city, index) => {
+    const name = replaceSpace(city.name)
+    return <div key={city.id} className="cityWrapper">
+            <h2 className="cityWrapperText">{index + 1} {name}</h2> 
+            <div className="imageWrapper">
+              <img className="cityImage" src={`/region-webp/${city.name}.webp`} alt={city.name} /> 
+            </div>
+          </div>
+    }
   )
 
-  // `./src\assets\flags\Albania.jpg`
   return (
-    <>
-      {countriesList}
-    </>
+    <main>
+      {cityList}
+    </main>
   )
 }
 export default App
