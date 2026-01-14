@@ -24,16 +24,16 @@ export default function Popular() {
             </div>
             <div id="navButtonWrapper">
                 <i className="fa-solid fa-circle-chevron-left"></i>
-                <buttun className="navButton"></buttun>
-                <buttun className="navButton"></buttun>
-                <buttun className="navButton"></buttun>
-                <buttun className="navButton"></buttun>
-                <buttun className="navButton"></buttun>
-                <buttun className="navButton"></buttun>
-                <buttun className="navButton"></buttun>
-                <buttun className="navButton"></buttun>
-                <buttun className="navButton"></buttun>
-                <buttun className="navButton"></buttun>
+                <button className="navButton"></button>
+                <button className="navButton"></button>
+                <button className="navButton"></button>
+                <button className="navButton"></button>
+                <button className="navButton"></button>
+                <button className="navButton"></button>
+                <button className="navButton"></button>
+                <button className="navButton"></button>
+                <button className="navButton"></button>
+                <button className="navButton"></button>
                 <i className="fa-solid fa-circle-chevron-right"></i>
             </div>
         </section>

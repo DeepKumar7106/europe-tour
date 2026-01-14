@@ -1,0 +1,62 @@
+@import 'config';
+
+#regionSection {
+    height: 100vh;
+    @include center(column);
+    padding: 1rem;
+    background: linear-gradient($secondary, darken($secondary, 10%));
+}
+
+#sectionHeading {
+    @include headingText();
+    color: $accent;
+}
+
+#regionWrapper {
+    height: 80%;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.regionCard {
+    height: 10rem;
+    width: 20rem;
+
+    border-radius: 10px;
+    color: $accent;
+    background-color: $black;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px 2px $black;
+
+    & .regionImg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+        border-radius: 10px;
+    }
+
+    & article {
+        position: absolute;
+        bottom: 1rem;
+        padding-left: 1rem;
+        & p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            pointer-events: none;
+        }
+    }
+}
+
+.regionCard:hover .regionPara {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.regionCard:hover{
+    scale: 1.1;
+}

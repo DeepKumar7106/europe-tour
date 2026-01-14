@@ -13,6 +13,7 @@
 
 #activitiesHeading {
     @include headingText();
+    color: $secondary;
 }
 
 #experienceWrapper {

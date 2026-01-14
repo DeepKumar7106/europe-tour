@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <header>
-            {/* <img src="" alt="" /> */}
+            <img src="" alt="" />
             <nav>
                 <ul id="navList">
                     <li className="listItem"><a href="">Home</a></li>
