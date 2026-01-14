@@ -1,45 +1,104 @@
 @import 'config';
 
 #popular {
-    background: $primary;
+    background:linear-gradient(to top, $primary, lighten($primary, 5%)) ;
     height: 100vh;
     @include center(column);
+    justify-content: space-evenly;
     // border-radius:0 0 200% 200%;
+}
+
+#popularHeading {
+    // outline: 2px solid white;
+    @include headingText();
+    border-bottom: 1px solid $accent;
 }
 
 #popularImageWrapper {
     position: relative;
     height: 60%;
     background-color: $accent;
+    transition: all 3s ease;
+    margin-bottom: 1rem;
+    z-index: 2;
     &::before {
-        z-index: 2;
+        z-index: 5;
         content: "";
         position: absolute;
         inset: 0;
         background-color: rgba(0, 0, 0, 0.541);
     }
     & > #popularImage {
-        anchor-name: image;
         height: 100%;
         aspect-ratio: 16 / 9;
         object-fit: cover;
-        opacity: 0.8;
+        
     }
 
     & #imageDeatailTexts {
-        z-index: 3;
-        height: 30%;
+        z-index: 10;
+        min-height: 30%;
         width: 100%;
-        background: linear-gradient(to bottom, transparent, $accent);
+        background: linear-gradient(to bottom, transparent, $black);
         color: $accent;
         position: absolute;
         bottom: 0;
-        padding-bottom: 2rem;
+        padding: 0.5rem;
+        padding-top: 2rem;
+        // outline: 20px solid lime;
         padding-left: 2rem;
         font-size: clamp(2rem, 2.5vw, 4rem);
         & p{
             text-align: left;
         }
+    }
+}
+
+#bgImageWrapperLeft{
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    transform: translateY(-50%);
+    background-color: #000;
+    z-index: -1;
+    &::before {
+        z-index: 5;
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:linear-gradient(to left, rgba(0, 0, 0, 0.541), black);
+    }
+    & .popularBgImage {
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+        position: relative;
+        // opacity: 0.5;
+    }
+}
+
+#bgImageWrapperRight  {
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    transform: translateY(-50%);
+    background-color: #000;
+    z-index: -1;
+    &::before {
+        z-index: 5;
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:linear-gradient(to right, rgba(0, 0, 0, 0.541), black);
+    }
+    & .popularBgImage {
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+        position: relative;
+        // opacity: 0.5;
     }
 }
 
@@ -49,5 +108,34 @@
 }
 
 #cityParagraph {
-    width: 100%;
+    transition: all 1s ease;
+    display: none;
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    width: 90%;
+}
+
+#popularImageWrapper:hover #cityParagraph {
+    display: block;
+}
+
+#navButtonWrapper {
+    @include center(row);
+    & > .fa-solid {
+        margin: 0 1rem;
+        font-size: clamp(1.6rem, 2vw, 3rem);
+        color: $accent;
+    }
+}
+
+.navButton {
+    margin-top: 1rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    background: $accent;
+    margin: 0 0.5rem;
+    transition: all 0.5s ease-in;
+    &:hover {
+        background: $secondary;
+    }
 }

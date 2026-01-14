@@ -7,13 +7,34 @@ export default function Popular() {
 
     return (
         <section id="popular">
-            <h2 id="popularHeading">Popular Destinations</h2>
+            <h2 id="popularHeading">attractions</h2>
             <div id="popularImageWrapper">
-                <img id="popularImage" src={`/city-images-webp/${paris.cityName}.webp`} alt={paris.cityName} />  
-                <div id="imageDeatailTexts">
-                    <p id="cityName">{paris.cityName}</p>
-                    <p id="countryName">{country.name}</p>
+                <div id="bgImageWrapperLeft">
+                    <img className="popularBgImage leftImage" src={`/city-images-webp/${paris.cityName}.webp`} alt={paris.cityName} />
                 </div>
+                <div id="bgImageWrapperRight">
+                    <img className="popularBgImage rightImage" src="public\city-images-webp\Zurich.webp" alt={paris.cityName} />
+                </div>
+                <img id="popularImage" src={`/city-images-webp/${paris.cityName}.webp`} alt={paris.cityName} />  
+                <article id="imageDeatailTexts">
+                    <p id="cityName">{paris.famousLocation[0]}</p>
+                    <p id="countryName"><i className="fa-solid fa-location-dot"></i> {paris.cityName}, {country.name}</p>
+                    <p id="cityParagraph">{paris.description}</p>
+                </article>
+            </div>
+            <div id="navButtonWrapper">
+                <i className="fa-solid fa-circle-chevron-left"></i>
+                <buttun className="navButton"></buttun>
+                <buttun className="navButton"></buttun>
+                <buttun className="navButton"></buttun>
+                <buttun className="navButton"></buttun>
+                <buttun className="navButton"></buttun>
+                <buttun className="navButton"></buttun>
+                <buttun className="navButton"></buttun>
+                <buttun className="navButton"></buttun>
+                <buttun className="navButton"></buttun>
+                <buttun className="navButton"></buttun>
+                <i className="fa-solid fa-circle-chevron-right"></i>
             </div>
         </section>
     )

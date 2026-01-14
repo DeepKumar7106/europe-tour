@@ -7,7 +7,7 @@ export default function Footer() {
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="">Attactions</a></li>
-                        <li><a href="">Experiences</a></li>
+                        <li><a href="#activitiesSection">Experiences</a></li>
                         <li><a href="">FAQs</a></li>
                     </ul>
                 </div>
@@ -16,7 +16,7 @@ export default function Footer() {
                         <h3>Follow Us</h3>
                         <div id="socialList">
                             <i className="fa-brands fa-facebook"></i>
-                            <i className="fa-brands fa-twitter"></i>
+                            <i className="fa-brands fa-x-twitter"></i>
                             <i className="fa-brands fa-instagram"></i>
                             <i className="fa-brands fa-youtube"></i>
                             <i className="fa-brands fa-linkedin"></i>

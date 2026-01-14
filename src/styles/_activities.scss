@@ -1,0 +1,80 @@
+@import 'config';
+
+#activitiesSection {
+    @include center(column);
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
+        url('public\city-images-webp\Zurich.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+#activitiesHeading {
+    @include headingText();
+}
+
+#experienceWrapper {
+    height: 60%;
+    width: 90%;
+    @include center(row);
+    gap: 1rem;
+    overflow: hidden;
+    justify-content: flex-start;
+    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+.experienceCard {
+    @include center(column);
+    position: relative;
+    height: 90%;
+    width: max-content;
+    align-self: flex-end;
+    box-shadow: 5px 5px 10px 5px $black;
+    background: $black;
+    border-radius: 25px;
+    
+    & > .experienceImage {
+        height: 100%;
+        width: 21vw;
+        object-fit: cover;
+        // opacity: 0.5;
+        border-radius: 25px;
+    }
+    
+    & > .activityDetailBox {
+        position: absolute;
+        color: $accent;
+        bottom: 0;
+        @include center(column);
+        padding-block: 1rem;
+        border-radius: 0 0 25px 25px ;
+        box-shadow: 0px 5px 5px 0px $black;
+        background: linear-gradient(to bottom, transparent 0%, $black 80%, $black 100%);
+        & > .activityDetail {
+            width: 100%;
+            padding: 1rem;
+            & .activity {
+                font-size: clamp(2rem, 2.5vw, 4rem);
+            }
+            & .activityPara {
+                text-align: left;
+            }    
+        }
+
+        & > .experienceButton {
+            height: 50px;
+            width: 150px;
+            border: none;
+            border-radius: 50px;
+            font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+            margin-inline: 1rem;
+            color: $black;
+            font-weight: 500;
+            background: $primary;
+            position: relative;
+            
+        }
+    }
+}

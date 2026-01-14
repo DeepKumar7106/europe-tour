@@ -15,3 +15,15 @@ $black : #0c1618;
     align-items: center;
     flex-direction: $direction ;
 }
+
+@mixin headingText() {
+    font-size: clamp(3rem, 6vw, 7rem);
+    color: $accent;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin: 1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-family: "Gasoek One", sans-serif;
+}
