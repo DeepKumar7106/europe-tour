@@ -1,6 +1,129 @@
 @import '../config';
+@import '../header';
+@import '../footer';
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background: $primary;
+    overflow-x: hidden ;
 }
+
+#heroSection {
+    height: 100vh;
+    width: 100%;
+    @include center(column);    
+
+    position: relative;
+    background: $black;
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+    }
+
+    & #heroArticle {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        & h1 {
+            @include headingText();
+            font-size: clamp(2rem, 5vw, 10rem);
+            text-align: center;
+            margin-bottom: 0;
+
+        }
+
+        & p{
+            font-size: clamp(1.2rem, 1.5vw, 3rem);
+            color: $accent;
+        }
+    }
+
+}
+
+
+.countryCard {
+    height: 100vh;
+    width: 100%;
+    @include center(column);    
+
+    position: relative;
+    background: $accent;
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+        filter: blur(1px);
+    }
+
+}
+
+.foregroundDetails {
+    position: absolute;
+    inset: 0;
+    @include center(row);
+    background: linear-gradient(to right, $black 0%, $black 40%,  transparent 40%, transparent 100%);
+    
+    
+    & img {
+        width: 40%;
+        filter: blur(0);
+        mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%
+          );
+        box-shadow: 2px 2px 5px 2px $black;
+        opacity: 0.7;
+    }
+
+    .countryDetails {
+        flex: 1;
+        @include center(column);
+        padding: 4rem;
+        & h2 {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: "Gasoek One", sans-serif;
+            font-size: clamp(2rem, 3vw, 4rem);
+            color: $secondary;
+            text-align: left;
+            width: 100%;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid $secondary;
+        }
+        & p{
+            padding-left: 0;
+            padding-block: 1rem;
+            font-size: clamp(1.2rem, 1.3vw, 2rem);
+            color: $black;
+            text-align: left;
+        }
+        & button {
+            height: 50px;
+            width: 150px;
+            border: none;
+            border-radius: 50px;
+            font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+            margin-inline: 1rem;
+            color: $black;
+            font-weight: 500;
+            background: $primary;
+        }
+
+    }
+}
+
+.countryCard:nth-child(even) {
+    .foregroundDetails {
+      flex-direction: row-reverse;
+      background: linear-gradient(to left, $black 0%, $black 40%,  transparent 40%, transparent 100%);
+    }
+  }
