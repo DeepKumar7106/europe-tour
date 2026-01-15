@@ -1,10 +1,10 @@
-@import 'config';
+@import '../config';
 
 #activitiesSection {
     @include center(column);
     background:
         linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
-        url('public\city-images-webp\Zurich.webp');
+        url("/public/region-webp/Nordic-Europe.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

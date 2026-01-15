@@ -1,12 +1,12 @@
 @import 'config';
 @import 'header';
 @import 'footer';
-@import 'hero';
-@import 'popular';
-@import 'activities';
-@import 'recommendation';
-@import 'underrated'; 
-@import 'regions';
+@import 'home/hero';
+@import 'home/popular';
+@import 'home/activities';
+@import 'home/recommendation';
+@import 'home/underrated'; 
+@import 'home/regions';
 
 body {
     overflow-x: hidden;

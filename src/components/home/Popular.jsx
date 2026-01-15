@@ -1,4 +1,4 @@
-import { cities, oldCities, countries } from "../scripts/data";
+import { cities, oldCities, countries } from "../../scripts/data";
 
 export default function Popular() {
     const paris = cities.find(city => city.id === "euc001")

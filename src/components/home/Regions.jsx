@@ -1,5 +1,5 @@
-import { regions } from "../scripts/data"
-import { replaceSpace } from "../App"
+import { regions } from "../../scripts/data"
+import { replaceSpace } from "../../App"
 
 const regionList = regions.map(region => {
     const name = replaceSpace(region.name)
