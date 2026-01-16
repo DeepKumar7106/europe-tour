@@ -336,8 +336,6 @@ export const countries = [
   }
 ];
 
-
-
 export const cities = [
   // --- AUSTRIA ---
   {
@@ -2203,6 +2201,326 @@ export const cities = [
   },
   
 ];
+
+export const expeditions = [
+  {
+    id: "expd001",
+    name: "Swiss Alps Adventure",
+    duration: "3 Days",
+    region: "Alpine Europe",
+    usp: "Fly above iconic alpine peaks",
+    highlights: ["Interlaken", "Jungfrau Region", "Paragliding", "Alpine Lakes"]
+  },
+  {
+    id: "expd002",
+    name: "Paris Cultural Escape",
+    duration: "2 Days",
+    region: "Western Europe",
+    usp: "Art, romance, and timeless landmarks",
+    highlights: ["Eiffel Tower", "Louvre Museum", "Seine Cruise", "Montmartre"]
+  },
+  {
+    id: "expd003",
+    name: "Rome Ancient Discovery",
+    duration: "3 Days",
+    region: "Mediterranean Europe",
+    usp: "Walk through ancient world history",
+    highlights: ["Colosseum", "Roman Forum", "Vatican City", "Trastevere"]
+  },
+  {
+    id: "expd004",
+    name: "Amsterdam City & Canals",
+    duration: "2 Days",
+    region: "Western Europe",
+    usp: "Canals, culture, and relaxed vibes",
+    highlights: ["Canal Cruise", "Anne Frank House", "Van Gogh Museum"]
+  },
+  {
+    id: "expd005",
+    name: "Santorini Island Highlights",
+    duration: "2 Days",
+    region: "Mediterranean Europe",
+    usp: "World-famous sunsets and views",
+    highlights: ["Oia Sunset", "Caldera Views", "Beaches", "Local Cuisine"]
+  },
+  {
+    id: "expd006",
+    name: "Norwegian Fjord Explorer",
+    duration: "3 Days",
+    region: "Nordic Europe",
+    usp: "Cruise dramatic glacier-carved fjords",
+    highlights: ["Bergen", "Geirangerfjord", "Fjord Cruise", "Waterfalls"]
+  },
+  {
+    id: "expd007",
+    name: "Prague Medieval Getaway",
+    duration: "2 Days",
+    region: "Central & Eastern Europe",
+    usp: "A fairytale medieval city escape",
+    highlights: ["Old Town Square", "Charles Bridge", "Prague Castle"]
+  },
+  {
+    id: "expd008",
+    name: "Barcelona Culture & Coast",
+    duration: "3 Days",
+    region: "Mediterranean Europe",
+    usp: "Architecture, beaches, and vibrant life",
+    highlights: ["Sagrada Família", "Park Güell", "Barceloneta Beach"]
+  },
+  {
+    id: "expd009",
+    name: "Iceland Golden Circle Mini Tour",
+    duration: "2 Days",
+    region: "Nordic Europe",
+    usp: "Raw nature in pure form",
+    highlights: ["Thingvellir", "Geysir", "Gullfoss", "Blue Lagoon"]
+  },
+  {
+    id: "expd010",
+    name: "Croatian Coast Escape",
+    duration: "3 Days",
+    region: "Balkans",
+    usp: "Islands, old towns, turquoise seas",
+    highlights: ["Dubrovnik Old Town", "Island Hopping", "Adriatic Coast"]
+  },
+  {
+    id: "expd011",
+    name: "Vienna Classical Experience",
+    duration: "2 Days",
+    region: "Western Europe",
+    usp: "Imperial charm and classical music",
+    highlights: ["Schönbrunn Palace", "Historic Center", "Classical Concert"]
+  },
+  {
+    id: "expd012",
+    name: "Lapland Arctic Adventure",
+    duration: "3 Days",
+    region: "Nordic Europe",
+    usp: "Northern Lights and Arctic wilderness",
+    highlights: ["Northern Lights", "Husky Sledding", "Arctic Wilderness"]
+  }
+];
+
+export const attractions = [
+  {
+    id: "atc001",
+    name: "Eiffel Tower",
+    city: "Paris",
+    country: "France"
+  },
+  {
+    id: "atc002",
+    name: "Colosseum",
+    city: "Rome",
+    country: "Italy"
+  },
+  {
+    id: "atc003",
+    name: "Buckingham Palace",
+    city: "London",
+    country: "United Kingdom"
+  },
+  {
+    id: "atc004",
+    name: "Sagrada Família",
+    city: "Barcelona",
+    country: "Spain"
+  },
+  {
+    id: "atc005",
+    name: "Canals of Amsterdam",
+    city: "Amsterdam",
+    country: "Netherlands"
+  },
+  {
+    id: "atc006",
+    name: "Santorini Caldera",
+    city: "Santorini",
+    country: "Greece"
+  },
+  {
+    id: "atc007",
+    name: "St. Mark’s Square",
+    city: "Venice",
+    country: "Italy"
+  },
+  {
+    id: "atc008",
+    name: "Prague Old Town",
+    city: "Prague",
+    country: "Czechia"
+  },
+  {
+    id: "atc009",
+    name: "Matterhorn",
+    city: "Zermatt",
+    country: "Switzerland"
+  },
+  {
+    id: "atc010",
+    name: "Golden Circle",
+    city: "Reykjavik",
+    country: "Iceland"
+  }
+];
+
+export const underrated = [
+  {
+    id: "und001",
+    name: "Colmar Old Town",
+    city: "Colmar",
+    country: "France"
+  },
+  {
+    id: "und002",
+    name: "Bay of Kotor",
+    city: "Kotor",
+    country: "Montenegro"
+  },
+  {
+    id: "und003",
+    name: "Naxos Island",
+    city: "Naxos",
+    country: "Greece"
+  },
+  {
+    id: "und004",
+    name: "Alentejo Coast",
+    city: "Alentejo",
+    country: "Portugal"
+  },
+  {
+    id: "und005",
+    name: "Lake Bohinj",
+    city: "Bohinj",
+    country: "Slovenia"
+  },
+  {
+    id: "und006",
+    name: "Lviv Old Town",
+    city: "Lviv",
+    country: "Ukraine"
+  },
+  {
+    id: "und007",
+    name: "Mostar Old Bridge Area",
+    city: "Mostar",
+    country: "Bosnia and Herzegovina"
+  },
+  {
+    id: "und008",
+    name: "High Tatras",
+    city: "Vysoké Tatry",
+    country: "Slovakia"
+  },
+  {
+    id: "und009",
+    name: "Trulli of Alberobello",
+    city: "Alberobello",
+    country: "Italy"
+  },
+  {
+    id: "und010",
+    name: "Saaremaa Island",
+    city: "Kuressaare",
+    country: "Estonia"
+  }
+];
+
+export const experience = [
+  {
+    id: "exp001",
+    activityName: "Paragliding",
+    regionOrCountry: "Alpine Europe"
+  },
+  {
+    id: "exp002",
+    activityName: "Northern Lights Chasing",
+    regionOrCountry: "Nordic Europe"
+  },
+  {
+    id: "exp003",
+    activityName: "Hot Air Ballooning",
+    regionOrCountry: "Mediterranean Europe"
+  },
+  {
+    id: "exp004",
+    activityName: "Skydiving",
+    regionOrCountry: "Alpine Europe"
+  },
+  {
+    id: "exp005",
+    activityName: "Fjord Kayaking",
+    regionOrCountry: "Nordic Europe"
+  },
+  {
+    id: "exp006",
+    activityName: "Via Ferrata Climbing",
+    regionOrCountry: "Alpine Europe"
+  },
+  {
+    id: "exp007",
+    activityName: "Surfing",
+    regionOrCountry: "Western Europe"
+  },
+  {
+    id: "exp008",
+    activityName: "Dog Sledding",
+    regionOrCountry: "Nordic Europe"
+  },
+  {
+    id: "exp009",
+    activityName: "Island Hopping",
+    regionOrCountry: "Mediterranean Europe"
+  },
+  {
+    id: "exp010",
+    activityName: "Thermal Bathing",
+    regionOrCountry: "Central & Eastern Europe"
+  },
+  {
+    id: "exp011",
+    activityName: "Glacier & Ice Cave Exploration",
+    regionOrCountry: "Nordic Europe"
+  },
+  {
+    id: "exp012",
+    activityName: "Skiing & Snowboarding",
+    regionOrCountry: "Alpine Europe"
+  },
+  {
+    id: "exp013",
+    activityName: "Nightlife & Clubbing",
+    regionOrCountry: "Western Europe"
+  },
+  {
+    id: "exp014",
+    activityName: "Beach Parties",
+    regionOrCountry: "Mediterranean Europe"
+  },
+  {
+    id: "exp015",
+    activityName: "Sunset Viewing",
+    regionOrCountry: "Mediterranean Europe"
+  },
+  {
+    id: "exp016",
+    activityName: "Paddleboarding",
+    regionOrCountry: "Alpine Europe"
+  },
+  {
+    id: "exp017",
+    activityName: "Highland Hiking",
+    regionOrCountry: "British Isles"
+  },
+  {
+    id: "exp018",
+    activityName: "Cave Exploration",
+    regionOrCountry: "Balkans"
+  }
+];
+
+
 
 export const oldCities = [
   // --- AUSTRIA ---

@@ -3,7 +3,7 @@ import Main from "./components/home/Main";
 import Footer from "./components/Footer";
 
 export function replaceSpace(name) {
-  return name.replace("-"," " );
+  return name.split("-").join(" ")
 }
 function App() {
 

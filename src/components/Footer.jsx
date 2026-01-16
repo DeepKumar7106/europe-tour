@@ -6,9 +6,9 @@ export default function Footer() {
                 <div id="quickLinks">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="">Attactions</a></li>
+                        <li><a href="src/pages/attractions/attraction.html">Attactions</a></li>
                         <li><a href="#activitiesSection">Experiences</a></li>
-                        <li><a href="">FAQs</a></li>
+                        <li><a href="src/pages/underrated/underrated.html">FAQs</a></li>
                     </ul>
                 </div>
                 <div id="aboutWrapper">

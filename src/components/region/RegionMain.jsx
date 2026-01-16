@@ -12,7 +12,7 @@ export default function RegionMain() {
     const countryCard = countryList.map(country => {
         return (
             <div className="countryCard" key={country.id}>
-                <img className="countryImage" src={`/country-map/${country.name}.png`} alt="" />
+                <img className="countryImage" src={`/country-map-webp/${country.name}.webp`} alt="" />
                 <div className="foregroundDetails">
                     <img src={`/country-backdrop-webp/${country.name}.webp`} alt="" className="foregroundimage" />
                     <article className="countryDetails">
