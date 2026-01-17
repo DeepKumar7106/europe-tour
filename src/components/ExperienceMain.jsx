@@ -1,8 +1,21 @@
-import {countries, regions} from '/src/scripts/data.js'
+import {experience} from '/src/scripts/data.js'
+import { addHyphen } from '../App'
 
 export default function ExperienceMain() {
    
-
+    const experiencList = experience.map(activity => {
+        const name = addHyphen(activity.activityName)
+        return(
+            <div className="experienceCard" key={activity.id}>
+                <img src={`/experiences-webp/${name}.webp`} alt={name} className="experienceImg" />
+                <article className="experienceArticle">
+                    <h2 className="experiencName">{activity.activityName}</h2>
+                    <p className="activityRegion">in {activity.regionOrCountry}</p>
+                    <p className="activityPara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed voluptatum dignissimos error, nesciunt illo expedita dolorem reprehenderit obcaecati voluptate repellendus deleniti distinctio magnam quasi numquam, est dicta praesentium. Impedit, saepe.</p>
+                </article>
+            </div>
+        )
+    })
     
     return (
         <main>
@@ -13,7 +26,8 @@ export default function ExperienceMain() {
                     <p id="heroPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat.</p>
                 </article>
             </section>
-            <section id="countryWrapper">
+            <section id="experienceWrapper">
+                {experiencList}
             </section>
         </main>
     )
