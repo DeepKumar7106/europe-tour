@@ -1,7 +1,23 @@
-import {countries, regions} from '/src/scripts/data.js'
+import { expeditions } from '/src/scripts/data.js'
+import { addHyphen } from '../App'
 
 export default function ExpeditionMain() {
-   
+   const expeditionList = expeditions.map(exp => {
+    const name = addHyphen(exp.name)
+
+    return (
+        <div className="expeditionCard">
+            <img src={`/expedition-webp/${name}.webp`} alt={name} className="expeditonImg" />
+            <article className="expeditonArticle">
+                <h2 className="expeditionName">{exp.name}</h2>
+                <p className="duration"><i className="fa-regular fa-clock"></i> {exp.duration}</p>
+                <h3 className="usp">{exp.usp}</h3>
+                <p className="region">{exp.region}</p>
+                <p className="descritption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consequatur maxime qui doloremque quisquam dicta. Adipisci sed delectus deserunt odit.</p>
+            </article>
+        </div>
+    )
+   })
 
     
     return (
@@ -14,16 +30,7 @@ export default function ExpeditionMain() {
                 </article>
             </section>
             <section id="expeditionWrapper">
-                <div className="expeditionCard">
-                    <img src={`/expedition-webp/Swiss-Alps-Adventure.webp`} alt="" className="expeditonImg" />
-                    <article className="expeditonArticle">
-                        <h2 className="expeditionName">hell yeah tours</h2>
-                        <p className="duration"><i className="fa-regular fa-clock"></i> eternity</p>
-                        <h3 className="usp">spend ur all money</h3>
-                        <p className="region">Alpine</p>
-                        <p className="descritption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consequatur maxime qui doloremque quisquam dicta. Adipisci sed delectus deserunt odit.</p>
-                    </article>
-                </div>
+                {expeditionList}
             </section>
         </main>
     )

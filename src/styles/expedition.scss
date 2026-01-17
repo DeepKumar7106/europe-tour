@@ -48,7 +48,7 @@ body {
 #expeditionWrapper {
     @include center(column);
     width: 100%;
-    background: linear-gradient(lighten($secondary, 10%), $secondary, darken($secondary, 10%));
+    background: linear-gradient( lighten($primary, 10%), darken($accent, 30%));
     padding: 2rem;
     gap: 4rem;
     
@@ -79,7 +79,6 @@ body {
         flex: 1;
         padding: 2rem;
         height: 80%;
-        background: inherit;
 
         & p {
             width: 70%;
@@ -122,19 +121,37 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    height: 100%;
+    height:  calc(100% + 2rem);;
     z-index: -2;
-    width: 100%;
-    scale: 1.02;
+    width: calc(100% + 2rem);
     background: darken($accent, 15%);
-    border-radius: inherit;
+    border-radius: calc(4rem + 1rem);
+    transform: translate(-1rem, -1rem);
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.4);
 }
 
 .expeditionCard::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: inherit; // Ensures it matches the parent's curve
+    border-radius: inherit;  
     background: darken($accent, 5%);
-    z-index: -1; // Sits behind the content
+    z-index: -1;  
+    box-shadow: 5px 5px 15px 5px  rgba(0,0,0,0.4);
+}
+
+.expeditionCard:nth-child(even) {
+    flex-direction: row-reverse;
+    & img {
+        border-radius: 0 4rem 4rem 0 ;
+    }
+
+    & article {
+        text-align: right;
+        & p {
+            text-align: inherit;
+            margin-left: auto;
+        }
+
+    }
 }
