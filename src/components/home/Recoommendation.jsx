@@ -1,44 +1,26 @@
+import { expeditions } from '../../scripts/data'
+import { addHyphen } from '../../App'
+
 export default function Recommendation() {
+    const expeditionList = expeditions.map(expedition => {
+        const name = addHyphen(expedition.name)
+        return (
+            <div className="recommendationCard">
+                <img src={`public/expedition-webp/${name}.webp`} alt={name} className="recommendationImg" />
+                <article className="recommendationArticle">
+                    <h3 className="planName">{expedition.name}</h3>
+                    <p className="planDescription">{expedition.usp}</p>
+                </article>
+            </div>
+        )
+    })
+
     return (
         <section id="recommendationSection">
             <h2 id="recommendationHeading">expedition</h2>
             <div id="recommendationCardWrapper">
                 <div id="recommendationCardContainer">
-                    <div className="recommendationCard">
-                        <img src="public\city-images-webp\Verona.webp" alt="" className="recommendationImg" />
-                        <article className="recommendationArticle">
-                            <h3 className="planName">2 day Italy</h3>
-                            <p className="planDescription">Explore Italia in blink</p>
-                        </article>
-                    </div>
-                    <div className="recommendationCard">
-                        <img src="public\city-images-webp\Verona.webp" alt="" className="recommendationImg" />
-                        <article className="recommendationArticle">
-                            <h3 className="planName">2 day Italy</h3>
-                            <p className="planDescription">Explore Italia in blink</p>
-                        </article>
-                    </div>
-                    <div className="recommendationCard">
-                        <img src="public\city-images-webp\Verona.webp" alt="" className="recommendationImg" />
-                        <article className="recommendationArticle">
-                            <h3 className="planName">2 day Italy</h3>
-                            <p className="planDescription">Explore Italia in blink</p>
-                        </article>
-                    </div>
-                    <div className="recommendationCard">
-                        <img src="public\city-images-webp\Verona.webp" alt="" className="recommendationImg" />
-                        <article className="recommendationArticle">
-                            <h3 className="planName">2 day Italy</h3>
-                            <p className="planDescription">Explore Italia in blink</p>
-                        </article>
-                    </div>
-                    <div className="recommendationCard">
-                        <img src="public\city-images-webp\Verona.webp" alt="" className="recommendationImg" />
-                        <article className="recommendationArticle">
-                            <h3 className="planName">2 day Italy</h3>
-                            <p className="planDescription">Explore Italia in blink</p>
-                        </article>
-                    </div>
+                    {expeditionList}
                 </div>
                 <div id="recommendationButtonWrapper">
                     <div id="navButtons">
@@ -51,3 +33,11 @@ export default function Recommendation() {
         </section>
     )
 }
+
+{/* <div className="recommendationCard">
+    <img src="public\city-images-webp\Verona.webp" alt="" className="recommendationImg" />
+    <article className="recommendationArticle">
+        <h3 className="planName">2 day Italy</h3>
+        <p className="planDescription">Explore Italia in blink</p>
+    </article>
+</div> */}

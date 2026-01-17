@@ -2229,7 +2229,7 @@ export const expeditions = [
   },
   {
     id: "expd004",
-    name: "Amsterdam City & Canals",
+    name: "Amsterdam City and Canals",
     duration: "2 Days",
     region: "Western Europe",
     usp: "Canals, culture, and relaxed vibes",
@@ -2261,7 +2261,7 @@ export const expeditions = [
   },
   {
     id: "expd008",
-    name: "Barcelona Culture & Coast",
+    name: "Barcelona Culture and Coast",
     duration: "3 Days",
     region: "Mediterranean Europe",
     usp: "Architecture, beaches, and vibrant life",
@@ -2435,7 +2435,7 @@ export const experience = [
   },
   {
     id: "exp002",
-    activityName: "Northern Lights Chasing",
+    activityName: "Northern Lights",
     regionOrCountry: "Nordic Europe"
   },
   {
@@ -2450,7 +2450,7 @@ export const experience = [
   },
   {
     id: "exp005",
-    activityName: "Fjord Kayaking",
+    activityName: "Kayaking",
     regionOrCountry: "Nordic Europe"
   },
   {
@@ -2469,38 +2469,28 @@ export const experience = [
     regionOrCountry: "Nordic Europe"
   },
   {
-    id: "exp009",
-    activityName: "Island Hopping",
-    regionOrCountry: "Mediterranean Europe"
-  },
-  {
     id: "exp010",
     activityName: "Thermal Bathing",
     regionOrCountry: "Central & Eastern Europe"
   },
   {
     id: "exp011",
-    activityName: "Glacier & Ice Cave Exploration",
+    activityName: "Ice Cave Exploration",
     regionOrCountry: "Nordic Europe"
   },
   {
     id: "exp012",
-    activityName: "Skiing & Snowboarding",
+    activityName: "Skiing And Snowboarding",
     regionOrCountry: "Alpine Europe"
   },
   {
     id: "exp013",
-    activityName: "Nightlife & Clubbing",
+    activityName: "Clubbing",
     regionOrCountry: "Western Europe"
   },
   {
-    id: "exp014",
-    activityName: "Beach Parties",
-    regionOrCountry: "Mediterranean Europe"
-  },
-  {
     id: "exp015",
-    activityName: "Sunset Viewing",
+    activityName: "Sunset",
     regionOrCountry: "Mediterranean Europe"
   },
   {

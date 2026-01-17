@@ -5,6 +5,11 @@ import Footer from "./components/Footer";
 export function replaceSpace(name) {
   return name.split("-").join(" ")
 }
+
+export function addHyphen(str) {
+  return str.split(' ').join('-')
+  // return str.replaceAll(" ","-" );
+}
 function App() {
 
 

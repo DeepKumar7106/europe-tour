@@ -1,11 +1,9 @@
 import {countries, regions, underrated} from '/src/scripts/data.js'
+import { addHyphen } from '../App'
 
 export default function UnderratedMain() {
     
-    function addHyphen(str) {
-        return str.split(' ').join('-')
-        // return str.replaceAll(" ","-" );
-    }
+    
     
     console.log(addHyphen("a and b"))
 
