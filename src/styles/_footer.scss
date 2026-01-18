@@ -12,7 +12,7 @@ footer {
 }
 
 h1 {
-    font-size: clamp(3rem, 3vw, 5rem);
+    font-size: clamp(2rem, 3vw, 5rem);
     text-align: left;
     padding-left: 1rem;
     border-bottom: 1px soild rgba(97, 97, 97, 0.555);
@@ -48,4 +48,10 @@ ul {
 
 p {
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    footer > * {
+        width: 100%;
+    }
 }

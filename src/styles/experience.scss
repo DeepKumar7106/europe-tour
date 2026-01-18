@@ -8,42 +8,7 @@ body {
     overflow-x: hidden ;
 }
 
-#heroSection {
-    height: 100vh;
-    width: 100%;
-    @include center(column);    
 
-    position: relative;
-    background: $black;
-    & img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        opacity: 0.5;
-    }
-
-    & #heroArticle {
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-
-        & h1 {
-            @include headingText();
-            font-size: clamp(2rem, 5vw, 10rem);
-            text-align: center;
-            margin-bottom: 0;
-
-        }
-
-        & p{
-            font-size: clamp(1.2rem, 1.5vw, 3rem);
-            color: $accent;
-        }
-    }
-
-}
 
 main {
     @include center(column);
@@ -93,7 +58,6 @@ main {
         
         & h2 {
             color: $secondary;
-            font-size: clamp(2rem, 4.5vw, 4rem);
         }
         
         & .activityRegion {
@@ -145,12 +109,67 @@ main {
         border-radius: 500px 0 0 500px;
         
         & h2 {
+            width: 100%;
             text-align: right;
         }
 
         & p {
             text-align: end;
             margin-left: auto;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        background-color: black;
+        padding: 0;
+    }
+    #experienceWrapper {
+        padding-inline: 1rem;
+        background: pink;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .experienceCard {
+        padding: 0.5rem;
+        width: 95%;
+        height: 50vw;
+        border-radius: 2rem;
+        
+        & img {
+            width: 40%;
+            border-radius: 20rem 3rem 3rem 20rem;
+        } 
+        & article {
+            @include center(column);
+            padding: 1rem;
+            flex: 1;
+            border-radius: 0 20rem 20rem 0 ;
+            & h2 {
+                width: 100%;
+                text-align: left;
+                font-size: 1.6rem;
+            }
+    
+            & .activityRegion{
+                width: 100%;
+                border: none;
+                box-shadow: none;
+                margin-bottom: 0.3rem;
+            }
+
+            & .activityPara {
+                display: none;
+            }
+
+        }  
+    }
+
+    .experienceCard:nth-child(even) {
+        & img {
+            border-radius:3rem 20rem 20rem 2rem;
         }
     }
 }

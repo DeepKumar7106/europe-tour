@@ -22,3 +22,9 @@ nav {
         }
     }
 }
+
+@media (max-width: 700px) {
+    nav {
+        display: none;
+    }
+}

@@ -9,41 +9,6 @@ body {
     background-color: $accent;
 }
 
-#heroSection {
-    height: 100vh;
-    width: 100%;
-    @include center(column);    
-
-    position: relative;
-    background: $black;
-    & img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        opacity: 0.5;
-    }
-
-    & #heroArticle {
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-
-        & h1 {
-            @include headingText();
-            font-size: clamp(2rem, 5vw, 10rem);
-            text-align: center;
-            margin-bottom: 0;
-
-        }
-
-        & p{
-            font-size: clamp(1.2rem, 1.5vw, 3rem);
-            color: $accent;
-        }
-    }
-}
 
 #cityListAnimateContainer {
     @include center(row);
@@ -99,8 +64,8 @@ body {
             border-bottom: 2px solid $accent;
             
             @include headingText();
+            font-size:  4rem;
             padding: 2px;
-            font-size: clamp(2.5rem, 3vw, 4.5rem);
         }
 
         & p {
@@ -115,4 +80,27 @@ body {
 .cityCard:hover  .cityDetails{
     transform: translateX(0);
     opacity: 1;
+}
+
+@media (max-width: 700px) {
+    #cityListWrapper {
+        flex: 1;
+    }
+
+    .cityCard {
+        height: 40vh;
+        width: 95%;
+        border-radius: 2rem;
+        & img {
+            border-radius: inherit;
+        }
+
+        & article {
+            width: 100%;
+            border-radius: inherit;
+            & h2 {
+                font-size:  3rem;
+            }
+        }
+    }
 }

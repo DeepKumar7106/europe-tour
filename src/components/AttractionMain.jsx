@@ -11,7 +11,7 @@ export default function AttractionMain() {
                         <h2 className="cityName">{place.city}</h2>
                         <p className="countryName">{place.country}</p>
                     </article>
-                    <i className="fa-solid fa-circle-arrow-right"></i>
+                <i className="fa-solid fa-circle-arrow-right"></i>
                 </div>
             </div>
         )
