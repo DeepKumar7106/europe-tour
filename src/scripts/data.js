@@ -1,13 +1,67 @@
 export const regions = [
-  { id: "eur01", name: "Nordic-Europe" },
-  { id: "eur02", name: "Western-Europe" },
-  { id: "eur03", name: "Mediterranean-Europe" },
-  { id: "eur04", name: "Alpine-Europe" },
-  { id: "eur05", name: "Balkans" },
-  { id: "eur06", name: "Central-and-Eastern-Europe" },
-  { id: "eur07", name: "British-Isles" },
-  { id: "eur08", name: "Baltics" },
-  { id: "eur09", name: "Caucasus" }
+  { 
+    id: "eur07", 
+    scale:1,
+    name: "British-Isles",
+    x:"-10vh",
+    y:"-5vh", 
+  },
+  { 
+    id: "eur01", 
+    scale:2.4 ,
+    name: "Nordic-Europe",
+    x:"-1vh",
+    y:"-5vh", 
+  },
+  { 
+    id: "eur08", 
+    scale:1.2 ,
+    name: "Baltics",
+    x:"5vh",
+    y:"-12vh", 
+  },
+  { 
+    id: "eur02", 
+    scale:2 ,
+    name: "Western-Europe",
+    x:"-5vh",
+    y:"0.5vh", 
+  },
+  { 
+    id: "eur05", 
+    scale:1.9 ,
+    name: "Balkans",
+    x:"0vh",
+    y:"0vh", 
+  },
+  { 
+    id: "eur06", 
+    scale:2.7 ,
+    name: "Central-and-Eastern-Europe",
+    x:"5vh",
+    y:"-1.5vh", 
+  },
+  { 
+    id: "eur04", 
+    scale:1.6 ,
+    name: "Alpine-Europe",
+    x:"-5.6vh",
+    y:"6vh", 
+  },
+  { 
+    id: "eur03", 
+    scale:2.6 ,
+    name: "Mediterranean-Europe",
+    x:"1vh",
+    y:"5vh", 
+  },
+  { 
+    id: "eur09", 
+    scale:2 ,
+    name: "Caucasus",
+    x:"8vh",
+    y:"5vh", 
+  },
 ];
 
 export const countries = [

@@ -2,29 +2,33 @@
 
 #regionSection {
     height: 100vh;
-    @include center(column);
+    @include center(row);
     padding: 1rem;
+    justify-content: space-evenly;
     background: linear-gradient($secondary, darken($secondary, 10%));
 }
 
 #sectionHeading {
     @include headingText();
+    width: 50%;
     color: $accent;
+    height: 80%;
 }
 
 #regionWrapper {
-    height: 80%;
+    height: fit-content;
     width: max-content;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1vh;
+    margin-inline:auto ;
 }
 
 .regionCard {
-    height: 10rem;
-    width: 20rem;
+    height: 10vh;
+    width: 10vh;
 
-    border-radius: 10px;
+    border-radius: 1vh;
     color: $accent;
     background-color: $black;
     position: relative;
@@ -35,11 +39,12 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
-        opacity: 0.5;
-        border-radius: 10px;
+        opacity: 0.8;
+        border-radius: inherit;
     }
 
     & article {
+        display: none;
         position: absolute;
         bottom: 1rem;
         padding-left: 1rem;
@@ -60,3 +65,4 @@
 .regionCard:hover{
     scale: 1.1;
 }
+

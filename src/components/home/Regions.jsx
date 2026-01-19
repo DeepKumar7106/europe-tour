@@ -5,7 +5,10 @@ const regionList = regions.map(region => {
     const name = replaceSpace(region.name)
     const imgSrc = `public/region-webp/${region.name}.webp`
     return (
-        <div className="regionCard" key={region.id}>
+        <div className="regionCard" key={region.id} style={
+            { 
+                transform: `scale(${region.scale}) translate(${region.x},${region.y})` 
+            }} id={region.id}>
             <img className="regionImg" src={imgSrc} alt="" />
             <article className="regionArticle">
                 <h3 className="regionName">{name}</h3>
@@ -13,7 +16,7 @@ const regionList = regions.map(region => {
             </article>
         </div>
     )
-    document.querySelector('.regionCard').style
+   
 })
 
 {/* <div className="regionCard">
@@ -22,6 +25,7 @@ const regionList = regions.map(region => {
         <p className="regionPara">Lorem ipsum dolor sit amet consectetur.</p>
     </article>
 </div> */}
+
 
 export default function Region() {
     return (

@@ -5,7 +5,7 @@ export default function Recommendation() {
     const expeditionList = expeditions.map(expedition => {
         const name = addHyphen(expedition.name)
         return (
-            <div className="recommendationCard">
+            <div className="recommendationCard" key={expedition.id}>
                 <img src={`public/expedition-webp/${name}.webp`} alt={name} className="recommendationImg" />
                 <article className="recommendationArticle">
                     <h3 className="planName">{expedition.name}</h3>
