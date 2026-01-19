@@ -1,18 +1,45 @@
 @import '../config';
 
+// * {
+//     outline: 2px solid;
+// }
+
+#regionInfo {
+    height: 100vh;
+    width: 50%;
+    @include center(column);
+
+    & article {
+        color: $accent;
+        // height: 30%;
+        width: 80%;
+        margin: auto;
+        @include center(column);
+        & h2 {
+            width: 100%;
+            text-align: center;
+            font-size: clamp(2rem, 4.5vw, 5rem);
+        }
+
+        & p {
+            margin-block: 1rem;
+            font-size: clamp(1.2rem, 2.5vw, 2rem);
+        }
+    }
+}
+
 #regionSection {
     height: 100vh;
     @include center(row);
     padding: 1rem;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     background: linear-gradient($secondary, darken($secondary, 10%));
 }
 
 #sectionHeading {
     @include headingText();
-    width: 50%;
+    width: 100%;
     color: $accent;
-    height: 80%;
 }
 
 #regionWrapper {
@@ -66,3 +93,16 @@
     scale: 1.1;
 }
 
+
+#regionExplore {
+    text-align: center;
+    text-wrap: none;
+    background: $accent;
+    color: $secondary;
+    font-size: 2rem;
+    height: 70px;
+    width: 250px;
+    border: none;
+    border-radius: 70px;
+    display: none;
+}

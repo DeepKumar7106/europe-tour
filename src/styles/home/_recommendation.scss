@@ -12,26 +12,35 @@
 }
 
 #recommendationCardWrapper {
-    @include center(column);
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     
 }
 
 #recommendationCardContainer {
-    @include center(row);
     width: 100%;
     gap: 1rem;
     overflow: hidden;
-    justify-content: flex-start
+    // display: flex;
+    // flex-direction: row;
+}
+
+.track {
+    display: flex;
+    width: 300%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .recommendationCard {
     @include center(column);
     height: 30vw;
     position: relative;
+    flex: 0 0 8.333%;
     & > .recommendationImg {
         height: 80%;
-        width: 21vw;
+        width: 90%;
         object-fit: cover;
         border-radius: 50px 100px 30px 80px;
     }

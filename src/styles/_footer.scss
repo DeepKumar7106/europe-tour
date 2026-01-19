@@ -1,11 +1,13 @@
 @import 'config';
 
 footer {
+    z-index: 100;
     @include center(column);
     background-color: $secondary;
     width: 100%;
     padding: 1rem;
     color: $accent;
+    // box-shadow: 0 -15px  rgb(255, 255, 255);
     & > * {
         width: 50%;
     }

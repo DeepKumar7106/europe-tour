@@ -21,14 +21,18 @@
     transition: all 3s ease;
     margin-bottom: 1rem;
     z-index: 2;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.6) ;
     &::before {
         z-index: 5;
         content: "";
         position: absolute;
         inset: 0;
-        background-color: rgba(0, 0, 0, 0.541);
+        background-color: rgba(0, 0, 0, 0.267);
+        border-radius: 2rem;
     }
     & > #popularImage {
+        border-radius: inherit;
         height: 100%;
         aspect-ratio: 16 / 9;
         object-fit: cover;
@@ -39,7 +43,7 @@
         z-index: 10;
         min-height: 30%;
         width: 100%;
-        background: linear-gradient(to bottom, transparent, $black);
+        background: rgba(0, 0, 0, 0.616);
         color: $accent;
         position: absolute;
         bottom: 0;
@@ -48,6 +52,7 @@
         // outline: 20px solid lime;
         padding-left: 2rem;
         font-size: clamp(2rem, 2.5vw, 4rem);
+        border-radius: 2rem;
         & p{
             text-align: left;
         }
@@ -62,14 +67,18 @@
     transform: translateY(-50%);
     background-color: #000;
     z-index: -1;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 5px  rgba(0,0,0,0.6) ;
     &::before {
         z-index: 5;
         content: "";
         position: absolute;
         inset: 0;
         background:linear-gradient(to left, rgba(0, 0, 0, 0.541), black);
+        border-radius: 2rem;
     }
     & .popularBgImage {
+        border-radius: inherit;
         height: 100%;
         object-fit: cover;
         aspect-ratio: 16 / 9;
@@ -86,14 +95,18 @@
     transform: translateY(-50%);
     background-color: #000;
     z-index: -1;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 5px  rgba(0,0,0,0.6) ;
     &::before {
         z-index: 5;
         content: "";
         position: absolute;
         inset: 0;
         background:linear-gradient(to right, rgba(0, 0, 0, 0.541), black);
+        border-radius: 2rem;
     }
     & .popularBgImage {
+        border-radius: inherit;
         height: 100%;
         object-fit: cover;
         aspect-ratio: 16 / 9;

@@ -2,11 +2,11 @@ import { experience } from '/src/scripts/data.js'
 import { addHyphen } from '../../App'
 
 export default function Activities() {
-    const activities = experience.map(activity => {
+    const activities = experience.map((activity, index) => {
         const name = addHyphen(activity.activityName)
-        
+        console.log(index + 1)
         return (
-            <div className="experienceCard" key={activity.id}>
+            <div className={`experienceCard item${index + 1}`} key={activity.id}>
                 <img src={`public/experiences-webp/${name}.webp`} alt={name} className="experienceImage" />
                 <div className="activityDetailBox">
                     <div className="activityDetail">
@@ -22,8 +22,10 @@ export default function Activities() {
     return (
         <section id="activitiesSection">
             <h2 id="activitiesHeading">experiences</h2>
-            <div id="experienceWrapper">
-                {activities}
+            <div id="actiivtyContainer">
+                <div id="experienceWrapper">
+                    {activities}
+                </div>
             </div>
         </section>
     )

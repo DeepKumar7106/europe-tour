@@ -1,29 +1,57 @@
-import { cities, oldCities, countries } from "../../scripts/data";
+import { attractions } from "../../scripts/data";
+import { useState } from "react";
 
 export default function Popular() {
-    const paris = cities.find(city => city.id === "euc001")
-    const country = countries.find(item => item.id === paris.countryId)
-    // console.log(country)
+    let prevCityIndex , nextCityIndex
+    const [cityIndex, setCityIndex] = useState(0)
+    prevCityIndex = cityIndex === 0 ? attractions.length - 1 : cityIndex - 1
+    nextCityIndex = cityIndex === attractions.length - 1 ? 0 : cityIndex + 1
+
+    const foreGroundCity = attractions[cityIndex]
+    const nextCity = attractions[nextCityIndex]
+    const prevCity = attractions[prevCityIndex]
+
+    function updateCityImageNext() {
+        setCityIndex(prevCityIndex => {
+            if(attractions.length - 1 === prevCityIndex)
+                return 0
+            return prevCityIndex + 1
+        })
+    }
+    function updateCityImagePrev() {
+        setCityIndex(prevCityIndex => {
+            if(0 === prevCityIndex)
+                return attractions.length - 1
+            return prevCityIndex - 1
+        })
+    }
 
     return (
         <section id="popular">
             <h2 id="popularHeading">attractions</h2>
             <div id="popularImageWrapper">
-                <div id="bgImageWrapperLeft">
-                    <img className="popularBgImage leftImage" src={`/city-images-webp/${paris.cityName}.webp`} alt={paris.cityName} />
+                {/* next img */}
+                <div id="bgImageWrapperLeft"
+                    onClick={updateCityImageNext}
+                >
+                    <img className="popularBgImage leftImage" src={`/city-images-webp/${nextCity.city}.webp`} alt={nextCity.city} />
                 </div>
-                <div id="bgImageWrapperRight">
-                    <img className="popularBgImage rightImage" src="public\city-images-webp\Zurich.webp" alt={paris.cityName} />
+                {/* previous img */}
+                <div id="bgImageWrapperRight"
+                    onClick={updateCityImagePrev}
+                >
+                    <img className="popularBgImage rightImage" src={`/city-images-webp/${prevCity.city}.webp`} alt={prevCity.city} />
                 </div>
-                <img id="popularImage" src={`/city-images-webp/${paris.cityName}.webp`} alt={paris.cityName} />  
+                <img id="popularImage" src={`/city-images-webp/${foreGroundCity.city}.webp`} alt={foreGroundCity.city} />  
                 <article id="imageDeatailTexts">
-                    <p id="cityName">{paris.famousLocation[0]}</p>
-                    <p id="countryName"><i className="fa-solid fa-location-dot"></i> {paris.cityName}, {country.name}</p>
-                    <p id="cityParagraph">{paris.description}</p>
+                    <p id="city">{foreGroundCity.name}</p>
+                    <p id="countryName"><i className="fa-solid fa-location-dot"></i> {foreGroundCity.city}, {foreGroundCity.country}</p>
                 </article>
             </div>
             <div id="navButtonWrapper">
-                <i className="fa-solid fa-circle-chevron-left"></i>
+                <i className="fa-solid fa-circle-chevron-left"
+                    onClick={updateCityImagePrev}
+                ></i>
                 <button className="navButton"></button>
                 <button className="navButton"></button>
                 <button className="navButton"></button>
@@ -34,7 +62,9 @@ export default function Popular() {
                 <button className="navButton"></button>
                 <button className="navButton"></button>
                 <button className="navButton"></button>
-                <i className="fa-solid fa-circle-chevron-right"></i>
+                <i className="fa-solid fa-circle-chevron-right"
+                    onClick={updateCityImageNext} 
+                ></i>
             </div>
         </section>
     )
