@@ -12,6 +12,7 @@
     // outline: 2px solid white;
     @include headingText();
     border-bottom: 1px solid $accent;
+    width: 90%;
 }
 
 #popularImageWrapper {
@@ -152,4 +153,21 @@
     &:hover {
         background: $secondary;
     }
+}
+
+@media (max-width: 700px) {
+    #bgImageWrapperRight {
+        left: -10%;
+    }
+    #bgImageWrapperLeft {
+        right: -10%;
+    } 
+
+    #popularImageWrapper {
+        width: 80%;
+        & img {
+            width: 100%;
+        }
+    }
+    
 }

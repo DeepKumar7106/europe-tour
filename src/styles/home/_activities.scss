@@ -1,8 +1,10 @@
 @import '../config';
 $total-items: 16;
-$item-width: 21vw;
 $animation-duration: 60s;
 
+:root {
+    --item-width : 21vw;
+}
 
 #activitiesSection {
     @include center(column);
@@ -18,6 +20,7 @@ $animation-duration: 60s;
 #activitiesHeading {
     @include headingText();
     color: $secondary;
+    width: 90%;
 }
 
 #actiivtyContainer {
@@ -43,12 +46,12 @@ $animation-duration: 60s;
     @include center(column);
     position: absolute;
     height: 90%;
-    width: $item-width;
+    width: var(--item-width);
     align-self: flex-end;
     box-shadow: 5px 5px 10px 5px $black;
     background: $black;
     border-radius: 25px;
-    left: max(calc($item-width * $total-items), 100%);
+    left: max(calc(var(--item-width) * $total-items), 100%);
     animation: retailScroll $animation-duration linear infinite;
     
     & > .experienceImage {
@@ -96,14 +99,28 @@ $animation-duration: 60s;
 }
 
 @keyframes retailScroll {
-    to {
-        /* They must end at a negative distance equal to the whole train */
-        left: calc($item-width * -1); 
+
+    100% {
+        left: calc(var(--item-width) * -1); 
     }
 }
 
 @for $i from 1 through $total-items {
     .item#{$i} {
         animation-delay: calc(#{$animation-duration} / #{$total-items} * (#{$total-items} - #{$i}) * -1);
+    }
+}
+
+
+@media (max-width: 700px) {
+    :root {
+        --item-width: 80%;
+    }
+    #actiivtyContainer {
+        width: 95%;
+    }
+
+    h2 {
+        width: 90%;
     }
 }

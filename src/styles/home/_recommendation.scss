@@ -30,7 +30,7 @@
 .track {
     display: flex;
     width: 300%;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s ease-in-out;
 }
 
 .recommendationCard {
@@ -51,7 +51,7 @@
         text-align: center;
         & > h3 {
             color: $secondary;
-            font-size: clamp(1.5rem, 2vw, 3rem);
+            font-size: clamp(2rem, 2vw, 3rem);
         }
     }
 }
@@ -76,4 +76,18 @@
 
 .fa-solid {
     margin-inline: 1rem;
+}
+
+@media (max-width: 700px) {
+    
+    .recommendationCard {
+        height: 70vh;
+        flex: 0 0 33.333%;
+        
+        & > .recommendationArticle {
+            & > p {
+                display: none;
+            }
+        }
+    }
 }

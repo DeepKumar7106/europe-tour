@@ -4,7 +4,8 @@ import { useState, useRef } from 'react'
 
 export default function Recommendation() {
     const [page, setPage] = useState(0)
-    const totalPage = 3
+    const isMobile = window.innerWidth <= 700
+    const totalPage = isMobile ? 12 : 3
 
     const expeditionList = expeditions.map(expedition => {
         const name = addHyphen(expedition.name)
@@ -29,7 +30,7 @@ export default function Recommendation() {
     function shiftLeft() {
         setPage(prevPage => {
             if(0 === prevPage)
-                return 2
+                return totalPage - 1
             return prevPage - 1
         })
     }

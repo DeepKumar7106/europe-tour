@@ -106,3 +106,13 @@
     border-radius: 70px;
     display: none;
 }
+
+@media (max-wdith: 700px) {
+    #regionInfo  {
+        display: none;
+    }
+
+    #regionWrapper {
+        display: flex;
+    }
+}

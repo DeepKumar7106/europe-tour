@@ -4,7 +4,6 @@ import { addHyphen } from '../../App'
 export default function Activities() {
     const activities = experience.map((activity, index) => {
         const name = addHyphen(activity.activityName)
-        console.log(index + 1)
         return (
             <div className={`experienceCard item${index + 1}`} key={activity.id}>
                 <img src={`public/experiences-webp/${name}.webp`} alt={name} className="experienceImage" />
