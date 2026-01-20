@@ -79,3 +79,10 @@ h2 {
     font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
+.fa-arrow-left,
+.fa-arrow-right {
+    margin: 0 1rem;
+    font-size: 3rem;
+    color: $accent;
+}
+

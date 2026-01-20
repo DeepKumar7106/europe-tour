@@ -24,7 +24,7 @@ export default function Underrated() {
 
     return (
         <section id="underratedSection">
-            <img src={`public/underrated-webp/${addHyphen(location.name)}.webp`} alt={addHyphen(location.name)} />
+            <img src={`public/underrated-webp/${addHyphen(location.name)}.webp`} alt={addHyphen(location.name)} loading="lazy" />
             <h2 id="underratedHeading">hidden gems</h2>
             <div className="underratedWrapper" id={location.id}>
                 <article id="underratedArticle">

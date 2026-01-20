@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Hero() {
     return (
       <section id="hero">
@@ -6,7 +8,9 @@ export default function Hero() {
             <h1>Explore Europe</h1>
             <p>Embark on an unforgettable odyssey across Europe, where ancient history seamlessly blends with modern vibrance. From sun-drenched Mediterranean shores to frost-dusted Alpine peaks, go beyond the famous landmarks to uncover enchanting hidden gems and create timeless stories in every corner.</p>
             <div id="ctaBox">
-                <button id="explore">Explore</button>
+                <Link to="/region">
+                  <button id="explore">Explore</button>
+                </Link>
                 <button id="learnMore">Learn More</button>
             </div>
           </div>

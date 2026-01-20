@@ -22,7 +22,7 @@ export default function Activities() {
         <section id="activitiesSection">
             <h2 id="activitiesHeading">experiences</h2>
             <div id="actiivtyContainer">
-                <div id="experienceWrapper">
+                <div id="experienceWrapperHome">
                     {activities}
                 </div>
             </div>

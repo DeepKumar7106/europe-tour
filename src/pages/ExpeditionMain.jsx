@@ -1,5 +1,6 @@
 import { expeditions } from '/src/scripts/data.js'
 import { addHyphen } from '../App'
+import './../styles/expedition.scss'
 
 export default function ExpeditionMain() {
    const expeditionList = expeditions.map(exp => {

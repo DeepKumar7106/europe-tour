@@ -1,5 +1,7 @@
 import {countries, regions} from '/src/scripts/data.js'
+import './../styles/region.scss'
 
+console.log("made it")
 export default function RegionMain() {
     const regionId = "eur05"
     let countryList = []

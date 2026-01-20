@@ -1,5 +1,6 @@
 import {experience} from '/src/scripts/data.js'
 import { addHyphen } from '../App'
+import '../styles/experience.scss'
 
 export default function ExperienceMain() {
    

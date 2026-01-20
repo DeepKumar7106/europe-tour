@@ -1,23 +1,18 @@
-import {countries, regions, underrated} from '/src/scripts/data.js'
-import { addHyphen } from '../App'
+import {countries, regions, attractions} from '/src/scripts/data.js'
+import './../styles/attraction.scss'
 
-export default function UnderratedMain() {
-    
-    
-    
-    console.log(addHyphen("a and b"))
-
-    const attractionList = underrated.map(place => {
-        const name = addHyphen(place.name)
+export default function AttractionMain() {
+   
+    const attractionList = attractions.map(place => {
         return (
             <div className="attractionCard" key={place.id}>
-                <img src={`/underrated-webp/${name}.webp`} alt={name} className="attractionBG" />
+                <img src={`/city-images-webp/${place.city}.webp`} alt="" className="attractionBG" />
                 <div className="detailWrapper">
                     <article className="attractionArticle">
-                        <h2 className="cityName">{place.name}</h2>
-                        <p className="countryName">{place.city}, {place.country}</p>
+                        <h2 className="cityName">{place.city}</h2>
+                        <p className="countryName">{place.country}</p>
                     </article>
-                    <i className="fa-solid fa-circle-arrow-right"></i>
+                <i className="fa-solid fa-circle-arrow-right"></i>
                 </div>
             </div>
         )

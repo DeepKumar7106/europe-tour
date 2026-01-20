@@ -136,7 +136,7 @@
     @include center(row);
     & > .fa-solid {
         margin: 0 1rem;
-        font-size: clamp(1.6rem, 2vw, 3rem);
+        font-size: 3rem;
         color: $accent;
     }
 }
@@ -172,6 +172,11 @@
         & img {
             width: 100%;
         }
+    }
+
+    .fa-circle-chevron-left,
+    .fa-circle-chevron-right {
+        font-size: 4rem;
     }
     
 }
