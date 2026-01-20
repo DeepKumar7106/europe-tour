@@ -29,11 +29,15 @@
 }
 
 #regionSection {
-    height: 100vh;
+    min-height: 100vh;
     @include center(row);
     padding: 1rem;
     // justify-content: space-evenly;
     background: linear-gradient($secondary, darken($secondary, 10%));
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 }
 
 #sectionHeading {
@@ -107,12 +111,31 @@
     display: none;
 }
 
-@media (max-wdith: 700px) {
+@media (max-width: 700px) {
     #regionInfo  {
-        display: none;
+        width: 100%;
+        height: 10vh;
+        & h2 {
+            font-size: clamp(5rem, 2.5vw, 3rem);
+        }
+        & article {
+            display: none;
+        }
     }
 
     #regionWrapper {
+        width: 100%;;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        // overflow-x: scroll;
+    }
+
+    .regionCard {
+        height: 30vh;
+        width: 90vw;
+        transform: translate(0%, 0%);
+        scale: 1 1;
     }
 }

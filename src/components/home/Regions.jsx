@@ -1,8 +1,16 @@
 import { regions } from "../../scripts/data"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const RegionList = ({region, onCardClick}) => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     function updateRegionDetail() {
         console.log(document.getElementById('regionName'))
     }
@@ -12,7 +20,9 @@ const RegionList = ({region, onCardClick}) => {
         <div className="regionCard" 
             key={region.id} 
             style={
-                { transform: `scale(${region.scale}) translate(${region.x},${region.y})` }
+                { transform: 
+                    `scale(${isMobile ? 1 : region.scale}) 
+                    translate(${isMobile ? 0 : region.x},${isMobile ? 0 : region.y})` }
             }
             onClick={(() => onCardClick(region))}
             id={region.id}

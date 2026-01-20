@@ -158,13 +158,17 @@
 @media (max-width: 700px) {
     #bgImageWrapperRight {
         left: -10%;
+        top: 10%;
+        transform: rotate(-5deg);
     }
     #bgImageWrapperLeft {
         right: -10%;
+        top: 10%;
+        transform: rotate(5deg);
     } 
 
     #popularImageWrapper {
-        width: 80%;
+        width: 75%;
         & img {
             width: 100%;
         }
