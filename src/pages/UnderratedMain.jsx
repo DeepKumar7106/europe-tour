@@ -4,20 +4,15 @@ import './../styles/underrated.scss'
 
 
 export default function UnderratedMain() {
-    
-    
-    
-    console.log(addHyphen("a and b"))
-
     const attractionList = underrated.map(place => {
         const name = addHyphen(place.name)
         return (
-            <div className="attractionCard" key={place.id}>
-                <img src={`/underrated-webp/${name}.webp`} alt={name} className="attractionBG" />
-                <div className="detailWrapper">
-                    <article className="attractionArticle">
-                        <h2 className="cityName">{place.name}</h2>
-                        <p className="countryName">{place.city}, {place.country}</p>
+            <div className="underrated-card" key={place.id}>
+                <img src={`/underrated-webp/${name}.webp`} alt={name} className="underrated-card-bg-img" />
+                <div className="underrated-card-details">
+                    <article className="underrated-card-details-article">
+                        <h2 className="underrated-card-details-article-name">{place.name}</h2>
+                        <p className="underrated-card-details-article-country">{place.city}, {place.country}</p>
                     </article>
                     <i className="fa-solid fa-circle-arrow-right"></i>
                 </div>
@@ -27,14 +22,14 @@ export default function UnderratedMain() {
     
     return (
         <main>
-            <section id="heroSection">
+            <section id="underrated-hero-section">
                 <img src="/region-webp/Alpine-Europe.webp" alt="" />
                 <article id="heroArticle">
                     <h1 id="heroTitle">Alpine Europe</h1>
                     <p id="heroPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat.</p>
                 </article>
             </section>
-            <section id="attractionList">
+            <section id="underrated-list-section">
                 {attractionList}
             </section>
         </main>

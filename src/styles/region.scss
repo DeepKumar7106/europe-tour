@@ -8,15 +8,18 @@ body {
     overflow-x: hidden ;
 }
 
+#region-hero-section {
+    @include heroSection();
+}
 
-.countryCard {
+.region-country-card {
     height: 100vh;
     width: 100%;
     @include center(column);    
 
     position: relative;
     background: $accent;
-    & img {
+    & .region-country-card-bg-img {
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -26,14 +29,14 @@ body {
 
 }
 
-.foregroundDetails {
+.region-country-card-detail {
     position: absolute;
     inset: 0;
     @include center(row);
     background: linear-gradient(to right, $black 0%, $black 40%,  transparent 40%, transparent 100%);
     
     
-    & img {
+    & .region-country-card-detail-img {
         width: 40%;
         filter: blur(0);
         object-fit: cover;
@@ -48,11 +51,11 @@ body {
         opacity: 0.7;
     }
 
-    .countryDetails {
+    .region-country-card-detail-article {
         width: 60%;
         @include center(column);
         padding: 2rem;
-        & h2 {
+        & > h2 {
             padding-inline: 1rem;
             text-transform: uppercase;
             font-weight: 200;
@@ -64,14 +67,14 @@ body {
             border-bottom: 1px solid $secondary;
             font-size:  4rem;
         }
-        & p{
+        & > p{
             padding-left: 0;
             padding-block: 1rem;
             font-size: clamp(1.2rem, 1.3vw, 2rem);
             color: $black;
             text-align: left;
         }
-        & button {
+        & > button {
             height: 50px;
             width: 150px;
             border: none;
@@ -87,13 +90,13 @@ body {
 }
 
 .countryCard:nth-child(even) {
-    .foregroundDetails {
+    .region-country-card-detail {
         flex-direction: row-reverse;
         background: linear-gradient(to left, $black 0%, $black 40%,  transparent 40%, transparent 100%);
 
-        & .countryDetails {
-            & p,
-            & h2 {
+        & .region-country-card-detail-article {
+            & > p,
+            & > h2 {
             text-align: right;
             }
             
@@ -102,18 +105,18 @@ body {
 }
 
   @media (max-width: 700px) {
-    .countryCard {
+    .region-country-card {
         height: 50vh;
-        & .foregroundDetails {
-            .countryDetails {
+        & .region-country-card-detail {
+            .region-country-card-detail-article {
                 padding: 0;
-                h2 {
+                & > h2 {
                     font-size:  clamp(1.5rem, 2.5vw, 2rem);
                 }
-                & p {
+                & > p {
                     display: none;
                 }
-                & button {
+                & > button {
                     height: 25px;
                     width: 100px;
                 }

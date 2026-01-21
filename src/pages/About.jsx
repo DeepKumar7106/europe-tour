@@ -1,11 +1,14 @@
 import './../styles/about.scss'
+import { Link } from 'react-router-dom'
 
 export default function About() {
     return (
-        <main>
-            <section id="textSection">
-                <h2><i className="fa-solid fa-circle-arrow-left"></i>home</h2>
-                <h1>about us</h1>
+        <main id='about-main'>
+            <section id="about-text-section">
+                <Link to='/home' id='about-text-section-link'>
+                    <h2 id='about-text-section-home'><i className="fa-solid fa-circle-arrow-left"></i>home</h2>
+                </Link>
+                <h1 id='about-text-section-heading'>about us</h1>
                 <p>The goal of this project is to explore the Europe subcontinent and discover the hidden gems along side the already well known hot destinations in Europe for the tourists across the globe 
                 </p>
                 <p>
@@ -22,7 +25,7 @@ export default function About() {
                 7106
                 </p>    
             </section>
-            <section id="navSection">
+            <section id="about-nav-section">
                 <ul>
                     <li>about us</li>
                     <li>contact</li>
