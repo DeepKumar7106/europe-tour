@@ -6,8 +6,9 @@ $animation-duration: 60s;
     --item-width : 21vw;
 }
 
-#activitiesSection {
+#home-activity-section {
     @include center(column);
+    width: 100%;
     background:
         linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
         url("/public/region-webp/Nordic-Europe.webp");
@@ -17,13 +18,13 @@ $animation-duration: 60s;
     height: 100vh;
 }
 
-#activitiesHeading {
+#home-activity-section-heading {
     @include headingText();
     color: $secondary;
     width: 90%;
 }
 
-#actiivtyContainer {
+#home-activity-container {
     height: 60%;
     width: 100%;
     display: flex;
@@ -31,7 +32,7 @@ $animation-duration: 60s;
     justify-content: center;
 }
 
-#experienceWrapperHome {
+#home-activity-card-container {
     height: 100%;
     width: 90%;
     @include center(row);
@@ -42,7 +43,7 @@ $animation-duration: 60s;
     mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
 }
 
-.experienceCard {
+.home-experience-card {
     @include center(column);
     position: absolute;
     height: 90%;
@@ -54,7 +55,7 @@ $animation-duration: 60s;
     left: max(calc(var(--item-width) * $total-items), 100%);
     animation: retailScroll $animation-duration linear infinite;
     
-    & > .experienceImage {
+    & > .home-experience-img {
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -62,7 +63,7 @@ $animation-duration: 60s;
         border-radius: 25px;
     }
     
-    & > .activityDetailBox {
+    & > .home-activity-details-box {
         position: absolute;
         color: $accent;
         bottom: 0;
@@ -71,18 +72,18 @@ $animation-duration: 60s;
         border-radius: 0 0 25px 25px ;
         box-shadow: 0px 5px 5px 0px $black;
         background: linear-gradient(to bottom, transparent 0%, $black 80%, $black 100%);
-        & > .activityDetail {
+        & > .home-activity-detail {
             width: 100%;
             padding: 1rem;
-            & .activity {
+            & .home-activity {
                 font-size: clamp(2rem, 2.5vw, 4rem);
             }
-            & .activityPara {
+            & .home-activity-para {
                 text-align: left;
             }    
         }
 
-        & > .experienceButton {
+        & > .home-experience-btn {
             height: 50px;
             width: 150px;
             border: none;
@@ -106,7 +107,7 @@ $animation-duration: 60s;
 }
 
 @for $i from 1 through $total-items {
-    .item#{$i} {
+    .home-item#{$i} {
         animation-delay: calc(#{$animation-duration} / #{$total-items} * (#{$total-items} - #{$i}) * -1);
     }
 }
@@ -116,11 +117,11 @@ $animation-duration: 60s;
     :root {
         --item-width: 80%;
     }
-    #actiivtyContainer {
+    #home-activity-container {
         width: 95%;
     }
 
-    h2 {
+    #home-activity-section-heading{
         width: 90%;
     }
 }

@@ -27,41 +27,41 @@ export default function Popular() {
     }
 
     return (
-        <section id="popular">
-            <h2 id="popularHeading">attractions</h2>
-            <div id="popularImageWrapper">
+        <section id="home-popular-section">
+            <h2 id="home-popular-heading">attractions</h2>
+            <div id="home-popular-container">
                 {/* next img */}
-                <div id="bgImageWrapperLeft"
+                <div id="home-popular-bg-img-container-left"
                     onClick={updateCityImageNext}
                 >
-                    <img className="popularBgImage leftImage" src={`/city-images-webp/${nextCity.city}.webp`} alt={nextCity.city} />
+                    <img className="home-popular-bg-img left-img" src={`/city-images-webp/${nextCity.city}.webp`} alt={nextCity.city} />
                 </div>
                 {/* previous img */}
-                <div id="bgImageWrapperRight"
+                <div id="home-popular-bg-img-container-right"
                     onClick={updateCityImagePrev}
                 >
-                    <img className="popularBgImage rightImage" src={`/city-images-webp/${prevCity.city}.webp`} alt={prevCity.city} />
+                    <img className="home-popular-bg-img rightImage" src={`/city-images-webp/${prevCity.city}.webp`} alt={prevCity.city} />
                 </div>
-                <img id="popularImage" src={`/city-images-webp/${foreGroundCity.city}.webp`} alt={foreGroundCity.city} />  
-                <article id="imageDeatailTexts">
-                    <p id="city">{foreGroundCity.name}</p>
-                    <p id="countryName"><i className="fa-solid fa-location-dot"></i> {foreGroundCity.city}, {foreGroundCity.country}</p>
+                <img id="home-popular-img" src={`/city-images-webp/${foreGroundCity.city}.webp`} alt={foreGroundCity.city} />  
+                <article id="home-popular-img-detail-text">
+                    <p id="home-popular-city">{foreGroundCity.name}</p>
+                    <p id="home-popular-country-name"><i className="fa-solid fa-location-dot"></i> {foreGroundCity.city}, {foreGroundCity.country}</p>
                 </article>
             </div>
-            <div id="navButtonWrapper">
+            <div id="home-popular-nav-container">
                 <i className="fa-solid fa-circle-chevron-left"
                     onClick={updateCityImagePrev}
                 ></i>
-                <button className="navButton"></button>
-                <button className="navButton"></button>
-                <button className="navButton"></button>
-                <button className="navButton"></button>
-                <button className="navButton"></button>
-                <button className="navButton"></button>
-                <button className="navButton"></button>
-                <button className="navButton"></button>
-                <button className="navButton"></button>
-                <button className="navButton"></button>
+                <button className="home-popular-nav-btn"></button>
+                <button className="home-popular-nav-btn"></button>
+                <button className="home-popular-nav-btn"></button>
+                <button className="home-popular-nav-btn"></button>
+                <button className="home-popular-nav-btn"></button>
+                <button className="home-popular-nav-btn"></button>
+                <button className="home-popular-nav-btn"></button>
+                <button className="home-popular-nav-btn"></button>
+                <button className="home-popular-nav-btn"></button>
+                <button className="home-popular-nav-btn"></button>
                 <i className="fa-solid fa-circle-chevron-right"
                     onClick={updateCityImageNext} 
                 ></i>

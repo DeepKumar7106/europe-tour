@@ -1,17 +1,19 @@
 @import '../config';
 
-#recommendationSection {
+#home-recommend-section {
+    width: 100%;
     height: 100vh;
     @include center(column);
     padding: 1rem;
+    background: radial-gradient($accent, darken($accent, 10%));
 }
 
-#recommendationHeading {
+#home-recommend-section-heading {
     @include headingText();
     color: $secondary;
 }
 
-#recommendationCardWrapper {
+#home-recommend-section-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +21,7 @@
     
 }
 
-#recommendationCardContainer {
+#home-recommend-card-container {
     width: 100%;
     gap: 1rem;
     overflow: hidden;
@@ -27,40 +29,43 @@
     // flex-direction: row;
 }
 
-.track {
+.home-recommend-card-track {
     display: flex;
     width: 300%;
     transition: transform 0.8s ease-in-out;
 }
 
-.recommendationCard {
+.home-recommend-card {
     @include center(column);
     height: 30vw;
     position: relative;
     flex: 0 0 8.333%;
-    & > .recommendationImg {
+    & > .home-recommend-card-img {
+        box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.5);
         height: 80%;
         width: 90%;
         object-fit: cover;
         border-radius: 50px 100px 30px 80px;
     }
-    & > .recommendationArticle {
+    & > .home-recommend-card-article {
         flex: 1;
         width: 100%;
         padding: 1rem;
         text-align: center;
-        & > h3 {
+        & > .home-recommend-card-article-expedition {
             color: $secondary;
             font-size: clamp(2rem, 2vw, 3rem);
         }
     }
 }
 
-#recommendationButtonWrapper {
+// .home-recommend-card-article-expedition-description
+
+#home-recommend-btn-container {
     @include center(column);
     width: 100%;
     font-size: clamp(1.5rem, 2vw, 3rem) ;   
-    & #recommendationDiscoverBtn {
+    & > #home-recommend-btn-container-discover-btn {
         height: 50px;
         width: max-content;
         padding-inline: 2rem;
@@ -73,18 +78,19 @@
         background: $primary;
     } 
 }
-
-.fa-solid {
-    margin-inline: 1rem;
+#home-recommend-btn-container-nav {
+    & > .fa-solid {
+        color: $black;
+        margin-inline: 1rem;
+    }
 }
-
 @media (max-width: 700px) {
     
-    .recommendationCard {
+    .home-recommend-card {
         height: 70vh;
         flex: 0 0 33.333%;
         
-        & > .recommendationArticle {
+        & > .recommendationhome-recommend-card-article {
             & > p {
                 display: none;
             }

@@ -1,11 +1,12 @@
 @import '../config';
 
-#underratedSection {
+#home-underrated-section {
+    width: 100%;
     height: 100vh;
     color: $accent;
     background: $black;
     position: relative;
-    & img {
+    & > img {
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -14,14 +15,14 @@
 
 }
 
-#underratedHeading {
+#home-underrated-section-heading {
     @include headingText();
     position: absolute;
     top: 1rem;
     width: 90%;
 }
 
-.underratedWrapper {
+.home-underrated-section-container {
     width: 100%;
     padding-block: 2rem;
     @include center(column);
@@ -32,17 +33,17 @@
     background: rgba(0,0,0,0.7);
     box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.452);
 
-    & article {
+    & > #home-underrated-section-container-article {
         font-size: clamp(1.2rem, 2.5vw, 3rem);
     }
 }
 
-#underratedButtonWrapper {
+#home-underrated-section-container-btn-ctn {
     @include center(column);
     width: 100%;
     font-size: clamp(1.5rem, 2vw, 3rem) ;  
     gap: 1rem; 
-    & #underratedLearnBtn {
+    & #home-underrated-section-container-btn-ctn-learn-more {
         height: 50px;
         width: max-content;
         padding-inline: 2rem;
@@ -53,9 +54,10 @@
         color: $black;
         font-weight: 500;
         background: $primary;
+        & > .fa-solid {
+            background: none;
+            
+            margin-inline: 2rem;
+        }
     } 
-}
-
-.fa-solid {
-    margin-inline: 2rem;
 }

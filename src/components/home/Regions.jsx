@@ -17,7 +17,7 @@ const RegionList = ({region, onCardClick}) => {
     const name = region.name.replace(/\s+/g, '-');
     const imgSrc = `public/region-webp/${region.name}.webp`
     return (
-        <div className="regionCard" 
+        <div className="home-region-card" 
             key={region.id} 
             style={
                 { transform: 
@@ -27,10 +27,10 @@ const RegionList = ({region, onCardClick}) => {
             onClick={(() => onCardClick(region))}
             id={region.id}
         >
-            <img className="regionImg" src={imgSrc} alt="" />
-            <article className="regionArticle">
-                <h3 className="regionName">{name}</h3>
-                <p className="regionPara">Lorem ipsum dolor sit amet consectetur.</p>
+            <img className="home-region-card-img" src={imgSrc} alt="" />
+            <article className="home-region-card-article">
+                <h3 className="home-region-card-article-name">{name}</h3>
+                <p className="home-region-card-article-para">Lorem ipsum dolor sit amet consectetur.</p>
             </article>
         </div>
     )
@@ -43,24 +43,24 @@ export default function Region() {
 
     const [currentRegion, setCurrentRegion] = useState({})
     function updateRegion(reg) {
-        document.getElementById('regionExplore').style.display = 'block'
+        document.getElementById('home-region-section-info-article').style.display = 'block'
         setCurrentRegion(reg)
     }
     return (
-        <section id="regionSection">
-            <div id="regionInfo">
-                <h2 id="sectionHeading">regions</h2>
-                <article id="regionDetail">
-                    <h2 id="regionName">{currentRegion.name}</h2>
-                    <p id="regionDetail">
+        <section id="home-region-section">
+            <div id="home-region-section-info">
+                <h2 id="home-region-section-info-heading">regions</h2>
+                <article id="home-region-section-info-article">
+                    <h2 id="home-region-section-info-article-name">{currentRegion.name}</h2>
+                    <p id="home-region-section-info-article-para">
                         {currentRegion.desc}
                     </p>
-                    <button id="regionExplore">
+                    <button id="home-region-section-info-article-explore">
                         Explore <i className="fa-solid fa-arrow-right"></i>
                     </button>
                 </article>
             </div> 
-            <div id="regionWrapper">
+            <div id="home-region-section-container">
                 {
                     regions.map(region => (
                         <RegionList 

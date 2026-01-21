@@ -4,31 +4,32 @@
 //     outline: 2px solid;
 // }
 
-#regionInfo {
+#home-region-section-info {
     height: 100vh;
     width: 50%;
     @include center(column);
 
-    & article {
+    & > #home-region-section-info-article {
         color: $accent;
         // height: 30%;
         width: 80%;
         margin: auto;
         @include center(column);
-        & h2 {
+        & > #home-region-section-info-article-name {
             width: 100%;
             text-align: center;
             font-size: clamp(2rem, 4.5vw, 5rem);
         }
 
-        & p {
+        & > #home-region-section-info-article-para {
             margin-block: 1rem;
             font-size: clamp(1.2rem, 2.5vw, 2rem);
         }
     }
 }
 
-#regionSection {
+#home-region-section {
+    width: 100%;
     min-height: 100vh;
     @include center(row);
     padding: 1rem;
@@ -40,13 +41,13 @@
     }
 }
 
-#sectionHeading {
+#home-region-section-info-heading {
     @include headingText();
     width: 100%;
     color: $accent;
 }
 
-#regionWrapper {
+#home-region-section-container {
     height: fit-content;
     width: max-content;
     display: grid;
@@ -55,7 +56,7 @@
     margin-inline:auto ;
 }
 
-.regionCard {
+.home-region-card {
     height: 10vh;
     width: 10vh;
 
@@ -66,7 +67,7 @@
     transition: all 0.3s ease;
     box-shadow: 2px 2px 10px 2px $black;
 
-    & .regionImg {
+    & .home-region-card-img {
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -74,12 +75,12 @@
         border-radius: inherit;
     }
 
-    & article {
+    & .home-region-card-article {
         display: none;
         position: absolute;
         bottom: 1rem;
         padding-left: 1rem;
-        & p {
+        & > .home-region-card-article-para {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease, transform 0.5s ease;
@@ -88,17 +89,17 @@
     }
 }
 
-.regionCard:hover .regionPara {
+.home-region-card:hover .home-region-card-article-para {
     opacity: 1;
     transform: translateY(0);
 }
 
-.regionCard:hover{
+.home-region-card:hover{
     scale: 1.1;
 }
 
 
-#regionExplore {
+#home-region-section-info-article-explore {
     text-align: center;
     text-wrap: none;
     background: $accent;
@@ -112,18 +113,18 @@
 }
 
 @media (max-width: 700px) {
-    #regionInfo  {
+    #home-region-section-info  {
         width: 100%;
         height: 10vh;
-        & h2 {
+        & > h2 {
             font-size: clamp(5rem, 2.5vw, 3rem);
         }
-        & article {
+        & > article {
             display: none;
         }
     }
 
-    #regionWrapper {
+    #home-region-section-container {
         width: 100%;;
         display: flex;
         flex-direction: column;
@@ -132,7 +133,7 @@
         // overflow-x: scroll;
     }
 
-    .regionCard {
+    .home-region-card {
         height: 30vh;
         width: 90vw;
         transform: translate(0%, 0%);

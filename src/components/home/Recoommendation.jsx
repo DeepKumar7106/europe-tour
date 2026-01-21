@@ -10,11 +10,11 @@ export default function Recommendation() {
     const expeditionList = expeditions.map(expedition => {
         const name = addHyphen(expedition.name)
         return (
-            <div className="recommendationCard" key={expedition.id}>
-                <img src={`public/expedition-webp/${name}.webp`} alt={name} className="recommendationImg" />
-                <article className="recommendationArticle">
-                    <h3 className="planName">{expedition.name}</h3>
-                    <p className="planDescription">{expedition.usp}</p>
+            <div className="home-recommend-card" key={expedition.id}>
+                <img src={`public/expedition-webp/${name}.webp`} alt={name} className="home-recommend-card-img" />
+                <article className="home-recommend-card-article">
+                    <h3 className="home-recommend-card-article-expedition">{expedition.name}</h3>
+                    {/* <p className="home-recommend-card-article-expedition-description">{expedition.usp}</p> */}
                 </article>
             </div>
         )
@@ -38,11 +38,11 @@ export default function Recommendation() {
     const trackMovement = page * 33.333
 
     return (
-        <section id="recommendationSection">
-            <h2 id="recommendationHeading">expedition</h2>
-            <div id="recommendationCardWrapper">
-                <div id="recommendationCardContainer">
-                    <div className="track"
+        <section id="home-recommend-section">
+            <h2 id="home-recommend-section-heading">expedition</h2>
+            <div id="home-recommend-section-container">
+                <div id="home-recommend-card-container">
+                    <div className="home-recommend-card-track"
                         style={{
                             transform:`translate(-${trackMovement}%)`
                         }}
@@ -50,8 +50,8 @@ export default function Recommendation() {
                         {expeditionList}
                     </div>
                 </div>
-                <div id="recommendationButtonWrapper">
-                    <div id="navButtons">
+                <div id="home-recommend-btn-container">
+                    <div id="home-recommend-btn-container-nav">
                         <i className="fa-solid fa-arrow-left"
                             onClick={shiftLeft}
                         ></i>
@@ -59,7 +59,7 @@ export default function Recommendation() {
                             onClick={shiftRight}
                         ></i>
                     </div>
-                    <button id="recommendationDiscoverBtn">Discover More</button>
+                    <button id="home-recommend-btn-container-discover-btn">Discover More</button>
                 </div>
             </div>
         </section>

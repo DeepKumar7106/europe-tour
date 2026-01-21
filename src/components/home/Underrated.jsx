@@ -23,16 +23,16 @@ export default function Underrated() {
     }
 
     return (
-        <section id="underratedSection">
+        <section id="home-underrated-section">
             <img src={`public/underrated-webp/${addHyphen(location.name)}.webp`} alt={addHyphen(location.name)} loading="lazy" />
-            <h2 id="underratedHeading">hidden gems</h2>
-            <div className="underratedWrapper" id={location.id}>
-                <article id="underratedArticle">
+            <h2 id="home-underrated-section-heading">hidden gems</h2>
+            <div className="home-underrated-section-container" id={location.id}>
+                <article id="home-underrated-section-container-article">
                     <i className="fa-solid fa-location-dot"> {location.name}</i>
                     <p id="countryCity">{location.city}, {location.country}</p>
                 </article>
-                <div id="underratedButtonWrapper">
-                    <div id="navButtons">
+                <div id="home-underrated-section-container-btn-ctn">
+                    <div id="home-underrated-section-container-btn-ctn-nav">
                         <i className="fa-solid fa-arrow-left" 
                             onClick={updateImgPrev}
                         ></i>
@@ -40,7 +40,7 @@ export default function Underrated() {
                             onClick={updateImgNext}
                         ></i>
                     </div>
-                    <button id="underratedLearnBtn">Learn More</button>
+                    <button id="home-underrated-section-container-btn-ctn-learn-more">Learn More</button>
                 </div>
             </div>
         </section>
