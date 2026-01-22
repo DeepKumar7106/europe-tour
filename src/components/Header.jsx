@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom"
+import { useState, useRef } from "react"
 
 export default function Header() {
+    const [open, setOpen] = useState(false)
+    const menu = useRef(null)
+
+    function openMenu() {
+        setOpen(prevOpen => !prevOpen)
+        menu.current.style.cssText = open ? "height: 100vh; align-items: start; padding-top: 1rem;" : "height: 70px; align-items: center;"
+    }
     return (
-        <header>
-            <img src="src\assets\react.svg" alt="" />
-            <nav>
-                <ul id="navList">
+        <header ref={menu}>
+            <img src="src\assets\react.svg" alt="" id="header-logo-img"/>
+            <nav id="header-nav">
+                <ul id="header-nav-list">
                     <Link to= "/region">
                         <li className="listItem">Home</li>
                     </Link>
@@ -23,6 +31,11 @@ export default function Header() {
                     </Link>
                 </ul>
             </nav>
+            <div id="header-mobile-menu" 
+                onClick={openMenu}
+            >
+                <i className="fa-solid fa-bars"></i>
+            </div>
         </header>
     )
 }
