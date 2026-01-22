@@ -89,7 +89,7 @@ body {
     }
 }
 
-.countryCard:nth-child(even) {
+.region-country-card:nth-child(even) {
     .region-country-card-detail {
         flex-direction: row-reverse;
         background: linear-gradient(to left, $black 0%, $black 40%,  transparent 40%, transparent 100%);
