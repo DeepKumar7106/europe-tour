@@ -1,20 +1,26 @@
 import { Link } from "react-router-dom"
 import { useState, useRef } from "react"
 
+
 export default function Header() {
     const [open, setOpen] = useState(false)
     const menu = useRef(null)
+    const menuList = useRef(null)
+
 
     function openMenu() {
+        menuList.current.style.display = open ? "block" : "none"
         setOpen(prevOpen => !prevOpen)
-        menu.current.style.cssText = open ? "height: 100vh; align-items: start; padding-top: 1rem;" : "height: 70px; align-items: center;"
+        menu.current.style.cssText = open ? "height: 100vh; align-items: start; padding-top: 1rem; overflow: hidden" : "height: 70px; align-items: center; overflow: auto"
     }
+
+
     return (
         <header ref={menu}>
             <img src="src\assets\react.svg" alt="" id="header-logo-img"/>
             <nav id="header-nav">
                 <ul id="header-nav-list">
-                    <Link to= "/region">
+                    <Link to= "/home">
                         <li className="listItem">Home</li>
                     </Link>
                     <Link to= "/AttractionMain">
@@ -31,10 +37,15 @@ export default function Header() {
                     </Link>
                 </ul>
             </nav>
-            <div id="header-mobile-menu" 
-                onClick={openMenu}
-            >
-                <i className="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-bars"  onClick={openMenu} id="header-mobile-menu" ></i>
+            <div id="header-mobile-menu-list" ref={menuList} className="header-menu-list-container">
+                <ul id="header-mobile-list">
+                    <Link to= "/home">Home</Link>
+                    <Link to= "/AttractionMain">Attraction</Link>
+                    <Link to= "/ExperienceMain"></Link>
+                    <Link to= "/ExpeditionMain">Expedition</Link>
+                    <Link to= "/UnderratedMain">Hidden Gems</Link>
+                </ul>
             </div>
         </header>
     )

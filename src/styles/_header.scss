@@ -7,11 +7,12 @@ header {
     justify-content: space-between;
     background-color: $secondary;
     padding: 1rem;
-
+    transition: all 0.5s ease-in-out;
     
 }
 
 #header-nav {
+    transition: all 0.5s ease-in-out;
     width: 50%;
     & #header-nav-list {
         width: 100%;
@@ -32,7 +33,47 @@ header {
     font-size: 2rem;
 }
 
+#header-mobile-menu-list{
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 100px;
+    z-index: 100;
+    & > #header-mobile-list {
+        @include center(column);
+        height:100%;
+        gap: 1rem; 
+        & > * {
+            color: $accent;
+            text-decoration: none;
+            font-size: 10vw;
+            line-height: 1.5;
+            width: 100%;
+            text-align: center;
+            padding-right: 1rem;
+        }
+
+        & > *:hover {
+            transform: scale(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.6);
+            border-top: 1px solid rgba(0,0,0,0.6);
+            background: darken($secondary, 15%);
+            box-shadow: 0px 2px 5px  rgba(145, 105, 255, 0.253);
+        }
+    }
+}
+
+#header-mobile-menu-list {
+    display: none;
+}
+
 @media (max-width: 700px) {
+    header {
+        background: radial-gradient($secondary, darken($secondary, 15%));
+        position: relative;
+    }
+
     #header-nav {
         display: none;
     }
@@ -40,4 +81,6 @@ header {
     #header-mobile-menu {
         display: inline;
     }
+
+    
 }
