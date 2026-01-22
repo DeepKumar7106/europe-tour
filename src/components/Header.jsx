@@ -7,11 +7,16 @@ export default function Header() {
     const menu = useRef(null)
     const menuList = useRef(null)
 
-
     function openMenu() {
-        menuList.current.style.display = open ? "block" : "none"
         setOpen(prevOpen => !prevOpen)
-        menu.current.style.cssText = open ? "height: 100vh; align-items: start; padding-top: 1rem; overflow: hidden" : "height: 70px; align-items: center; overflow: auto"
+        menuList.current.style.display = !open ? "block" : "none"
+        menu.current.style.cssText = !open ? `height: 100vh; 
+                                            align-items: start; 
+                                            padding-top: 1rem; 
+                                            overflow: hidden; 
+                                            background: radial-gradient($secondary, darken($secondary, 15%));` : `height: 70px; align-items: center; 
+                                            overflow: auto;
+                                            background-color: $secondary;`
     }
 
 

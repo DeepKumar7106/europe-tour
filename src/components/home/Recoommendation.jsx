@@ -11,7 +11,7 @@ export default function Recommendation() {
         const name = addHyphen(expedition.name)
         return (
             <div className="home-recommend-card" key={expedition.id}>
-                <img src={`public/expedition-webp/${name}.webp`} alt={name} className="home-recommend-card-img" />
+                <img src={`/expedition-webp/${name}.webp`} alt={name} className="home-recommend-card-img" />
                 <article className="home-recommend-card-article">
                     <h3 className="home-recommend-card-article-expedition">{expedition.name}</h3>
                     {/* <p className="home-recommend-card-article-expedition-description">{expedition.usp}</p> */}

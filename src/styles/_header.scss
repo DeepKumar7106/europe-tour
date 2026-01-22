@@ -70,7 +70,7 @@ header {
 
 @media (max-width: 700px) {
     header {
-        background: radial-gradient($secondary, darken($secondary, 15%));
+        // background: radial-gradient($secondary, darken($secondary, 15%));
         position: relative;
     }
 

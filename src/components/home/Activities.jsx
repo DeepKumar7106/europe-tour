@@ -6,7 +6,7 @@ export default function Activities() {
         const name = addHyphen(activity.activityName)
         return (
             <div className={`home-experience-card home-item${index + 1}`} key={activity.id}>
-                <img src={`public/experiences-webp/${name}.webp`} alt={name} className="home-experience-img" />
+                <img src={`/experiences-webp/${name}.webp`} alt={name} className="home-experience-img" />
                 <div className="home-activity-details-box">
                     <div className="home-activity-detail">
                         <h3 className="home-activity">{activity.activityName}</h3>

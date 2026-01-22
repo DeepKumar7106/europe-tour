@@ -15,7 +15,7 @@ const RegionList = ({region, onCardClick}) => {
         console.log(document.getElementById('regionName'))
     }
     const name = region.name.replace(/\s+/g, '-');
-    const imgSrc = `public/region-webp/${region.name}.webp`
+    const imgSrc = `/region-webp/${region.name}.webp`
     return (
         <div className="home-region-card" 
             key={region.id} 
