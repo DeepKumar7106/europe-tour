@@ -29,7 +29,7 @@ function App() {
           <Route path="/region/:regionId" element = {<RegionMain />} />
           <Route path="/about" element = {<About />} />
           <Route path="/attraction" element = {<AttractionMain />} />
-          <Route path="/country" element = {<CountryMain />} />
+          <Route path="/country/:countryId" element = {<CountryMain />} />
           <Route path="/expedition" element = {<ExpeditionMain />} />
           <Route path="/experience" element = {<ExperienceMain />} />
           <Route path="/underrated" element = {<UnderratedMain />} />

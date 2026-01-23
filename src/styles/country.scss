@@ -31,16 +31,34 @@ body {
     width: 70%;
     height: 100vh;
     @include center(column);
+    gap: 20px;
 }
 
 .country-city-card {
+    background: darken($primary, 15%);
+    box-shadow: 2px 2px 10px 2px darken($primary, 30%);
+    border-radius: 50px;
+    width: 80%;
+    height: 20px;
+    scale: 0.9 1;
+
+    & > img,
+    & > article {
+        display: none;
+        & > * {
+            display: inherit;
+        }
+    }
+}
+
+.country-city-card-indexed {
     position: relative;
     width: 80%;
     height: 50vh;
     border-radius: 50px;
-    box-shadow: 5px 5px 10px 5px darken($primary, 20%);
-
-    & > img {
+    box-shadow: 2px 2px 10px 2px darken($primary, 20%);
+    scale: 1;
+    & > .country-city-card-img {
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -48,7 +66,7 @@ body {
         border-radius: 50px;
     }
 
-    & > article {
+    & > .country-city-card-detail {
         @include center(column);
         border-radius: 50px 0 0 50px;
         position: absolute;
@@ -62,7 +80,7 @@ body {
         // transform: translateX(-100%);
         transition: all 0.5s ease-out;
 
-        & > h2 {
+        & > .country-city-card-detail-name {
             width: 100%;
             border-bottom: 2px solid $accent;
             
@@ -71,7 +89,7 @@ body {
             padding: 2px;
         }
 
-        & > p {
+        & > .country-city-card-detail-para {
             font-size: clamp(1rem, 1.2vw, 1.2rem);
             color: $accent;
             width: 80%;
@@ -80,9 +98,19 @@ body {
     }
 }
 
-.country-city-card:hover  .country-city-card-detail{
+.country-city-card-indexed:hover  .country-city-card-detail{
     transform: translateX(0);
     opacity: 1;
+}
+
+#country-city-update-btns {
+    width: 100px;
+    height: 50vh;
+    margin-right: 1rem;
+    @include center(column);
+    color: $secondary;
+    font-size: 4rem;
+    justify-content: space-evenly;
 }
 
 @media (max-width: 700px) {
@@ -91,7 +119,6 @@ body {
     }
 
     .country-city-card {
-        height: 40vh;
         width: 95%;
         border-radius: 2rem;
         & > img {

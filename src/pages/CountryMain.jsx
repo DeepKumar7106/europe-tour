@@ -1,6 +1,62 @@
 import './../styles/country.scss'
+import { cities } from '../scripts/data'
+import { useEffect, useRef, useState } from 'react'
+import { useParams } from 'react-router-dom'
+
+
 
 export default function CountryMain() {
+    const [cardIndex, setCardIndex] = useState(0)
+    const {countryId} = useParams()
+    const cardRefs = useRef([])
+    const cityList = []
+    const indexedClass = "country-city-card-indexed"
+    const defaultCardClass ="country-city-card"
+
+    cities.forEach(city => {
+        if(city.countryId === countryId)
+            cityList.push(city)
+    })
+
+    useEffect(() => {
+        const currentCard = cardRefs.current[cardIndex]
+        currentCard.classList.add(indexedClass)
+        currentCard.classList.remove(defaultCardClass)
+
+        return () => {
+            if (currentCard) {
+                currentCard.classList.remove(indexedClass);
+                currentCard.classList.add(defaultCardClass);
+            }
+        }
+    }, [cardIndex])
+    
+    const cityCards = cityList.map((city, index) => (
+        <div className="country-city-card" key={city.id} id={city.id} ref={(el) => (cardRefs.current[index] = el)}>
+            <img src={`/city-images-webp/${city.cityName}.webp`} alt={city.cityName} className='country-city-card-img' />
+            <article className="country-city-card-detail">
+                <h2 className='country-city-card-detail-name'>{city.cityName.split('-').join(' ')}</h2>
+                <p className='country-city-card-detail-para'>{city.description}</p>
+            </article>
+        </div>
+    )) 
+
+    function updateCityDown() {
+        setCardIndex(prevIndex => {
+            if(cityList.length-1 === prevIndex)
+                return 0
+            return prevIndex + 1
+        })
+    }
+
+    function updateCityUp() {
+        setCardIndex(prevIndex => {
+            if(0 === prevIndex)
+                return cityList.length - 1
+            return prevIndex - 1
+        })
+    }
+
     return (
         <main>
             <section id="country-hero-section">
@@ -13,13 +69,15 @@ export default function CountryMain() {
             <section id="country-city-list-section">
                 <div id="country-city-list-section-bar"></div>
                 <div id="country-city-list-section-container">
-                    <div className="country-city-card">
-                        <img src="/country-backdrop-webp/Slovakia.webp" alt="" className="backgroundimage" />
-                        <article className="country-city-card-detail">
-                            <h2 className="country-city-card-detail-name">Slovakia</h2>
-                            <p className="country-city-card-detail-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore sed eveniet cum possimus incidunt rem quaerat in veritatis ratione quae officia reprehenderit nisi, nesciunt doloribus veniam iure vitae ducimus quia.</p>
-                        </article>
-                    </div>
+                    {cityCards}
+                </div>
+                <div id="country-city-update-btns">
+                    <i className="fa-solid fa-circle-chevron-up"
+                        onClick={updateCityUp}
+                    ></i>
+                    <i className="fa-solid fa-circle-chevron-down"
+                        onClick={updateCityDown}
+                    ></i>
                 </div>
             </section>
         </main>

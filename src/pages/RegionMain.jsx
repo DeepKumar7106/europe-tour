@@ -1,27 +1,37 @@
 import {countries, regions} from '/src/scripts/data.js'
 import './../styles/region.scss'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { useRef } from 'react'
 
-console.log("made it")
 export default function RegionMain() {
     const {regionId} = useParams()
+    const navigate = useNavigate()
+    const regionCard = useRef(null)
+
     let countryList = []
     countries.forEach(country => {
         if(country.region === regionId)
             countryList.push(country)
     })
 
+    function navigateCountry() {
+        const id = regionCard.current.id
+        navigate(`/country/${id}`)
+    }
+
 
     const countryCard = countryList.map(country => {
         return (
-            <div className="region-country-card" key={country.id}>
+            <div className="region-country-card" key={country.id} id={country.id} ref={regionCard}>
                 <img className="region-country-card-bg-img" src={`/country-map-webp/${country.name}.webp`} alt="" />
                 <div className="region-country-card-detail">
                     <img src={`/country-backdrop-webp/${country.name}.webp`} alt="" className="region-country-card-detail-img" />
                     <article className="region-country-card-detail-article">
                         <h2 className="region-country-card-detail-article-name">{country.name}</h2>
-                        <p className="region-country-card-detail-article-para">{country.description}<br></br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat vel quod facilis in error explicabo labore libero quidem dignissimos possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum iste, ratione aspernatur possimus sunt natus incidunt dicta dolores, libero id omnis. Consequatur atque modi animi quaerat quia voluptates libero adipisci delectus mollitia. Velit quidem, dolorem distinctio ullam ex deserunt vitae commodi laborum. Excepturi velit maxime quae deserunt rem nostrum?</p>
-                        <button className="region-country-card-detail-article-btn">Learn More</button>
+                        <p className="region-country-card-detail-article-para">{country.description}<br></br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat vel quod facilis in error explicabo labore libero quidemvelit maxime quae deserunt rem nostrum?</p>
+                        <button className="region-country-card-detail-article-btn"
+                            onClick={navigateCountry}
+                        >Learn More</button>
                     </article>
                 </div>
             </div>
