@@ -25,7 +25,41 @@ body {
 #country-city-list-section-bar {
     height: 100vh;
     width: 20%;
+    z-index: 2;
+    position: relative;
+    @include center(column);
+    & > #country-city-list-section-bar-container {
+        @include center(column);
+        height: 50%;
+        justify-content: space-evenly;
+        & > .country-city-list-section-bar-element {
+            height: 40px;
+            width: 40px;
+            transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+            background: darken($primary, 20%);
+            border-radius: 20px;
+            z-index: 20;
+        }
+
+        & > .country-city-list-section-bar-element-scale {
+            width: 20rem;
+            transform: translateX(40%);
+            background: $accent;
+        }
+    }
+
 }
+// #country-city-list-section-bar::before {
+//     content: "";
+//     height: 80%;
+//     position: absolute;
+//     width: 10px;
+//     right: 50%;
+//     top: 50%;
+//     transform: translate(-10%, -50%);
+//     z-index: 1;
+//     background: darken($primary, 20%);
+// }
 
 #country-city-list-section-container {
     width: 70%;
@@ -41,6 +75,7 @@ body {
     width: 80%;
     height: 20px;
     scale: 0.9 1;
+    // transition: all 0.5s cubic-bezier(0.615, 0.810, 0.855, 1);
 
     & > img,
     & > article {

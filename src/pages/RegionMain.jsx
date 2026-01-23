@@ -16,7 +16,8 @@ export default function RegionMain() {
 
     function navigateCountry() {
         const id = regionCard.current.id
-        navigate(`/country/${id}`)
+        console.log(id)
+        // navigate(`/country/${id}`)
     }
 
 
@@ -30,7 +31,7 @@ export default function RegionMain() {
                         <h2 className="region-country-card-detail-article-name">{country.name}</h2>
                         <p className="region-country-card-detail-article-para">{country.description}<br></br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat vel quod facilis in error explicabo labore libero quidemvelit maxime quae deserunt rem nostrum?</p>
                         <button className="region-country-card-detail-article-btn"
-                            onClick={navigateCountry}
+                            onClick={() => {navigate(`/country/${country.id}`)}}
                         >Learn More</button>
                     </article>
                 </div>

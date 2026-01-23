@@ -9,6 +9,7 @@ export default function CountryMain() {
     const [cardIndex, setCardIndex] = useState(0)
     const {countryId} = useParams()
     const cardRefs = useRef([])
+    const barRefs = useRef([])
     const cityList = []
     const indexedClass = "country-city-card-indexed"
     const defaultCardClass ="country-city-card"
@@ -18,18 +19,39 @@ export default function CountryMain() {
             cityList.push(city)
     })
 
+    function updateCityIndex(index) {
+        setCardIndex(prevIndex => index)
+    }
+
     useEffect(() => {
         const currentCard = cardRefs.current[cardIndex]
-        currentCard.classList.add(indexedClass)
-        currentCard.classList.remove(defaultCardClass)
+        const currentBar = barRefs.current[cardIndex]
+        if (currentCard) {
+            currentCard.classList.add(indexedClass)
+            currentCard.classList.remove(defaultCardClass)
+        }
+        if(currentBar)
+            currentBar.classList.add('country-city-list-section-bar-element-scale')
 
         return () => {
             if (currentCard) {
                 currentCard.classList.remove(indexedClass);
                 currentCard.classList.add(defaultCardClass);
+
             }
+            if(currentBar)
+                currentBar.classList.remove('country-city-list-section-bar-element-scale')
         }
     }, [cardIndex])
+
+    const barList = cityList.map((city, index)=> (
+        <div className="country-city-list-section-bar-element"
+            data-index={index}
+            key={city.id}
+            ref={(el)=> (barRefs.current[index] = el)}
+            onClick={((e)=>{updateCityIndex(e.currentTarget.dataset.index)})}
+        ></div>
+    ))
     
     const cityCards = cityList.map((city, index) => (
         <div className="country-city-card" key={city.id} id={city.id} ref={(el) => (cardRefs.current[index] = el)}>
@@ -43,9 +65,10 @@ export default function CountryMain() {
 
     function updateCityDown() {
         setCardIndex(prevIndex => {
-            if(cityList.length-1 === prevIndex)
+            console.log(prevIndex)
+            if(prevIndex >= cityList.length - 1)
                 return 0
-            return prevIndex + 1
+            return Number(prevIndex) + 1
         })
     }
 
@@ -67,7 +90,11 @@ export default function CountryMain() {
                 </article>
             </section>
             <section id="country-city-list-section">
-                <div id="country-city-list-section-bar"></div>
+                <div id="country-city-list-section-bar">
+                    <div id="country-city-list-section-bar-container">
+                        {barList}
+                    </div>
+                </div>
                 <div id="country-city-list-section-container">
                     {cityCards}
                 </div>

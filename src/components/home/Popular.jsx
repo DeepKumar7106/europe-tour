@@ -40,7 +40,9 @@ export default function Popular() {
             <h2 id="home-popular-heading"onClick={(() => {navigate('/attraction')})}>attractions</h2>
             <div id="home-popular-container" onClick={navigateAttraction} >
                 {/* next img */}
-                <div id="home-popular-bg-img-container-left">
+                <div id="home-popular-bg-img-container-left"
+                    onClick={updateCityImageNext}
+                >
                     <img className="home-popular-bg-img left-img" src={`/city-images-webp/${nextCity.city}.webp`} alt={nextCity.city} />
                 </div>
                 {/* previous img */}
