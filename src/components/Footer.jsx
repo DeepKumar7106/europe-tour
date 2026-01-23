@@ -1,20 +1,22 @@
+import { Link } from "react-router-dom"
+
 export default function Footer() {
     return (
         <footer>
-            <h1>Tour-De-Europa</h1>
-            <div id="linkWrapper">
-                <div id="quickLinks">
+            <h1 id="footer-heading">Tour-De-Europa</h1>
+            <div id="footer-link-container">
+                <div id="footer-link-container-quick-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="src/pages/attractions/attraction.html">Attactions</a></li>
-                        <li><a href="#activitiesSection">Experiences</a></li>
-                        <li><a href="src/pages/underrated/underrated.html">FAQs</a></li>
+                        <li><Link to='/attraction'>Attactions</Link></li>
+                        <li><Link to='/experience'>Experiences</Link></li>
+                        <li><Link to='/attraction'>FAQs</Link></li>
                     </ul>
                 </div>
-                <div id="aboutWrapper">
-                    <div id="followUs">
+                <div id="footer-link-container-about-links">
+                    <div id="footer-link-container-about-links-follow">
                         <h3>Follow Us</h3>
-                        <div id="socialList">
+                        <div id="footer-link-container-about-links-social-list">
                             <i className="fa-brands fa-facebook"></i>
                             <i className="fa-brands fa-x-twitter"></i>
                             <i className="fa-brands fa-instagram"></i>
@@ -22,12 +24,12 @@ export default function Footer() {
                             <i className="fa-brands fa-linkedin"></i>
                         </div>
                     </div>
-                    <div id="about">
+                    <div id="footer-link-container-about-links-about">
                     <h3>About Us</h3>
                         <ul>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">Credits</a></li>
+                            <li><Link to='/about'>About</Link></li>
+                            <li><Link to='/about'>Contact Us</Link></li>
+                            <li><Link to='/about'>Credits</Link></li>
                         </ul>
                     </div>
                 </div>

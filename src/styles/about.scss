@@ -42,7 +42,12 @@ body {
             text-transform: uppercase;
             font-size: clamp(1rem, 4.5vw, 4rem);
             text-align: left;
-        }   
+        } 
+        
+        & > h2:hover {
+            color: $primary;
+        }
+        
     }
 
     & #about-text-section-heading {
@@ -87,6 +92,12 @@ body {
             text-align: center;
             
         }
+
+        & > li:hover {
+            width: calc(100% + 2rem);
+            background: $primary;
+            color: $black;
+        }
     }
 }
 
@@ -98,11 +109,7 @@ li:nth-child(1) {
                 0 -5px 5px -5px $secondary inset;
 }
 
-li:hover {
-    width: calc(100% + 2rem);
-    background: $primary;
-    color: $black;
-}
+
 
 h2:hover {
     color: $primary;

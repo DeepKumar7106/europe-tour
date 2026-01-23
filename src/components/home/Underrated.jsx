@@ -1,8 +1,9 @@
 import { underrated } from "../../scripts/data"
 import { useState } from "react"
 import { addHyphen } from "../../App"
+import { useNavigate } from "react-router-dom"
 export default function Underrated() {
-
+    const navigate = useNavigate()
     const [locIndex, setLocIndex] = useState(0)
     const location = underrated[locIndex]
 
@@ -22,9 +23,13 @@ export default function Underrated() {
         })
     }
 
+    function navigateUnderrated() {
+        console.log(location.id)
+    }
+
     return (
-        <section id="home-underrated-section">
-            <img src={`/underrated-webp/${addHyphen(location.name)}.webp`} alt={addHyphen(location.name)} loading="lazy" />
+        <section id="home-underrated-section" >
+            <img src={`/underrated-webp/${addHyphen(location.name)}.webp`} alt={addHyphen(location.name)} loading="lazy" onClick={navigateUnderrated}/>
             <h2 id="home-underrated-section-heading">hidden gems</h2>
             <div className="home-underrated-section-container" id={location.id}>
                 <article id="home-underrated-section-container-article">
@@ -40,7 +45,9 @@ export default function Underrated() {
                             onClick={updateImgNext}
                         ></i>
                     </div>
-                    <button id="home-underrated-section-container-btn-ctn-learn-more">Learn More</button>
+                    <button id="home-underrated-section-container-btn-ctn-learn-more"
+                        onClick={(() => {navigate('/underrated')})}
+                    >Learn More</button>
                 </div>
             </div>
         </section>

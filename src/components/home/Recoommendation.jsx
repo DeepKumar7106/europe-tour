@@ -1,16 +1,27 @@
 import { expeditions } from '../../scripts/data'
 import { addHyphen } from '../../App'
 import { useState, useRef } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Recommendation() {
     const [page, setPage] = useState(0)
     const isMobile = window.innerWidth <= 700
     const totalPage = isMobile ? 12 : 3
+    const navigate = useNavigate()
+
+    function navigateExpedition(id) {
+        console.log(id)
+    }
 
     const expeditionList = expeditions.map(expedition => {
         const name = addHyphen(expedition.name)
         return (
-            <div className="home-recommend-card" key={expedition.id}>
+            <div 
+                className="home-recommend-card" 
+                key={expedition.id}
+                id={expedition.id}
+                onClick={((e) => {navigateExpedition(e.currentTarget.id)})}    
+            >
                 <img src={`/expedition-webp/${name}.webp`} alt={name} className="home-recommend-card-img" />
                 <article className="home-recommend-card-article">
                     <h3 className="home-recommend-card-article-expedition">{expedition.name}</h3>
@@ -39,7 +50,7 @@ export default function Recommendation() {
 
     return (
         <section id="home-recommend-section">
-            <h2 id="home-recommend-section-heading">expedition</h2>
+            <h2 id="home-recommend-section-heading" onClick={(() => {navigate('/expedition')})}>expedition</h2>
             <div id="home-recommend-section-container">
                 <div id="home-recommend-card-container">
                     <div className="home-recommend-card-track"
@@ -59,7 +70,9 @@ export default function Recommendation() {
                             onClick={shiftRight}
                         ></i>
                     </div>
-                    <button id="home-recommend-btn-container-discover-btn">Discover More</button>
+                    <button id="home-recommend-btn-container-discover-btn">
+                        <Link to='/expedition'>Discover More</Link>
+                    </button>
                 </div>
             </div>
         </section>

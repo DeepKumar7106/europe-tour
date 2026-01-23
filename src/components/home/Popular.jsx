@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { attractions } from "../../scripts/data";
 import { useState } from "react";
 
 export default function Popular() {
-    let prevCityIndex , nextCityIndex
     const [cityIndex, setCityIndex] = useState(0)
+    const navigate = useNavigate()
+    let prevCityIndex , nextCityIndex
+    
     prevCityIndex = cityIndex === 0 ? attractions.length - 1 : cityIndex - 1
     nextCityIndex = cityIndex === attractions.length - 1 ? 0 : cityIndex + 1
 
@@ -26,14 +29,18 @@ export default function Popular() {
         })
     }
 
+
+    function navigateAttraction() {
+        console.log(foreGroundCity.id)
+        // navigate(`/attraction/${}`)
+    }
+
     return (
         <section id="home-popular-section">
-            <h2 id="home-popular-heading">attractions</h2>
-            <div id="home-popular-container">
+            <h2 id="home-popular-heading"onClick={(() => {navigate('/attraction')})}>attractions</h2>
+            <div id="home-popular-container" onClick={navigateAttraction} >
                 {/* next img */}
-                <div id="home-popular-bg-img-container-left"
-                    onClick={updateCityImageNext}
-                >
+                <div id="home-popular-bg-img-container-left">
                     <img className="home-popular-bg-img left-img" src={`/city-images-webp/${nextCity.city}.webp`} alt={nextCity.city} />
                 </div>
                 {/* previous img */}
@@ -42,11 +49,13 @@ export default function Popular() {
                 >
                     <img className="home-popular-bg-img rightImage" src={`/city-images-webp/${prevCity.city}.webp`} alt={prevCity.city} />
                 </div>
-                <img id="home-popular-img" src={`/city-images-webp/${foreGroundCity.city}.webp`} alt={foreGroundCity.city} />  
-                <article id="home-popular-img-detail-text">
-                    <p id="home-popular-city">{foreGroundCity.name}</p>
-                    <p id="home-popular-country-name"><i className="fa-solid fa-location-dot"></i> {foreGroundCity.city}, {foreGroundCity.country}</p>
-                </article>
+                <div id="home-popular-img-container">
+                    <img id="home-popular-img" src={`/city-images-webp/${foreGroundCity.city}.webp`} alt={foreGroundCity.city} onClick={navigateAttraction} />  
+                    <article id="home-popular-img-detail-text">
+                        <p id="home-popular-city">{foreGroundCity.name}</p>
+                        <p id="home-popular-country-name"><i className="fa-solid fa-location-dot"></i> {foreGroundCity.city}, {foreGroundCity.country}</p>
+                    </article>
+                </div>
             </div>
             <div id="home-popular-nav-container">
                 <i className="fa-solid fa-circle-chevron-left"

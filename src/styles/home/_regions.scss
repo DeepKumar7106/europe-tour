@@ -1,32 +1,6 @@
 @import '../config';
 
-// * {
-//     outline: 2px solid;
-// }
-
-#home-region-section-info {
-    height: 100vh;
-    width: 50%;
-    @include center(column);
-
-    & > #home-region-section-info-article {
-        color: $accent;
-        // height: 30%;
-        width: 80%;
-        margin: auto;
-        @include center(column);
-        & > #home-region-section-info-article-name {
-            width: 100%;
-            text-align: center;
-            font-size: clamp(2rem, 4.5vw, 5rem);
-        }
-
-        & > #home-region-section-info-article-para {
-            margin-block: 1rem;
-            font-size: clamp(1.2rem, 2.5vw, 2rem);
-        }
-    }
-}
+// * {outline: 2px solid;}
 
 #home-region-section {
     width: 100%;
@@ -40,6 +14,33 @@
         flex-direction: column;
     }
 }
+
+#home-region-section-info {
+    height: 70vh;
+    width: 50%;
+    @include center(column);
+    gap: 1rem;
+    
+    & > #home-region-section-info-article {
+        color: $accent;
+        height: 70%;
+        width: 89%;
+        margin: auto;
+        @include center(column);
+        // justify-content: space-evenly;
+        & > #home-region-section-info-article-name {
+            width: 100%;
+            text-align: center;
+            font-size: clamp(2rem, 4.5vw, 5rem);
+        }
+
+        & > #home-region-section-info-article-para {
+            margin-block: 1rem;
+            font-size: clamp(1.2rem, 2.5vw, 2rem);
+        }
+    }
+}
+
 
 #home-region-section-info-heading {
     @include headingText();
@@ -109,7 +110,12 @@
     width: 250px;
     border: none;
     border-radius: 70px;
-    display: none;
+    @include center(row);
+    margin-top: 2rem;
+
+    & > .fa-solid {
+        color: black;
+    }
 }
 
 @media (max-width: 700px) {

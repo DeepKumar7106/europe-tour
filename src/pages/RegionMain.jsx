@@ -1,9 +1,10 @@
 import {countries, regions} from '/src/scripts/data.js'
 import './../styles/region.scss'
+import { useParams } from 'react-router-dom'
 
 console.log("made it")
 export default function RegionMain() {
-    const regionId = "eur05"
+    const {regionId} = useParams()
     let countryList = []
     countries.forEach(country => {
         if(country.region === regionId)

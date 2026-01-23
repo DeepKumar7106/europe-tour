@@ -1,5 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import { regions } from "../../scripts/data"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
 const RegionList = ({region, onCardClick}) => {
@@ -11,9 +12,6 @@ const RegionList = ({region, onCardClick}) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    function updateRegionDetail() {
-        console.log(document.getElementById('regionName'))
-    }
     const name = region.name.replace(/\s+/g, '-');
     const imgSrc = `/region-webp/${region.name}.webp`
     return (
@@ -40,25 +38,31 @@ const RegionList = ({region, onCardClick}) => {
 
 
 export default function Region() {
-
     const [currentRegion, setCurrentRegion] = useState({})
-    function updateRegion(reg) {
-        document.getElementById('home-region-section-info-article').style.display = 'block'
+    function updateRegion(reg) {      
         setCurrentRegion(reg)
+    }
+
+    const navigate = useNavigate()
+
+    function navigateRegion() {
+        navigate(`/region/${currentRegion.id}`)
     }
     return (
         <section id="home-region-section">
             <div id="home-region-section-info">
                 <h2 id="home-region-section-info-heading">regions</h2>
-                <article id="home-region-section-info-article">
+                {currentRegion.name && <article id="home-region-section-info-article">
                     <h2 id="home-region-section-info-article-name">{currentRegion.name}</h2>
                     <p id="home-region-section-info-article-para">
                         {currentRegion.desc}
                     </p>
-                    <button id="home-region-section-info-article-explore">
+                    <button id="home-region-section-info-article-explore"
+                        onClick={navigateRegion}
+                    >
                         Explore <i className="fa-solid fa-arrow-right"></i>
                     </button>
-                </article>
+                </article>}
             </div> 
             <div id="home-region-section-container">
                 {

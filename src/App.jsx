@@ -26,13 +26,13 @@ function App() {
         <Header />
         <Routes>
           <Route path="/home" element= {<Main /> } />
-          <Route path="/region" element = {<RegionMain />} />
-          <Route path="/About" element = {<About />} />
-          <Route path="/AttractionMain" element = {<AttractionMain />} />
-          <Route path="/CountryMain" element = {<CountryMain />} />
-          <Route path="/ExpeditionMain" element = {<ExpeditionMain />} />
-          <Route path="/ExperienceMain" element = {<ExperienceMain />} />
-          <Route path="/UnderratedMain" element = {<UnderratedMain />} />
+          <Route path="/region/:regionId" element = {<RegionMain />} />
+          <Route path="/about" element = {<About />} />
+          <Route path="/attraction" element = {<AttractionMain />} />
+          <Route path="/country" element = {<CountryMain />} />
+          <Route path="/expedition" element = {<ExpeditionMain />} />
+          <Route path="/experience" element = {<ExperienceMain />} />
+          <Route path="/underrated" element = {<UnderratedMain />} />
         </Routes>
         <Footer />
     </BrowserRouter>
