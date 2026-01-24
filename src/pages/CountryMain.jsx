@@ -1,13 +1,14 @@
 import './../styles/country.scss'
 import { cities } from '../scripts/data'
 import { useEffect, useRef, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 
 
 export default function CountryMain() {
     const [cardIndex, setCardIndex] = useState(0)
     const {countryId} = useParams()
+    const navigate = useNavigate()
     const cardRefs = useRef([])
     const barRefs = useRef([])
     const cityList = []
@@ -54,7 +55,12 @@ export default function CountryMain() {
     ))
     
     const cityCards = cityList.map((city, index) => (
-        <div className="country-city-card" key={city.id} id={city.id} ref={(el) => (cardRefs.current[index] = el)}>
+        <div 
+            className="country-city-card" 
+            key={city.id} id={city.id} 
+            ref={(el) => (cardRefs.current[index] = el)}
+            onClick={(()=> navigate(`/cities/${city.id}`))}
+        >
             <img src={`/city-images-webp/${city.cityName}.webp`} alt={city.cityName} className='country-city-card-img' />
             <article className="country-city-card-detail">
                 <h2 className='country-city-card-detail-name'>{city.cityName.split('-').join(' ')}</h2>
@@ -65,7 +71,6 @@ export default function CountryMain() {
 
     function updateCityDown() {
         setCardIndex(prevIndex => {
-            console.log(prevIndex)
             if(prevIndex >= cityList.length - 1)
                 return 0
             return Number(prevIndex) + 1

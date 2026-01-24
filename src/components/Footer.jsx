@@ -10,7 +10,7 @@ export default function Footer() {
                     <ul>
                         <li><Link to='/attraction'>Attactions</Link></li>
                         <li><Link to='/experience'>Experiences</Link></li>
-                        <li><Link to='/attraction'>FAQs</Link></li>
+                        <li><Link to='/cities'>FAQs</Link></li>
                     </ul>
                 </div>
                 <div id="footer-link-container-about-links">

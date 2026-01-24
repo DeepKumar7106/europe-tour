@@ -1,0 +1,90 @@
+@import 'config';
+@import 'header';
+@import 'footer';
+
+#cities-main {
+    min-height: 100vh;
+    width: 100%;
+    @include center(column);
+}
+
+#cities-backdrop-section {
+    height: 100vh;
+    width: 100%;
+    background-color: $black;
+    position: relative;
+
+    & > #cities-backdrop-section-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.1;
+    }
+
+    & > #cities-backdrop-section-article {
+        position: absolute;
+        inset: 0;
+        height: 50%;
+        width: 60%;
+        background: $accent ;
+    }
+}
+// outline: 2px solid blue;
+
+#cities-hero-section {
+    width: 70%;
+    margin-block: 2rem;
+    padding: 2rem;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    @include center(row);
+    justify-content: space-evenly;
+    --img-height: 20rem;
+
+    & > #cities-hero-section-img {
+        height: var(--img-height);
+        aspect-ratio: 1 / 1;
+        border-radius: calc(var(--img-height) / 20);
+        object-fit: cover;
+    }
+
+    & > #cities-hero-section-article {
+        width: 70%;
+
+        & > #cities-hero-section-article-name {
+            font-size: clamp(2rem, 5.5vw, 6rem);
+        }
+
+        & > #cities-hero-section-article-details {
+            font-size: clamp(1.1rem, 2.5vw, 2rem);
+        }
+    }
+}
+
+
+#cities-details-section {
+    width: 70%;
+    @include center(row);
+    height: 100vh;
+
+    & > #cities-details-section-menu {
+        width: 20rem;
+        height: 100%;
+        background: darken($primary, 35%);
+    }
+
+    & > #cities-details-section-container {
+        height: 100%;
+        width: calc(100% - 20rem);
+        background: darken($accent, 5%);
+        padding-inline: 10%;
+        font-size: clamp(1.1rem, 1.5vw, 1.6rem);
+
+        & > h2 {
+            width: 100%;
+            margin-block: 2rem;
+            font-size: clamp(1.1rem, 2.5vw, 4rem);
+            border-bottom: 1px solid black;
+        }
+    }
+}
