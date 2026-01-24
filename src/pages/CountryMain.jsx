@@ -74,9 +74,9 @@ export default function CountryMain() {
 
     function updateCityUp() {
         setCardIndex(prevIndex => {
-            if(0 === prevIndex)
+            if(prevIndex <= 0)
                 return cityList.length - 1
-            return prevIndex - 1
+            return Number(prevIndex) - 1
         })
     }
 
