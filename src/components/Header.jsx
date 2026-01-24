@@ -28,16 +28,16 @@ export default function Header() {
                     <Link to= "/home">
                         <li className="listItem">Home</li>
                     </Link>
-                    <Link to= "/AttractionMain">
+                    <Link to= "/attraction">
                         <li className="listItem">Attractions</li>
                     </Link>
-                    <Link to= "/ExperienceMain">
+                    <Link to= "/experience">
                         <li className="listItem">Experiences</li>
                     </Link>
-                    <Link to= "/ExpeditionMain">
+                    <Link to= "/expedition">
                         <li className="listItem">Expeditions</li>
                     </Link>
-                    <Link to= "/UnderratedMain">
+                    <Link to= "/underrated">
                         <li className="listItem">Hidden Gems</li>
                     </Link>
                 </ul>
@@ -46,10 +46,10 @@ export default function Header() {
             <div id="header-mobile-menu-list" ref={menuList} className="header-menu-list-container">
                 <ul id="header-mobile-list">
                     <Link to= "/home">Home</Link>
-                    <Link to= "/AttractionMain">Attraction</Link>
-                    <Link to= "/ExperienceMain"></Link>
-                    <Link to= "/ExpeditionMain">Expedition</Link>
-                    <Link to= "/UnderratedMain">Hidden Gems</Link>
+                    <Link to= "/attraction">Attraction</Link>
+                    <Link to= "/experience"></Link>
+                    <Link to= "/expedition">Expedition</Link>
+                    <Link to= "/underrated">Hidden Gems</Link>
                 </ul>
             </div>
         </header>
