@@ -7,14 +7,14 @@ export default function ExpeditionMain() {
     const name = addHyphen(exp.name)
 
     return (
-        <div className="expedition-card">
+        <div className="expedition-card" key={exp.id}>
             <img src={`/expedition-webp/${name}.webp`} alt={name} className="expedition-card-img" />
             <article className="expedition-card-article">
                 <h2 className="expedition-card-article-name">{exp.name}</h2>
                 <p className="expedition-card-article-duration"><i className="fa-regular fa-clock"></i> {exp.duration}</p>
                 <h3 className="expedition-card-article-usp">{exp.usp}</h3>
                 <p className="expedition-card-article-region">{exp.region}</p>
-                <p className="expedition-card-article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consequatur maxime qui doloremque quisquam dicta. Adipisci sed delectus deserunt odit.</p>
+                <p className="expedition-card-article-description">{exp.summary.shortBrief}</p>
             </article>
         </div>
     )
