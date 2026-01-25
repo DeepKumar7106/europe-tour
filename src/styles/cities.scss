@@ -3,7 +3,6 @@
 @import 'footer';
 
 #cities-main {
-    min-height: 100vh;
     width: 100%;
     @include center(column);
 }
@@ -65,16 +64,16 @@
 #cities-details-section {
     width: 70%;
     @include center(row);
-    height: 100vh;
+    min-height: 100vh;
+    align-items: stretch;
 
     & > #cities-details-section-menu {
         width: 20rem;
-        height: 100%;
-        background: darken($primary, 35%);
+        flex: 1;
+        background: darken($accent, 50%);
     }
 
     & > #cities-details-section-container {
-        height: 100%;
         width: calc(100% - 20rem);
         background: darken($accent, 5%);
         padding-inline: 10%;

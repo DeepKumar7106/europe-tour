@@ -1,4 +1,4 @@
-[
+export const cityData = [
     {
       "id": "euc001",
       "cityName": "Vienna",

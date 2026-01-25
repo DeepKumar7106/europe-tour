@@ -1,4 +1,5 @@
 import { cities } from "../scripts/data"
+import { cityData } from "../scripts/moreData"
 import './../styles/cities.scss'
 import { useParams } from "react-router-dom"
 
@@ -6,7 +7,7 @@ export default function Cities() {
     const {cityId} = useParams()
 
     const city = cities.find(city => city.id === cityId)
-
+    const cityDetail = cityData.find(city => city.id === cityId)
     return (
         <main id="cities-main">
             <section id="cities-backdrop-section">
@@ -27,9 +28,26 @@ export default function Cities() {
 
                 </div>
                 <div id="cities-details-section-container">
-                    <h2 id="cities-details-section-container">Heading</h2>
+                    <h2 className ="cities-details-section-container-heading">Overview</h2>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores iste saepe vero dignissimos aspernatur. Et facere fugiat commodi, in repellat aut ratione molestias similique unde. Quis, molestiae voluptatum nisi aliquid molestias delectus minus cum ab quibusdam culpa vitae tempore, voluptas at! Nesciunt atque, nulla, ab ipsam laboriosam nemo accusamus, fugit omnis minima suscipit ipsa. Vero, modi quae aliquam esse dolorem hic iste accusamus tempora dicta, voluptatum architecto amet illum! Vitae id sint deleniti tempore non eos nisi. Magnam vel quis, repellendus reiciendis voluptatum ducimus temporibus pariatur, exercitationem amet repellat nemo ipsa! Unde perferendis fugiat similique optio! Nostrum assumenda architecto dolorem.
+                       {cityDetail.overview}
+                    </p>
+                    <h2 className ="cities-details-section-container-heading">Famous Places</h2>
+                    <p>
+                       {cityDetail.featured.why_famous} <br /> {cityDetail.featured.why_recommended}
+                    </p>
+                    <h2 className ="cities-details-section-container-heading">Known For</h2>
+                    <p>
+                       {cityDetail.famous_places_details.map(loc => (
+                            <div className="cities-details-section-container-deatils-container">
+                                <h2 className="cities-details-section-container-deatils-container-name">
+                                    {loc.name}
+                                </h2>
+                                <p className="cities-details-section-container-deatils-container-brief">
+                                    {loc.brief}
+                                </p>
+                            </div>
+                       ))}
                     </p>
                 </div>
             </section>

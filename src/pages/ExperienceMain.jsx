@@ -12,7 +12,7 @@ export default function ExperienceMain() {
                 <article className="experience-card-article">
                     <h2 className="experience-card-article-name">{activity.activityName}</h2>
                     <p className="experience-card-article-region">in {activity.regionOrCountry}</p>
-                    <p className="experience-card-article-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed voluptatum dignissimos error, nesciunt illo expedita dolorem reprehenderit obcaecati voluptate repellendus deleniti distinctio magnam quasi numquam, est dicta praesentium. Impedit, saepe.</p>
+                    <p className="experience-card-article-para">{activity.heroSection.shortBrief}</p>
                 </article>
             </div>
         )

@@ -2490,7 +2490,7 @@ export const underrated = [
   }
 ];
 
-export const experience = [
+export const oldExperience = [
   {
     id: "exp001",
     activityName: "Paragliding",
@@ -4434,3 +4434,450 @@ export const oldCities = [
     famousLocation: ["Old Castle", "New Castle", "Calvary", "Holy Trinity Square", "Open-Air Mining Museum", "Počúvadlo Lake"]
   }
 ];
+
+
+export const experience = [
+  {
+    "id": "exp001",
+    "activityName": "Paragliding",
+    "regionOrCountry": "Alpine Europe",
+    "heroSection": {
+      "vibe": "Soar like an eagle over jagged limestone peaks and turquoise alpine lakes.",
+      "shortBrief": "Experience the ultimate freedom of flight with a tandem paraglide. Launch from mountain ridges and glide silently over Europe's most dramatic landscapes."
+    },
+    "quickFacts": {
+      "season": "May – September",
+      "topCountries": ["Switzerland", "France", "Austria"],
+      "vibe": "Adrenaline, Scenic, Serene",
+      "budget": "€€"
+    },
+    "curatedSpotlights": [
+      { "name": "Interlaken, Switzerland", "cityId": "euc115", "feature": "Legendary landing in the town center after flying between two lakes." },
+      { "name": "Chamonix, France", "cityId": "euc113", "feature": "Stunning views of the Mont Blanc massif at 3,000+ meters." },
+      { "name": "Innsbruck, Austria", "cityId": "euc122", "feature": "Launch from the Nordkette and see the city spread beneath you." }
+    ],
+    "expertGuide": {
+      "culture": "The Alpine 'Hike & Fly' tradition is strong here; many pilots hike the peaks before gliding down.",
+      "levels": {
+        "beginner": "Tandem flights require zero experience—just a short run at takeoff.",
+        "expert": "The thermal conditions in the Valais region are world-renowned for cross-country flying."
+      },
+      "logistics": "Always book for your first available day, as flights are highly weather-dependent."
+    },
+    "proTip": "Ask your pilot for 'G-Force' maneuvers if you want a thrill, or a 'Thermal' flight if you want to stay up longer."
+  },
+  {
+    "id": "exp002",
+    "activityName": "Northern Lights",
+    "regionOrCountry": "Nordic Europe",
+    "heroSection": {
+      "vibe": "Chase the elusive Aurora Borealis across the starlit Arctic wilderness.",
+      "shortBrief": "Witness the sky ignite with dancing ribbons of green, pink, and violet. This natural phenomenon is best viewed far from city lights in the 'Aurora Oval'."
+    },
+    "quickFacts": {
+      "season": "Late September – March",
+      "topCountries": ["Norway", "Sweden", "Iceland", "Finland"],
+      "vibe": "Mystical, Cold, Bucket-List",
+      "budget": "€€€"
+    },
+    "curatedSpotlights": [
+      { "name": "Tromsø, Norway", "cityId": "euc170", "feature": "The 'Capital of the Arctic' with high solar activity rates." },
+      { "name": "Reykjavik, Iceland", "cityId": "euc176", "feature": "Pair your Aurora chase with volcanic landscapes and hot springs." },
+      { "name": "Abisko, Sweden", "cityId": "euc173", "feature": "Famous for its 'Blue Hole' microclimate that keeps skies clear." }
+    ],
+    "expertGuide": {
+      "culture": "Locals call it the 'Green Lady.' Chasing her often involves campfires and traditional Arctic snacks.",
+      "levels": {
+        "beginner": "Join a guided bus tour that uses satellite data to find clear skies.",
+        "expert": "Rent a 4x4 and head to remote fjords for long-exposure photography."
+      },
+      "logistics": "The lights are most active between 10:00 PM and 2:00 AM."
+    },
+    "proTip": "Use a tripod and a 'long exposure' setting on your camera; the lights often look brighter through a lens than the naked eye."
+  },
+  {
+    "id": "exp003",
+    "activityName": "Hot Air Ballooning",
+    "regionOrCountry": "Mediterranean Europe",
+    "heroSection": {
+      "vibe": "Ascend at dawn over ancient cave dwellings and golden Spanish plains.",
+      "shortBrief": "Float gently on the morning breeze. From the volcanic 'fairy chimneys' of Turkey to the Roman ruins of Spain, see the Mediterranean's history from above."
+    },
+    "quickFacts": {
+      "season": "Year-round (Best in Spring/Autumn)",
+      "topCountries": ["Turkey", "Spain", "Italy"],
+      "vibe": "Romantic, Peaceful, Historic",
+      "budget": "€€€"
+    },
+    "curatedSpotlights": [
+      { "name": "Cappadocia, Turkey", "cityId": "euc213", "feature": "The world's most iconic ballooning spot with hundreds of balloons at sunrise." },
+      { "name": "Segovia, Spain", "cityId": "euc152", "feature": "Drift over a Roman Aqueduct and a medieval cathedral." },
+      { "name": "Tuscany, Italy", "cityId": "euc083", "feature": "Panoramic views of rolling vineyards and cypress-lined roads." }
+    ],
+    "expertGuide": {
+      "culture": "Flights traditionally end with a champagne toast, a custom dating back to 1783.",
+      "levels": {
+        "beginner": "Standard baskets hold 16-20 people and are very stable.",
+        "expert": "Private 'VIP' flights for two are popular for proposals and special events."
+      },
+      "logistics": "Pickup is usually around 5:00 AM to catch the stable morning thermals."
+    },
+    "proTip": "Stand in the corner of the basket for the best unobstructed 270-degree photos."
+  },
+  {
+    "id": "exp004",
+    "activityName": "Skydiving",
+    "regionOrCountry": "Alpine Europe",
+    "heroSection": {
+      "vibe": "Freefall at 200km/h with the majestic Eiger and Jungfrau peaks as your backdrop.",
+      "shortBrief": "Experience the ultimate adrenaline rush. Jump from 14,000 feet and witness the scale of the Alps before pulling the chute for a scenic canopy ride."
+    },
+    "quickFacts": {
+      "season": "Year-round (Best in Summer)",
+      "topCountries": ["Switzerland", "Austria", "Germany"],
+      "vibe": "Extreme, Thrilling, Scenic",
+      "budget": "€€€"
+    },
+    "curatedSpotlights": [
+      { "name": "Interlaken, Switzerland", "cityId": "euc115", "feature": "Known as the adventure capital; jump over the Swiss lakes." },
+      { "name": "Innsbruck, Austria", "cityId": "euc122", "feature": "High-altitude jumps with views deep into the Tyrolean valleys." },
+      { "name": "Voss, Norway", "cityId": "euc169", "feature": "Jump over the dramatic fjords for a unique vertical landscape." }
+    ],
+    "expertGuide": {
+      "culture": "Skydiving in the Alps is unique because of the helicopter jumps, which are rarer than plane jumps.",
+      "levels": {
+        "beginner": "Tandem jumps require 20 minutes of training.",
+        "expert": "Voss is a hub for BASE jumping and advanced wing-suit flying."
+      },
+      "logistics": "Weight limits usually apply (around 95-100kg max)."
+    },
+    "proTip": "If possible, choose a 'Helicopter Jump' over a plane jump—the sensation of falling from a stationary object is much more intense."
+  },
+  {
+    "id": "exp005",
+    "activityName": "Kayaking",
+    "regionOrCountry": "Nordic Europe",
+    "heroSection": {
+      "vibe": "Paddle through mirror-still fjords beneath 1,000-meter vertical cliffs.",
+      "shortBrief": "Explore the coastlines of the North. Kayaking allows you to reach hidden waterfalls and remote sea caves that larger boats simply cannot access."
+    },
+    "quickFacts": {
+      "season": "June – August",
+      "topCountries": ["Norway", "Sweden", "Iceland"],
+      "vibe": "Active, Quiet, Nature-rich",
+      "budget": "€ - €€"
+    },
+    "curatedSpotlights": [
+      { "name": "Nærøyfjord, Norway", "cityId": "euc168", "feature": "UNESCO-listed fjord so narrow that the mountains feel within reach." },
+      { "name": "Stockholm Archipelago, Sweden", "cityId": "euc171", "feature": "Navigate 30,000 islands and stay in remote cabins." },
+      { "name": "Jökulsárlón, Iceland", "cityId": "euc177", "feature": "Paddle between blue icebergs in a glacial lagoon." }
+    ],
+    "expertGuide": {
+      "culture": "Nordic countries have the 'Right of Public Access,' meaning you can often camp anywhere along the coast.",
+      "levels": {
+        "beginner": "Flat-water fjord paddling is very safe and calm.",
+        "expert": "Sea kayaking around the Lofoten Islands requires knowledge of strong tides."
+      },
+      "logistics": "Dry suits are almost always provided and necessary due to the water temperature."
+    },
+    "proTip": "Look for 'Night Kayaking' tours in Norway during the Summer—the Midnight Sun means you can paddle at 12:00 AM in broad daylight."
+  },
+  {
+    "id": "exp006",
+    "activityName": "Via Ferrata Climbing",
+    "regionOrCountry": "Alpine Europe",
+    "heroSection": {
+      "vibe": "Climb high-altitude rock faces using the 'Iron Path' of steel cables and ladders.",
+      "shortBrief": "Via Ferrata allows non-climbers to experience extreme vertical heights safely. Built into the rock, these routes offer a secure way to reach the summit."
+    },
+    "quickFacts": {
+      "season": "June – October",
+      "topCountries": ["Italy", "Slovenia", "Austria"],
+      "vibe": "Challenging, Gritty, Epic",
+      "budget": "€"
+    },
+    "curatedSpotlights": [
+      { "name": "The Dolomites, Italy", "cityId": "euc082", "feature": "The birthplace of Via Ferrata, featuring historic WWI routes." },
+      { "name": "Triglav, Slovenia", "cityId": "euc142", "feature": "The classic route to the highest peak in the Julian Alps." },
+      { "name": "Murren, Switzerland", "cityId": "euc115", "feature": "A terrifyingly scenic 2,000-foot drop right beneath your feet." }
+    ],
+    "expertGuide": {
+      "culture": "Many of these routes were originally used by soldiers in WWI to move supplies through the mountains.",
+      "levels": {
+        "beginner": "Grade A/B routes are essentially steep hikes with cables.",
+        "expert": "Grade E/F routes involve overhanging rock and require significant upper body strength."
+      },
+      "logistics": "You need a harness, a specialized Ferrata lanyard, and a helmet."
+    },
+    "proTip": "Always wear climbing gloves; the steel cables can be rough on your hands after a few hours."
+  },
+  {
+    "id": "exp007",
+    "activityName": "Surfing",
+    "regionOrCountry": "Western Europe",
+    "heroSection": {
+      "vibe": "Ride the powerful Atlantic swells on Europe's rugged west coast.",
+      "shortBrief": "From the world-record monster waves of Portugal to the beginner-friendly sandbreaks of France, Western Europe is a world-class surf destination."
+    },
+    "quickFacts": {
+      "season": "September – November (Best for all levels)",
+      "topCountries": ["Portugal", "France", "Spain", "Ireland"],
+      "vibe": "Cool, Athletic, Coastal",
+      "budget": "€ - €€"
+    },
+    "curatedSpotlights": [
+      { "name": "Nazaré, Portugal", "cityId": "euc067", "feature": "Home to the world's largest rideable waves (Winter only)." },
+      { "name": "Hossegor, France", "cityId": "euc114", "feature": "The 'Surfing Capital of Europe' with famous beach breaks." },
+      { "name": "Bundoran, Ireland", "cityId": "euc009", "feature": "Cold-water surfing at its best with consistent, powerful reefs." }
+    ],
+    "expertGuide": {
+      "culture": "The surf lifestyle is huge in towns like Ericeira and Biarritz—think campervans, beach fires, and sunrise sessions.",
+      "levels": {
+        "beginner": "Summer months provide smaller, manageable waves for learners.",
+        "expert": "Autumn/Winter brings the 'Big Wave' season for professionals."
+      },
+      "logistics": "A 3/2mm or 4/3mm wetsuit is required even in summer due to Atlantic currents."
+    },
+    "proTip": "The tides in Europe are massive (sometimes 10+ meters). Always check a local 'Tide Chart' before heading out, or you might find your beach has disappeared!"
+  },
+  {
+    "id": "exp008",
+    "activityName": "Dog Sledding",
+    "regionOrCountry": "Nordic Europe",
+    "heroSection": {
+      "vibe": "Mush your own team of huskies through the silent, frozen forests of Lapland.",
+      "shortBrief": "Connect with nature and these incredible athletes. Learn to drive a sled and feel the power of a husky team as they pull you through deep snow."
+    },
+    "quickFacts": {
+      "season": "December – early April",
+      "topCountries": ["Finland", "Norway", "Sweden"],
+      "vibe": "Traditional, Heartwarming, Active",
+      "budget": "€€€"
+    },
+    "curatedSpotlights": [
+      { "name": "Rovaniemi, Finland", "cityId": "euc174", "feature": "The classic husky safari experience near Santa Claus Village." },
+      { "name": "Alta, Norway", "cityId": "euc170", "feature": "Deep wilderness expeditions and home to the Finnmarksløpet race." },
+      { "name": "Kiruna, Sweden", "cityId": "euc173", "feature": "Combine sledding with a stay at the original Ice Hotel." }
+    ],
+    "expertGuide": {
+      "culture": "Huskies are born to run; you'll notice they are loudest when they are waiting to start and silent once they begin.",
+      "levels": {
+        "beginner": "Short 5-10km 'taster' rides where you sit in the sled.",
+        "expert": "Multi-day 'self-drive' expeditions where you care for your own team."
+      },
+      "logistics": "Extremely warm 'Arctic Suits' are usually provided by the tour operators."
+    },
+    "proTip": "When driving, remember to 'help' the dogs by pushing with one foot on the uphill sections—they'll appreciate the teamwork!"
+  },
+  {
+    "id": "exp010",
+    "activityName": "Thermal Bathing",
+    "regionOrCountry": "Central & Eastern Europe",
+    "heroSection": {
+      "vibe": "Unwind in mineral-rich steam within neo-Baroque palaces and natural thermal river-beds.",
+      "shortBrief": "Central Europe sits on a massive bed of geothermal activity. Whether it's a social 'sparty' in Budapest or a quiet medical soak in the Czech Republic, this is relaxation at its most historic."
+    },
+    "quickFacts": {
+      "season": "Year-round (Magical in Winter)",
+      "topCountries": ["Hungary", "Czech Republic", "Poland"],
+      "vibe": "Relaxing, Social, Healing",
+      "budget": "€ - €€"
+    },
+    "curatedSpotlights": [
+      { "name": "Budapest, Hungary", "cityId": "euc133", "feature": "The Széchenyi Baths—largest medicinal bath in Europe with 18 pools." },
+      { "name": "Karlovy Vary, Czech Rep", "cityId": "euc137", "feature": "Historic colonnades where you can drink the curative mineral water." },
+      { "name": "Zakopane, Poland", "cityId": "euc139", "feature": "Chochołów thermal pools with panoramic views of the Tatra Mountains." }
+    ],
+    "expertGuide": {
+      "culture": "It is a social ritual; don't be surprised to see locals playing chess on floating boards.",
+      "health": "The waters are rich in calcium and magnesium, perfect for muscle recovery after a day of hiking.",
+      "etiquette": "Most baths require a swim cap for lap pools. Always bring your own flip-flops and towel to save on rental fees."
+    },
+    "proTip": "Visit the 'Ruin Bar' spas in Budapest at night for a 'Sparty'—a unique combination of thermal bathing and clubbing."
+  },
+  {
+    "id": "exp011",
+    "activityName": "Ice Cave Exploration",
+    "regionOrCountry": "Nordic Europe",
+    "heroSection": {
+      "vibe": "Step into a world of crystalline blue ice, hidden deep within massive glaciers.",
+      "shortBrief": "These ephemeral wonders are carved by meltwater each year. Walking through a glacier’s interior feels like stepping inside a giant, glowing blue sapphire."
+    },
+    "quickFacts": {
+      "season": "November – March",
+      "topCountries": ["Iceland", "Norway", "Austria (Alpine exception)"],
+      "vibe": "Surreal, Silent, Cold",
+      "budget": "€€€"
+    },
+    "curatedSpotlights": [
+      { "name": "Vatnajökull, Iceland", "cityId": "euc177", "feature": "The 'Crystal Caves'—the most famous and vibrant blue caves in the world." },
+      { "name": "Svalbard, Norway", "cityId": "euc170", "feature": "Deep arctic caves accessible only by snowmobile or dog sled." },
+      { "name": "Werfen, Austria", "cityId": "euc122", "feature": "Eisriesenwelt—the world’s largest accessible limestone ice cave." }
+    ],
+    "expertGuide": {
+      "culture": "Because glaciers move, these caves disappear and reform in new shapes every year.",
+      "safety": "Never enter an ice cave without a certified guide; they monitor the structural stability and gas levels.",
+      "gear": "Crampons and helmets are mandatory and usually provided by tour operators."
+    },
+    "proTip": "Wear wool base layers. Even if you feel warm walking to the cave, the temperature inside stays a constant 0°C (32°F) or lower."
+  },
+  {
+    "id": "exp012",
+    "activityName": "Skiing And Snowboarding",
+    "regionOrCountry": "Alpine Europe",
+    "heroSection": {
+      "vibe": "Carve through fresh powder on high-altitude glaciers where the birthplace of alpinism meets world-class après-ski culture.",
+      "shortBrief": "The Alps offer massive interconnected lift systems that span valleys and even cross international borders, providing vertical drops of up to 9,000 feet."
+    },
+    "quickFacts": {
+      "season": "Late November to Mid-April",
+      "topCountries": ["France", "Switzerland", "Austria", "Italy"],
+      "vibe": "Active, Social, High-Altitude",
+      "budget": "€€€"
+    },
+    "curatedSpotlights": [
+      { "name": "Zermatt, Switzerland", "cityId": "euc118", "feature": "Matterhorn views & international skiing into Italy." },
+      { "name": "Chamonix, France", "cityId": "euc113", "feature": "Epic 20km off-piste runs on the Aiguille du Midi." },
+      { "name": "Innsbruck, Austria", "cityId": "euc122", "feature": "The 'Capital of the Alps' with urban-to-mountain access." }
+    ],
+    "expertGuide": {
+      "culture": "The 'Après-ski' is as important as the sport—think mountain huts, sun-drenched terraces, and evening fondue.",
+      "levels": {
+        "beginner": "Look for wide, groomed 'Blue' pistes (Interlaken).",
+        "expert": "Seek out 'Off-piste' powder but always with a guide due to crevasse risks."
+      },
+      "logistics": "European resorts use a 'Piste' system where groomed runs are roped and controlled for avalanches."
+    },
+    "proTip": "Book your ski pass online in advance to save up to 20% and use the 'international' ticket in Zermatt to ski to Italy for lunch."
+  },
+  {
+    "id": "exp013",
+    "activityName": "Clubbing",
+    "regionOrCountry": "Western Europe",
+    "heroSection": {
+      "vibe": "Lose yourself in the world’s most iconic dance floors, from underground techno bunkers to sunrise beach clubs.",
+      "shortBrief": "Europe defines global nightlife. Whether it's the 48-hour marathons of Berlin or the glamorous 'Superclubs' of Ibiza, the music never stops."
+    },
+    "quickFacts": {
+      "season": "Summer (Ibiza/Mykonos) or Year-round (Berlin/London)",
+      "topCountries": ["Germany", "Spain", "Netherlands", "UK"],
+      "vibe": "Energetic, Diverse, Limitless",
+      "budget": "€€ - €€€"
+    },
+    "curatedSpotlights": [
+      { "name": "Berlin, Germany", "cityId": "euc124", "feature": "Berghain and Tresor—the world capitals of industrial techno." },
+      { "name": "Ibiza, Spain", "cityId": "euc155", "feature": "Amnesia and Pacha—home to the world's most famous DJs." },
+      { "name": "Amsterdam, Netherlands", "cityId": "euc044", "feature": "De School and Shelter—cutting edge electronic music and ADE festival." }
+    ],
+    "expertGuide": {
+      "culture": "In Berlin, the 'door policy' is strict; wear black and don't look like a tourist. In Ibiza, it’s all about the 'Sunset strip' before the main event.",
+      "timing": "Main clubs in Spain and Italy don't get busy until 2:00 AM.",
+      "logistics": "Buy tickets online in advance for major DJs to avoid 3-hour queues."
+    },
+    "proTip": "For a cheaper but equally wild experience, head to **Belgrade** (Balkans) for their floating river clubs called 'Splavovi'."
+  },
+  {
+    "id": "exp015",
+    "activityName": "Sunset",
+    "regionOrCountry": "Mediterranean Europe",
+    "heroSection": {
+      "vibe": "Witness the sky turn to liquid gold over ancient ruins and whitewashed volcanic cliffs.",
+      "shortBrief": "In the Mediterranean, the sunset isn't just a time of day—it's an event. Crowds gather, music plays, and the world pauses for the golden hour."
+    },
+    "quickFacts": {
+      "season": "Year-round (Best May – October)",
+      "topCountries": ["Greece", "Italy", "Croatia", "Spain"],
+      "vibe": "Romantic, Calm, Picturesque",
+      "budget": "Free"
+    },
+    "curatedSpotlights": [
+      { "name": "Santorini, Greece", "cityId": "euc104", "feature": "The Oia sunset—the most photographed 'Golden Hour' in the world." },
+      { "name": "Zadar, Croatia", "cityId": "euc096", "feature": "The 'Greeting to the Sun'—an art installation paired with a Sea Organ." },
+      { "name": "Florence, Italy", "cityId": "euc083", "feature": "Piazzale Michelangelo—panoramic views of the Duomo bathed in orange light." }
+    ],
+    "expertGuide": {
+      "culture": "In many coastal towns, the 'Passeggiata' (evening stroll) is timed perfectly with the setting sun.",
+      "locations": "Rooftop bars are great, but the best views are often from medieval city walls or historic lighthouses.",
+      "photography": "The 20 minutes *after* the sun disappears (the Blue Hour) often provides the best colors."
+    },
+    "proTip": "In Santorini, skip the Oia crowds and hike to **Imerovigli** for the same view with 90% fewer people."
+  },
+  {
+    "id": "exp016",
+    "activityName": "Paddleboarding",
+    "regionOrCountry": "Alpine Europe",
+    "heroSection": {
+      "vibe": "Glide across mirror-like alpine waters with snow-capped peaks reflecting beneath your board.",
+      "shortBrief": "Stand-up paddleboarding (SUP) on Alpine lakes offers a peaceful perspective on the mountains. It's the ultimate 'slow travel' experience."
+    },
+    "quickFacts": {
+      "season": "June – September",
+      "topCountries": ["Slovenia", "Austria", "Switzerland", "Italy"],
+      "vibe": "Peaceful, Balanced, Scenic",
+      "budget": "€"
+    },
+    "curatedSpotlights": [
+      { "name": "Lake Bled, Slovenia", "cityId": "euc142", "feature": "Paddle to the iconic island church in the middle of a turquoise lake." },
+      { "name": "Lake Annecy, France", "cityId": "euc114", "feature": "Known as Europe's cleanest lake, surrounded by dramatic limestone cliffs." },
+      { "name": "Lake Garda, Italy", "cityId": "euc079", "feature": "Explore hidden Roman ruins and lemon groves from the water." }
+    ],
+    "expertGuide": {
+      "culture": "Many Alpine lakes are 'motor-free,' ensuring the water remains perfectly glassy for paddlers.",
+      "fitness": "It’s a core-heavy workout, but the calm lake waters make it easy for absolute beginners.",
+      "timing": "Go at sunrise (6:00 AM) to avoid the wind and have the lake entirely to yourself."
+    },
+    "proTip": "Rent an inflatable SUP if you are road-tripping; you can hike it up to high-altitude 'tarn' lakes for a truly remote paddle."
+  },
+  {
+    "id": "exp017",
+    "activityName": "Highland Hiking",
+    "regionOrCountry": "British Isles",
+    "heroSection": {
+      "vibe": "Trek through misty glens, rugged ridges, and purple heather-covered moors.",
+      "shortBrief": "The Highlands offer some of the last true wilderness in Europe. From the 'Munros' of Scotland to the peaks of Wales, it’s a landscape of myth and legend."
+    },
+    "quickFacts": {
+      "season": "May – September",
+      "topCountries": ["Scotland", "Wales", "Ireland"],
+      "vibe": "Moody, Atmospheric, Epic",
+      "budget": "€"
+    },
+    "curatedSpotlights": [
+      { "name": "Isle of Skye, Scotland", "cityId": "euc012", "feature": "The Quiraing and Old Man of Storr—otherworldly rock formations." },
+      { "name": "Snowdonia, Wales", "cityId": "euc004", "feature": "Climb Yr Wyddfa (Snowdon) for views across the Irish Sea." },
+      { "name": "Glendalough, Ireland", "cityId": "euc007", "feature": "Ancient monastic ruins set in a dramatic glacial valley." }
+    ],
+    "expertGuide": {
+      "culture": "In Scotland, 'Munro Bagging' (climbing peaks over 3,000ft) is a national obsession.",
+      "weather": "The 'Four Seasons in One Day' rule applies. Always carry a waterproof shell, even if it's sunny.",
+      "etiquette": "Stick to the 'Leave No Trace' principles and be wary of 'midges' (tiny biting flies) in mid-summer."
+    },
+    "proTip": "Buy a 'midge net' for your head if hiking Scotland in July—it looks silly but will save your sanity."
+  },
+  {
+    "id": "exp018",
+    "activityName": "Cave Exploration",
+    "regionOrCountry": "Balkans",
+    "heroSection": {
+      "vibe": "Journey into massive underground cathedrals and hidden pirate hideouts along the Adriatic.",
+      "shortBrief": "The Balkans are home to 'Karst' topography, creating some of the deepest and most decorated cave systems on earth, many with fascinating war histories."
+    },
+    "quickFacts": {
+      "season": "Year-round",
+      "topCountries": ["Slovenia", "Albania", "Montenegro", "Serbia"],
+      "vibe": "Mysterious, Geological, Historic",
+      "budget": "€ - €€"
+    },
+    "curatedSpotlights": [
+      { "name": "Postojna, Slovenia", "cityId": "euc142", "feature": "Ride an underground train through 24km of stalactites and halls." },
+      { "name": "Karaburun, Albania", "cityId": "euc102", "feature": "The Cave of Haxhi Ali—a massive sea cave used by 17th-century pirates." },
+      { "name": "Cetinje, Montenegro", "cityId": "euc100", "feature": "Lipa Cave—one of the largest in the country with an underground bar." }
+    ],
+    "expertGuide": {
+      "culture": "Caves here often served as bomb shelters or partisan bases during past conflicts.",
+      "wildlife": "Keep an eye out for the 'Olm' in Slovenia—a rare, blind aquatic salamander known as the 'human fish'.",
+      "temperature": "Underground caves stay at a constant 10°C (50°F) year-round, making them a great escape from summer heat."
+    },
+    "proTip": "In Postojna, book the 'Hidden Passages' tour if you want to see the parts of the cave not accessible by the tourist train."
+  },
+]
