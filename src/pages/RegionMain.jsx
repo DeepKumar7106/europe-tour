@@ -14,13 +14,6 @@ export default function RegionMain() {
             countryList.push(country)
     })
 
-    function navigateCountry() {
-        const id = regionCard.current.id
-        console.log(id)
-        // navigate(`/country/${id}`)
-    }
-
-
     const countryCard = countryList.map(country => {
         return (
             <div className="region-country-card" key={country.id} id={country.id} ref={regionCard}>
