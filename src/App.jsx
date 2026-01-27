@@ -36,7 +36,7 @@ function App() {
           <Route path="/experience" element = {<ExperienceMain />} />
           <Route path="/underrated" element = {<UnderratedMain />} />
           <Route path="/cities/:cityId" element = {<Cities />} />
-          <Route path="/attraction" element = {<Attraction />} />
+          <Route path="/attractionLocation" element = {<Attraction />} />
         </Routes>
         <Footer />
     </BrowserRouter>

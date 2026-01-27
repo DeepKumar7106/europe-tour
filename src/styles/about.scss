@@ -98,16 +98,17 @@ body {
             background: $primary;
             color: $black;
         }
+
+        & > li:nth-child(1) {
+            width: calc(100% + 2rem);
+            background: $secondary;
+            color: $accent;
+            box-shadow: 0 5px 15px -5px $secondary,
+                        0 -5px 5px -5px $secondary inset;
+        }
     }
 }
 
-li:nth-child(1) {
-    width: calc(100% + 2rem);
-    background: $secondary;
-    color: $accent;
-    box-shadow: 0 5px 15px -5px $secondary,
-                0 -5px 5px -5px $secondary inset;
-}
 
 
 @media (max-width: 700px) {

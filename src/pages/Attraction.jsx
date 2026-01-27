@@ -1,4 +1,5 @@
 import { attractions } from "../scripts/data"
+import './../styles/attractionLocation.scss'
 
 export default function Attraction() {
     const atcId = "atc001"
@@ -8,9 +9,7 @@ export default function Attraction() {
         <main id="attraction-place-main">
             <section id="attraction-place-bg-section">
                 <img src="public\underrated-webp\Alentejo-Coast.webp" alt="" id="attraction-place-bg-img" />
-                <article id="attraction-place-bg-article">
-
-                </article>
+                <h2 id="attraction-place-bg-h2">{location.name}</h2>
             </section>
             <section id="attraction-place-hero-section">
                 <article id="attraction-place-hero-detail">

@@ -1,0 +1,61 @@
+@use "sass:color";
+@import 'config';
+@import 'header';
+@import 'footer';
+
+#attraction-place-main {
+    width: 100%;
+    background-color: $secondary;
+    position: relative;
+    @include center(column);
+    align-items: end;
+}
+
+#attraction-place-bg-section {
+    height: 100vh;
+    width: 100%;
+    background: $black;
+    anchor-name: --bg-section;
+    position: relative;
+    & > #attraction-place-bg-img {
+        height: 100%;
+        width: 100%;
+        opacity: 0.4;
+        object-fit: cover;
+    }
+
+    & > #attraction-place-bg-h2 {
+        // height: 50%;
+        width: 100%;
+        font-size: 10rem;
+        font-weight: 900;
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        outline: 2px solid;
+    }
+}
+
+#attraction-place-hero-section {
+    height: 100vh;
+    width: 50%;
+    background: $accent;
+
+    & > #attraction-place-hero-detail {
+        width: 100%;
+        & > h2 {
+            font-size: clamp(1.2rem, 4vw, 3.5rem);
+        }
+
+        & > #attraction-place-hero-location {
+            font-size: clamp(1.1rem, 2vw, 2.5rem);
+        }
+
+        & > #attraction-place-hero-architecture-style {
+            font-size: clamp(1.2rem, 3vw, 3rem);
+        }
+    }
+}
