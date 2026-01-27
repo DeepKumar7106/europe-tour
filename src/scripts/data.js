@@ -3008,15 +3008,33 @@ export const attractions = [
       "architectural_style": "Industrial Iron Puddle Lattice"
     },
     "why_it_is_famous": [
-      "Global Icon: The ultimate symbol of France and romance.",
-      "Engineering Marvel: It was the tallest man-made structure in the world for 41 years.",
-      "Sparkle Effect: Every hour on the hour at night, 20,000 lightbulbs flash for 5 minutes."
+      {
+        "heading": "Global Icon",
+        "brief": "The ultimate symbol of France and romance."
+      },
+      {
+        "heading": "Engineering Marvel",
+        "brief": "It was the tallest man-made structure in the world for 41 years."
+      },
+      {
+        "heading": "Sparkle Effect",
+        "brief": "Every hour on the hour at night, 20,000 lightbulbs flash for 5 minutes."
+      }
     ],
-    "tour_guide_secrets": {
-      "the_secret_apartment": "Gustave Eiffel built a private apartment at the very top. You can now peer into it to see wax figures of Eiffel and Thomas Edison.",
-      "the_bunker": "Under the Champ de Mars lies a secret military bunker connected to the tower by tunnels.",
-      "paint_job": "The tower is repainted every 7 years by hand, using 60 tons of paint to prevent rust."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_secret_apartment",
+        "brief": "Gustave Eiffel built a private apartment at the very top. You can now peer into it to see wax figures of Eiffel and Thomas Edison."
+      },
+      {
+        "heading": "the_bunker",
+        "brief": "Under the Champ de Mars lies a secret military bunker connected to the tower by tunnels."
+      },
+      {
+        "heading": "paint_job",
+        "brief": "The tower is repainted every 7 years by hand, using 60 tons of paint to prevent rust."
+      }
+    ],
     "visitor_strategy": {
       "ideal_duration": "2.5 Hours",
       "best_time_to_visit": "One hour before sunset to see the city in daylight, the golden hour, and the night lights.",
@@ -3033,16 +3051,34 @@ export const attractions = [
       "story": "Originally known as the Flavian Amphitheatre, it was built on the site of a drained lake from Emperor Nero's palace. It was a gift to the Roman people to provide 'Bread and Circuses'—state-funded entertainment to keep the population happy and distracted.",
       "architectural_style": "Ancient Roman (Travertine and Tuff)"
     },
-    "why_it_is_famous": [
-      "Gladiatorial Combat: The epicenter of Roman blood sports and naval battle recreations.",
-      "Engineering Complexity: A system of 80 arched entrances allowed 50,000 people to exit in under 10 minutes.",
-      "Survival: It has survived earthquakes, stone-thieves (who used its marble for St. Peter’s), and WWII bombings."
+   "why_it_is_famous": [
+      {
+        "heading": "Gladiatorial Combat",
+        "brief": "The epicenter of Roman blood sports and naval battle recreations."
+      },
+      {
+        "heading": "Engineering Complexity",
+        "brief": "A system of 80 arched entrances allowed 50,000 people to exit in under 10 minutes."
+      },
+      {
+        "heading": "Survival",
+        "brief": "It has survived earthquakes, stone-thieves (who used its marble for St. Peter’s), and WWII bombings."
+      }
     ],
-    "tour_guide_secrets": {
-      "the_hypogeum": "The floor was wood covered in sand; beneath it was a massive two-level network of tunnels and lift systems for beasts.",
-      "naval_battles": "In the early years, the arena could be flooded with water to stage miniature sea battles (Naumachia).",
-      "the_holes": "The thousands of small holes in the exterior are where Romans pried out the iron clamps that held the stones together."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_hypogeum",
+        "brief": "The floor was wood covered in sand; beneath it was a massive two-level network of tunnels and lift systems for beasts."
+      },
+      {
+        "heading": "naval_battles",
+        "brief": "In the early years, the arena could be flooded with water to stage miniature sea battles (Naumachia)."
+      },
+      {
+        "heading": "the_holes",
+        "brief": "The thousands of small holes in the exterior are where Romans pried out the iron clamps that held the stones together."
+      }
+    ],
     "visitor_strategy": {
       "ideal_duration": "3 Hours (including Forum)",
       "best_time_to_visit": "8:30 AM (Opening) to avoid the heat and the 10:00 AM tour bus rush.",
@@ -3060,15 +3096,33 @@ export const attractions = [
       "architectural_style": "French Neoclassical / Beaux-Arts"
     },
     "why_it_is_famous": [
-      "The Working Palace: It is the administrative headquarters of the British Monarch and a setting for state ceremonial and official entertaining.",
-      "The Balcony: The site of historic public appearances, from Royal Wedding kisses to Jubilee celebrations.",
-      "Changing of the Guard: A world-famous display of British military pageantry and tradition."
+      {
+        "heading": "The Working Palace",
+        "brief": "It is the administrative headquarters of the British Monarch and a setting for state ceremonial and official entertaining."
+      },
+      {
+        "heading": "The Balcony",
+        "brief": "The site of historic public appearances, from Royal Wedding kisses to Jubilee celebrations."
+      },
+      {
+        "heading": "Changing of the Guard",
+        "brief": "A world-famous display of British military pageantry and tradition."
+      }
     ],
-    "tour_guide_secrets": {
-      "the_flag_code": "Watch the mast: If the Royal Standard is flying, the King is in residence. If the Union Jack is flying, he is away.",
-      "underground_tunnels": "A network of secret tunnels lies beneath the palace, connecting it to the Houses of Parliament and the nearby St. James's Park.",
-      "the_ballroom_size": "The State Ballroom is the largest room in the palace; it was opened in 1856 to celebrate the end of the Crimean War and is long enough to fit two double-decker buses parked end-to-end."
-    },
+   "tour_guide_secrets": [
+      {
+        "heading": "the_flag_code",
+        "brief": "Watch the mast: If the Royal Standard is flying, the King is in residence. If the Union Jack is flying, he is away."
+      },
+      {
+        "heading": "underground_tunnels",
+        "brief": "A network of secret tunnels lies beneath the palace, connecting it to the Houses of Parliament and the nearby St. James's Park."
+      },
+      {
+        "heading": "the_ballroom_size",
+        "brief": "The State Ballroom is the largest room in the palace; it was opened in 1856 to celebrate the end of the Crimean War and is long enough to fit two double-decker buses parked end-to-end."
+      }
+    ],
     "visitor_strategy": {
       "ideal_duration": "2 Hours (Exterior/Guard Change) | 4 Hours (State Room Tour)",
       "best_time_to_visit": "10:15 AM on a Monday, Wednesday, Friday, or Sunday to secure a spot for the 11:00 AM Changing of the Guard.",
@@ -3086,15 +3140,33 @@ export const attractions = [
       "architectural_style": "Catalan Modernism / Organic Gothic"
     },
     "why_it_is_famous": [
-      "The Unfinished: It has been under construction for over 140 years, longer than it took to build the Egyptian Pyramids.",
-      "Forest Interior: The columns are designed to look like giant stone trees with branches reaching the ceiling.",
-      "Mathematical Perfection: The Magic Square on the Passion Facade adds up to 33 (the age of Christ) in every direction."
+      {
+        "heading": "The Unfinished",
+        "brief": "It has been under construction for over 140 years, longer than it took to build the Egyptian Pyramids."
+      },
+      {
+        "heading": "Forest Interior",
+        "brief": "The columns are designed to look like giant stone trees with branches reaching the ceiling."
+      },
+      {
+        "heading": "Mathematical Perfection",
+        "brief": "The Magic Square on the Passion Facade adds up to 33 (the age of Christ) in every direction."
+      }
     ],
-    "tour_guide_secrets": {
-      "color_meaning": "The stained glass is chromatically ordered; the yellow/red side represents the Resurrection, while the blue/green side represents the Nativity.",
-      "no_straight_lines": "There are almost no right angles in the entire building; everything is curved to mimic God’s creation in nature.",
-      "future_height": "When the final tower (Jesus Christ) is finished, it will reach 172.5 meters, intentionally 1 meter shorter than the local Montjuïc hill, because 'the work of man should not exceed the work of God'."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "color_meaning",
+        "brief": "The stained glass is chromatically ordered; the yellow/red side represents the Resurrection, while the blue/green side represents the Nativity."
+      },
+      {
+        "heading": "no_straight_lines",
+        "brief": "There are almost no right angles in the entire building; everything is curved to mimic God’s creation in nature."
+      },
+      {
+        "heading": "future_height",
+        "brief": "When the final tower (Jesus Christ) is finished, it will reach 172.5 meters, intentionally 1 meter shorter than the local Montjuïc hill, because 'the work of man should not exceed the work of God'."
+      }
+    ],
     "visitor_strategy": {
       "ideal_duration": "2 Hours",
       "best_time_to_visit": "Late afternoon (4:00 PM – 6:00 PM) for the 'Sunset Fire' light effect inside the nave.",
@@ -3112,15 +3184,33 @@ export const attractions = [
       "architectural_style": "Dutch Baroque / Mannerism"
     },
     "why_it_is_famous": [
-      "The Venice of the North: Over 100 kilometers of canals and 1,500 bridges.",
-      "UNESCO Heritage: One of the most perfectly preserved 17th-century urban landscapes.",
-      "Houseboat Culture: A living community of thousands of people residing on the water."
+      {
+        "heading": "The Venice of the North",
+        "brief": "Over 100 kilometers of canals and 1,500 bridges."
+      },
+      {
+        "heading": "UNESCO Heritage",
+        "brief": "One of the most perfectly preserved 17th-century urban landscapes."
+      },
+      {
+        "heading": "Houseboat Culture",
+        "brief": "A living community of thousands of people residing on the water."
+      }
     ],
-    "tour_guide_secrets": {
-      "the_tilting_houses": "Buildings lean forward not because of age, but by design; hooks at the top allowed furniture to be hoisted up without hitting the windows.",
-      "the_bicycle_graveyard": "Approximately 12,000 to 15,000 bicycles are fished out of the canals every single year.",
-      "hidden_churches": "The canals hide 'Ons' Lieve Heer op Solder'—a secret Catholic church built inside a canal house attic during the Reformation."
-    },
+   "tour_guide_secrets": [
+      {
+        "heading": "the_tilting_houses",
+        "brief": "Buildings lean forward not because of age, but by design; hooks at the top allowed furniture to be hoisted up without hitting the windows."
+      },
+      {
+        "heading": "the_bicycle_graveyard",
+        "brief": "Approximately 12,000 to 15,000 bicycles are fished out of the canals every single year."
+      },
+      {
+        "heading": "hidden_churches",
+        "brief": "The canals hide 'Ons' Lieve Heer op Solder'—a secret Catholic church built inside a canal house attic during the Reformation."
+      }
+    ],
     "visitor_strategy": {
       "ideal_duration": "1.5 Hours (Boat) / 3 Hours (Walking)",
       "best_time_to_visit": "Twilight (The 'Blue Hour'). The bridges light up with thousands of tiny bulbs, reflecting perfectly in the still water.",
@@ -3138,15 +3228,33 @@ export const attractions = [
       "architectural_style": "Cycladic (Whitewashed / Cubist)"
     },
     "why_it_is_famous": [
-      "The View: The world's most iconic contrast of white buildings, blue domes, and deep indigo sea.",
-      "Geology: One of the few places on earth where you can live on the rim of an active volcano.",
-      "Wine Heritage: Home to ancient 'Assyrtiko' vines that grow in baskets on the volcanic soil."
+      {
+        "heading": "The View",
+        "brief": "The world's most iconic contrast of white buildings, blue domes, and deep indigo sea."
+      },
+      {
+        "heading": "Geology",
+        "brief": "One of the few places on earth where you can live on the rim of an active volcano."
+      },
+      {
+        "heading": "Wine Heritage",
+        "brief": "Home to ancient 'Assyrtiko' vines that grow in baskets on the volcanic soil."
+      }
     ],
-    "tour_guide_secrets": {
-      "why_the_blue_domes": "Originally, the blue paint was the cheapest available; later, it became a symbol of the Greek flag during resistance movements.",
-      "the_donkey_path": "The 588 steps from the Old Port were the only way up for centuries; today, the cable car is the ethical and faster choice.",
-      "the_volcano_is_alive": "You can visit the center of the caldera (Nea Kameni) to see active sulfur vents steaming from the ground."
-    },
+   "tour_guide_secrets": [
+      {
+        "heading": "why_the_blue_domes",
+        "brief": "Originally, the blue paint was the cheapest available; later, it became a symbol of the Greek flag during resistance movements."
+      },
+      {
+        "heading": "the_donkey_path",
+        "brief": "The 588 steps from the Old Port were the only way up for centuries; today, the cable car is the ethical and faster choice."
+      },
+      {
+        "heading": "the_volcano_is_alive",
+        "brief": "You can visit the center of the caldera (Nea Kameni) to see active sulfur vents steaming from the ground."
+      }
+    ],
     "visitor_strategy": {
       "ideal_duration": "Full Day",
       "best_time_to_visit": "Early morning for the hike from Fira to Oia; it takes 3 hours and offers the best views without the heat.",
@@ -3164,15 +3272,33 @@ export const attractions = [
       "architectural_style": "Italo-Byzantine / Venetian Gothic"
     },
     "why_it_is_famous": [
-      "The drawing room of Europe: A vast, open space in a city of narrow alleys.",
-      "Basilica di San Marco: Known as the 'Church of Gold' for its 8,000 square meters of mosaics.",
-      "Acqua Alta: The dramatic flooding that turns the square into a shallow lake several times a year."
+      {
+        "heading": "The drawing room of Europe",
+        "brief": "A vast, open space in a city of narrow alleys."
+      },
+      {
+        "heading": "Basilica di San Marco",
+        "brief": "Known as the 'Church of Gold' for its 8,000 square meters of mosaics."
+      },
+      {
+        "heading": "Acqua Alta",
+        "brief": "The dramatic flooding that turns the square into a shallow lake several times a year."
+      }
     ],
-    "tour_guide_secrets": {
-      "the_red_pillars": "Two of the pillars in the Doge's Palace are red; this is where death sentences were traditionally announced.",
-      "the_stolen_saint": "The relics of St. Mark were allegedly smuggled out of Egypt in a barrel of pork to get past Muslim guards.",
-      "coffee_history": "Caffè Florian (founded 1720) in the square is the oldest coffee house in continuous operation in the world."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_red_pillars",
+        "brief": "Two of the pillars in the Doge's Palace are red; this is where death sentences were traditionally announced."
+      },
+      {
+        "heading": "the_stolen_saint",
+        "brief": "The relics of St. Mark were allegedly smuggled out of Egypt in a barrel of pork to get past Muslim guards."
+      },
+      {
+        "heading": "coffee_history",
+        "brief": "Caffè Florian (founded 1720) in the square is the oldest coffee house in continuous operation in the world."
+      }
+    ],
     "visitor_strategy": {
       "ideal_duration": "2 Hours",
       "best_time_to_visit": "10:00 PM. The orchestras at the cafes play, the crowds have left for their hotels, and the atmosphere is pure cinema.",
@@ -3189,16 +3315,34 @@ export const attractions = [
       "story": "Prague’s Old Town (Staré Město) was a crossroads of trade for centuries. While other European cities were destroyed in WWII, Prague remained largely intact, leaving a perfect 'layer cake' of architecture from Romanesque to Art Nouveau.",
       "architectural_style": "Gothic / Baroque / Romanesque"
     },
-    "why_it_is_famous": [
-      "The Astronomical Clock: The oldest working clock of its kind (1410).",
-      "Charles Bridge: A 14th-century stone bridge lined with 30 brooding statues of saints.",
-      "Fairytale Vibe: One of the most complete medieval centers left in the world."
+   "why_it_is_famous": [
+      {
+        "heading": "The Astronomical Clock",
+        "brief": "The oldest working clock of its kind (1410)."
+      },
+      {
+        "heading": "Charles Bridge",
+        "brief": "A 14th-century stone bridge lined with 30 brooding statues of saints."
+      },
+      {
+        "heading": "Fairytale Vibe",
+        "brief": "One of the most complete medieval centers left in the world."
+      }
+],
+    "tour_guide_secrets": [
+      {
+        "heading": "the_clock_curse",
+        "brief": "Legend says that if the clock is neglected, the city will suffer. Its maker was reportedly blinded so he could never build another."
+      },
+      {
+        "heading": "egg-shell-mortar",
+        "brief": "Medieval engineers supposedly mixed raw eggs into the mortar of Charles Bridge to make the stone stronger."
+      },
+      {
+        "heading": "hidden_alchemist_labs",
+        "brief": "The Old Town is riddled with legends of alchemy; look for symbols on house facades that indicate what 'magical' trades were practiced there."
+      }
     ],
-    "tour_guide_secrets": {
-      "the_clock_curse": "Legend says that if the clock is neglected, the city will suffer. Its maker was reportedly blinded so he could never build another.",
-      "egg-shell-mortar": "Medieval engineers supposedly mixed raw eggs into the mortar of Charles Bridge to make the stone stronger.",
-      "hidden_alchemist_labs": "The Old Town is riddled with legends of alchemy; look for symbols on house facades that indicate what 'magical' trades were practiced there."
-    },
     "visitor_strategy": {
       "ideal_duration": "4 Hours",
       "best_time_to_visit": "6:00 AM on the Charles Bridge. It is the only time you can experience the Gothic atmosphere without thousands of selfies.",
@@ -3216,15 +3360,33 @@ export const attractions = [
       "architectural_style": "Natural (Pyramidal Peak)"
     },
     "why_it_is_famous": [
-      "The Shape: A near-perfect pyramid with four faces facing the cardinal points.",
-      "Cultural Impact: The inspiration for the Toblerone chocolate bar and the world's most recognizable peak.",
-      "Car-Free Zermatt: The town below is entirely electric, keeping the air as pure as the mountain."
+      {
+        "heading": "The Shape",
+        "brief": "A near-perfect pyramid with four faces facing the cardinal points."
+      },
+      {
+        "heading": "Cultural Impact",
+        "brief": "The inspiration for the Toblerone chocolate bar and the world's most recognizable peak."
+      },
+      {
+        "heading": "Car-Free Zermatt",
+        "brief": "The town below is entirely electric, keeping the air as pure as the mountain."
+      }
     ],
-    "tour_guide_secrets": {
-      "the_hörnli_ridge": "The most popular climbing route is actually a busy 'highway' in summer, with up to 100 climbers attempting it daily.",
-      "disappearing_glacier": "The surrounding Gorner Glacier is the second largest in the Alps but is retreating fast, revealing WWI artifacts and even old climbing gear.",
-      "optical_illusion": "From certain angles in Zermatt, the mountain looks much smaller than its neighbors because of its isolated position."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_hörnli_ridge",
+        "brief": "The most popular climbing route is actually a busy 'highway' in summer, with up to 100 climbers attempting it daily."
+      },
+      {
+        "heading": "disappearing_glacier",
+        "brief": "The surrounding Gorner Glacier is the second largest in the Alps but is retreating fast, revealing WWI artifacts and even old climbing gear."
+      },
+      {
+        "heading": "optical_illusion",
+        "brief": "From certain angles in Zermatt, the mountain looks much smaller than its neighbors because of its isolated position."
+      }
+    ],
     "visitor_strategy": {
       "ideal_duration": "Full Day (including Gornergrat)",
       "best_time_to_visit": "The first 'Gornergrat Bahn' train of the morning. You’ll see the sun hit the peak (Alpenglow) before the clouds form.",
@@ -3242,15 +3404,33 @@ export const attractions = [
       "architectural_style": "Natural (Volcanic / Glacial)"
     },
     "why_it_is_famous": [
-      "Geysir: The namesake for all other geysers in the world.",
-      "Gullfoss: The 'Golden Falls,' where glacial water plunges into a deep canyon.",
-      "Tectonic Rift: One of the few places on earth where you can see the Earth's crust pulling apart above sea level."
+      {
+        "heading": "Geysir",
+        "brief": "The namesake for all other geysers in the world."
+      },
+      {
+        "heading": "Gullfoss",
+        "brief": "The 'Golden Falls,' where glacial water plunges into a deep canyon."
+      },
+      {
+        "heading": "Tectonic Rift",
+        "brief": "One of the few places on earth where you can see the Earth's crust pulling apart above sea level."
+      }
     ],
-    "tour_guide_secrets": {
-      "the_silfra_crack": "The water in the tectonic rift is so pure you can drink it while snorkeling; it has been filtered through lava rock for 50 years.",
-      "geothermal_bread": "Near Laugarvatn, locals bury rye bread dough in the hot ground to bake it using only volcanic heat.",
-      "the_sleeping_giant": "While 'Strokkur' geyser erupts every 10 minutes, the Great Geysir next to it hasn't erupted properly in years, but is still considered active."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_silfra_crack",
+        "brief": "The water in the tectonic rift is so pure you can drink it while snorkeling; it has been filtered through lava rock for 50 years."
+      },
+      {
+        "heading": "geothermal_bread",
+        "brief": "Near Laugarvatn, locals bury rye bread dough in the hot ground to bake it using only volcanic heat."
+      },
+      {
+        "heading": "the_sleeping_giant",
+        "brief": "While 'Strokkur' geyser erupts every 10 minutes, the Great Geysir next to it hasn't erupted properly in years, but is still considered active."
+      }
+    ],
     "visitor_strategy": {
       "ideal_duration": "8 - 10 Hours",
       "best_time_to_visit": "Winter for the chance to see the waterfalls frozen and the Northern Lights, or Summer 'Midnight Sun' to do the tour at 11:00 PM without crowds.",
