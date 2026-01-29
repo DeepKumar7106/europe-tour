@@ -1,10 +1,11 @@
-@import 'config';
-@import 'header';
-@import 'footer';
+@use "sass:color";
+@use 'config' as *;
+@use 'header';
+@use 'footer';
 
 body {
     min-height: 100vh;
-    background: darken($accent, 5%);
+    background: color.adjust($accent,$lightness: -5%);
     overflow-x: hidden ;
 }
 

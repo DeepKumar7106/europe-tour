@@ -1,6 +1,7 @@
-@import 'config';
-@import 'header';
-@import 'footer';
+@use "sass:color";
+@use 'config' as *;
+@use 'header';
+@use 'footer';
 
 body {
     min-height: 100vh;
@@ -15,7 +16,7 @@ body {
 #expedition-list-section {
     @include center(column);
     width: 100%;
-    background: linear-gradient( lighten($primary, 10%), darken($accent, 30%));
+    background: linear-gradient( color.adjust($primary, $lightness: 10%), color.adjust($accent,$lightness:-30%));
     padding: 2rem;
     gap: 4rem;
     
@@ -25,7 +26,7 @@ body {
     @include center(row);
     width: 80%;
     height: 40rem;
-    background: darken($accent, 5%);
+    background: color.adjust($accent,$lightness: -5%);
     border-radius: 4rem;
     position: relative;
     z-index: 0;
@@ -88,7 +89,7 @@ body {
     height:  calc(100% + 2rem);;
     z-index: -2;
     width: calc(100% + 2rem);
-    background: darken($accent, 15%);
+    background: color.adjust($accent,$lightness: -15%);
     border-radius: calc(4rem + 1rem);
     transform: translate(-1rem, -1rem);
     box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.4);
@@ -99,7 +100,7 @@ body {
     position: absolute;
     inset: 0;
     border-radius: inherit;  
-    background: radial-gradient(darken($accent, 5%) ,darken($accent, 15%));
+    background: radial-gradient(color.adjust($accent, $lightness:-5%) ,color.adjust($accent,$lightness: -15%));
     z-index: -1;  
     box-shadow: 5px 5px 15px 5px  rgba(0,0,0,0.4);
 }

@@ -1,6 +1,7 @@
-@import 'config';
-@import 'header';
-@import 'footer';
+@use "sass:color";
+@use 'config' as *;
+@use 'header';
+@use 'footer';
 
 #cities-main {
     width: 100%;
@@ -70,12 +71,12 @@
     & > #cities-details-section-menu {
         width: 20rem;
         flex: 1;
-        background: darken($accent, 50%);
+        background: color.adjust($accent, $lightness:-50%);
     }
 
     & > #cities-details-section-container {
         width: calc(100% - 20rem);
-        background: darken($accent, 5%);
+        background: color.adjust($accent, $lightness:-5%);
         padding-inline: 10%;
         font-size: clamp(1.1rem, 1.5vw, 1.6rem);
 

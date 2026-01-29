@@ -1,4 +1,5 @@
-@import 'config';
+@use "sass:color";
+@use 'config' as *;
 
 footer {
     z-index: 100;

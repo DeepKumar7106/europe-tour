@@ -1,6 +1,7 @@
-@import 'config';
-@import 'header';
-@import 'footer';
+@use "sass:color";
+@use 'config' as *;
+@use 'header';
+@use 'footer';
 
 body {
     min-height: 100vh;
@@ -18,7 +19,10 @@ body {
     width: 100%;
     justify-content: space-evenly;
     min-height: 100vh;
-    background: radial-gradient(lighten($primary, 20%) 0%, $primary 30%, $primary 70%, darken($primary, 20%) 100%);
+    background: radial-gradient(color.adjust($primary, $lightness: 20%) 0%, 
+                                $primary 30%, 
+                                $primary 70%, 
+                                color.adjust($primary, $lightness: -20%) 100%);
 }
 
 
@@ -36,7 +40,7 @@ body {
             height: 40px;
             width: 40px;
             transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
-            background: darken($primary, 20%);
+            background: color.adjust($primary, $lightness: -20%);
             border-radius: 20px;
             z-index: 20;
         }
@@ -58,7 +62,7 @@ body {
 //     top: 50%;
 //     transform: translate(-10%, -50%);
 //     z-index: 1;
-//     background: darken($primary, 20%);
+//     background: color.adjust($primary, 20%);
 // }
 
 #country-city-list-section-container {
@@ -69,8 +73,8 @@ body {
 }
 
 .country-city-card {
-    background: darken($primary, 15%);
-    box-shadow: 2px 2px 10px 2px darken($primary, 30%);
+    background: color.adjust($primary,$lightness: -15%);
+    box-shadow: 2px 2px 10px 2px color.adjust($primary,$lightness: -30%);
     border-radius: 50px;
     width: 80%;
     height: 20px;
@@ -91,7 +95,7 @@ body {
     width: 80%;
     height: 50vh;
     border-radius: 50px;
-    box-shadow: 2px 2px 10px 2px darken($primary, 20%);
+    box-shadow: 2px 2px 10px 2px color.adjust($primary,$lightness: -20%);
     scale: 1;
     & > .country-city-card-img {
         height: 100%;

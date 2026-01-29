@@ -1,6 +1,7 @@
-@import 'config';
-@import 'header';
-@import 'footer';
+@use "sass:color";
+@use 'config' as *;
+@use 'header';
+@use 'footer';
 
 body {
     min-height: 100vh;
@@ -15,7 +16,7 @@ body {
 .region-country-card {
     height: 100vh;
     width: 100%;
-    @include center(column);    
+    // @include center(column);    
 
     position: relative;
     background: $accent;

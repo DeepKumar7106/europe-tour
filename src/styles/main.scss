@@ -1,12 +1,13 @@
-@import 'config';
-@import 'header';
-@import 'footer';
-@import 'home/hero';
-@import 'home/popular';
-@import 'home/activities';
-@import 'home/recommendation';
-@import 'home/underrated'; 
-@import 'home/regions';
+@use "sass:color";
+@use 'config' as *;
+@use 'header';
+@use 'footer';
+@use 'home/hero';
+@use 'home/popular';
+@use 'home/activities';
+@use 'home/recommendation';
+@use 'home/underrated'; 
+@use 'home/regions';
 
 body {
     overflow-x: hidden;

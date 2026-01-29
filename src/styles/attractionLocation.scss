@@ -1,7 +1,7 @@
 @use "sass:color";
-@import 'config';
-@import 'header';
-@import 'footer';
+@use 'config' as *;
+@use 'header';
+@use 'footer';
 
 #attraction-place-main {
     width: 100%;
