@@ -1,9 +1,12 @@
 import {countries, regions, underrated} from '/src/scripts/data.js'
 import { addHyphen } from '../App'
 import './../styles/underrated.scss'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function UnderratedMain() {
+    const navigate = useNavigate()
+
     const attractionList = underrated.map(place => {
         const name = addHyphen(place.name)
         return (
@@ -14,7 +17,9 @@ export default function UnderratedMain() {
                         <h2 className="underrated-card-details-article-name">{place.name}</h2>
                         <p className="underrated-card-details-article-country">{place.city}, {place.country}</p>
                     </article>
-                    <i className="fa-solid fa-circle-arrow-right"></i>
+                    <i className="fa-solid fa-circle-arrow-right"
+                        onClick={() => {navigate(`/underratedLocation/${place.id}`)}}
+                    ></i>
                 </div>
             </div>
         )

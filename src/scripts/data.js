@@ -3451,10 +3451,16 @@ export const underrated = [
       "era": "Renaissance / Middle Ages",
       "story": "Colmar has swapped hands between France and Germany multiple times, resulting in a unique 'Alsatian' blend of architecture, language, and food. It was miraculously spared from destruction in WWII, preserving its 16th-century soul."
     },
-    "tour_guide_secrets": {
-      "the_statue_of_liberty": "The creator of the Statue of Liberty, Frédéric Auguste Bartholdi, was born here. You can find a 12-meter replica of the statue on the outskirts of town.",
-      "little_venice": "The 'Petite Venise' district was formerly the center of the professional tanners, wine producers, and boatmen; the house colors once represented the type of shop inside."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_statue_of_liberty",
+        "brief": "The creator of the Statue of Liberty, Frédéric Auguste Bartholdi, was born here. You can find a 12-meter replica of the statue on the outskirts of town."
+      },
+      {
+        "heading": "little_venice",
+        "brief": "The 'Petite Venise' district was formerly the center of the professional tanners, wine producers, and boatmen; the house colors once represented the type of shop inside."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Quiet, romantic, and pedestrian-heavy.",
       "best_time": "Early morning in the 'Quai de la Poissonnerie'. You’ll see the local fisherman's market spirit without the midday day-trippers from larger cities."
@@ -3471,10 +3477,16 @@ export const underrated = [
       "era": "Venetian (1420–1797)",
       "story": "Kotor was a fortified stronghold for the Republic of Venice. Its walls crawl up the vertical mountain like a mini-Great Wall of China, designed to protect the wealthy maritime traders from Ottoman invasions."
     },
-    "tour_guide_secrets": {
-      "the_cat_capital": "Kotor is famous for its cats. They are considered a symbol of good luck for having saved the city from the plague by killing rats centuries ago.",
-      "1,350_steps": "To get the best view, you must climb 1,350 steps to the Castle of San Giovanni. Most tourists stop halfway; the top is where the silence is absolute."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_cat_capital",
+        "brief": "Kotor is famous for its cats. They are considered a symbol of good luck for having saved the city from the plague by killing rats centuries ago."
+      },
+      {
+        "heading": "1,350_steps",
+        "brief": "To get the best view, you must climb 1,350 steps to the Castle of San Giovanni. Most tourists stop halfway; the top is where the silence is absolute."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Atmospheric, narrow, and slightly mysterious.",
       "best_time": "Visit the Old Town after 4:00 PM when the cruise ship passengers depart. The stone alleys become cool, quiet, and perfect for a slow dinner."
@@ -3491,10 +3503,16 @@ export const underrated = [
       "era": "Bronze Age / Venetian",
       "story": "According to myth, this is where Dionysus (God of Wine) lived. It has a unique mix of white Cycladic houses and medieval Venetian towers, a remnant of the Duchy of the Archipelago."
     },
-    "tour_guide_secrets": {
-      "the_portara": "The massive marble gate you see on the harbor is 2,500 years old. It was meant to be a temple for Apollo but was never finished; it now stands as a 'doorway to nowhere'.",
-      "mountain_villages": "Head to 'Apeiranthos'. It’s a village made entirely of marble, hidden high in the mountains where locals still wear traditional dress."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_portara",
+        "brief": "The massive marble gate you see on the harbor is 2,500 years old. It was meant to be a temple for Apollo but was never finished; it now stands as a 'doorway to nowhere'."
+      },
+      {
+        "heading": "mountain_villages",
+        "brief": "Head to 'Apeiranthos'. It’s a village made entirely of marble, hidden high in the mountains where locals still wear traditional dress."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Authentic, rustic, and incredibly spacious.",
       "best_time": "September. The Etesian winds die down, the water is warm, and the long sandy beaches of Plaka feel like your own private island."
@@ -3511,10 +3529,16 @@ export const underrated = [
       "era": "Traditional Portuguese / Moorish roots",
       "story": "This region has always been the 'breadbasket' of Portugal. Its coastline remained ignored by developers for decades, preserving a slow-motion way of life that has disappeared elsewhere in Europe."
     },
-    "tour_guide_secrets": {
-      "storks_on_cliffs": "This is the only place in the world where white storks nest on sea stacks directly above the crashing Atlantic surf.",
-      "the_rota_vicentina": "A world-class hiking trail follows the coast. You can walk for hours without seeing a car, only seeing the occasional local fisherman perched on a 50-meter cliff."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "storks_on_cliffs",
+        "brief": "This is the only place in the world where white storks nest on sea stacks directly above the crashing Atlantic surf."
+      },
+      {
+        "heading": "the_rota_vicentina",
+        "brief": "A world-class hiking trail follows the coast. You can walk for hours without seeing a car, only seeing the occasional local fisherman perched on a 50-meter cliff."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Wild, windy, and soulful.",
       "best_time": "Late Spring (May). The cliffs are covered in wild flowers, and the 'hidden' beaches like Praia do Cavaleiro are completely empty."
@@ -3531,10 +3555,16 @@ export const underrated = [
       "era": "Glacial / Alpine Frontier",
       "story": "Local legend says that when God was giving out land to people, he forgot a small group who stayed silent and waited. Because of their patience, he gave them the most beautiful piece of land he had kept for himself: Bohinj."
     },
-    "tour_guide_secrets": {
-      "the_vogel_cable_car": "Take the lift to Mt. Vogel; you get a bird’s eye view of the lake that makes it look like a heart carved into the mountains.",
-      "savica_waterfall": "A 20-minute hike leads to an A-shaped waterfall that emerges from a hidden underground cave system."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_vogel_cable_car",
+        "brief": "Take the lift to Mt. Vogel; you get a bird’s eye view of the lake that makes it look like a heart carved into the mountains."
+      },
+      {
+        "heading": "savica_waterfall",
+        "brief": "A 20-minute hike leads to an A-shaped waterfall that emerges from a hidden underground cave system."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Quiet, pristine, and majestic.",
       "best_time": "Early morning or late afternoon. The water is so still it acts as a perfect mirror for the Julian Alps."
@@ -3551,10 +3581,16 @@ export const underrated = [
       "era": "Austro-Hungarian / Renaissance",
       "story": "Lviv was once the capital of the Kingdom of Galicia and Lodomeria. Because it escaped the destruction of WWII that flattened many other Ukrainian cities, it remains a pristine museum of Renaissance, Baroque, and Belle Époque architecture."
     },
-    "tour_guide_secrets": {
-      "the_coffee_mine": "Locals joke that coffee is mined like coal. Visit 'Lviv Coffee Manufacture' where you go underground into a 'mine' to see how they flame-roast the beans.",
-      "the_yard_of_lost_toys": "A strange, haunting, yet beautiful courtyard filled with abandoned toys found by a local resident—a true testament to the city's quirky soul."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_coffee_mine",
+        "brief": "Locals joke that coffee is mined like coal. Visit 'Lviv Coffee Manufacture' where you go underground into a 'mine' to see how they flame-roast the beans."
+      },
+      {
+        "heading": "the_yard_of_lost_toys",
+        "brief": "A strange, haunting, yet beautiful courtyard filled with abandoned toys found by a local resident—a true testament to the city's quirky soul."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Intellectual, bohemian, and nostalgic.",
       "best_time": "Early morning in Rynok Square. Watch the city wake up as the scent of fresh pastries fills the air before the local students take over the cafes."
@@ -3571,10 +3607,16 @@ export const underrated = [
       "era": "Ottoman (16th Century)",
       "story": "The Stari Most (Old Bridge) stood for 427 years before being destroyed during the Croat–Bosniak War in 1993. It was painstakingly rebuilt using the original stones recovered from the riverbed, symbolizing the city's rebirth and reconciliation."
     },
-    "tour_guide_secrets": {
-      "the_bridge_jumpers": "Local men have jumped from the 24-meter bridge into the icy river for centuries as a rite of passage. They won't jump until they've collected enough 'tips' from the crowd.",
-      "the_crooked_bridge": "Just a few meters away is 'Kriva Ćuprija,' a miniature version of the main bridge that served as a prototype before the grand project was attempted."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_bridge_jumpers",
+        "brief": "Local men have jumped from the 24-meter bridge into the icy river for centuries as a rite of passage. They won't jump until they've collected enough 'tips' from the crowd."
+      },
+      {
+        "heading": "the_crooked_bridge",
+        "brief": "Just a few meters away is 'Kriva Ćuprija,' a miniature version of the main bridge that served as a prototype before the grand project was attempted."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Spiritual, vibrant, and resilient.",
       "best_time": "Stay overnight. Most people visit Mostar as a day-trip. At night, when the buses leave, the bridge is lit up and the call to prayer echoes through the quiet stone streets."
@@ -3591,10 +3633,16 @@ export const underrated = [
       "era": "Glacial / Slavic Heartland",
       "story": "For centuries, these mountains were the frontier of the Kingdom of Hungary. Today, they are a strictly protected biosphere where nature remains incredibly raw—it is one of the few places in Europe where brown bears and lynx still roam free."
     },
-    "tour_guide_secrets": {
-      "the_mountain_porters": "The High Tatras are the only mountains in Europe where 'Sherpas' (Slovak Porters) still carry hundreds of kilograms of food and beer on their backs to the mountain huts on foot.",
-      "tatra_tea": "Ask for 'Tatratea'—a potent herbal tea liqueur. The strongest version is 72% alcohol and was originally used by mountain dwellers to stay warm."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_mountain_porters",
+        "brief": "The High Tatras are the only mountains in Europe where 'Sherpas' (Slovak Porters) still carry hundreds of kilograms of food and beer on their backs to the mountain huts on foot."
+      },
+      {
+        "heading": "tatra_tea",
+        "brief": "Ask for 'Tatratea'—a potent herbal tea liqueur. The strongest version is 72% alcohol and was originally used by mountain dwellers to stay warm."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Rugged, crisp, and energetic.",
       "best_time": "September. The 'mists' descend, the summer crowds have gone, and the hiking trails to lakes like Štrbské Pleso are silent and golden."
@@ -3611,10 +3659,16 @@ export const underrated = [
       "era": "14th Century / Kingdom of Naples",
       "story": "The 'Trulli' were built as dry-stone huts (without mortar) so that they could be quickly dismantled. Why? To evade property taxes from the King when the royal tax inspectors were in town!"
     },
-    "tour_guide_secrets": {
-      "the_symbols": "Look at the white symbols painted on the roofs—some are Christian, but many are pagan or zodiac signs designed to ward off the 'evil eye' or bring good harvest.",
-      "the_trullo_church": "The Church of Sant'Antonio is the only church in the world built in the Trullo style, featuring several massive cones and a unique circular layout."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "the_symbols",
+        "brief": "Look at the white symbols painted on the roofs—some are Christian, but many are pagan or zodiac signs designed to ward off the 'evil eye' or bring good harvest."
+      },
+      {
+        "heading": "the_trullo_church",
+        "brief": "The Church of Sant'Antonio is the only church in the world built in the Trullo style, featuring several massive cones and a unique circular layout."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Whimsical, Mediterranean, and sunny.",
       "best_time": "Sunrise. Walking through the Rione Monti district before the shops open feels like wandering through an abandoned ancient village."
@@ -3631,10 +3685,16 @@ export const underrated = [
       "era": "Viking / Teutonic Knight",
       "story": "During the Soviet era, Saaremaa was a restricted border zone, meaning it remained frozen in time for 50 years. This preserved the traditional wooden villages and old-growth forests that were lost elsewhere."
     },
-    "tour_guide_secrets": {
-      "kaali_meteor_crater": "About 3,500 years ago, a massive meteor hit the island. It was one of the last giant impacts in a populated area and is mentioned in ancient Finnish and Estonian myths.",
-      "juniper_everything": "The island is covered in juniper bushes. Locals use the wood to make everything from butter knives to beer, giving the entire island a distinct, gin-like scent."
-    },
+    "tour_guide_secrets": [
+      {
+        "heading": "kaali_meteor_crater",
+        "brief": "About 3,500 years ago, a massive meteor hit the island. It was one of the last giant impacts in a populated area and is mentioned in ancient Finnish and Estonian myths."
+      },
+      {
+        "heading": "juniper_everything",
+        "brief": "The island is covered in juniper bushes. Locals use the wood to make everything from butter knives to beer, giving the entire island a distinct, gin-like scent."
+      }
+    ],
     "crowd_free_strategy": {
       "the_vibe": "Remote, windy, and peaceful.",
       "best_time": "Midsummer (June). The 'White Nights' mean it never gets truly dark, allowing you to explore the stone castles and windmills in a perpetual twilight."

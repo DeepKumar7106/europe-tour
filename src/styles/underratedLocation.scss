@@ -3,7 +3,7 @@
 @use 'header';
 @use 'footer';
 
-#attraction-place-main {
+#underrated-page-main {
     width: 100%;
     background-color: $secondary;
     position: relative;
@@ -11,13 +11,13 @@
     align-items: end;
 }
 
-#attraction-place-bg-section {
+#underrated-place-bg-section {
     height: 100vh;
     width: 100%;
     background: $black;
     anchor-name: --bg-section;
     position: relative;
-    & > #attraction-place-bg-img {
+    & > #underrated-place-bg-img {
         height: 100%;
         width: 100%;
         opacity: 0.2;
@@ -25,7 +25,7 @@
         // filter: grayscale(1);
     }
 
-    & > #attraction-place-bg-detail {
+    & > #underrated-place-bg-detail {
         // height: 50%;
         width: 50%;
         font-size: 2rem;
@@ -36,7 +36,7 @@
         top: 50%;
         left: 30%;
         transform: translate(-50%,-50%);
-        & > #attraction-place-bg-name {
+        & > #underrated-place-bg-name {
             width: 100%;
             font-size: 5rem;
             font-weight: 900;
@@ -45,7 +45,7 @@
     }
 }
 
-#attraction-place-hero-section {
+#underrated-place-hero-section {
     min-height: 100vh;
     width: 50%;
     @include center(column);
@@ -57,45 +57,27 @@
     // inset: 0 0 0 auto;
 }
 
-#attraction-place-hero-famous {
+#underrated-place-hero-famous {
     background: color.adjust($accent, $lightness: -20%);
     // outline: 2px solid;
     width: 90%;
     padding: 2rem;
     // border: 2px solid black;
     border-radius: 15px;
-    & > #attraction-place-hero-famous-heading {
+    & > #underrated-place-hero-famous-heading {
         font-size: clamp(1.1rem, 3vw, 3rem);
     }
 
-    & > #attraction-place-hero-famous-ul {
-        list-style: none;
-        padding-left: 1rem;
-
-        & > li {
-            width: 90%;
-            padding-bottom: 1.5rem;
-            & > h2 {
-                font-size: clamp(1.1rem, 2.5vw, 2rem);
-                width: max-content;
-                padding: 1rem;
-                border-radius: 0 0 0 15px;
-                border-bottom: 1px solid $black;
-                border-left: 1px solid $black;
-                font-weight: 600;
-            }
-
-            & > p {
-                width: 100%;
-                padding-top: 0.5rem;
-                padding-left: 2rem;
-                font-size: clamp(1.1rem, 1.5vw, 1.5rem);
-            }
-        }
+    & > #underrated-place-hero-famous-brief {
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-left: 2rem;
+        font-size: clamp(1.1rem, 1.5vw, 1.5rem);
     }
+
 }
 
-#attraction-place-hero-history {
+#underrated-place-hero-history {
     background: color.adjust($accent, $lightness: -19%);
     width: 90%;
     padding: 2rem;
@@ -105,24 +87,19 @@
         font-weight: 700;
     }
 
-    & > #attraction-place-hero-history-era {
+    & > #underrated-place-hero-history-era {
         font-weight: 200;
         color: $black;
 
     }
 
-    & > #attraction-place-hero-history-brief {
+    & > #underrated-place-hero-history-brief {
         font-size: clamp(1.1rem, 2vw, 1.6rem);
         padding: 1rem;
     }
-
-    & > #attraction-place-hero-architecture-style {
-        font-size: clamp(1.2rem, 2.5vw, 2rem);
-        
-    }
 }
 
-#attraction-place-hero-facts {
+#underrated-place-hero-facts {
     background: color.adjust($accent, $lightness: -18%);
     // outline: 2px solid;
     width: 90%;
@@ -131,19 +108,15 @@
     border-radius: 15px;
 }
 
-#attraction-place-hero-tips{
+#underrated-place-hero-tips{
     background: color.adjust(#137d5a, $lightness: 10%);
     // outline: 2px solid;
     width: 90%;
     padding: 2rem;
     border-radius: 15px;
-}
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
 
-#attraction-place-hero-beware{
-    background: color.adjust(#ff0000cb, $lightness: 10%);
-    // outline: 2px solid;
-    width: 90%;
-    padding: 2rem;
-    // border: 2px solid black;
-    border-radius: 15px;
+    & span {
+        font-weight: 600;
+    }
 }
