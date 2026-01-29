@@ -20,42 +20,130 @@
     & > #attraction-place-bg-img {
         height: 100%;
         width: 100%;
-        opacity: 0.4;
+        opacity: 0.2;
         object-fit: cover;
+        filter: grayscale(1);
     }
 
-    & > #attraction-place-bg-h2 {
+    & > #attraction-place-bg-detail {
         // height: 50%;
-        width: 100%;
-        font-size: 10rem;
+        width: 50%;
+        font-size: 2rem;
         font-weight: 900;
-        text-align: center;
+        text-align: left;
         color: white;
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 30%;
         transform: translate(-50%,-50%);
-        outline: 2px solid;
+        & > #attraction-place-bg-name {
+            width: 100%;
+            font-size: 5rem;
+            font-weight: 900;
+            
+        }
     }
 }
 
 #attraction-place-hero-section {
-    height: 100vh;
+    min-height: 100vh;
     width: 50%;
-    background: $accent;
+    @include center(column);
+    gap: 1rem;
+    background: linear-gradient( color.adjust($accent, $lightness: -30%), color.adjust($accent, $lightness: -40%));
+    padding-block: 1rem;
+    // overflow-y: scroll;
+    // position: absolute;
+    // inset: 0 0 0 auto;
+}
 
-    & > #attraction-place-hero-detail {
-        width: 100%;
-        & > h2 {
-            font-size: clamp(1.2rem, 4vw, 3.5rem);
-        }
+#attraction-place-hero-famous {
+    background: color.adjust($accent, $lightness: -20%);
+    // outline: 2px solid;
+    width: 90%;
+    padding: 2rem;
+    // border: 2px solid black;
+    border-radius: 15px;
+    & > #attraction-place-hero-famous-heading {
+        font-size: clamp(1.1rem, 3vw, 3rem);
+    }
 
-        & > #attraction-place-hero-location {
-            font-size: clamp(1.1rem, 2vw, 2.5rem);
-        }
+    & > #attraction-place-hero-famous-ul {
+        list-style: none;
+        padding-left: 1rem;
 
-        & > #attraction-place-hero-architecture-style {
-            font-size: clamp(1.2rem, 3vw, 3rem);
+        & > li {
+            width: 90%;
+            padding-bottom: 1.5rem;
+            & > h2 {
+                font-size: clamp(1.1rem, 2.5vw, 2rem);
+                width: max-content;
+                padding: 1rem;
+                border-radius: 0 0 0 15px;
+                border-bottom: 1px solid $black;
+                border-left: 1px solid $black;
+                font-weight: 600;
+            }
+
+            & > p {
+                width: 100%;
+                padding-top: 0.5rem;
+                padding-left: 2rem;
+                font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+            }
         }
     }
+}
+
+#attraction-place-hero-history {
+    background: color.adjust($accent, $lightness: -19%);
+    width: 90%;
+    padding: 2rem;
+    border-radius: 15px;
+
+    & span {
+        font-weight: 700;
+    }
+
+    & > #attraction-place-hero-history-era {
+        font-weight: 200;
+        color: $black;
+
+    }
+
+    & > #attraction-place-hero-history-brief {
+        font-size: clamp(1.1rem, 2vw, 1.6rem);
+        padding: 1rem;
+    }
+
+    & > #attraction-place-hero-architecture-style {
+        font-size: clamp(1.2rem, 2.5vw, 2rem);
+        
+    }
+}
+
+#attraction-place-hero-facts {
+    background: color.adjust($accent, $lightness: -18%);
+    // outline: 2px solid;
+    width: 90%;
+    padding: 2rem;
+    // border: 2px solid black;
+    border-radius: 15px;
+}
+
+#attraction-place-hero-tips{
+    background: color.adjust(#137d5a, $lightness: 10%);
+    // outline: 2px solid;
+    width: 90%;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+#attraction-place-hero-beware{
+    background: color.adjust(#ff0000cb, $lightness: 10%);
+    // outline: 2px solid;
+    width: 90%;
+    padding: 2rem;
+    // border: 2px solid black;
+    border-radius: 15px;
 }

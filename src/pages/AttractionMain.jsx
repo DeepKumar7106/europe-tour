@@ -1,17 +1,22 @@
 import {countries, regions, attractions} from '/src/scripts/data.js'
 import './../styles/attraction.scss'
+import { useNavigate } from 'react-router-dom'
 
 export default function AttractionMain() {
+    const navigate = useNavigate()
+
     const attractionList = attractions.map(place => {
         return (
             <div className="attraction-card" key={place.id}>
                 <img src={`/city-images-webp/${place.city}.webp`} alt="" className="attraction-card-bg-img" />
                 <div className="attraction-card-details">
                     <article className="attraction-card-details-article">
-                        <h2 className="attraction-card-details-article-name">{place.city}</h2>
+                        <h2 className="attraction-card-details-article-name">{place.name}</h2>
                         <p className="attraction-card-details-article-country">{place.country}</p>
                     </article>
-                <i className="fa-solid fa-circle-arrow-right"></i>
+                <i className="fa-solid fa-circle-arrow-right"
+                    onClick={()=>{navigate(`/attractionLocation/${place.id}`)}}
+                ></i>
                 </div>
             </div>
         )
