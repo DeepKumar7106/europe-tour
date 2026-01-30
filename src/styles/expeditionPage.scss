@@ -58,3 +58,40 @@
     }
 
 }
+
+#expedition-page-description-section {
+    width: 100%;
+    @include center(column);
+    padding: 1rme;
+    gap: 10px;
+    margin: 1rem;
+
+    & > #expedition-page-description-section-brief-container {
+        width: 95%;
+        @include center(row);
+        padding: 10px;
+        border-radius: 10px;
+        background: color.adjust($accent, $lightness: -10%);
+        align-items: start;
+        & > #expedition-page-description-section-brief-article {
+            flex: 1;
+
+            & > #expedition-page-description-section-brief-heading {
+                font-size: clamp(1.2rem, 2.5vw, 3.5rem);
+            }
+
+            & > #expedition-page-description-section-brief {
+                font-size: clamp(1.1rem, 2vw, 1.5rem);
+                width: 90%;
+                margin-left: 1rem;
+            }
+        }
+
+        & > #expedition-page-description-section-map-img {
+            height: 20rem;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+    }
+}
