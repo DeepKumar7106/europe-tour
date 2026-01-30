@@ -12,6 +12,7 @@ import UnderratedMain from "./pages/UnderratedMain";
 import Cities from "./pages/Cities";
 import Attraction from "./pages/Attraction";
 import UnderratedPage from "./pages/UnderratedPage";
+import Expedition from "./pages/Expedition";
 
 export function replaceSpace(name) {
   return name.split("-").join(" ")
@@ -39,6 +40,7 @@ function App() {
           <Route path="/cities/:cityId" element = {<Cities />} />
           <Route path="/attractionLocation/:atcId" element = {<Attraction />} />
           <Route path="/underratedLocation/:undId" element = {<UnderratedPage />} />
+          <Route path="/expeditionPage/:expdId" element = {<Expedition />} />
         </Routes>
         <Footer />
     </BrowserRouter>

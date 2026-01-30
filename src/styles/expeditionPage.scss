@@ -1,0 +1,60 @@
+@use "sass:color";
+@use 'config' as *;
+@use 'header';
+@use 'footer';
+
+#expedition-page-main {
+    @include center(column);
+    min-height: 100vh;
+    width: 100%;
+}
+
+#expedition-page-hero-section {
+    height: 70vh;
+    background: $black;
+    width: 95%;
+    margin: 1rem;
+    border-radius: 1rem;
+    position: relative;
+
+    & > #expedition-page-hero-img {
+        height: 100%;
+        width: 100%;
+        border-radius: inherit;
+        opacity: 0.4;
+        object-fit: cover;
+    }
+
+    & > #expedition-page-hero-article {
+        position: absolute;
+        inset: auto auto 2rem 2rem;
+        color: $accent;
+    }
+}
+
+#expedtion-page-breif-details {
+    height: 10vh;
+    width: 95%;
+    padding: 10px;
+    background:rgb(199, 199, 199);
+    border-radius: 1rem;
+    @include center(row);
+    gap: 1rem;
+    justify-content: start;
+
+    & > span {
+        border-radius: calc(10px);
+        align-content: center;
+        text-align: center;
+        height: 100%;
+        width: 20%;
+        color: $accent;
+        font-size: clamp(1.1rem, 2vw, 1.5rem);
+        background: color.adjust(rgb(199, 199, 199), $lightness: -10%);
+        
+        & > i {
+            margin-inline: 1rem;
+        }
+    }
+
+}
