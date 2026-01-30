@@ -1,13 +1,16 @@
 import {experience} from '/src/scripts/data.js'
 import { addHyphen } from '../App'
 import '../styles/experience.scss'
+import { useNavigate } from 'react-router-dom'
 
 export default function ExperienceMain() {
-   
+   const navigate = useNavigate()
     const experiencList = experience.map(activity => {
         const name = addHyphen(activity.activityName)
         return(
-            <div className="experience-card" key={activity.id}>
+            <div className="experience-card" key={activity.id}
+                onClick={() => {navigate(`/experiencePage/${activity.id}`)}}
+            >
                 <img src={`/experiences-webp/${name}.webp`} alt={name} className="experience-card-img" />
                 <article className="experience-card-article">
                     <h2 className="experience-card-article-name">{activity.activityName}</h2>

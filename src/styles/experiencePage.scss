@@ -1,0 +1,40 @@
+@use "sass:color";
+@use 'config' as *;
+@use 'header';
+@use 'footer';
+
+#experience-page-main {
+    @include center(column);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#experience-bg-img {
+    height: 100%;
+    background: $black;
+    width:100%;
+    position: relative;
+
+    & > #experience-bg {
+        height: 100%;
+        width: 100%;
+        opacity: 0.4;
+        object-fit: cover;
+    }
+
+    & > #experience-bg-name {
+        color: $accent;
+        font-size: clamp(3rem, 10vw, 6rem);
+        position: absolute;
+        inset: 10rem auto auto 1rem;
+        width: 50%;
+    }
+}
+
+#experience-hero-details {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 auto;
+}
