@@ -70,24 +70,45 @@
 
 #experience-hero-details-spot-lights {
     @include center(column);
-    gap: 1rem; 
+    gap: 2rem; 
     & > .experience-hero-details-spot-lights-card {
         @include center(row);
         gap: 1rem; 
+        anchor-scope: --image;
 
         & > .experience-hero-details-spot-lights-article{
             flex: 1;
             font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+            // anchor-scope: --image;
+            
+            & > .fa-solid-wrap {
+                --ofset:0.5rem;
+                height: 5vh;
+                aspect-ratio: 1 / 1;
+                background: $black;
+                border-radius: 5vh;
+                text-align: center;
+                // color: rgb(255, 69, 69);
+                color: $accent;
+                position: absolute;
+                align-content: center;
+                top: calc(anchor(top --image) - var(--ofset));
+                right: calc(anchor(right --image) - var(--ofset));
+                box-shadow: 0 0 0 var(--ofset) black;
+            }
         }
     }
 }
 
 .experience-hero-details-spot-lights-card-img {
+    --radius: 20%;
     height: 30vh;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 1rem;
-    
+    anchor-name: --image;
+    // anchor-scope: --image;
+    // mask-image: radial-gradient(circle at 90% 10%, transparent var(--radius), black calc(var(--radius) + 0.5px));
 }
 
 #experience-hero-details-expert-guides {

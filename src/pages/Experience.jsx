@@ -33,6 +33,9 @@ export default function Experience() {
                                 <article className="experience-hero-details-spot-lights-article">
                                     <h2 className="experience-hero-details-spot-lights-name">{spot.name}</h2>
                                     <p className="experience-hero-details-spot-lights-feature">{spot.feature}</p>
+                                    <p className="fa-solid-wrap">
+                                        <i className="fa-solid fa-heart"></i>
+                                    </p>
                                 </article>
                             </div>
                         )})}
