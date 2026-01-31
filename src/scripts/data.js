@@ -1,3 +1,5 @@
+import Activities from "../components/home/Activities";
+
 export const regions = [
   { 
     id: "eur07", 
@@ -2733,8 +2735,41 @@ export const expeditions = [
       "accommodation": "Boutique Alpine Lodges",
       "transport": "Swiss Travel Pass (Train/Cable Car)"
     },
-    "requirements": ["Moderate fitness for light hiking", "Windproof clothing", "Camera for aerial shots"],
-    "highlights": ["Interlaken", "Jungfrau Region", "Paragliding", "Alpine Lakes"]
+    "description": "The Swiss Alps Adventure is an elite, multi-modal expedition designed for those who want to conquer the Bernese Oberland's most dramatic landscapes in a condensed timeframe. Starting in the mountain hub of Grindelwald, the journey scales the sheer faces of the Eiger and Jungfrau massif. This trip is unique because it blends traditional high-altitude trekking with modern aerial exploration, allowing participants to witness the scale of the Aletsch Glacier—the largest in the Alps—from both the ice level and the cockpit of a helicopter or paragliding wing. It is a high-octane immersion into Swiss mountaineering culture, featuring stays in historic alpine huts and transit via world-class cogwheel railways. The expedition is meticulously paced to provide physical challenge during the day and refined alpine hospitality by nightfall.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "3,454 meters (Jungfraujoch Sphinx Observatory)",
+      "terrain": "Glacial moraines, limestone ridges, groomed alpine trails, and permanent snowfields.",
+      "bestSeason": "Late June to Early September for hiking; December to March for winter flight variants."
+    },
+    "highlights": [
+      "Scenic helicopter flight circling the Eiger North Face",
+      "Standing on the 'Top of Europe' at the Jungfraujoch Sphinx Observatory",
+      "Traversing the Eiger Trail directly beneath the 1,800m vertical rock wall",
+      "Sunrise views over the Aletsch Glacier, a UNESCO World Heritage site",
+      "Traditional fondue dinner at a remote mountain hut accessible only by foot or cable car"
+    ],
+    "requirements": [
+      "Sturdy Grade B mountaineering boots with ankle support",
+      "Layered technical clothing (Base, Mid-layer, and Gore-Tex Shell)",
+      "Polarized sunglasses with Category 4 UV protection for glacial reflection",
+      "15-25 liter daypack with hydration bladder",
+      "Basic physical fitness for 4-6 hours of daily hiking at elevation"
+    ],
+    "precaution": "Rapid weather shifts are common; whiteout conditions can occur even in summer. Altitude sickness is a minor risk at 3,500m; hydration is critical. Crevasse safety is mandatory for any off-trail glacier excursions.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "Arrival in Grindelwald; Gear check and briefing; Afternoon hike along the Eiger Trail from Eigergletscher to Alpiglen; Evening orientation dinner."
+      },
+      {
+        "day": 2,
+        "activities": "Ascent via the Eiger Express tricable gondola; Exploration of the Jungfraujoch ice tunnels; Afternoon helicopter peak-pass over the Mönch and Jungfrau summits."
+      },
+      {
+        "day": 3,
+        "activities": "Early morning trek to the Bachalpsee for reflection shots of the peaks; Optional tandem paragliding descent into the Lauterbrunnen Valley; Return to Interlaken for departure."
+      }
+    ]
   },
   {
     "id": "expd002",
@@ -2756,8 +2791,37 @@ export const expeditions = [
       "accommodation": "Classic Parisian Hotel",
       "transport": "Metro & Walking"
     },
-    "requirements": ["Comfortable walking shoes", "Pre-booked museum passes"],
-    "highlights": ["Eiffel Tower", "Louvre Museum", "Seine Cruise", "Montmartre"]
+    "description": "The Paris Cultural Escape is an intensive, curated journey through the soul of French aesthetics, designed for those who wish to maximize their exposure to history in a single weekend. This expedition prioritizes high-value cultural assets, moving from the monolithic grandeur of the Louvre to the narrow, cobblestone arteries of Montmartre. Unlike a standard tour, this route is optimized to avoid 'tourist fatigue' by blending world-class museum visits with scenic boat transits and architectural walks. It captures the transition of Paris from its royal roots to its 19th-century bohemian revolution, offering a sophisticated look at the landmarks that have defined Western art and romance for centuries.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "130 meters (Summit of Montmartre hill)",
+      "terrain": "Paved boulevards, historical limestone staircases, and manicured park gravel.",
+      "bestSeason": "April to June for blossoms or October for crisp autumnal lighting."
+    },
+    "highlights": [
+      "Private evening cruise on the Seine to view illuminated monuments",
+      "Skip-the-line access to the Louvre’s Denon Wing (Mona Lisa and Winged Victory)",
+      "Sunset views from the Sacré-Cœur Basilica overlooking the entire city",
+      "Pastry and espresso tasting in the historic Le Marais district",
+      "Walk through the Tuileries Garden toward the Place de la Concorde"
+    ],
+    "requirements": [
+      "Comfortable walking shoes (essential for 10km+ daily urban trekking)",
+      "Smart-casual attire for evening venues and fine dining",
+      "Pre-booked digital museum passes to bypass wait times",
+      "A portable power bank for GPS navigation and photography",
+      "Basic French phrases for polite interaction in local bistros"
+    ],
+    "precaution": "High risk of pickpocketing in crowded areas like the Eiffel Tower and Metro Line 1. Ensure all valuables are in 'anti-theft' or front-facing bags. Avoid 'unauthorized' street vendors in Montmartre.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "Morning Louvre masterclass session; Afternoon walk through the Tuileries to Place de la Concorde; Evening Seine River cruise with champagne as the Eiffel Tower begins its sparkle display."
+      },
+      {
+        "day": 2,
+        "activities": "Exploration of the Le Marais district's boutiques and Jewish Quarter; Afternoon funicular ride up to Montmartre; Artist Square (Place du Tertre) visit and farewell dinner at a traditional French brasserie."
+      }
+    ]
   },
   {
     "id": "expd003",
@@ -2780,8 +2844,41 @@ export const expeditions = [
       "accommodation": "Historical Center Boutique Hotel",
       "transport": "Walking & Private Transfer"
     },
-    "requirements": ["Modest dress code for churches", "High sun tolerance"],
-    "highlights": ["Colosseum", "Roman Forum", "Vatican City", "Trastevere"]
+    "description": "The Rome Ancient Discovery is a deep-dive expedition into the 'Caput Mundi,' designed to peel back the historical layers of the Eternal City. This 3-day itinerary focuses on the transition from the pagan architectural triumphs of the Roman Empire to the Renaissance spiritual dominance of the Vatican. It is a dense, high-narrative journey that prioritizes the 'triumvirate' of Roman sites: the Colosseum, the Roman Forum, and Palatine Hill. Beyond the stone and mortar, the expedition immerses participants in the Mediterranean lifestyle, emphasizing the city's living history through its vibrant piazzas, baroque fountains, and the culinary traditions of the Trastevere district. It is an essential route for those seeking to understand the foundations of Western civilization in a contemporary urban setting.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "50 meters (Janiculum Hill overlooking the city center)",
+      "terrain": "Uneven ancient basalt paving stones (Sanpietrini), gravel paths within archaeological sites, and marble museum floors.",
+      "bestSeason": "October to November or March to May to avoid the intense Mediterranean heat and peak summer crowds."
+    },
+    "highlights": [
+      "Underground tour of the Colosseum’s hypogeum (gladiator tunnels)",
+      "Early-access viewing of the Sistine Chapel and Vatican Museums",
+      "Panoramic sunset over the Roman Forum from the Capitoline Hill",
+      "Evening walking tour of the Pantheon and Trevi Fountain",
+      "Authentic Roman pasta tasting (Carbonara and Cacio e Pepe) in a hidden Trastevere alley"
+    ],
+    "requirements": [
+      "High-traction walking shoes (Sanpietrini stones can be slippery when wet)",
+      "Modest dress code for religious sites (shoulders and knees must be covered for the Vatican)",
+      "Refillable water bottle for the 'Nasoni' (Rome's free public drinking fountains)",
+      "Sun protection (hat and sunscreen), as the Roman Forum offers very little shade",
+      "Pre-downloaded audio guides or an offline map of the historic center"
+    ],
+    "precaution": "Dehydration during summer months is a major factor; use the public fountains frequently. Be aware of 'Gladiator' impersonators near the Colosseum who charge high fees for photos. Traffic in Rome is erratic—always use designated crossings.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "The Core of the Empire: VIP entry to the Colosseum, Palatine Hill, and the Roman Forum; Evening stroll through the Piazza Navona to see Bernini's fountains."
+      },
+      {
+        "day": 2,
+        "activities": "The Spiritual Center: Vatican Museums and St. Peter’s Basilica; Afternoon climb of the Castel Sant'Angelo for river views; Dinner in the bohemian Trastevere neighborhood."
+      },
+      {
+        "day": 3,
+        "activities": "The Layers of Rome: Visit the Pantheon and the Trevi Fountain; Afternoon exploration of the Appian Way or the Borghese Gallery; Final sunset at the Spanish Steps."
+      }
+    ]
   },
   {
     "id": "expd004",
@@ -2803,8 +2900,37 @@ export const expeditions = [
       "accommodation": "Canal-side Guesthouse",
       "transport": "Bicycle & Canal Boat"
     },
-    "requirements": ["Ability to ride a bike", "Rain jacket (essential for NL)"],
-    "highlights": ["Canal Cruise", "Anne Frank House", "Van Gogh Museum"]
+    "description": "The Amsterdam City and Canals expedition offers a sophisticated look at the 'Venice of the North,' focusing on the Golden Age engineering that defined this urban masterpiece. This two-day journey balances the profound emotional weight of the Anne Frank House and the Jewish Quarter with the vibrant, light-filled galleries of the Rijksmuseum. Participants will navigate the city’s concentric canal rings—a UNESCO World Heritage site—both by foot and by boat to understand how water has shaped Dutch trade, art, and daily life. The expedition emphasizes the 'Gezellig' (cosy/convivial) atmosphere of the Jordaan district, providing a relaxed yet intellectually stimulating escape into one of Europe’s most progressive and historically preserved capitals.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "2 meters (Virtually sea level; mostly reclaimed land)",
+      "terrain": "Flat, paved cycle paths, brick-laid sidewalks, and narrow canal bridges.",
+      "bestSeason": "Mid-April to early May for the nearby tulip blooms, or September for mild weather and fewer crowds."
+    },
+    "highlights": [
+      "Private evening canal cruise through the illuminated 17th-century Grachtengordel",
+      "Deep-dive tour of the Rijksmuseum to see Rembrandt’s 'The Night Watch'",
+      "Emotional journey through the Anne Frank House and the Secret Annex",
+      "Guided cycling tour through the sprawling Vondelpark and hidden 'hofjes' (courtyards)",
+      "Traditional Dutch pancake and 'Stroopwafel' tasting in the Jordaan district"
+    ],
+    "requirements": [
+      "Basic cycling proficiency and awareness of local bike lane etiquette",
+      "Weather-resistant outer layer (Amsterdam weather is notoriously unpredictable)",
+      "Pre-booked time-slot tickets for the Anne Frank House (often sold out weeks in advance)",
+      "Comfortable footwear for walking along uneven brick quaysides",
+      "A digital payment method (many Amsterdam cafes are 'card only')"
+    ],
+    "precaution": "The most significant danger is the high-speed bicycle traffic; pedestrians must be extremely careful not to walk in dedicated red-paved bike lanes. Tram tracks can also be a tripping hazard or a trap for bicycle tires.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "History and Heritage: Morning visit to the Anne Frank House; exploration of the Jewish Historical Museum and Portuguese Synagogue; Sunset canal boat tour starting from Central Station."
+      },
+      {
+        "day": 2,
+        "activities": "Art and Atmosphere: Morning at the Museum Square (Rijksmuseum or Van Gogh Museum); Afternoon bike rental to explore Vondelpark; Evening stroll through the boutique-lined 'Nine Streets' (De Negen Straatjes)."
+      }
+    ]
   },
   {
     "id": "expd005",
@@ -2826,8 +2952,37 @@ export const expeditions = [
       "accommodation": "Cave Villa",
       "transport": "Private Shuttle & Boat"
     },
-    "requirements": ["Swimwear", "Sunscreen", "Camera with extra storage"],
-    "highlights": ["Oia Sunset", "Caldera Views", "Beaches", "Local Cuisine"]
+    "description": "The Santorini Island Highlights expedition is a sensory journey through the jewel of the Cyclades, designed to showcase the island's dual identity as a volcanic powerhouse and a pinnacle of Mediterranean luxury. This two-day route centers on the 'Caldera Rim,' where whitewashed villages like Fira and Oia cling to thousand-foot cliffs. Beyond the iconic blue domes, the expedition explores the island's prehistoric soul at Akrotiri—the 'Minoan Pompeii'—and the rare viticulture of volcanic soil vineyards. The pace is designed for 'slow travel'—allowing for long afternoons overlooking the Aegean, balanced by the invigorating cliffside trek from Fira to Oia. It is the definitive route for photographers, geology enthusiasts, and those seeking the quintessential Greek island aesthetic.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "350 meters (Imerovigli, the highest point of the caldera rim)",
+      "terrain": "Volcanic cobblestones, steep 'donkey steps,' smooth marble walkways, and dusty coastal hiking trails.",
+      "bestSeason": "May to June or September to October (avoiding the intense July/August heat and extreme cruise ship crowds)."
+    },
+    "highlights": [
+      "The 10.5km Fira-to-Oia cliffside hike with uninterrupted caldera views",
+      "Guided exploration of the Akrotiri archaeological site (preserved 16th-century BC city)",
+      "Sunset wine tasting featuring local Assyrtiko grapes at a cliffside winery",
+      "Catamaran cruise to the 'Red Beach' and the active volcanic islet of Nea Kameni",
+      "Early morning photography session in Oia to capture the blue domes without the crowds"
+    ],
+    "requirements": [
+      "Footwear with significant grip (volcanic stones and marble paths can be surprisingly slick)",
+      "Sun protection: High-SPF sunscreen, polarized sunglasses, and a wide-brimmed hat",
+      "Lightweight, breathable linen or cotton clothing (technical gear for the Fira-Oia hike)",
+      "Small daypack for water and camera equipment",
+      "Water shoes for swimming at black sand volcanic beaches (sand gets extremely hot)"
+    ],
+    "precaution": "Intense sun exposure and heat exhaustion are the primary risks; there is almost no shade on the caldera hike. Be cautious near cliff edges as the volcanic rock can be crumbly. Avoid the 'Donkey Paths' in Fira if you have respiratory sensitivities due to the smell and animal waste.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "The High Rim: Morning trek from Fira through Imerovigli to Oia; Afternoon exploring Oia’s marble alleys and boutique shops; Evening sunset at the Byzantine Castle ruins."
+      },
+      {
+        "day": 2,
+        "activities": "Ancient Earth & Sea: Morning tour of the Akrotiri ruins; Afternoon catamaran cruise visiting the Hot Springs and Red Beach; Farewell dinner in a traditional 'Canava' (wine cellar) restaurant."
+      }
+    ]
   },
   {
     "id": "expd006",
@@ -2850,8 +3005,41 @@ export const expeditions = [
       "accommodation": "Traditional Waterfront Hotel",
       "transport": "Train, Boat & Bus"
     },
-    "requirements": ["Layered clothing for rapid weather changes", "Sturdy walking boots"],
-    "highlights": ["Bergen", "Geirangerfjord", "Fjord Cruise", "Waterfalls"]
+    "description": "The Norwegian Fjord Explorer is a high-latitude immersion into the raw power of glacial erosion. Centered on the Sognefjord—Norway's longest and deepest fjord—this expedition utilizes a seamless network of electric ferries and narrow-gauge railways to navigate vertical landscapes. The journey highlights the transition from sea-level waterways to high-alpine plateaus, specifically focusing on the Nærøyfjord, a UNESCO World Heritage site known for being only 250 meters wide at certain points. Beyond the transit, the expedition offers a tactile experience of Nordic life, from the spray of the Kjosfossen waterfall to the quiet, moss-covered villages of Aurland. It is an essential route for those seeking the 'Norway in a Nutshell' experience with an emphasis on sustainable, eco-conscious travel through some of the most dramatic coastal scenery on Earth.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "862 meters (Myrdal Station)",
+      "terrain": "Deep saltwater fjords, sheer granite cliffs, and steep mountain rail tracks.",
+      "bestSeason": "June to August for the Midnight Sun and lush greenery; late September for autumn colors and snow-capped peaks."
+    },
+    "highlights": [
+      "Steepest standard-gauge rail journey in the world on the Flåm Railway",
+      "Silent electric ferry cruise through the narrow, mist-shrouded Nærøyfjord",
+      "Panoramic views from the Stegastein Lookout, 650 meters above the water",
+      "Stop at Kjosfossen Waterfall to witness the powerful glacial runoff",
+      "Exploring the historic Hanseatic wharf of Bryggen in Bergen"
+    ],
+    "requirements": [
+      "High-quality waterproof hardshell jacket (fjord microclimates change rapidly)",
+      "Binoculars for spotting seals, eagles, and mountain goats on cliff ledges",
+      "Thermal base layers (even in summer, the wind on the ferry deck is biting)",
+      "Sturdy shoes with non-slip soles for wet ferry decks and forest paths",
+      "A camera with a wide-angle lens to capture the vertical scale of the cliffs"
+    ],
+    "precaution": "Hypothermia risk on open-deck ferries due to wind chill, even if the sun is out. Motion sickness is rare within the fjords due to calm waters, but the coastal approach to Bergen can be choppy. Be mindful of narrow mountain roads when walking near overlooks.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "The Mountain Descent: Depart Bergen via the Bergen Line to Myrdal; transfer to the Flåm Railway for the 20km descent; overnight in the village of Flåm."
+      },
+      {
+        "day": 2,
+        "activities": "The Deep Fjord: Board a premium silent ferry through the Aurlandsfjord and Nærøyfjord to Gudvangen; bus transfer via the winding Stalheimskleiva (seasonal)."
+      },
+      {
+        "day": 3,
+        "activities": "The Coastal Return: Scenic train transit back to Bergen; afternoon exploration of the Fish Market and Mount Fløyen funicular for a final city-wide view."
+      }
+    ]
   },
   {
     "id": "expd007",
@@ -2873,8 +3061,37 @@ export const expeditions = [
       "accommodation": "Old Town Boutique Hotel",
       "transport": "Walking & Historic Tram"
     },
-    "requirements": ["Comfortable shoes for cobblestones", "Light jacket for evening river breezes"],
-    "highlights": ["Old Town Square", "Charles Bridge", "Prague Castle"]
+    "description": "The Prague Medieval Getaway is a dense, atmospheric exploration of the best-preserved Gothic and Baroque city center in Central Europe. Often called the 'City of a Hundred Spires,' this expedition focuses on the 14th-century legacy of Holy Roman Emperor Charles IV. Participants navigate a labyrinth of narrow, gas-lit alleys that open into grand market squares, bridging the gap between the Vltava River's banks via the iconic Charles Bridge. The trip is designed to showcase the contrast between the city's dark, mystical legends (like the Golem and alchemists) and its golden, ornate architectural triumphs. It is an ideal route for those who value walkability, historical mystery, and the distinct, hearty culinary traditions of Bohemia.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "270 meters (Petřín Hill Lookout Tower)",
+      "terrain": "Dense, uneven historical cobblestones (Cat's head stones), steep inclines leading to the Castle District, and stone bridges.",
+      "bestSeason": "December for the world-famous medieval Christmas markets, or September for misty, atmospheric mornings and mild walking temperatures."
+    },
+    "highlights": [
+      "Crossing the Charles Bridge at dawn to witness the 30 baroque statues without crowds",
+      "Watching the 600-year-old Astronomical Clock (Orloj) strike the hour in Old Town Square",
+      "Exclusive tour of the Golden Lane, the 16th-century dwellings of castle guards and alchemists",
+      "Evening classical concert in a hidden Baroque chapel or the Klementinum library",
+      "Traditional Bohemian feast featuring roast duck and local pilsner in a medieval cellar"
+    ],
+    "requirements": [
+      "Shoes with thick, cushioned soles (the historical paving is notoriously hard on the feet)",
+      "Small change (Czech Koruna) for public restrooms and historical site entry",
+      "A coat/jacket even in summer, as the deep stone cellars and cathedrals remain quite chilly",
+      "Advance booking for the Jewish Quarter (Josefov) circuit to ensure entry to the Old Jewish Cemetery",
+      "A camera capable of low-light photography for the evening city lights"
+    ],
+    "precaution": "Prague is generally very safe, but the Old Town Square is a hotspot for 'currency exchange' scams—always use official banks. Watch for pickpockets on the crowded Charles Bridge and Tram 22 (the 'Pickpocket Express'). Cobblestones can be extremely slippery when frosty or wet.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "The Old Town & Jewish Quarter: Morning exploration of the Old Town Square and the Astronomical Clock; Afternoon tour of Josefov; Sunset walk across Charles Bridge followed by a riverside dinner."
+      },
+      {
+        "day": 2,
+        "activities": "The Royal Heights: Ascent to Prague Castle (Hradčany) to visit St. Vitus Cathedral; Walk through the Golden Lane; Afternoon descent through the Lesser Town (Malá Strana) and Petřín Hill for a panoramic city view."
+      }
+    ]
   },
   {
     "id": "expd008",
@@ -2897,8 +3114,41 @@ export const expeditions = [
       "accommodation": "Modernist District Apartment",
       "transport": "Metro & Walking"
     },
-    "requirements": ["Pre-booked Sagrada Família tickets", "Sun protection"],
-    "highlights": ["Sagrada Família", "Park Güell", "Barceloneta Beach"]
+    "description": "The Barcelona Culture and Coast expedition is a vibrant study of Catalan Modernism and Mediterranean urbanism. This 3-day journey is anchored by the surrealist genius of Antoni Gaudí, tracing his influence from the towering spires of the Sagrada Família to the organic forms of Park Güell. The expedition offers a dual perspective: the shadowed, labyrinthine history of the Barri Gòtic (Gothic Quarter) and the sun-drenched, grid-patterned expansion of the Eixample district. Beyond the aesthetics, the route immerses participants in the city's social fabric, transitioning from the bustling Boqueria Market to the revitalized beachfront of Barceloneta. It is designed for those who appreciate the intersection of high art, coastal relaxation, and a world-class culinary scene that thrives long after sunset.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "173 meters (Montjuïc Hill)",
+      "terrain": "Flat coastal promenades, octagonal city blocks (Eixample), and occasional steep inclines in Park Güell.",
+      "bestSeason": "May to June for perfect beach weather without the humidity, or September for the Mercè Festival celebrations."
+    },
+    "highlights": [
+      "In-depth exploration of the Sagrada Família’s forest-like interior and towers",
+      "Sunset views over the city grid from the mosaic benches of Park Güell",
+      "Tapas crawl through the hidden bars of El Born and the Gothic Quarter",
+      "Early morning walk along the Barceloneta boardwalk to the W Hotel",
+      "Visit to Casa Batlló or La Pedrera to see Gaudí’s residential 'living breathing' architecture"
+    ],
+    "requirements": [
+      "Lightweight, stylish clothing suitable for both beach strolls and upscale dining",
+      "Pre-booked tickets for Gaudí sites (essential, as daily capacity is strictly limited)",
+      "Comfortable sandals or walking shoes for the 133-block Eixample grid",
+      "A small cross-body bag for security in high-traffic pedestrian zones",
+      "Basic knowledge of Catalan culture (locals appreciate 'Bon dia' over 'Buenos días')"
+    ],
+    "precaution": "Barcelona is the European capital for highly skilled pickpockets, particularly on La Rambla and Metro Line 4. Never leave bags on the floor at outdoor cafes. Be wary of the 'bird poop' or 'map' scams where strangers distract you to steal valuables.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "The Gaudí Masterpieces: Morning visit to Sagrada Família; Afternoon at Park Güell; Evening walk down Passeig de Gràcia to view the modernist facades under city lights."
+      },
+      {
+        "day": 2,
+        "activities": "The Historical Heart: Guided walk through the Gothic Quarter and Cathedral; Food tasting at La Boqueria Market; Late afternoon beach time in Barceloneta followed by seafood paella."
+      },
+      {
+        "day": 3,
+        "activities": "The Olympic Heights: Cable car ride to Montjuïc Hill for the fortress and Olympic stadium; Visit to the Joan Miró Foundation; Farewell sunset drinks overlooking the Mediterranean."
+      }
+    ]
   },
   {
     "id": "expd009",
@@ -2920,8 +3170,37 @@ export const expeditions = [
       "accommodation": "Eco-Lodge or City Center Hotel",
       "transport": "4x4 Super Jeep"
     },
-    "requirements": ["Wind/Waterproof clothing", "Sturdy hiking boots", "Swimwear"],
-    "highlights": ["Thingvellir", "Geysir", "Gullfoss", "Blue Lagoon"]
+    "description": "The Iceland Golden Circle Mini Tour is a concentrated exploration of the North Atlantic's most volatile and majestic geological features. This two-day expedition leaves the urban safety of Reykjavik to traverse the Mid-Atlantic Ridge at Þingvellir National Park, where the North American and Eurasian tectonic plates are visibly drifting apart. The route captures the raw power of Icelandic water and heat, from the thundering double-cascade of Gullfoss to the hyper-active Strokkur geyser. Designed for those with limited time but a deep hunger for 'primal' landscapes, the journey combines the history of the world's oldest parliament with the futuristic energy of geothermal fields. It is a nature-first itinerary where the weather dictates the pace and the landscape feels like the earth is still under construction.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "approx. 100 meters (elevation changes are minimal, but the exposure is high)",
+      "terrain": "Volcanic basalt, gravel pathways, wooden boardwalks over boiling mud pits, and spray-slicked rock stairs.",
+      "bestSeason": "June to August for 24-hour daylight (Midnight Sun) and accessible trails; September to March for Northern Lights (Aurora Borealis) potential."
+    },
+    "highlights": [
+      "Walking between continental plates in the Almannagjá fault at Þingvellir",
+      "Witnessing the Strokkur geyser erupting 30 meters into the air every 6-10 minutes",
+      "Feeling the spray from the massive Gullfoss (Golden Falls) 'staircase' waterfall",
+      "Soaking in the geothermal waters of the Secret Lagoon or Fontana Spa",
+      "Exploring the Kerið volcanic crater lake with its vibrant red volcanic rock walls"
+    ],
+    "requirements": [
+      "Strictly waterproof hardshell jacket and trousers (mist from falls and wind-driven rain is constant)",
+      "Sturdy hiking boots with deep tread for muddy or icy paths",
+      "Thermal base layers (synthetic or wool) even in the height of summer",
+      "Swimsuit and quick-dry towel for geothermal springs",
+      "A sturdy tripod if visiting in winter for long-exposure Northern Lights photography"
+    ],
+    "precaution": "Extreme wind gusts (up to 100km/h) can occur suddenly and are strong enough to blow open car doors. Never venture off marked boardwalks in geothermal areas—the ground can be a thin crust over boiling water. Weather changes occur in minutes; always check the 'SafeTravel' app.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "Tectonics and History: Morning exploration of Þingvellir National Park; Afternoon at the Geysir geothermal area; Evening relaxation at a local hot spring; Overnight stay in the Hella/Flúðir area."
+      },
+      {
+        "day": 2,
+        "activities": "The Power of Water: Morning at Gullfoss Waterfall; Visit to the Kerið crater; Afternoon return to Reykjavik via the Hellisheiði volcanic plateau and geothermal power plant."
+      }
+    ]
   },
   {
     "id": "expd010",
@@ -2944,8 +3223,41 @@ export const expeditions = [
       "accommodation": "Seaview Villa",
       "transport": "Ferry & Private Boat"
     },
-    "requirements": ["Swimwear", "Polarized sunglasses", "Hat"],
-    "highlights": ["Dubrovnik Old Town", "Island Hopping", "Adriatic Coast"]
+    "description": "The Croatian Coast Escape is a curated journey through the Southern Dalmatian archipelago, where the sun-drenched history of the Republic of Ragusa meets the turquoise serenity of the Adriatic Sea. This 3-day expedition centers on Dubrovnik’s formidable limestone walls—a masterpiece of medieval fortification—before transitioning to the lush, car-free tranquility of the Elafiti Islands. The route is designed to showcase the unique 'stone-and-sea' aesthetic of Croatia, moving from the polished marble of the Stradun to the hidden saltwater lakes and pine forests of the coast. It is an ideal blend of historical discovery and Mediterranean relaxation, emphasizing the region’s maritime heritage and its emergence as a premier cultural destination in the Balkans.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "412 meters (Summit of Mount Srđ)",
+      "terrain": "Polished limestone pavers (slippery when dry), medieval stone stairs, and pebbled Mediterranean shorelines.",
+      "bestSeason": "June or September for the perfect sea temperature and vibrant 'Golden Hour' lighting without the peak July heat."
+    },
+    "highlights": [
+      "Full circuit walk of the Dubrovnik City Walls for a bird’s-eye view of the terracotta rooftops",
+      "Sunset cable car ascent to Mount Srđ for panoramic views of the coast and neighboring Bosnia",
+      "Island-hopping boat excursion to Lopud and Šipan to swim in secluded azure bays",
+      "Walking tour of the 'Game of Thrones' filming locations and the Rector's Palace",
+      "Fresh seafood dinner in a cliffside 'Buža' bar overlooking the open Adriatic"
+    ],
+    "requirements": [
+      "Shoes with excellent rubber grip (the limestone streets of the Old Town are polished to a mirror-like, slippery finish)",
+      "Swimwear and high-SPF reef-safe sunscreen",
+      "Light, breathable linen attire (essential for the humid Adriatic summer)",
+      "A dry-bag for valuables during boat transfers and island hopping",
+      "Cash (Euros) for small island konobas (taverns) that may not accept cards"
+    ],
+    "precaution": "Heat exhaustion is common on the City Walls as there is zero shade for the 2km walk; go before 9:00 AM or after 5:00 PM. Sea urchins are prevalent on rocky shores; use water shoes when entering the sea outside of sandy zones.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "The Pearl of the Adriatic: Morning walk on the Dubrovnik City Walls; Afternoon exploration of the Old Town (Stradun and Onofrio's Fountain); Sunset cable car trip to Mount Srđ."
+      },
+      {
+        "day": 2,
+        "activities": "Nautical Discovery: Full-day private or group boat tour to the Elafiti Islands; Swimming at Sunj Beach on Lopud; Lunch in a traditional fisherman’s village."
+      },
+      {
+        "day": 3,
+        "activities": "Legacy and Leisure: Morning visit to the Franciscan Monastery and oldest pharmacy in Europe; Kayaking around Lokrum Island; Farewell dinner at the Old Harbor."
+      }
+    ]
   },
   {
     "id": "expd011",
@@ -2967,8 +3279,37 @@ export const expeditions = [
       "accommodation": "Imperial-style Hotel",
       "transport": "Public Transport & Fiaker (Horse Carriage)"
     },
-    "requirements": ["Smart-casual evening wear for concerts", "Sweet tooth"],
-    "highlights": ["Schönbrunn Palace", "Historic Center", "Classical Concert"]
+    "description": "The Vienna Classical Experience is a refined journey into the heart of the Habsburg legacy, designed to showcase the city's transition from a medieval fortress to the premier musical and political capital of Europe. This 2-day expedition follows the 'Ringstrasse'—the grand circular boulevard that replaced the city walls—linking the Hofburg Palace with the Vienna State Opera. It is a deep dive into the 'First Viennese School,' exploring the environments where Mozart, Beethoven, and Schubert composed their masterpieces. Beyond the music, the route emphasizes the intellectual 'Kaffeehauskultur' (Coffee House Culture), offering a slow-paced but intellectually dense immersion into the aesthetics of the Baroque and Art Nouveau movements that define the city's skyline.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "60 meters (The Great Ferris Wheel/Riesenrad in the Prater)",
+      "terrain": "Smoothly paved boulevards, gravel courtyard paths, and marble-floored museum galleries.",
+      "bestSeason": "December for the traditional Advent markets or May to June for the palace gardens in full bloom."
+    },
+    "highlights": [
+      "Private evening concert featuring works by Strauss and Mozart at the Kursalon",
+      "Tour of the Schönbrunn Palace and its expansive Baroque 'Gloriette' gardens",
+      "Guided walk through the Hofburg Imperial Treasury to see the Holy Roman Empire's crown jewels",
+      "Traditional Sachertorte tasting at a historic 19th-century coffee house",
+      "Art-nouveau exploration at the Upper Belvedere to view Gustav Klimt’s 'The Kiss'"
+    ],
+    "requirements": [
+      "Formal or semi-formal attire (essential for evening opera or classical concert attendance)",
+      "A museum pass for the Kunsthistorisches Museum and Belvedere to bypass ticket queues",
+      "Comfortable dress shoes suitable for walking between galleries and standing for performances",
+      "General awareness of Viennese coffee etiquette (knowing your Melange from an Einspänner)",
+      "Pre-downloaded audio tour focusing on the Ringstrasse architecture"
+    ],
+    "precaution": "Over-tourism at the Schönbrunn Palace can lead to 2-hour wait times without pre-booked slots. Be aware of 'Mozart-costumed' ticket touts in the city center; only purchase concert tickets from authorized venues. Summer humidity can be high in un-airconditioned historical buildings.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "Imperial Grandeur: Morning exploration of the Hofburg Palace complex; Afternoon stroll through the Ringstrasse to the State Opera; Evening classical performance followed by a late-night coffee house visit."
+      },
+      {
+        "day": 2,
+        "activities": "Baroque and Art: Morning visit to Schönbrunn Palace (outer city); Afternoon at the Upper Belvedere Gallery; Farewell evening at the Prater for a ride on the historic 1897 Ferris wheel."
+      }
+    ]
   },
   {
     "id": "expd012",
@@ -2991,8 +3332,41 @@ export const expeditions = [
       "accommodation": "Glass Igloo or Log Cabin",
       "transport": "Sled, Snowmobile & Reindeer"
     },
-    "requirements": ["Thermal underwear", "Physical readiness for cold", "Passport"],
-    "highlights": ["Northern Lights", "Husky Sledding", "Arctic Wilderness"]
+    "description": "The Lapland Arctic Adventure is a high-latitude expedition into the heart of the Finnish backcountry, designed for those seeking to test their endurance against the elements of the North. Based out of Rovaniemi and extending into the Pallas-Yllästunturi National Park, this journey transcends typical tourism by focusing on authentic Arctic mobility. Participants will master the art of mushing a husky sled, navigating by the stars, and managing body temperature in environments that can drop below -30°C. The mission is centered on the pursuit of the Aurora Borealis, utilizing remote wilderness cabins far from light pollution. It is a grueling yet transcendent experience that offers a profound connection to the silent, frozen landscapes of the Fennoscandian Shield.",
+    "detailedKeyFeatures": {
+      "maxAltitude": "500 meters (Fell summits within the Arctic Plateau)",
+      "terrain": "Deep Taiga snow, frozen lake surfaces, and undulating tundra fells.",
+      "bestSeason": "December to March for deep snow and peak Aurora visibility; late September for the 'Autumn Aurora'."
+    },
+    "highlights": [
+      "Self-driving a 6-dog husky team through 30km of untouched wilderness",
+      "Overnight stay in a remote wilderness hut with traditional wood-fired sauna",
+      "Nocturnal snowshoe expedition to high-altitude vantage points for Aurora hunting",
+      "Traditional Sámi cultural immersion and reindeer sledding experience",
+      "Ice fishing on a frozen lake followed by an open-fire lunch"
+    ],
+    "requirements": [
+      "High-grade thermal layering system (Wool base, fleece mid, and down/Gore-Tex outer)",
+      "Extreme-cold rated boots (tested to -40°C)",
+      "Chemical or electronic hand and toe warmers",
+      "High-calorie nutrition packs (essential for metabolic heat production)",
+      "Headlamp with extra lithium batteries (standard batteries fail in extreme cold)"
+    ],
+    "precaution": "Frostbite can occur in under 15 minutes on exposed skin; strict adherence to the 'buddy system' for skin checks is required. The 'Blue Hour' provides very little light; navigation must be precise to avoid becoming disoriented in the Taiga forest. Polar madness/fatigue from limited sunlight hours.",
+    "route": [
+      {
+        "day": 1,
+        "activities": "Arrival and Survival: Arctic gear fitting and safety briefing; Afternoon snowshoe training; Evening 'chase' via snowmobile to a remote Aurora basecamp."
+      },
+      {
+        "day": 2,
+        "activities": "The Great Mushing: Full-day husky sledding expedition across frozen marshes and fells; Evening wilderness hut arrival and wood-chopping/sauna ritual."
+      },
+      {
+        "day": 3,
+        "activities": "Arctic Heritage: Morning reindeer farm visit and Sámi storytelling; Afternoon ice-hole swimming (optional) and return to Rovaniemi for departure."
+      }
+    ]
   }
 ]
 
@@ -3701,3 +4075,4 @@ export const underrated = [
     }
   }
 ]
+
