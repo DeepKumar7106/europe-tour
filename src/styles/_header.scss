@@ -6,29 +6,19 @@ header {
     height: 70px;
     @include center(row);
     justify-content: space-between;
-    padding: 1rem;
+    padding-inline: 1rem;
     transition: all 0.5s ease-in-out;
     position: fixed;
     z-index: 100;
     background: transparent;
-    background-color: rgba(0,0,0,0.9);
     & > * {
         opacity: 1;
     }
 }
 
-// header::after {
-//     content: "";
-//     width: 100%;
-//     height: 70px;
-//     background-color: $black;
-//     position: fixed;
-//     z-index: 90;
-//     opacity: 0.6;
-//     left: 0;
-// }
-
 #header-nav {
+    scrollbar-width: none;
+    overflow-y: hidden;
     transition: all 0.5s ease-in-out;
     width: 50%;
     & #header-nav-list {
@@ -37,9 +27,14 @@ header {
         justify-content: space-evenly;
         list-style: none;
         & > * {
+            background-color: rgb(10, 2, 22);
             cursor: pointer;
             color: $accent;
             text-decoration: none;
+            // height: 80%;
+            width: max-content;
+            padding: 1rem 2rem;
+            border-radius: 70px;
         }
     }
 }

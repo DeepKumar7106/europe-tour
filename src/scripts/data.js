@@ -2725,7 +2725,7 @@ export const expeditions = [
       "vibe": "A high-altitude thrill ride through the heart of the Bernese Oberland.",
       "shortBrief": "Experience the Swiss Alps from every angle—on foot, by cogwheel train, and from the air. This expedition focuses on the majestic 'Big Three' peaks: Eiger, Mönch, and Jungfrau."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc115", "activity": "Arrival in Interlaken & Sunset Paragliding over the lakes." },
       { "day": 2, "cityId": "euc115", "activity": "Jungfraujoch 'Top of Europe' excursion via the Eiger Express." },
       { "day": 3, "cityId": "euc118", "activity": "Scenic train transfer to Zermatt and farewell dinner facing the Matterhorn." }
@@ -2782,7 +2782,7 @@ export const expeditions = [
       "vibe": "A fast-paced immersion into the 'City of Light'.",
       "shortBrief": "Perfect for a weekend getaway, this route connects the grandest museums of the world with the bohemian charm of hilltop villages."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc043", "activity": "Morning at the Louvre followed by a Seine River lunch cruise." },
       { "day": 2, "cityId": "euc043", "activity": "Sunrise at the Eiffel Tower and an afternoon exploring Montmartre’s artist squares." }
     ],
@@ -2834,7 +2834,7 @@ export const expeditions = [
       "vibe": "A time-traveling journey through 2,000 years of civilization.",
       "shortBrief": "Uncover the layers of the Eternal City, from the brutal history of the Colosseum to the spiritual grandeur of the Vatican."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc078", "activity": "Private tour of the Colosseum and Roman Forum." },
       { "day": 2, "cityId": "euc078", "activity": "Vatican Museums, Sistine Chapel, and St. Peter’s Basilica." },
       { "day": 3, "cityId": "euc078", "activity": "Trastevere food crawl and the Pantheon at dusk." }
@@ -2891,7 +2891,7 @@ export const expeditions = [
       "vibe": "A laid-back exploration of waterways and world-class art.",
       "shortBrief": "Discover why Amsterdam is the world's most cycling-friendly city while exploring the deeply moving history of the Jewish Quarter."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc044", "activity": "Canal boat tour followed by the Anne Frank House." },
       { "day": 2, "cityId": "euc044", "activity": "Van Gogh Museum and a bike tour through Vondelpark." }
     ],
@@ -2943,7 +2943,7 @@ export const expeditions = [
       "vibe": "Whitewashed luxury perched on the edge of a volcanic caldera.",
       "shortBrief": "A visually stunning escape focusing on the unique geology and world-famous architecture of the Cycladic islands."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc104", "activity": "Coastal hike from Fira to Imerovigli and sunset in Oia." },
       { "day": 2, "cityId": "euc104", "activity": "Catamaran cruise around the Caldera with swimming at Red Beach." }
     ],
@@ -2995,7 +2995,7 @@ export const expeditions = [
       "vibe": "A nature-first journey through deep blue waters and soaring cliffs.",
       "shortBrief": "Travel the 'Norway in a Nutshell' route, featuring the steepest railways and the narrowest fjords in the world."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc169", "activity": "Arrival in Bergen and Fløibanen funicular for city views." },
       { "day": 2, "cityId": "euc168", "activity": "Flam Railway journey and Nærøyfjord electric boat cruise." },
       { "day": 3, "cityId": "euc168", "activity": "Stegastein Viewpoint and transfer back to Bergen." }
@@ -3052,7 +3052,7 @@ export const expeditions = [
       "vibe": "A journey through the 'City of a Hundred Spires' and its Gothic heart.",
       "shortBrief": "Step into a living fairytale. Prague’s skyline of towers and stone bridges remains largely untouched since the 14th century, offering a dense, walkable history lesson."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc136", "activity": "Old Town Square exploration and crossing the Charles Bridge at sunset." },
       { "day": 2, "cityId": "euc136", "activity": "Tour of Prague Castle complex and evening in the Jewish Quarter." }
     ],
@@ -3104,7 +3104,7 @@ export const expeditions = [
       "vibe": "Where Gaudí’s surrealism meets the Mediterranean breeze.",
       "shortBrief": "Experience the unique Catalan identity through its modernist architecture, legendary culinary scene, and urban beach culture."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc069", "activity": "Gaudí discovery: La Sagrada Família and Park Güell." },
       { "day": 2, "cityId": "euc069", "activity": "Gothic Quarter walking tour followed by sunset at Barceloneta Beach." },
       { "day": 3, "cityId": "euc069", "activity": "Morning at La Boqueria Market and a cable car ride to Montjuïc." }
@@ -3161,7 +3161,7 @@ export const expeditions = [
       "vibe": "Fire and ice in the world's most dramatic geological park.",
       "shortBrief": "A high-impact loop from Reykjavik that covers exploding geysers, massive waterfalls, and the tectonic rift where two continents pull apart."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc176", "activity": "Thingvellir National Park, Geysir, and Gullfoss Waterfall." },
       { "day": 2, "cityId": "euc176", "activity": "Relaxing in the Blue Lagoon and exploring Reykjavik's colorful streets." }
     ],
@@ -3213,7 +3213,7 @@ export const expeditions = [
       "vibe": "Sailing through the 'Pearl of the Adriatic'.",
       "shortBrief": "This coastal hop focuses on the southern Dalmatian coast, combining medieval stone fortresses with the crystal-clear waters of the Adriatic islands."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc094", "activity": "Walking the medieval walls of Dubrovnik's Old Town." },
       { "day": 2, "cityId": "euc094", "activity": "Full-day boat excursion to the Elaphiti Islands for snorkeling." },
       { "day": 3, "cityId": "euc095", "activity": "Transfer to Split to visit Diocletian's Palace." }
@@ -3270,7 +3270,7 @@ export const expeditions = [
       "vibe": "The elegance of the Habsburg Empire in its prime.",
       "shortBrief": "Immerse yourself in a world of grand palaces, historic coffee houses, and the musical legacy of Mozart and Beethoven."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc121", "activity": "Schönbrunn Palace tour and evening Classical Concert." },
       { "day": 2, "cityId": "euc121", "activity": "The Hofburg, St. Stephen's Cathedral, and a Sachertorte tasting." }
     ],
@@ -3322,7 +3322,7 @@ export const expeditions = [
       "vibe": "The ultimate winter frontier experience.",
       "shortBrief": "Go beyond the Arctic Circle to master the skills of the North. This expedition focuses on traditional transport and chasing the Aurora in deep snow."
     },
-    "route": [
+    "routeBrief": [
       { "day": 1, "cityId": "euc174", "activity": "Husky sledding through the taiga and visit to Santa's Village." },
       { "day": 2, "cityId": "euc174", "activity": "Snowmobile expedition to a remote hut for Northern Lights spotting." },
       { "day": 3, "cityId": "euc174", "activity": "Traditional Finnish sauna and ice swimming experience." }
