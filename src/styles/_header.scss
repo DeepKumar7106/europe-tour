@@ -6,11 +6,27 @@ header {
     height: 70px;
     @include center(row);
     justify-content: space-between;
-    background-color: $secondary;
     padding: 1rem;
     transition: all 0.5s ease-in-out;
-    
+    position: fixed;
+    z-index: 100;
+    background: transparent;
+    background-color: rgba(0,0,0,0.9);
+    & > * {
+        opacity: 1;
+    }
 }
+
+// header::after {
+//     content: "";
+//     width: 100%;
+//     height: 70px;
+//     background-color: $black;
+//     position: fixed;
+//     z-index: 90;
+//     opacity: 0.6;
+//     left: 0;
+// }
 
 #header-nav {
     transition: all 0.5s ease-in-out;
@@ -20,7 +36,8 @@ header {
         @include center(row);
         justify-content: space-evenly;
         list-style: none;
-        & li > a{
+        & > * {
+            cursor: pointer;
             color: $accent;
             text-decoration: none;
         }

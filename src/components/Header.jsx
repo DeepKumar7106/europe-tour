@@ -25,7 +25,7 @@ export default function Header() {
             <img src="src\assets\react.svg" alt="" id="header-logo-img"/>
             <nav id="header-nav">
                 <ul id="header-nav-list">
-                    <Link to= "/home">
+                    <Link to= "/">
                         <li className="listItem">Home</li>
                     </Link>
                     <Link to= "/attraction">

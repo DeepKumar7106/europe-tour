@@ -5,7 +5,7 @@ export default function About() {
     return (
         <main id='about-main'>
             <section id="about-text-section">
-                <Link to='/home' id='about-text-section-link'>
+                <Link to='/' id='about-text-section-link'>
                     <h2 id='about-text-section-home'><i className="fa-solid fa-circle-arrow-left"></i>home</h2>
                 </Link>
                 <h1 id='about-text-section-heading'>about us</h1>
