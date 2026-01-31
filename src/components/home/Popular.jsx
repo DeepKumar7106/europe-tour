@@ -29,16 +29,14 @@ export default function Popular() {
         })
     }
 
-
-    function navigateAttraction() {
-        console.log(foreGroundCity.id)
-        // navigate(`/attraction/${}`)
+    function updateCityIndex(index) {
+        setCityIndex(index)
     }
 
     return (
         <section id="home-popular-section">
             <h2 id="home-popular-heading"onClick={(() => {navigate('/attraction')})}>attractions</h2>
-            <div id="home-popular-container" onClick={navigateAttraction} >
+            <div id="home-popular-container" >
                 {/* next img */}
                 <div id="home-popular-bg-img-container-left"
                     onClick={updateCityImageNext}
@@ -51,11 +49,14 @@ export default function Popular() {
                 >
                     <img className="home-popular-bg-img rightImage" src={`/city-images-webp/${prevCity.city}.webp`} alt={prevCity.city} />
                 </div>
-                <div id="home-popular-img-container">
-                    <img id="home-popular-img" src={`/city-images-webp/${foreGroundCity.city}.webp`} alt={foreGroundCity.city} onClick={navigateAttraction} />  
+                <div id="home-popular-img-container"  >
+                    <img id="home-popular-img" src={`/city-images-webp/${foreGroundCity.city}.webp`} alt={foreGroundCity.city}  />  
                     <article id="home-popular-img-detail-text">
-                        <p id="home-popular-city">{foreGroundCity.name}</p>
-                        <p id="home-popular-country-name"><i className="fa-solid fa-location-dot"></i> {foreGroundCity.city}, {foreGroundCity.country}</p>
+                        <div id="home-popular-img-detail-text-wrap">
+                            <p id="home-popular-city">{foreGroundCity.name}</p>
+                            <p id="home-popular-country-name"><i className="fa-solid fa-location-dot"></i> {foreGroundCity.city}, {foreGroundCity.country}</p>
+                        </div>
+                        <i className="fa-solid fa-circle-chevron-right" onClick={() => {navigate(`/attractionLocation/${foreGroundCity.id}`)}}></i>
                     </article>
                 </div>
             </div>
@@ -63,16 +64,12 @@ export default function Popular() {
                 <i className="fa-solid fa-circle-chevron-left"
                     onClick={updateCityImagePrev}
                 ></i>
-                <button className="home-popular-nav-btn"></button>
-                <button className="home-popular-nav-btn"></button>
-                <button className="home-popular-nav-btn"></button>
-                <button className="home-popular-nav-btn"></button>
-                <button className="home-popular-nav-btn"></button>
-                <button className="home-popular-nav-btn"></button>
-                <button className="home-popular-nav-btn"></button>
-                <button className="home-popular-nav-btn"></button>
-                <button className="home-popular-nav-btn"></button>
-                <button className="home-popular-nav-btn"></button>
+                {attractions.map((atc,index) => (
+                    <button className={cityIndex === index ? 'home-popular-nav-btn-active' : 'home-popular-nav-btn'}
+                        key={atc.id} 
+                        onClick={() => {updateCityIndex(index)}}
+                    ></button>
+                ))}
                 <i className="fa-solid fa-circle-chevron-right"
                     onClick={updateCityImageNext} 
                 ></i>

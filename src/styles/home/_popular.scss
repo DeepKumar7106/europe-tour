@@ -21,7 +21,7 @@
     position: relative;
     height: 60%;
     background-color: $accent;
-    transition: all 3s ease;
+    transition: all 0.4s ease;
     margin-bottom: 1rem;
     z-index: 2;
     border-radius: 2rem;
@@ -54,13 +54,14 @@
             color: $accent;
             position: absolute;
             bottom: 0;
-            padding: 0.5rem;
-            padding-top: 2rem;
+            padding: 2rem;
             // outline: 20px solid lime;
             padding-left: 2rem;
             font-size: clamp(2rem, 2.5vw, 4rem);
             border-radius: 2rem;
-            & > p{
+            @include center(row);
+            justify-content: space-between;
+            & p{
                 text-align: left;
             }
         }
@@ -128,20 +129,33 @@
         font-size: 3rem;
         color: $accent;
     }
+
+    & button {
+        margin-top: 1rem;
+        margin: 0 0.5rem;
+        transition: all 0.3s ease-in;
+        border: none;
+        &:hover {
+            background: $secondary;
+        }
+
+    }
 }
 
+
+
 .home-popular-nav-btn {
-    margin-top: 1rem;
     height: 1rem;
     width: 1rem;
     border-radius: 1rem;
     background: $accent;
-    margin: 0 0.5rem;
-    transition: all 0.5s ease-in;
-    border: none;
-    &:hover {
-        background: $secondary;
-    }
+}
+
+.home-popular-nav-btn-active {
+    height: 1.5rem;
+    width: 1.5rem;
+    background: color.adjust($accent, $lightness: -60%);
+    border-radius: 1.5rem;
 }
 
 @media (max-width: 700px) {

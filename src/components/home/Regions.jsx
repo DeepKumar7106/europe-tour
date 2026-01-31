@@ -28,7 +28,7 @@ const RegionList = ({region, onCardClick}) => {
             <img className="home-region-card-img" src={imgSrc} alt="" />
             <article className="home-region-card-article">
                 <h3 className="home-region-card-article-name">{name}</h3>
-                <p className="home-region-card-article-para">Lorem ipsum dolor sit amet consectetur.</p>
+                <p className="home-region-card-article-para">{region.desc}</p>
             </article>
         </div>
     )
