@@ -124,6 +124,7 @@
 
 #home-popular-nav-container {
     @include center(row);
+    max-width: 95vw;
     & > .fa-solid {
         margin: 0 1rem;
         font-size: 3rem;

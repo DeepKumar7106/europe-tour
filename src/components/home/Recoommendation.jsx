@@ -63,10 +63,10 @@ export default function Recommendation() {
                 </div>
                 <div id="home-recommend-btn-container">
                     <div id="home-recommend-btn-container-nav">
-                        <i className="fa-solid fa-arrow-left"
+                        <i className="fa-solid fa-circle-chevron-left"
                             onClick={shiftLeft}
                         ></i>
-                        <i className="fa-solid fa-arrow-right"
+                        <i className="fa-solid fa-circle-chevron-right"
                             onClick={shiftRight}
                         ></i>
                     </div>

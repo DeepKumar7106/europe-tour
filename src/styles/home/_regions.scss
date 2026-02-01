@@ -76,29 +76,12 @@
         opacity: 0.8;
         border-radius: inherit;
     }
-
-    & .home-region-card-article {
-        display: none;
-        position: absolute;
-        bottom: 1rem;
-        padding-left: 1rem;
-        & > .home-region-card-article-para {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            pointer-events: none;
-        }
-    }
 }
 
-.home-region-card:hover .home-region-card-article-para {
-    opacity: 1;
-    transform: translateY(0);
-}
 
-.home-region-card:hover{
-    scale: 1.1;
-}
+// .home-region-card:hover{
+//     scale: 1.1;
+// }
 
 
 #home-region-section-info-article-explore {
@@ -123,7 +106,7 @@
     #home-region-section-info  {
         width: 100%;
         height: 10vh;
-        & > h2 {
+        & > #home-region-section-info-heading {
             font-size: clamp(5rem, 2.5vw, 3rem);
         }
         & > article {
@@ -141,9 +124,59 @@
     }
 
     .home-region-card {
-        height: 30vh;
+        height: 10vh;
         width: 90vw;
         transform: translate(0%, 0%);
+        opacity: 0;
         scale: 1 1;
+        animation: region-card-animate;
+        animation-timeline: view();
+        animation-range:200px;
+        z-index: 2;
+        background-color: $accent;
+        will-change: height; 
+        transform: translateZ(0);
+        position: relative;
+        & > .home-region-card-article {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            padding: 1rem;
+            & > .home-region-card-article-para {
+                // transform: translateY(20px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+                pointer-events: none;
+                animation: region-article-para-up ease-in;
+                animation-timeline: view();
+                animation-range:200px;
+            }
+        }
+    }
+
+    @keyframes region-article-para-up {
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes region-card-animate {
+        30% {
+            // scale: 1 2;
+            opacity: 1;
+            height: 40vh;
+        }
+        50% {
+            // scale: 1 4;
+        }
+        70% {
+            // scale: 1 2;
+            opacity: 0.8;
+            height: 25vh;
+        }
+        90% {
+            // scale: 1 1.2;
+            opacity: 0.1;
+            height: 15vh;
+        }
     }
 }

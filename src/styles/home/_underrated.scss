@@ -6,12 +6,13 @@
     height: 100vh;
     color: $accent;
     background: $black;
-    position: relative;
+    // position: relative;
+    anchor-name: --home-und-img;
     & > img {
         height: 100%;
         width: 100%;
         object-fit: cover;
-        opacity: 0.9;
+        opacity: 0.6;
     }   
 
 }
@@ -19,7 +20,7 @@
 #home-underrated-section-heading {
     @include headingText();
     position: absolute;
-    top: 1rem;
+    top: calc(anchor(top --home-und-img));
     width: 90%;
 }
 
@@ -29,7 +30,7 @@
     @include center(column);
     gap: 1rem;
     position: absolute;
-    bottom: 0rem;
+    bottom: calc(anchor(bottom --home-und-img));
     border-radius: 4rem 4rem 0 0 ;
     background: rgba(0,0,0,0.7);
     box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.452);
@@ -44,6 +45,26 @@
     width: 100%;
     font-size: clamp(1.5rem, 2vw, 3rem) ;  
     gap: 1rem; 
+    anchor-name: --container;
+    & > #home-underrated-section-container-btn-ctn-nav {
+        & > .fa-solid {
+            position: absolute;
+            top: calc(anchor(top --container) - 200%);
+            right: calc(anchor(right --container) - 1rem);
+            height: max-content;
+            width: max-content;
+            clip-path: circle(50%);
+            background-color: rgba(0, 0, 0, 0.452);
+            font-size: max(2vw, 3rem);
+            // outline: 2px solid;
+            color: $accent;
+            padding: 1rem;
+            margin-inline: 2rem;
+        }
+        & > .fa-arrow-left {
+            left: calc(anchor(left --container) - 1rem);
+        }
+    }
     & #home-underrated-section-container-btn-ctn-learn-more {
         height: 50px;
         width: max-content;
@@ -55,10 +76,5 @@
         color: $black;
         font-weight: 500;
         background: $primary;
-        & > .fa-solid {
-            background: none;
-            
-            margin-inline: 2rem;
-        }
     } 
 }

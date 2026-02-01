@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 
 const RegionList = ({region, onCardClick}) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const navigate = useNavigate()
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -22,14 +23,15 @@ const RegionList = ({region, onCardClick}) => {
                     `scale(${isMobile ? 1 : region.scale}) 
                     translate(${isMobile ? 0 : region.x},${isMobile ? 0 : region.y})` }
             }
-            onClick={(() => onCardClick(region))}
+            // onClick={(() => onCardClick(region))}
             id={region.id}
+            onClick = {isMobile ? () => {navigate(`/region/${region.id}`)} : () => onCardClick(region)}
         >
             <img className="home-region-card-img" src={imgSrc} alt="" />
-            <article className="home-region-card-article">
+            {isMobile && <article className="home-region-card-article">
                 <h3 className="home-region-card-article-name">{name}</h3>
                 <p className="home-region-card-article-para">{region.desc}</p>
-            </article>
+            </article>}
         </div>
     )
 }
@@ -38,6 +40,7 @@ const RegionList = ({region, onCardClick}) => {
 
 
 export default function Region() {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const [currentRegion, setCurrentRegion] = useState({})
     function updateRegion(reg) {      
         setCurrentRegion(reg)
@@ -52,7 +55,7 @@ export default function Region() {
         <section id="home-region-section">
             <div id="home-region-section-info">
                 <h2 id="home-region-section-info-heading">regions</h2>
-                {currentRegion.name && <article id="home-region-section-info-article">
+                {(currentRegion.name && !isMobile) && <article id="home-region-section-info-article">
                     <h2 id="home-region-section-info-article-name">{currentRegion.name}</h2>
                     <p id="home-region-section-info-article-para">
                         {currentRegion.desc}

@@ -27,6 +27,7 @@
     width: 100%;
     gap: 1rem;
     overflow: hidden;
+    anchor-name: --home-expd-card;
     // display: flex;
     // flex-direction: row;
 }
@@ -85,9 +86,24 @@
 }
 #home-recommend-btn-container-nav {
     & > .fa-solid {
+        position: absolute;
+        top: calc(anchor(center --home-expd-card) - 10%);
+        right: calc(anchor(right --home-expd-card) - 1rem);
         color: $black;
         margin-inline: 1rem;
+        height: max-content;
+        width: max-content;
+        clip-path: circle(50%);
+        background-color: $accent;
+        font-size: max(3vw, 4rem);
+        // outline: 2px solid;
+        box-shadow: 0 0 0 2px $black;
     }
+    
+    & > .fa-circle-chevron-left {
+        left: calc(anchor(left --home-expd-card) - 1rem);
+    }
+        
 }
 @media (max-width: 700px) {
     
