@@ -8,7 +8,7 @@ $animation-duration: 5s;
 }
 
 #home-activity-section-wrapper {
-    height: 500vh;
+    height: 700vh;
 }
 
 #home-activity-section {
@@ -47,15 +47,15 @@ $animation-duration: 5s;
     position: relative;
     // mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
     
-    & > div {
+    & > .home-experience-card {
     @include center(column);
     height: 90%;
     background: $black;
     border-radius: 25px;
-    width: 4vw ;
+    // width: 4vw ;
     // outline: 2px solid;
     background: transparent;
-    
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     // old corousel styles
     // width: var(--item-width);
     // position: absolute;
@@ -78,8 +78,10 @@ $animation-duration: 5s;
         }
         
         & > .home-activity-details-box {
+            transition: all ease-in;
             display: none;
-            opacity: 0;
+            opacity: 1;
+            // width: 100%;
             position: absolute;
             color: $accent;
             bottom: 0;
@@ -87,7 +89,7 @@ $animation-duration: 5s;
             padding-block: 1rem;
             border-radius: 0 0 25px 25px ;
             box-shadow: 0px 5px 5px 0px $black;
-            background: linear-gradient(to bottom, transparent 0%, $black 80%, $black 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, $black 80%, $black 100%);
             & > .home-activity-detail {
                 width: 100%;
                 padding: 1rem;
@@ -115,11 +117,6 @@ $animation-duration: 5s;
     }
 }
 
-.home-experience-card-expand {
-    width: 20vw;
-}
-// .home-experience-card:hover {
-// }
 
 @keyframes expand-width {
     0%, 100% { width: 4vw; }
@@ -133,11 +130,7 @@ $animation-duration: 5s;
     }
 }
 
-// @for $i from 1 through $total-items {
-    //     .home-item#{$i} {
-        //         // animation-delay: calc(#{$animation-duration} / #{$total-items} * (#{$total-items} - #{$i}) * -1);
-        //     }
-        // }
+
         
 @keyframes home-act-scroll-y {
     0% {
@@ -152,55 +145,6 @@ $animation-duration: 5s;
     }
 
 }
-.home-item1 {
-    animation-delay: 0s;
-}
-.home-item2 {
-    animation-delay: 5s;
-}
-.home-item3 {
-    animation-delay: 10s;
-}
-.home-item4 {
-    animation-delay: 15s;
-}
-.home-item5 {
-    animation-delay: 20s;
-}
-.home-item6 {
-    animation-delay: 25s;
-}
-.home-item7 {
-    animation-delay: 30s;
-}
-.home-item8 {
-    animation-delay: 35s;
-}
-
-.home-item9 {
-    animation-delay: 40s;
-}
-.home-item10 {
-    animation-delay: 45s;
-}
-.home-item11 {
-    animation-delay: 50s;
-}
-.home-item12 {
-    animation-delay: 55s;
-}
-.home-item13 {
-    animation-delay: 60s;
-}
-.home-item14 {
-    animation-delay: 65s;
-}
-.home-item15 {
-    animation-delay: 70s;
-}
-.home-item16 {
-    animation-delay: 75s;
-}
 
 @media (max-width: 700px) {
     :root {
@@ -213,8 +157,8 @@ $animation-duration: 5s;
     #home-activity-card-container {
         flex-direction: column;
         & > .home-experience-card {
-            height: 2vh;
-            width: 90%;
+            width: 90vw;
+            display: none;
         }
     }
 
