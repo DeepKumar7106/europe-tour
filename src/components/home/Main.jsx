@@ -7,7 +7,7 @@ import Underrated from "./Underrated"
 
 export default function Main() {
     return (
-        <main>
+        <main id="home-main-section">
             <Hero />
             <Popular />
             <Activities />

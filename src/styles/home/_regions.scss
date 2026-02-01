@@ -121,15 +121,16 @@
         align-items: center;
         gap: 2rem;
         // overflow-x: scroll;
+        scroll-snap-type: y mandatory;
     }
 
     .home-region-card {
         height: 10vh;
         width: 90vw;
-        transform: translate(0%, 0%);
+        // transform: translate(0%, 0%);
         opacity: 0;
-        scale: 1 1;
-        animation: region-card-animate;
+        // scale: 1 1;
+        animation: region-card-animate cubic-bezier(0.215, 0.610, 0.355, 1);
         animation-timeline: view();
         animation-range:200px;
         z-index: 2;
@@ -137,6 +138,9 @@
         will-change: height; 
         transform: translateZ(0);
         position: relative;
+
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
         & > .home-region-card-article {
             position: absolute;
             bottom: 0;

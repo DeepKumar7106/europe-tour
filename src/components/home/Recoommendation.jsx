@@ -10,7 +10,7 @@ export default function Recommendation() {
     const navigate = useNavigate()
 
     function navigateExpedition(id) {
-        console.log(id)
+        navigate(`/expeditionPage/${id}`)
     }
 
     const expeditionList = expeditions.map(expedition => {
