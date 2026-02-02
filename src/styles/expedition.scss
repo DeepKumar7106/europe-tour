@@ -3,13 +3,9 @@
 @use 'header';
 @use 'footer';
 
-body {
-    min-height: 100vh;
-    background: $primary;
-    overflow-x: hidden ;
-}
 
 #expedition-hero-section {
+    --card-img-width: 40%;
     @include heroSection();
 }
 
@@ -30,24 +26,32 @@ body {
     border-radius: 4rem;
     position: relative;
     z-index: 0;
-    
+    justify-content: flex-start;
     
     & .expedition-card-img {
         // margin: 1rem;
         height: 100%;
-        width: 30rem;
+        width: 100%;
         object-fit: cover;
         filter: brightness(80%);
-        border-radius: 4rem 0 0 4rem;
+        border-radius: 4rem ;
         box-shadow: 5px 5px 15px 5px  rgba(0,0,0,0.4);
-        
+        animation: expd-card-img-scale-down ease-in-out;
+        animation-timeline: view();
+        animation-range: cover;
+        z-index: 2;
     }
 
     & .expedition-card-article {
         flex: 1;
         padding: 2rem;
         height: 80%;
-
+        // display: none;
+        opacity: 0;
+        animation: expd-card-img-scale-down-txt ease-in;
+        animation-timeline: view();
+        animation-range: cover;
+        
         & p {
             width: 70%;
             text-align: left;
@@ -107,9 +111,9 @@ body {
 
 .expedition-card:nth-child(even) {
     flex-direction: row-reverse;
-    & > img {
-        border-radius: 0 4rem 4rem 0 ;
-    }
+    // & > img {
+    //     border-radius: 0 4rem 4rem 0 ;
+    // }
 
     & > article {
         text-align: right;
@@ -122,16 +126,38 @@ body {
 }
 
 
+@keyframes expd-card-img-scale-down {
+    0%,100% {
+        width: 100%;
+    }
+    10%,90% {
+        width: 60%;
+    }
+    20%,80% {
+        width: 40%;
+    }
+}
+
+@keyframes expd-card-img-scale-down-txt {
+    0%,100% {
+        opacity: 0;
+        display: none;
+    }
+    10%,90% {
+        display: block;
+        opacity: 0.4;
+    }
+    30%,70% {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 700px) {
-    
 
     .expedition-card {
         width: 100%;
         height: 20rem;
         background: black;
-        & .expedition-card-img {
-            width: 40%;
-        } 
         & .expedition-card-article {
             padding: 1rem;
             height: 100%;
@@ -141,7 +167,7 @@ body {
             }
 
             & > p {
-                width: 100%;
+                display: none;
             }
         }  
     }

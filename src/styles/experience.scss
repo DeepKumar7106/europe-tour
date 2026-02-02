@@ -3,19 +3,16 @@
 @use 'header';
 @use 'footer';
 
-body {
-    min-height: 100vh;
-    background: color.adjust($accent, $lightness:-10%);
-    overflow-x: hidden ;
+
+#expereince-main {
+    background: color.adjust($primary, $lightness:15%);
+    @include center(column);
 }
 
 #experience-hero-section {
     @include heroSection();
 }
 
-#expereince-main {
-    @include center(column);
-}
 
 #experience-list-section {
     @include center(column);
@@ -29,7 +26,7 @@ body {
     width: 100%;
     height: 40rem;
     padding: 1rem ;
-    background: color.adjust($accent, $lightness:-5%);
+    background: radial-gradient(color.adjust($primary, $lightness:5%), $primary);
     border-radius: 3rem;
     box-shadow: 5px 5px 10px  rgba(0,0,0,0.2);
     
@@ -39,23 +36,28 @@ body {
         width: 30rem;
         object-fit: cover;
         filter: brightness(80%);
-        box-shadow: 5px 5px 15px 5px  rgba(0,0,0,0.4);
+        box-shadow: 5px 5px 15px 5px  rgba(0,0,0,0.6);
         border-radius: 100% 5rem 5rem 100%;
     }
     
     & > .experience-card-article {
-        width: 40vw;
+        width: 0vw;
         height: 80%;
-        background: $accent;
+        opacity: 0;
+        background: color.adjust($accent, $lightness:-5%);
         padding: 1rem;
         border-radius: 0 500px 500px 0;
         box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
-        animation: animateOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-        
-        & > * {
+        animation: animateOut cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-timeline: view();
+        animation-range: cover;
+
+        & * {
             opacity: 0;
-            animation: animateOutText 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation: animateOutText  cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
             animation-delay: 500ms;    
+            animation-timeline: view();
+            animation-range: cover 30%;
             
         } 
         
@@ -68,10 +70,14 @@ body {
             text-align: start;
             font-size: clamp(1rem, 1.5vw, 1.4rem);
             margin-bottom: 2rem;
-            opacity: 0.8;
+            opacity: 0;
             padding-bottom: 10px;
             border-bottom: 1px solid $secondary;
             box-shadow: 0px 5px 10px -10px $secondary;
+            // animation: animateOutText  cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            // animation-delay: 500ms;    
+            // animation-timeline: view();
+            // animation-range: cover;
          }
          
          & .experience-card-article-para {
@@ -86,18 +92,37 @@ body {
 }
 
 @keyframes animateOut {
-    from {
+    0%, 100% {
         width: 0;
         opacity: 0;
+    }
+
+    30%,80% {
+        width: 40vw;
+        opacity: 1;    
+    }
+    90% {
+        width: 20vw;
+        opacity: 0.5;    
     }
 }
 
 @keyframes animateOutText {
-    from {
+    // from {
+    //     opacity: 0;
+    // }
+    // to {
+    //     opacity: 1;
+    // }
+    0%, 100% {
         opacity: 0;
     }
-    to {
-        opacity: 1;
+
+    30%,70% {
+        opacity: 1;    
+    }
+    90% {
+        opacity: 0.1;    
     }
 }
 
@@ -125,12 +150,10 @@ body {
 
 @media (max-width: 700px) {
     #expereince-main {
-        background-color: black;
         padding: 0;
     }
     #experience-list-section {
         padding-inline: 1rem;
-        background: pink;
         width: 100%;
         gap: 1rem;
     }
@@ -148,8 +171,11 @@ body {
         & .experience-card-article {
             @include center(column);
             padding: 1rem;
-            flex: 1;
+            flex: 0;
             border-radius: 0 20rem 20rem 0 ;
+            & * {
+                animation-range: cover 30%;
+            } 
             & > h2 {
                 width: 100%;
                 text-align: left;
@@ -161,6 +187,7 @@ body {
                 border: none;
                 box-shadow: none;
                 margin-bottom: 0.3rem;
+                animation-range: cover 30%;
             }
 
             & .experience-card-article-para {
@@ -173,6 +200,22 @@ body {
     .experience-card:nth-child(even) {
         & .experience-card-img {
             border-radius:3rem 20rem 20rem 2rem;
+        }
+    }
+
+    @keyframes animateOut {
+        0%, 100% {
+            flex: 0;
+            opacity: 0;
+        }
+    
+        30%,80% {
+            flex: 1;
+            opacity: 1;    
+        }
+        90% {
+            flex: 0.5;
+            opacity: 0.5;    
         }
     }
 }

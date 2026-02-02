@@ -24,10 +24,10 @@ export default function ExperienceMain() {
     return (
         <main id='expereince-main'>
             <section id="experience-hero-section">
-                <img src="/region-webp/Alpine-Europe.webp" alt="" />
+                <img src="/page-backdrops/experience.jpg" alt="" />
                 <article id="heroArticle">
-                    <h1 id="heroTitle">Alpine Europe</h1>
-                    <p id="heroPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat.</p>
+                    <h1 id="heroTitle">Experiences</h1>
+                    <p id="heroPara">Find out exciting activities to enjoy across the continent</p>
                 </article>
             </section>
             <section id="experience-list-section">
