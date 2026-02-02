@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cossette+Titre:wght@400;700&family=Doto:wght@100..900&family=Gasoek+One&family=Lavishly+Yours&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira+Stencil+One&family=Sixtyfour&family=Sora:wght@100..800&family=Stack+Sans+Headline:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bowlby+One+SC&family=Cossette+Titre:wght@400;700&family=Doto:wght@100..900&family=Gasoek+One&family=Lavishly+Yours&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira+Stencil+One&family=Sixtyfour&family=Sora:wght@100..800&family=Stack+Sans+Headline:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 
 $primary : #ffb703;
@@ -16,7 +16,7 @@ $black : #0c1618;
 }
 
 :root {
-    font-family: "Sora", sans-serif;
+    font-family: "Lexend", sans-serif;
 }
 
 html {
@@ -31,15 +31,15 @@ html {
 }
 
 @mixin headingText() {
-    font-size: clamp(3rem, 6vw, 7rem);
+    font-size: clamp(3rem, 8vw, 8rem);
     color: $accent;
     width: 100%;
     text-align: center;
     padding-bottom: 1rem;
     margin: 1rem;
-    font-weight: 200;
     text-transform: uppercase;
-    font-family: "Gasoek One", sans-serif;
+    // font-weight: 900;
+    // font-family: "Gasoek One", sans-serif;
 }
 
 @mixin heroSection() {
@@ -53,7 +53,7 @@ html {
         height: 100%;
         width: 100%;
         object-fit: cover;
-        opacity: 0.5;
+        opacity: 0.4;
     }
 
     & > article {
@@ -65,10 +65,10 @@ html {
 
         & > h1 {
             @include headingText();
-            font-size: clamp(2.5rem, 5vw, 10rem);
+            // font-size: clamp(2.5rem, 5vw, 10rem);
             text-align: center;
             margin-bottom: 0;
-
+            font-weight: 900;
         }
 
         & > p{

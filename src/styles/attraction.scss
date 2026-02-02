@@ -9,8 +9,16 @@ body {
     overflow-x: hidden ;
 }
 
+// #attraction-all-loc-main{
+//     height: 100vh;
+// }
+
 #attraction-hero-section {
     @include heroSection();
+    // top: 0;
+    // position: sticky;
+    // & > img {
+    // }
 }
 
 #attraction-list-section {
@@ -27,8 +35,12 @@ body {
     background: $black;
     position: relative;
     border-radius: 5vw;
-    box-shadow: 5px 5px 10px 5px $black;
-    
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
+    scale:0;
+    animation: atc-card-fade-in-pc ease-in ;
+    animation-timeline: view();
+    animation-range: cover -10%;
+
     & .attraction-card-bg-img {
         height: 100%;
         width: 100%;
@@ -39,21 +51,21 @@ body {
     
     & .attraction-card-details {
         position: absolute;
-        bottom: 10px;
-        height: 20%;
+        bottom: 0;
+        height: 30%;
         width: 100%;
         @include center(row);
         justify-content: space-between;
         padding-inline: 5vw ;
-        background-color: rgba(0,0,0,0.5) ;
-        background: linear-gradient(to bottom, 
-                                    rgba(0,0,0,0.5) 0%,
-                                    rgba(0,0,0,0.5) 90%,
-                                    transparent 100%
-                                    );
+        background-color: rgba(0,0,0,0.6) ;
+        // background: linear-gradient(to bottom, 
+        //                             rgba(0,0,0,0.5) 0%,
+        //                             rgba(0,0,0,0.5) 90%,
+        //                             transparent 100%
+        //                             );
         border-radius: 0 0 5vw 5vw;
 
-        & .attraction-card-details-article {
+        & > .attraction-card-details-article {
             color: $accent;
 
             & p {
@@ -69,6 +81,23 @@ body {
     }
 }
 
+@keyframes atc-card-fade-in {
+    0%, 100% {scale: 1 0.2;opacity: 0.4;}
+    20%, 80% {
+        scale: 1;
+        opacity: 1;
+    }
+
+}
+
+@keyframes atc-card-fade-in-pc {
+    0%, 100% {scale: 0.2;opacity: 0.4;}
+    20%, 80% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
 @media (max-width: 700px) {
     #attraction-list-section {
         gap: 1rem;
@@ -76,7 +105,18 @@ body {
 
     .attraction-card {
         height: 20rem;
-        width: 90%;
+        width: 95%;
         box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.5);
+        // animation: atc-card-fade-in ease-in;
+        // animation-timeline: view();
+        animation-range: cover;
+
+        & > .attraction-card-details {
+            min-height: 30%;
+            & > .attraction-card-details-article {
+                padding-block: 2rem;
+                flex: 1;
+            }
+        }
     }
 }

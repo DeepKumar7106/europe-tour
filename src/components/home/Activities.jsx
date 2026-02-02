@@ -32,9 +32,6 @@ export default function Activities() {
             display: flex;
             opacity: 1;
         `
-
-
-
         const pcAllCardStyles = `
             width: 3vw;
         `

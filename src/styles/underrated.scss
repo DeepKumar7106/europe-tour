@@ -27,8 +27,12 @@ body {
     background: $black;
     position: relative;
     border-radius: 5vw;
-    box-shadow: 5px 5px 10px 5px $black;
-    
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
+    scale:0;
+    animation: atc-card-fade-in-pc ease-in ;
+    animation-timeline: view();
+    animation-range: cover 10%;
+
     & .underrated-card-bg-img {
         height: 100%;
         width: 100%;
@@ -39,18 +43,13 @@ body {
     
     & .underrated-card-details {
         position: absolute;
-        bottom: 10px;
-        height: 20%;
+        bottom: 0;
+        height: 30%;
         width: 100%;
         @include center(row);
         justify-content: space-between;
         padding-inline: 5vw ;
-        background-color: rgba(0,0,0,0.5) ;
-        background: linear-gradient(to bottom, 
-                                    rgba(0,0,0,0.5) 0%,
-                                    rgba(0,0,0,0.5) 90%,
-                                    transparent 100%
-                                    );
+        background-color: rgba(0,0,0,0.6) ;
         border-radius: 0 0 5vw 5vw;
 
         & .underrated-card-details-article {
@@ -69,6 +68,14 @@ body {
     }
 }
 
+@keyframes atc-card-fade-in-pc {
+    0%, 100% {scale: 0.2;opacity: 0.4;}
+    20%, 80% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
 @media (max-width: 700px) {
     #underrated-list-section {
         gap: 1rem;
@@ -78,5 +85,13 @@ body {
         height: 20rem;
         width: 90%;
         box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.5);
+        animation-range: cover;
+        & > .underrated-card-details {
+            min-height: 30%;
+            & > .underrated-card-details-article {
+                padding-block: 2rem;
+                flex: 1;
+            }
+        }
     }
 }

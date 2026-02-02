@@ -23,12 +23,12 @@ export default function AttractionMain() {
     })
     
     return (
-        <main>
+        <main id='attraction-all-loc-main'>
             <section id="attraction-hero-section">
-                <img src="/region-webp/Alpine-Europe.webp" alt="" />
+                <img src="/page-backdrops/attraction-page.jpg" alt="" />
                 <article>
-                    <h1 id="heroTitle">Alpine Europe</h1>
-                    <p id="heroPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat.</p>
+                    <h1 id="heroTitle">Attractions</h1>
+                    <p id="heroPara">Find places which are popular across globe</p>
                 </article>
             </section>
             <section id="attraction-list-section">

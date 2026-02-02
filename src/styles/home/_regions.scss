@@ -164,6 +164,7 @@
     }
 
     @keyframes region-card-animate {
+        20% {height: 20vh; opacity: 0.5;}
         30% {
             // scale: 1 2;
             opacity: 1;
