@@ -7,7 +7,7 @@ export default function RegionMain() {
     const {regionId} = useParams()
     const navigate = useNavigate()
     const regionCard = useRef(null)
-
+    const currentRegion = regions.find(item => item.id === regionId)
     let countryList = []
     countries.forEach(country => {
         if(country.region === regionId)
@@ -36,10 +36,10 @@ export default function RegionMain() {
     return (
         <main>
             <section id="region-hero-section">
-                <img src="/region-webp/Alpine-Europe.webp" alt="" />
+                <img src={`/region-webp/${currentRegion.name}.webp`} alt="" />
                 <article id="heroArticle">
-                    <h1 id="heroTitle">Alpine Europe</h1>
-                    <p id="heroPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat.</p>
+                    <h1 id="heroTitle">{currentRegion.name}</h1>
+                    <p id="heroPara">{currentRegion.desc}</p>
                 </article>
             </section>
             <section id="region-list-section">

@@ -9,6 +9,7 @@
     position: relative;
     @include center(column);
     align-items: end;
+    z-index: -1;
 }
 
 #attraction-place-bg-section {
@@ -25,23 +26,41 @@
         opacity: 0.2;
         object-fit: cover;
         // filter: grayscale(1);
+        animation: hero-bg-img-scale-up ease-in;
+        animation-timeline: view();
+        animation-range: cover;
     }
 
     & > #attraction-place-bg-detail {
         // height: 50%;
-        width: 50%;
-        font-size: 2rem;
-        font-weight: 900;
-        text-align: left;
+        width: 100%;
+        text-align: center;
         color: white;
         position: absolute;
         top: 50%;
-        left: 30%;
-        transform: translate(-50%,-50%);
+        left: 0%;
+        transform: translate(0%,-50%);
+        animation: hero-bg-txt-translate ease-in;
+        animation-timeline: view();
+        animation-range: cover 20%;
+        transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        & > #attraction-place-bg-location {
+            font-size: 3rem;
+            font-weight: 300;
+            animation: hero-bg-para-resize ease-in forwards;
+            animation-timeline: view();
+            animation-range: cover 20%;
+            transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        }
         & > #attraction-place-bg-name {
             width: 100%;
-            font-size: 5rem;
-            font-weight: 900;
+            font-size: clamp(3rem, 7vw, 8rem);
+            font-weight: 800;
+            animation: hero-bg-heading-resize ease-in forwards;
+            animation-timeline: view();
+            animation-range: cover 20%;
+            transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
             
         }
     }

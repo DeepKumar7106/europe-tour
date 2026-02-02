@@ -23,11 +23,27 @@ export function addHyphen(str) {
   return str.split(' ').join('-')
   // return str.replaceAll(" ","-" );
 }
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // This moves the window to the top whenever the URL path changes
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
 
 
   return (
     <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element= {<Main /> } />
