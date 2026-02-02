@@ -17,6 +17,9 @@
     background: $black;
     anchor-name: --bg-section;
     position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 0;
     & > #underrated-place-bg-img {
         height: 100%;
         width: 100%;
@@ -29,32 +32,58 @@
         // height: 50%;
         width: 50%;
         font-size: 2rem;
-        font-weight: 900;
-        text-align: left;
+        font-weight: 300;
+        text-align: center;
         color: white;
         position: absolute;
         top: 50%;
-        left: 30%;
-        transform: translate(-50%,-50%);
+        left: 0%;
+        // animation: undLoc-hero-txt-translate  ease;
+        animation-timeline: view();
+        // left: 30%;
+        transform: translate(0%,-50%);
         & > #underrated-place-bg-name {
             width: 100%;
-            font-size: 5rem;
+            font-size: 8rem;
             font-weight: 900;
             
         }
     }
 }
 
+@keyframes undLoc-hero-txt-translate {
+    to {
+        text-align: left;
+    }
+}
+
 #underrated-place-hero-section {
+    z-index: 2;
     min-height: 100vh;
     width: 50%;
     @include center(column);
     gap: 1rem;
     background: linear-gradient( color.adjust($accent, $lightness: -30%), color.adjust($accent, $lightness: -40%));
-    padding-block: 1rem;
+    padding-block: 20rem;
     // overflow-y: scroll;
     // position: absolute;
     // inset: 0 0 0 auto;
+    & > article {
+        opacity: 0;
+        animation: und-page-detail-article cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation-range: cover 50% cover 80%;
+        animation-timeline: view();
+        box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+    }
+}
+
+@keyframes und-page-detail-article {
+    0%, 100% {
+        opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
 }
 
 #underrated-place-hero-famous {

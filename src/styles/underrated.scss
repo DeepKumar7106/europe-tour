@@ -31,7 +31,7 @@ body {
     scale:0;
     animation: atc-card-fade-in-pc ease-in ;
     animation-timeline: view();
-    animation-range: cover 10%;
+    animation-range: cover -10%;
 
     & .underrated-card-bg-img {
         height: 100%;

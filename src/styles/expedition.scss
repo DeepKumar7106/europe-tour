@@ -27,6 +27,9 @@
     position: relative;
     z-index: 0;
     justify-content: flex-start;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.466),
+                0 0 0 2vh color.adjust($accent,$lightness: -15%),
+                5px 5px 25px 2vh rgba(0, 0, 0, 0.548);
     
     & .expedition-card-img {
         // margin: 1rem;
@@ -86,28 +89,28 @@
     
 }
 
-.expedition-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    height:  calc(100% + 2rem);;
-    z-index: -2;
-    width: calc(100% + 2rem);
-    background: color.adjust($accent,$lightness: -15%);
-    border-radius: calc(4rem + 1rem);
-    transform: translate(-1rem, -1rem);
-    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.4);
-}
+// .expedition-card::after {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     height:  calc(100% + 2rem);;
+//     z-index: -2;
+//     width: calc(100% + 2rem);
+//     background: color.adjust($accent,$lightness: -15%);
+//     border-radius: calc(4rem + 1rem);
+//     transform: translate(-1rem, -1rem);
+//     box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.4);
+// }
 
-.expedition-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;  
-    background: radial-gradient(color.adjust($accent, $lightness:-5%) ,color.adjust($accent,$lightness: -15%));
-    z-index: -1;  
-    box-shadow: 5px 5px 15px 5px  rgba(0,0,0,0.4);
-}
+// .expedition-card::before {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     border-radius: inherit;  
+//     background: radial-gradient(color.adjust($accent, $lightness:-5%) ,color.adjust($accent,$lightness: -15%));
+//     z-index: -1;  
+//     box-shadow: 5px 5px 15px 5px  rgba(0,0,0,0.4);
+// }
 
 .expedition-card:nth-child(even) {
     flex-direction: row-reverse;
@@ -157,11 +160,18 @@
     .expedition-card {
         width: 100%;
         height: 20rem;
-        background: black;
+        border-radius: 2rem;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.466),
+                    0 0 0 10px color.adjust($accent,$lightness: -15%),
+                    5px 5px 15px 10px rgba(0, 0, 0, 0.548);
+    
+        & > .expedition-card-img {
+            border-radius: 2rem;
+        }
         & .expedition-card-article {
             padding: 1rem;
             height: 100%;
-
+            
             & > h3 {
                 margin-block: 0.5rem
             }

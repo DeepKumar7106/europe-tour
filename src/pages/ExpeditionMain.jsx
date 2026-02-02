@@ -28,10 +28,10 @@ export default function ExpeditionMain() {
     return (
         <main>
             <section id="expedition-hero-section">
-                <img src="/region-webp/Alpine-Europe.webp" alt="" />
+                <img src="/page-backdrops/expedition.jpg" alt="" />
                 <article id="heroArticle">
-                    <h1 id="heroTitle">Alpine Europe</h1>
-                    <p id="heroPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat.</p>
+                    <h1 id="heroTitle">Expeditions</h1>
+                    <p id="heroPara">Confused where to go? choose one of our expeditions...</p>
                 </article>
             </section>
             <section id="expedition-list-section">

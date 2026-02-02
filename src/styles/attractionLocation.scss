@@ -17,6 +17,8 @@
     background: $black;
     anchor-name: --bg-section;
     position: relative;
+    position: sticky;
+    top: 0;
     & > #attraction-place-bg-img {
         height: 100%;
         width: 100%;
@@ -51,10 +53,26 @@
     @include center(column);
     gap: 1rem;
     background: linear-gradient( color.adjust($accent, $lightness: -30%), color.adjust($accent, $lightness: -40%));
-    padding-block: 1rem;
+    padding-block: 40rem;
     // overflow-y: scroll;
     // position: absolute;
     // inset: 0 0 0 auto;
+    & > article {
+        opacity: 0;
+        animation: und-page-detail-article cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation-range: cover 40% cover 80%;
+        animation-timeline: view();
+        box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.6);
+    }
+}
+
+@keyframes und-page-detail-article {
+    0%, 100% {
+        opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
 }
 
 #attraction-place-hero-famous {

@@ -28,10 +28,10 @@ export default function UnderratedMain() {
     return (
         <main>
             <section id="underrated-hero-section">
-                <img src="/region-webp/Alpine-Europe.webp" alt="" />
+                <img src="/page-backdrops/underrated.jpg" alt="" />
                 <article id="heroArticle">
-                    <h1 id="heroTitle">Alpine Europe</h1>
-                    <p id="heroPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat.</p>
+                    <h1 id="heroTitle">Hidden GEms</h1>
+                    <p id="heroPara">Discover european unheard gems which bring peace to your soul</p>
                 </article>
             </section>
             <section id="underrated-list-section">
