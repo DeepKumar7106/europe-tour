@@ -58,9 +58,9 @@ export default function RegionMain() {
                     <article className="region-country-card-detail-article">
                         <h2 className="region-country-card-detail-article-name">{currentCountry.name}</h2>
                         <p className="region-country-card-detail-article-para">{currentCountry.description}</p>
-                        <button className="region-country-card-detail-article-btn"
+                        <i className="fa-solid fa-circle-chevron-right"
                             onClick={() => {navigate(`/country/${currentCountry.id}`)}}
-                        >Learn More</button>
+                        ></i>
                     </article>
                 </div>
             </section>

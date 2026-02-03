@@ -37,9 +37,9 @@ export default function Cities() {
                        {cityDetail.featured.why_famous} <br /> {cityDetail.featured.why_recommended}
                     </p>
                     <h2 className ="cities-details-section-container-heading">Known For</h2>
-                    <p>
+                    <div>
                        {cityDetail.famous_places_details.map(loc => (
-                            <div className="cities-details-section-container-deatils-container">
+                            <div className="cities-details-section-container-deatils-container" key={loc.name}>
                                 <h2 className="cities-details-section-container-deatils-container-name">
                                     {loc.name}
                                 </h2>
@@ -48,7 +48,7 @@ export default function Cities() {
                                 </p>
                             </div>
                        ))}
-                    </p>
+                    </div>
                 </div>
             </section>
         </main>

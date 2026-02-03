@@ -58,56 +58,41 @@
         font-size:  4rem;
     }
     & > p{
+        align-self: baseline;
+        width: 90%;
         padding-left: 0;
         padding-block: 1rem;
         font-size: clamp(1.2rem, 1.3vw, 2rem);
-        text-align: left;
+        text-align: right;
+        anchor-name: --country-para;
     }
-    & > button {
-        height: 50px;
-        width: 150px;
-        border: none;
-        border-radius: 50px;
-        font-size: clamp(1.1rem, 1.2vw, 1.5rem);
-        margin: auto;
-        font-weight: 500;
-        background: $primary;
+    & > .fa-solid  {
+        position: absolute;
+        left: calc(anchor(right --country-para) + 5%);
+        top: calc(anchor(center --country-para) - 10%);
+        font-size: clamp(2rem, 4vw, 3rem);
     }
 
 }
 
-.region-country-card:nth-child(even) {
-    .region-country-card-detail {
-        flex-direction: row-reverse;
-        background: linear-gradient(to left, $black 0%, $black 40%,  transparent 40%, transparent 100%);
-
-        & .region-country-card-detail-article {
-            & > p,
-            & > h2 {
-            text-align: right;
-            }
-            
-        }
-    }
-}
 
   @media (max-width: 700px) {
     .region-country-card {
-        height: 50vh;
-        & .region-country-card-detail {
-            .region-country-card-detail-article {
-                padding: 0;
-                & > h2 {
-                    font-size:  clamp(1.5rem, 2.5vw, 2rem);
-                }
-                & > p {
-                    display: none;
-                }
-                & > button {
-                    height: 25px;
-                    width: 100px;
-                }
+        & .region-country-card-detail-article {
+            width: 100%;
+            height: 30%;
+            inset: auto;
+            bottom: 2vw;
+            & > p {
+                width: 80%;
+            }
+            & > .fa-solid  {
+                font-size: 3rem;
             }   
+            & * {
+                // text-align: center;
+                outline: 2px solid;
+            }
         }
     }
   }
