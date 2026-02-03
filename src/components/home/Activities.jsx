@@ -11,14 +11,14 @@ export default function Activities() {
     useEffect(()=> {
         const element = document.getElementById('home-activity-section-wrapper');
         const rect = element.getBoundingClientRect();
-        const elementHeight = element.offsetHeight * 0.75
+        const elementHeight = element.offsetHeight * 0.8
         const sectionStartPoint = rect.top + window.scrollY;
         const sectionEndPoint = sectionStartPoint + elementHeight
         console.log(windowVW + `The section begins at pixel: ${sectionEndPoint}`);
         
         const ranges = experience.map((_, index) => {
-            const start = Math.floor((index * 100) / 16);
-            const end = Math.floor(((index + 1) * 100) / 16);
+            const start = Math.floor((index * 100) / experience.length);
+            const end = Math.floor(((index + 1) * 100) / experience.length);
             return { start: index === 0 ? 0 : start + 1, end };
         });
 

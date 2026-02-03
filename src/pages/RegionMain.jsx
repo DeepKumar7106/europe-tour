@@ -1,38 +1,46 @@
 import {countries, regions} from '/src/scripts/data.js'
 import './../styles/region.scss'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function RegionMain() {
+    const [countryIndex , setCountryIndex] = useState(0)
     const {regionId} = useParams()
     const navigate = useNavigate()
     const regionCard = useRef(null)
     const currentRegion = regions.find(item => item.id === regionId)
-    let countryList = []
-    countries.forEach(country => {
-        if(country.region === regionId)
-            countryList.push(country)
-    })
+    const countryList = countries.filter(country => country.region === regionId)
 
-    const countryCard = countryList.map(country => {
-        return (
-            <div className="region-country-card" key={country.id} id={country.id} ref={regionCard}>
-                <img className="region-country-card-bg-img" src={`/country-map-webp/${country.name}.webp`} alt="" />
-                <div className="region-country-card-detail">
-                    <img src={`/country-backdrop-webp/${country.name}.webp`} alt="" className="region-country-card-detail-img" />
-                    <article className="region-country-card-detail-article">
-                        <h2 className="region-country-card-detail-article-name">{country.name}</h2>
-                        <p className="region-country-card-detail-article-para">{country.description}<br></br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat vel quod facilis in error explicabo labore libero quidemvelit maxime quae deserunt rem nostrum?</p>
-                        <button className="region-country-card-detail-article-btn"
-                            onClick={() => {navigate(`/country/${country.id}`)}}
-                        >Learn More</button>
-                    </article>
-                </div>
-            </div>
-        )
-    })
+    const currentCountry = countryList[countryIndex]
 
-    
+    useEffect(() => {
+        const listWrapper = document.getElementById('region-list-section')
+        listWrapper.style.height = `${countryList.length * 120}vh`
+        const listWrapperHeight = Math.round(listWrapper.offsetHeight * 0.8)
+        console.log(listWrapperHeight)
+        const lisStartPoint = listWrapper.getBoundingClientRect().top + window.scrollY
+        const listEndPoint = listWrapperHeight + lisStartPoint
+
+        const ranges = countryList.map((c, index) => {
+            const start = Math.floor((index * 100) / countryList.length);
+            const end = Math.floor(((index + 1) * 100) / countryList.length);
+            return { start: index === 0 ? 0 : start + 1, end };
+        } )
+
+        const handleScroll = () => {
+            const currentScrollPoint = Math.floor((window.scrollY - lisStartPoint) / (listWrapperHeight / 100))
+            
+            ranges.forEach((range, index) => {
+                if(currentScrollPoint > range.start && currentScrollPoint < range.end)
+                    setCountryIndex(index)
+            })
+        }
+
+        window.addEventListener('scroll' , handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    },[])
+
     return (
         <main>
             <section id="region-hero-section">
@@ -43,7 +51,18 @@ export default function RegionMain() {
                 </article>
             </section>
             <section id="region-list-section">
-                {countryCard}
+                <div className="region-country-card" key={currentCountry.id} id={currentCountry.id} ref={regionCard}>
+                    <img className="region-country-card-bg-img" src={`/country-backdrop-webp/${currentCountry.name}.webp`} alt="" />
+                    <div className="region-country-card-detail">
+                    </div>
+                    <article className="region-country-card-detail-article">
+                        <h2 className="region-country-card-detail-article-name">{currentCountry.name}</h2>
+                        <p className="region-country-card-detail-article-para">{currentCountry.description}</p>
+                        <button className="region-country-card-detail-article-btn"
+                            onClick={() => {navigate(`/country/${currentCountry.id}`)}}
+                        >Learn More</button>
+                    </article>
+                </div>
             </section>
         </main>
     )
