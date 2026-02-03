@@ -1,8 +1,7 @@
 import './../styles/country.scss'
-import { cities } from '../scripts/data'
+import { cities, countries } from '../scripts/data'
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { counters } from 'sharp'
 
 
 
@@ -16,7 +15,7 @@ export default function CountryMain() {
     const cityList = cities.filter(item => item.countryId === countryId)
     const indexedClass = "country-city-card-indexed"
     const defaultCardClass ="country-city-card"
-    const country = counters.find(item => item.id === countryId)
+    const country = countries.find(item => item.id === countryId)
 
     function updateCityIndex(index) {
         setCardIndex(prevIndex => index)
