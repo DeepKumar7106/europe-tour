@@ -2,6 +2,7 @@ import './../styles/country.scss'
 import { cities } from '../scripts/data'
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { counters } from 'sharp'
 
 
 
@@ -12,14 +13,10 @@ export default function CountryMain() {
     const navigate = useNavigate()
     const cardRefs = useRef([])
     const barRefs = useRef([])
-    const cityList = []
+    const cityList = cities.filter(item => item.countryId === countryId)
     const indexedClass = "country-city-card-indexed"
     const defaultCardClass ="country-city-card"
-
-    cities.forEach(city => {
-        if(city.countryId === countryId)
-            cityList.push(city)
-    })
+    const country = counters.find(item => item.id === countryId)
 
     function updateCityIndex(index) {
         setCardIndex(prevIndex => index)
@@ -86,10 +83,10 @@ export default function CountryMain() {
     return (
         <main>
             <section id="country-hero-section">
-                <img src="/region-webp/Alpine-Europe.webp" alt="" />
+                <img src={`/country-backdrop-webp/${country.name}.webp`} alt="" />
                 <article id="heroArticle">
-                    <h1 id="heroTitle">Alpine Europe</h1>
-                    <p id="heroPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat.</p>
+                    <h1 id="heroTitle">{country.name}</h1>
+                    <p id="heroPara">{country.description}</p>
                 </article>
             </section>
             <section id="country-city-list-section">
