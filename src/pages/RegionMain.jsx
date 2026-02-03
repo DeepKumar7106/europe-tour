@@ -13,8 +13,6 @@ export default function RegionMain() {
 
     const currentCountry = countryList[countryIndex]
 
-    const updateCountryIndex = index => {setCountryIndex(index)}
-
     useEffect(() => {
         const listWrapper = document.getElementById('region-list-section')
         listWrapper.style.height = `${countryList.length * 120}vh`
@@ -41,7 +39,7 @@ export default function RegionMain() {
         window.addEventListener('scroll' , handleScroll)
 
         return () => window.removeEventListener('scroll', handleScroll);
-    },[countryList])
+    },[])
 
     return (
         <main>
@@ -56,14 +54,6 @@ export default function RegionMain() {
                 <div className="region-country-card" key={currentCountry.id} id={currentCountry.id} ref={regionCard}>
                     <img className="region-country-card-bg-img" src={`/country-backdrop-webp/${currentCountry.name}.webp`} alt="" />
                     <div className="region-country-card-detail">
-                        {countryList.map((c, index) => (
-                            <button 
-                                className= {countryIndex === index ?"region-country-card-detail-card-index-current":"region-country-card-detail-card-index"} 
-                                id={index} 
-                                key={c.id}
-                                onClick={()=>{updateCountryIndex(index)}}
-                            >{index + 1}</button>
-                        ))}
                     </div>
                     <article className="region-country-card-detail-article">
                         <h2 className="region-country-card-detail-article-name">{currentCountry.name}</h2>

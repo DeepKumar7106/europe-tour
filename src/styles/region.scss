@@ -29,52 +29,33 @@
 
 }
 
-@mixin country-index-traker {
-    width: var(--btn-height);
-    height: var(--btn-height);
-    border: 1px solid $accent;
-    border-radius: var(--btn-height);
-    color: $accent;
-    font-size: clamp(1.5rem, 2.5vw, 3rem);
-}
-
 .region-country-card-detail {
-    --btn-height:6vh;
     position: absolute;
-    inset: 1rem;
-    @include center(column);
-    height: fit-content;
-    padding: 1rem;
-    width: 10vw;
-    gap: 1rem;
-    & > .region-country-card-detail-card-index {
-        background: transparent;
-        @include country-index-traker;
-    }
+    inset: 0;
+    @include center(row);
+    background: linear-gradient(to right, $black 0%, $black 40%,  transparent 40%, transparent 100%);
+    display: none;
+    // the country list styles
+    
 }
-
-.region-country-card-detail-card-index-current {
-    @include country-index-traker;
-    background: $accent;
-    color: $black;
-
-}
-
 
 .region-country-card-detail-article {
-    width: 100%;
+    width: 60%;
     @include center(column);
     padding: 2rem;
     position: absolute;
-    inset: auto 1rem 0 auto;
-    text-align: right;
+    inset: auto 1rem 1rem auto;
     color: $accent;
     & > h2 {
         padding-inline: 1rem;
         text-transform: uppercase;
-        font-weight: 800;
+        font-weight: 200;
+        font-family: "Gasoek One", sans-serif;
+        text-align: left;
         width: 100%;
-        font-size: clamp(3rem, 5.5vw, 5rem);
+        margin:0 2rem 2rem 2rem;
+        border-bottom: 1px solid $secondary;
+        font-size:  4rem;
     }
     & > p{
         align-self: baseline;
@@ -82,9 +63,8 @@
         padding-left: 0;
         padding-block: 1rem;
         font-size: clamp(1.2rem, 1.3vw, 2rem);
+        text-align: right;
         anchor-name: --country-para;
-        font-weight: 300;
-        opacity: 0.8;
     }
     & > .fa-solid  {
         position: absolute;
@@ -109,10 +89,10 @@
             & > .fa-solid  {
                 font-size: 3rem;
             }   
+            & * {
+                // text-align: center;
+                outline: 2px solid;
+            }
         }
     }
-    
-    .region-country-card-detail {
-        --btn-height:4vh;
-    }    
-}
+  }
