@@ -59,10 +59,7 @@ export default function CountryMain() {
             onClick={(()=> navigate(`/cities/${city.id}`))}
         >
             <img src={`/city-images-webp/${city.cityName}.webp`} alt={city.cityName} className='country-city-card-img' />
-            <article className="country-city-card-detail">
-                <h2 className='country-city-card-detail-name'>{city.cityName.split('-').join(' ')}</h2>
-                <p className='country-city-card-detail-para'>{city.description}</p>
-            </article>
+            <h2 className='country-city-card-detail-name'>{city.cityName.split('-').join(' ')}</h2>
         </div>
     )) 
 
