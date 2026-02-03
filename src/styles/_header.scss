@@ -27,15 +27,25 @@ header {
         justify-content: space-evenly;
         list-style: none;
         & > * {
-            background-color: rgb(10, 2, 22);
+            transition: all 0.3s ease-out;
             cursor: pointer;
-            color: $accent;
             text-decoration: none;
             // height: 80%;
             width: max-content;
             padding: 1vw 2vw;
             border-radius: 70px;
             font-size: 1vw;
+            background-color: rgb(254, 255, 223);
+            color: $black;
+            box-shadow: -5px -5px 5px #c2c1c1 inset,
+                        5px 5px 5px #0000009c inset;
+            &:hover{
+                background-color: rgb(26, 26, 26);
+                color: $accent;
+                box-shadow: 5px 5px 5px #c2c1c144 inset,
+                            -5px -5px 5px #0000009c inset;
+                
+            }
         }
     }
 }
@@ -84,8 +94,10 @@ header {
 
 @media (max-width: 700px) {
     header {
+        background-color: $primary;
         // background: radial-gradient($secondary, color.adjust($secondary, 15%));
-        position: relative;
+        position: sticky;
+        top: 0;
     }
 
     #header-nav {
