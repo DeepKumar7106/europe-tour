@@ -50,13 +50,20 @@
     & > .region-country-card-detail-card-index {
         background: transparent;
         @include country-index-traker;
+        &:hover {
+            background: #ffffff7a
+        }
     }
+
+    
 }
 
 .region-country-card-detail-card-index-current {
     @include country-index-traker;
     background: $accent;
     color: $black;
+    box-shadow: -5px -5px 5px 0 rgba(0,0,0,0.4) inset,
+                5px 5px 5px 0 #ffffff inset;
 
 }
 
