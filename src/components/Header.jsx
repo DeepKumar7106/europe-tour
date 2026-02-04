@@ -9,14 +9,14 @@ export default function Header() {
 
     function openMenu() {
         setOpen(prevOpen => !prevOpen)
-        menuList.current.style.display = !open ? "block" : "none"
-        menu.current.style.cssText = !open ? `height: 100vh; 
-                                            align-items: start; 
-                                            padding-top: 1rem; 
-                                            overflow: hidden; 
-                                            background: radial-gradient($secondary, darken($secondary, 15%));` : `height: 70px; align-items: center; 
-                                            overflow: auto;
-                                            background-color: $secondary;`
+        menuList.current.style.cssText = !open ? "transform: translateX(0%);" : "transform: translateX(100%);"
+        // menu.current.style.cssText = !open ? `height: 100vh; 
+                                            // align-items: start; 
+                                            // padding-top: 1rem; 
+                                            // overflow: hidden; 
+                                            // background: radial-gradient($secondary, darken($secondary, 15%));` : `height: 70px; align-items: center; 
+                                            // overflow: auto;
+                                            // background-color: $secondary;`
     }
 
 
@@ -45,11 +45,11 @@ export default function Header() {
             <i className="fa-solid fa-bars"  onClick={openMenu} id="header-mobile-menu" ></i>
             <div id="header-mobile-menu-list" ref={menuList} className="header-menu-list-container">
                 <ul id="header-mobile-list">
-                    <Link to= "/home">Home</Link>
-                    <Link to= "/attraction">Attraction</Link>
-                    <Link to= "/experience"></Link>
-                    <Link to= "/expedition">Expedition</Link>
-                    <Link to= "/underrated">Hidden Gems</Link>
+                    <Link onClick={openMenu} to= "/">Home</Link>
+                    <Link onClick={openMenu} to= "/attraction">Attraction</Link>
+                    <Link onClick={openMenu} to= "/experience">Experience</Link>
+                    <Link onClick={openMenu} to= "/expedition">Expedition</Link>
+                    <Link onClick={openMenu} to= "/underrated">Hidden Gems</Link>
                 </ul>
             </div>
         </header>
