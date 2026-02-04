@@ -74,6 +74,7 @@ header {
 
 #header-mobile-menu-list{
     position: absolute;
+    display: none;
     inset: 6vh 0 0 0;
     overflow: hidden;
     scrollbar-width: none;
@@ -81,7 +82,7 @@ header {
     width: 100%;
     justify-items: center;
     align-content: center;
-    background: rgba(0,0,0);
+    background: rgb(1, 0, 82);
     transform: translateX(100%);
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
     & > #header-mobile-list {
