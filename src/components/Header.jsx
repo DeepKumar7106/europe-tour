@@ -9,7 +9,7 @@ export default function Header() {
 
     function openMenu() {
         setOpen(prevOpen => !prevOpen)
-        menuList.current.style.cssText = !open ? "transform: translateX(0%);" : "transform: translateX(100%);"
+        menuList.current.style.cssText = !open ? "transform: translateX(0%); display:block;" : "transform: translateX(100%);display:none;"
         // menu.current.style.cssText = !open ? `height: 100vh; 
                                             // align-items: start; 
                                             // padding-top: 1rem; 
