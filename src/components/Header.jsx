@@ -1,12 +1,26 @@
 import { Link } from "react-router-dom"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 
 
 export default function Header() {
     const [open, setOpen] = useState(false)
+    // const [windowScroll, setWindowScroll] = useState(window.screenY)
     const menu = useRef(null)
     const menuList = useRef(null)
+    const scrollPos = useRef(0)
 
+    useEffect(() => {
+        function handleScroll() {
+        const element = menu.current
+        const currentScroll = window.scrollY
+            if (element) {
+                element.style.transform = scrollPos.current < currentScroll ? 'translateY(-200px)' : 'translateY(0px)'
+                scrollPos.current = currentScroll
+            }
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => {window.removeEventListener('scroll', handleScroll)}
+    },[])
     function openMenu() {
         setOpen(prevOpen => !prevOpen)
         menuList.current.style.cssText = !open ? "transform: translateX(0%); display:block;" : "transform: translateX(100%);display:none;"

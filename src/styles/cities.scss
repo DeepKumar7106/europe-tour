@@ -6,6 +6,7 @@
 #cities-main {
     width: 100%;
     @include center(column);
+    background: color.adjust($accent, $lightness:20%);
 }
 
 #cities-backdrop-section {
@@ -39,24 +40,37 @@
 // outline: 2px solid blue;
 
 #cities-hero-section {
+    --img-height: 20rem;
     width: 70%;
+    min-height: var(--img-height);
     margin-block: 2rem;
     padding: 2rem;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     @include center(row);
     justify-content: space-evenly;
-    --img-height: 20rem;
+    position: relative;
 
     & > #cities-hero-section-img {
         height: var(--img-height);
         aspect-ratio: 1 / 1;
         border-radius: calc(var(--img-height) / 20);
         object-fit: cover;
+        transform: translateX(50%);
+        animation: cities-article-pop-out ease-in-out forwards;
+        opacity: 1;
+        z-index: 2;
+        animation-timeline: view();
+        animation-range: entry 10%;
     }
 
     & > #cities-hero-section-article {
         width: 70%;
+        transform: translateX(-50%);
+        animation: cities-article-pop-out ease-in-out forwards;
+        opacity: 0;
+        animation-timeline: view();
+        animation-range: entry 20%;
 
         & > #cities-hero-section-article-name {
             font-size: clamp(2rem, 5.5vw, 5rem);
@@ -69,30 +83,51 @@
     }
 }
 
+@keyframes cities-article-pop-out {
+    to {
+        opacity: 1;
+        position: static;
+        transform: translateX(0%);
+    }
+}
 
 #cities-details-section {
     width: 70%;
-    @include center(row);
+    @include center(column);
     min-height: 100vh;
     align-items: stretch;
 
     & > #cities-details-section-menu {
-        width: 20rem;
-        flex: 1;
-        background: color.adjust($accent, $lightness:-50%);
+        width: 100%;
+        height: 100px;
+        // background: color.adjust($accent, $lightness:-50%);
+        @include center(row);
+        justify-content: start;
+        gap: 2%;
+        padding: 1rem;
+        & > .cities-details-section-menu-list {
+            padding-block: 0.5rem;
+            border-bottom: 2px solid $secondary;
+            font-size: clamp(1.1rem, 2.5vw, 2.5rem);
+            cursor: pointer;
+            text-decoration: none;
+        }
     }
 
     & > #cities-details-section-container {
-        width: calc(100% - 20rem);
-        background: color.adjust($accent, $lightness:-5%);
-        padding-inline: 10%;
+        width: 100% ;
         font-size: clamp(1.1rem, 1.5vw, 1.6rem);
+        & > article {
+            margin-block: 1rem;
+            padding:1rem 10%;
+            background: color.adjust($accent, $lightness:-5%);
 
-        & > h2 {
-            width: 100%;
-            margin-block: 2rem;
-            font-size: clamp(1.1rem, 2.5vw, 4rem);
-            border-bottom: 1px solid black;
+            & > h2 {
+                width: 100%;
+                margin-block: 2rem;
+                font-size: clamp(1.1rem, 2.5vw, 4rem);
+                border-bottom: 1px solid black;
+            }
         }
     }
 }

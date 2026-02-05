@@ -27,30 +27,38 @@ export default function Cities() {
             </section>
             <section id="cities-details-section">
                 <div id="cities-details-section-menu">
-
+                    <a className="cities-details-section-menu-list overview" href="#cities-details-section-container-overview">Overview</a>
+                    <a className="cities-details-section-menu-list famous" href="#cities-details-section-container-famous">Famous Places</a>
+                    <a className="cities-details-section-menu-list konwn" href="#cities-details-section-container-known">Known For</a>
                 </div>
                 <div id="cities-details-section-container">
-                    <h2 className ="cities-details-section-container-heading">Overview</h2>
-                    <p>
-                       {cityDetail.overview}
-                    </p>
-                    <h2 className ="cities-details-section-container-heading">Famous Places</h2>
-                    <p>
-                       {cityDetail.featured.why_famous} <br /> {cityDetail.featured.why_recommended}
-                    </p>
-                    <h2 className ="cities-details-section-container-heading">Known For</h2>
-                    <div>
-                       {cityDetail.famous_places_details.map(loc => (
-                            <div className="cities-details-section-container-deatils-container" key={loc.name}>
-                                <h2 className="cities-details-section-container-deatils-container-name">
-                                    {loc.name}
-                                </h2>
-                                <p className="cities-details-section-container-deatils-container-brief">
-                                    {loc.brief}
-                                </p>
-                            </div>
-                       ))}
-                    </div>
+                    <article id="cities-details-section-container-overiew">
+                        <h2 className ="cities-details-section-container-heading">Overview</h2>
+                        <p>
+                        {cityDetail.overview}
+                        </p>
+                    </article>
+                    <article id="cities-details-section-container-famous">
+                        <h2 className ="cities-details-section-container-heading">Famous Places</h2>
+                        <p>
+                        {cityDetail.featured.why_famous} <br /> {cityDetail.featured.why_recommended}
+                        </p>
+                    </article>
+                    <article id="cities-details-section-container-known">
+                        <h2 className ="cities-details-section-container-heading">Known For</h2>
+                        <div>
+                        {cityDetail.famous_places_details.map(loc => (
+                                <div className="cities-details-section-container-deatils-container" key={loc.name}>
+                                    <h3 className="cities-details-section-container-deatils-container-name">
+                                        {loc.name}
+                                    </h3>
+                                    <p className="cities-details-section-container-deatils-container-brief">
+                                        {loc.brief}
+                                    </p>
+                                </div>
+                        ))}
+                        </div>
+                    </article>
                 </div>
             </section>
         </main>
