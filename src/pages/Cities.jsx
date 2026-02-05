@@ -10,12 +10,14 @@ export default function Cities() {
     const cityDetail = cityData.find(city => city.id === cityId)
     return (
         <main id="cities-main">
-            <section id="cities-backdrop-section">
-                <img src={`/city-images-webp/${city.cityName}1.webp`} alt={city.cityName} id="cities-backdrop-section-img" />
-                <article id="cities-backdrop-section-article">
-                    {city.cityName}
-                </article>
-            </section>
+            <div id="cities-backdrop-section-wrapper">
+                <section id="cities-backdrop-section">
+                    <img src={`/city-images-webp/${city.cityName}1.webp`} alt={city.cityName} id="cities-backdrop-section-img" />
+                    <article id="cities-backdrop-section-article">
+                        {city.cityName}
+                    </article>
+                </section>
+            </div>
             <section id="cities-hero-section">
                 <img src = {`/city-images-webp/${city.cityName}.webp`} alt={city.cityName} id="cities-hero-section-img" />
                 <article id="cities-hero-section-article">

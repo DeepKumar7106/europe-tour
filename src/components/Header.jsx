@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from "react"
 
 export default function Header() {
     const [open, setOpen] = useState(false)
-    // const [windowScroll, setWindowScroll] = useState(window.screenY)
     const menu = useRef(null)
     const menuList = useRef(null)
     const scrollPos = useRef(0)
