@@ -10,13 +10,6 @@ export default function Header() {
     function openMenu() {
         setOpen(prevOpen => !prevOpen)
         menuList.current.style.cssText = !open ? "transform: translateX(0%); display:block;" : "transform: translateX(100%);display:none;"
-        // menu.current.style.cssText = !open ? `height: 100vh; 
-                                            // align-items: start; 
-                                            // padding-top: 1rem; 
-                                            // overflow: hidden; 
-                                            // background: radial-gradient($secondary, darken($secondary, 15%));` : `height: 70px; align-items: center; 
-                                            // overflow: auto;
-                                            // background-color: $secondary;`
     }
 
 

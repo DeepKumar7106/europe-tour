@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { expeditions } from "../scripts/data"
+import { cities, expeditions } from "../scripts/data"
 import '../styles/expeditionPage.scss'
 
 export default function Expedition() {
@@ -33,17 +33,15 @@ export default function Expedition() {
                 <div id="expedition-page-description-information-wrapper">
                     <article id="expedition-page-description-features">
                         <h2 id="expedition-page-description-features-heading">Features</h2>
-                        <article id="expedition-page-description-features-para-wrapper">
-                            <p id="expedition-page-description-features-max-alt">
-                                <span><i className="fa-solid fa-mountain"></i>Max-Altitude:</span>{expedition.detailedKeyFeatures.maxAltitude}
-                            </p>
-                            <p id="expedition-page-description-features-terrain">
-                                <span><i className="fa-solid fa-person-hiking"></i>Terrain:</span>{expedition.detailedKeyFeatures.terrain}
-                            </p>
-                            <p id="expedition-page-description-features-season">
-                                <span><i className="fa-solid fa-calendar-days"></i>Best Season:</span>{expedition.detailedKeyFeatures.bestSeason}
-                            </p>
-                        </article>
+                        <p id="expedition-page-description-features-max-alt">
+                            <span><i className="fa-solid fa-mountain"></i>Max-Altitude:</span>{expedition.detailedKeyFeatures.maxAltitude}
+                        </p>
+                        <p id="expedition-page-description-features-terrain">
+                            <span><i className="fa-solid fa-person-hiking"></i>Terrain:</span>{expedition.detailedKeyFeatures.terrain}
+                        </p>
+                        <p id="expedition-page-description-features-season">
+                            <span><i className="fa-solid fa-calendar-days"></i>Best Season:</span>{expedition.detailedKeyFeatures.bestSeason}
+                        </p>
                     </article>
                     <article id="expedition-page-description-highlights">
                         <h2 id="expedition-page-description-highlights-heading">Highlights</h2>
@@ -58,7 +56,21 @@ export default function Expedition() {
                     </article>
                 </div>
             </section>
-            <section id="expedition-page-route-section"></section>
+            <section id="expedition-page-route-section">
+                {expedition.route.map((r, index) => {
+                    const currentCity = cities.find(c => c.id ===  expedition.routeBrief[index].cityId)
+                    console.table(currentCity)
+                    return (
+                        <div className="expedition-page-route-card">
+                            <img src={`/city-images-webp/${currentCity.cityName}.webp`} alt="" className="expedition-page-route-card-image" />
+                            <article className="expedition-page-route-card-article">
+                                <h3 className="expedition-page-route-card-day">Day: {r.day}</h3>
+                                <p className="expedition-page-route-card-activity">{r.activities}</p>
+                            </article>
+                        </div>
+                    )
+                })}
+            </section>
             <section id="expedition-page-information-section">
                 <article id="expedition-page-information-requirements">
                     <h2 id="expedition-page-description-requirements-heading">Requirements</h2>

@@ -13,6 +13,8 @@
     width: 100%;
     background-color: $black;
     position: relative;
+    justify-items: center;
+    align-items: center;
 
     & > #cities-backdrop-section-img {
         height: 100%;
@@ -23,10 +25,15 @@
 
     & > #cities-backdrop-section-article {
         position: absolute;
-        inset: 0;
-        height: 50%;
-        width: 60%;
-        background: $accent ;
+        inset: 50% 50% 0 0 ;
+        transform: translate(0, -50%);
+        height: max-content;
+        padding: 2rem;
+        width: 100%;
+        text-align: center;
+        color: $accent ;
+        font-size: clamp(3rem, 7.5vw, 8rem);
+        font-weight: 900;
     }
 }
 // outline: 2px solid blue;
@@ -52,11 +59,12 @@
         width: 70%;
 
         & > #cities-hero-section-article-name {
-            font-size: clamp(2rem, 5.5vw, 6rem);
+            font-size: clamp(2rem, 5.5vw, 5rem);
         }
 
         & > #cities-hero-section-article-details {
-            font-size: clamp(1.1rem, 2.5vw, 2rem);
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+            padding-inline: 1rem;
         }
     }
 }

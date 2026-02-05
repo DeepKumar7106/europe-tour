@@ -71,30 +71,39 @@
     padding: 1rme;
     gap: 10px;
     margin: 1rem;
+    
 
     & > #expedition-page-description-section-brief-container {
         width: 95%;
         @include center(row);
         padding: 1rem;
-        border-radius: 10px;
-        background: color.adjust($accent, $lightness: -10%);
-        align-items: start;
+        border-radius: 1rem;
+        background: color.adjust($accent, $lightness:5%);
+        // align-items: start;
+        height: max-content;
+
         & > #expedition-page-description-section-brief-article {
             flex: 1;
 
             & > #expedition-page-description-section-brief-heading {
                 font-size: clamp(1.2rem, 2.5vw, 3.5rem);
+                text-align: center;
             }
 
             & > #expedition-page-description-section-brief {
                 font-size: clamp(1.1rem, 2vw, 1.5rem);
-                width: 90%;
+                // outline: auto;
                 margin-left: 1rem;
+                width: 50vw;
+                max-height: 90vh;
+                padding: 2%;
+                overflow: scroll;
+                scrollbar-width: none;
             }
         }
 
         & > #expedition-page-description-section-map-img {
-            height: 20rem;
+            width: 60vh;
             aspect-ratio: 1 / 1;
             object-fit: cover;
             border-radius: inherit;
@@ -103,29 +112,101 @@
 
     & > #expedition-page-description-information-wrapper {
         @include center(row);
-        width: 95%;
-        padding: 2rem 1rem;
         gap: 1rem;
-        background: $accent;
+        width: 95%;
+        // padding: 2rem 1rem;
+        background-color:$primary;
+        // padding: 0.5rem;
+        gap: 0.5rem;
         border-radius: 1rem;
+        height: 50vh;
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.425);
+        
+        & > * {
+            background: $accent;
+            height: 100%;
+            justify-items: center;
+            align-content: center;
+            border-radius: inherit;
+            text-align: left;
+            width: 50%;
+            & p {
+                width: 90%;
+                padding-left:1.5rem ;
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
+
+            }
+        }
+
         & > #expedition-page-description-features {
-            width: 40%;
-            border-right: 2px solid black;
+            & span {
+                color: red;
+                font-size: clamp(1.2rem, 1.5vw, 2.5rem);
+            }
         }
         
-        & > #expedition-page-description-highlights {
-            width: 60%;
-        }
+        // & > #expedition-page-description-highlights {
+        // }
+        
         & h2 {
+            text-align: center;
             margin-bottom: 1rem;
         }
-        & p {
-            padding-left:1.5rem ;
-            font-size: clamp(1rem, 2vw, 1.6rem);
+        
+    }
+}
+
+#expedition-page-description-information-wrapper::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 5px;
+    // background-color: black;
+}
+        
+
+#expedition-page-route-section {
+    width: 100%;
+    & >  .expedition-page-route-card {
+        height: 40vh;
+        width: 100%;
+        background: $black;
+        anchor-scope: --expd-route-card;
+        anchor-name: --expd-route-card;
+        & >  .expedition-page-route-card-image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            filter: brightness(0.5);
+        }
+        & >  .expedition-page-route-card-article {
+            position: absolute;
+            color: azure;
+            left: calc(anchor(left --expd-route-card) + 2vw);
+            bottom: calc(anchor(bottom --expd-route-card) + 1vw);
+            padding: 1rem;
+            & >  .expedition-page-route-card-day {
+                font-size: clamp(2rem, 3.5vw, 3rem);
+            }
+            & >  .expedition-page-route-card-activity {
+                width: 50%;
+                font-size: clamp(1rem, 1.5vw, 1.6rem);
+
+            }
         }
     }
 }
 
+.expedition-page-route-card:nth-child(even) {
+    & > .expedition-page-route-card-article {
+        text-align: right;
+        right: calc(anchor(right --expd-route-card) + 2vw);
+        & >  .expedition-page-route-card-activity {
+            margin-left: auto;
+        }
+    }
+}
 #expedition-page-information-section {
     width: 70%;
     margin-block: 1rem;
