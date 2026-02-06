@@ -22,7 +22,7 @@ export default function Header() {
     },[])
     function openMenu() {
         setOpen(prevOpen => !prevOpen)
-        menuList.current.style.cssText = !open ? "transform: translateX(0%); display:block;" : "transform: translateX(100%);display:none;"
+        menuList.current.style.cssText = !open ? "transform: translateY(0%);" : "transform: translateY(-100%);"
     }
 
 

@@ -6,7 +6,7 @@ header {
     // height: 70px;
     @include center(row);
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1%;
     transition: all 0.5s ease-in-out;
     position: fixed;
     z-index: 100;
@@ -22,7 +22,7 @@ header {
     overflow-y: hidden;
     transition: all 0.5s ease-in-out;
     background-color: rgb(39, 39, 39);
-    padding: 1rem;
+    padding: 1%;
     border-radius: 10vw;
     box-shadow: 5px 5px 10px #000000c2,
                 -5px -5px 5px #4242429c inset,
@@ -47,7 +47,7 @@ header {
                 box-shadow: 5px 5px 5px #c2c1c1a4 inset,
                             -5px -5px 5px #0000009c inset;
                 &:hover{
-                    background-color: rgb(31, 31, 31);
+                    background-color: $secondary;//rgb(31, 31, 31);
                     color: $accent;
                     box-shadow: 5px 5px 5px #c2c1c144 inset,
                     -5px -5px 5px #0000009c inset;
@@ -67,15 +67,18 @@ header {
 #header-mobile-menu {
     display: none;
     color: $accent;
-    margin-inline: 1rem;
+    margin: 1rem;
     font-size: 2rem;
+    z-index: 200;
+    position: fixed;
+    top: 0;
 }
 
 
 #header-mobile-menu-list{
     position: absolute;
-    display: none;
-    inset: 6vh 0 0 0;
+    // display: none;
+    inset: 0 0 0 0;
     overflow: hidden;
     scrollbar-width: none;
     height: 100vh;
@@ -83,8 +86,9 @@ header {
     justify-items: center;
     align-content: center;
     background: rgb(1, 0, 82);
-    transform: translateX(100%);
+    transform: translateY(-100%);
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 100;
     & > #header-mobile-list {
         @include center(column);
         padding: 5vw;
@@ -112,12 +116,13 @@ header {
 
 @media (max-width: 700px) {
     header {
-        height: 6vh;
-        background-color: $secondary;
+        // height: 6vh;
+        background-color: transparent;
         position: sticky;
         top: 0;
         z-index: 2;
-
+        padding: 0;
+        justify-content: end;
     }
 
     #header-nav {
