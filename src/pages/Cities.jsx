@@ -10,23 +10,24 @@ export default function Cities() {
     const cityDetail = cityData.find(city => city.id === cityId)
     return (
         <main id="cities-main">
-            <div id="cities-backdrop-section-wrapper">
-                <section id="cities-backdrop-section">
-                    <img src={`/city-images-webp/${city.cityName}1.webp`} alt={city.cityName} id="cities-backdrop-section-img" />
-                    <article id="cities-backdrop-section-article">
-                        {city.cityName}
-                    </article>
+                <section id="cities-backdrop-section-wrapper">
+                    <div id="cities-backdrop-section">
+                        <img src={`/city-images-webp/${city.cityName}1.webp`} alt={city.cityName} id="cities-backdrop-section-img" />
+                        <article id="cities-backdrop-section-article">
+                            {city.cityName}
+                        </article>
+                        <article id="cities-hero-section-article">
+                            {/* <h2 id="cities-hero-section-article-name">{city.cityName}</h2> */}
+                            <p id="cities-hero-section-article-details">
+                                {city.description}
+                            </p>
+                        </article>
+                    </div>
                 </section>
-            </div>
-            <section id="cities-hero-section">
+            {/* <section id="cities-hero-section">
                 <img src = {`/city-images-webp/${city.cityName}.webp`} alt={city.cityName} id="cities-hero-section-img" />
-                <article id="cities-hero-section-article">
-                    <h2 id="cities-hero-section-article-name">{city.cityName}</h2>
-                    <p id="cities-hero-section-article-details">
-                        {city.description}
-                    </p>
-                </article>
-            </section>
+                
+            </section> */}
             <section id="cities-details-section">
                 <div id="cities-details-section-menu">
                     <a className="cities-details-section-menu-list overview" href="#cities-details-section-container-overview">Overview</a>
@@ -34,7 +35,7 @@ export default function Cities() {
                     <a className="cities-details-section-menu-list konwn" href="#cities-details-section-container-known">Known For</a>
                 </div>
                 <div id="cities-details-section-container">
-                    <article id="cities-details-section-container-overiew">
+                    <article id="cities-details-section-container-overview">
                         <h2 className ="cities-details-section-container-heading">Overview</h2>
                         <p>
                         {cityDetail.overview}

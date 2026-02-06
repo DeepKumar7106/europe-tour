@@ -4,32 +4,31 @@
 @use 'footer';
 
 #cities-main {
+    // height: 200vh;
     width: 100%;
     @include center(column);
     background: color.adjust($accent, $lightness:20%);
 }
 
 #cities-backdrop-section-wrapper {
-    // height: 200vh;
     width: 100%;
+    height: 200vh;
 }
 
 #cities-backdrop-section {
     height: 100vh;
     width: 100%;
     position: sticky;
-    top: 0;
+    top: 0px;
     background-color: $black;
-    // justify-items: center;
-    // align-items: center;
     z-index: 0;
     
     & > #cities-backdrop-section-img {
-        height: 100vh;
+        height: 100%;
         width: 100%;
         object-fit: cover;
-        opacity: 0.3;
-        animation: hero-bg-img-scale-up ease-in;
+        opacity: 0.4;
+        // animation: hero-bg-img-scale-up ease-in;
         animation-timeline: view();
         animation-range: cover;
     }
@@ -45,6 +44,34 @@
         color: $accent ;
         font-size: clamp(3rem, 7.5vw, 8rem);
         font-weight: 900;
+        anchor-name: --city-heading;
+    }
+
+    & > #cities-hero-section-article {
+        width: 100%;
+        position: absolute;
+        
+        top: calc(anchor(bottom --city-heading));
+        color: $accent;
+        left: calc(anchor(left --city-heading));
+        // transform: translateX(-50%);
+        justify-items: center;
+        opacity: 0;
+
+        animation: cities-article-pop-out ease-in-out forwards;
+        animation-timeline:scroll(block);
+        animation-range: 20% 30%;
+
+        & > #cities-hero-section-article-name {
+            font-size: clamp(2rem, 5.5vw, 5rem);
+        }
+
+        & > #cities-hero-section-article-details {
+            width: 60%;
+            text-align: center;
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+            padding-inline: 1rem;
+        }
     }
 }
 // outline: 2px solid blue;
@@ -67,53 +94,38 @@
         border-radius: calc(var(--img-height) / 20);
         object-fit: cover;
         transform: translateX(50%);
-        animation: cities-article-pop-out ease-in-out forwards;
+        // animation: cities-article-pop-out ease-in-out forwards;
         opacity: 1;
         z-index: 2;
         animation-timeline: view();
         animation-range: entry 10%;
     }
 
-    & > #cities-hero-section-article {
-        width: 70%;
-        transform: translateX(-50%);
-        animation: cities-article-pop-out ease-in-out forwards;
-        opacity: 0;
-        animation-timeline: view();
-        animation-range: entry 20%;
-
-        & > #cities-hero-section-article-name {
-            font-size: clamp(2rem, 5.5vw, 5rem);
-        }
-
-        & > #cities-hero-section-article-details {
-            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-            padding-inline: 1rem;
-        }
-    }
+   
 }
 
 @keyframes cities-article-pop-out {
     to {
         opacity: 1;
-        position: static;
-        transform: translateX(0%);
     }
 }
 
 #cities-details-section {
-    width: 70%;
+    width: 100% ;
     @include center(column);
     min-height: 100vh;
-    align-items: stretch;
+    
 
     & > #cities-details-section-menu {
         width: 100%;
         height: 100px;
-        // background: color.adjust($accent, $lightness:-50%);
+        background: color.adjust($accent, $lightness:5%);
         @include center(row);
-        justify-content: start;
+        
         gap: 2%;
+        
+        // position: sticky;
+        top: 0;
         // padding: 1rem;
         & > .cities-details-section-menu-list {
             padding-block: 0.5rem;
@@ -125,7 +137,7 @@
     }
 
     & > #cities-details-section-container {
-        width: 100% ;
+        width: 70%;
         font-size: clamp(1.1rem, 1.5vw, 1.6rem);
         & > article {
             margin-block: 1rem;
@@ -144,7 +156,26 @@
 
 @media (max-width : 700px) {
     
+    #cities-backdrop-section-wrapper {
+        height: 250vh;
+    }
+    #cities-backdrop-section{
+        & > #cities-hero-section-article {
+            animation-range: 0% 30%;
+    
+            & > #cities-hero-section-article-details {
+                width: 90%;
+            }
+        }
+    }
+
     #cities-details-section {
-        width: 90%;
+        & > #cities-details-section-container {
+            width: 90%;
+        }
+
+        & > #cities-details-section-menu {
+            padding-inline: 1rem;
+        }
     }
 }
