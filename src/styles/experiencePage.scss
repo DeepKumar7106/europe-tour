@@ -68,7 +68,7 @@
     width: 50%;
     box-sizing: border-box;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.342);
+    // background-color: rgb(0, 0, 0);
     padding: 20rem 1rem;
     color: azure;
     justify-self: end;
@@ -82,12 +82,19 @@
         width: 90%;
         border-radius: 1rem;
         padding: 1rem;
-        opacity: 0;
-        animation: und-page-detail-article cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        animation-range: cover 40% cover 80%;
-        animation-timeline: view();
         box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.6);
     } 
+    // & > article , 
+    //     .experience-hero-details-spot-lights-card,
+    //     #experience-hero-details-pro-tip {    
+        & > *, 
+        .experience-hero-details-spot-lights-card {
+            opacity: 0;
+            animation: und-page-detail-article cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation-range: cover 40% cover 80%;
+            animation-timeline: view();
+
+        }
 
     & h2 {
         margin-bottom: 1rem;
@@ -118,6 +125,7 @@
 #experience-hero-details-spot-lights {
     @include center(column);
     gap: 2rem; 
+    animation-range: cover 20% cover 100%;
     & > .experience-hero-details-spot-lights-card {
         @include center(row);
         gap: 1rem; 
@@ -163,5 +171,38 @@
     font-size: clamp(1.1rem, 1.5vw, 1.3rem);
     & span {
         font-weight: 700;
+    }
+}
+
+@media (max-width: 700px) {
+    
+    #experience-bg-img {
+        & > #experience-bg {
+            animation: none;
+        }
+        & > #experience-bg-name {
+            width: 90%;
+        }
+    }    
+    #experience-hero-details {
+        width: 100%;
+
+        & > *, 
+        .experience-hero-details-spot-lights-card {
+            opacity: 0;
+            animation-range: cover 20% cover 60%;
+        }
+        & > #experience-hero-details-spot-lights {
+            width: 95%;
+            background: none;
+            box-shadow: none;
+            animation-range: cover 20% cover 100%;
+            & > .experience-hero-details-spot-lights-card {
+                flex-direction: column;
+                & > img {
+                    width: 90%;
+                }
+            }
+        }
     }
 }
