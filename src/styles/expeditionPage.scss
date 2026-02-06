@@ -86,7 +86,8 @@
             flex: 1;
 
             & > #expedition-page-description-section-brief-heading {
-                font-size: clamp(1.2rem, 2.5vw, 3.5rem);
+                width: 100%;
+                font-size: clamp(2rem, 2.5vw, 3.5rem);
                 text-align: center;
             }
 
@@ -149,6 +150,7 @@
         // }
         
         & h2 {
+            font-size: clamp(2rem, 2.5vw, 3.5rem);
             text-align: center;
             margin-bottom: 1rem;
         }
@@ -226,5 +228,36 @@
         border-radius: 1rem;
         padding: 1rem;
         box-shadow: 0 0 0 2px rgb(141, 141, 0);
+    }
+}
+
+@media (max-width:700px) {
+    #expedition-page-description-section {
+        & > #expedition-page-description-section-brief-container {
+            flex-direction: column-reverse;
+            & > #expedition-page-description-section-map-img {
+                width: 100%;
+            }
+            & > #expedition-page-description-section-brief-article{
+                width: 100%;
+                padding-block: 1rem;
+                & > #expedition-page-description-section-brief {
+                    width: 100%;
+                }
+            }
+        }
+        & > #expedition-page-description-information-wrapper {
+            flex-direction: column;
+            height: 100vh;
+            & > article {
+                width: 100%;
+            }
+        }
+    }
+
+    
+    #expedition-page-information-section {
+        width: 100%;
+        padding: 2%;
     }
 }

@@ -27,32 +27,29 @@ body {
 
 
 #country-city-list-section-bar {
-    height: 100vh;
-    width: 20%;
     z-index: 2;
+    height: 50vh;
+    width: 20%;
     position: relative;
     @include center(column);
-    & > #country-city-list-section-bar-container {
-        @include center(column);
-        height: 50%;
-        justify-content: space-evenly;
-        & > .country-city-list-section-bar-element {
-            height: 40px;
-            width: 40px;
-            transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
-            background: color.adjust($primary, $lightness: -20%);
-            border-radius: 20px;
-            z-index: 20;
-        }
-
-        & > .country-city-list-section-bar-element-scale {
-            width: 10rem;
-            transform: translateX(40%);
-            background: $accent;
-        }
+    justify-content: space-evenly;
+    & > .country-city-list-section-bar-element {
+        height: 40px;
+        width: 40px;
+        transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+        background: color.adjust($primary, $lightness: -20%);
+        border-radius: 20px;
+        z-index: 20;
     }
 
+    & > .country-city-list-section-bar-element-scale {
+        width: 10rem;
+        transform: translateX(40%);
+        background: $accent;
+    }
 }
+
+
 // #country-city-list-section-bar::before {
 //     content: "";
 //     height: 80%;
@@ -64,10 +61,14 @@ body {
 //     z-index: 1;
 //     background: color.adjust($primary, 20%);
 // }
-
+#country-city-list-section-wrapper {
+    width: 100%;
+    height: 100vh;
+    @include center(row);
+}
 #country-city-list-section-container {
     width: 70%;
-    height: 100vh;
+    height: 100%;
     @include center(column);
     gap: 20px;
 }
@@ -109,7 +110,7 @@ body {
         position: absolute;
         text-align: left;
         inset: auto auto 0 0;   
-        font-size:  4rem;
+        font-size:  clamp(2rem, 4.5vw, 4rem);
         margin: 0;
         background: rgba(0,0,0,0.4);
         border-radius: 0 0 50px 50px;
@@ -131,18 +132,48 @@ body {
 }
 
 #country-city-update-btns {
-    width: 100px;
+    // width: 100px;
     height: 50vh;
     margin-right: 1rem;
     @include center(column);
     color: $secondary;
-    font-size: 4rem;
+    font-size: clamp(3rem, 4vw, 4rem);
     justify-content: space-evenly;
 }
 
 @media (max-width: 700px) {
+    #country-city-list-section {
+        height: 100vh;
+        @include center(column-reverse);
+        justify-content: space-around;
+    }
+
+    #country-city-list-section-bar {
+       flex-direction: row;
+       max-height: 10%;
+       width: 80%;
+       & > .country-city-list-section-bar-element {
+            height: 20px;
+            width: 20px;
+            transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+            background: color.adjust($primary, $lightness: -20%);
+            border-radius: 20px;
+            z-index: 20;
+            margin-bottom: 1rem;
+        }
+    
+        & > .country-city-list-section-bar-element-scale {
+            background: $accent;
+            transform: translate(0);
+            // height: ;
+            // width: 20px;
+            scale: 1.5;
+        }
+    }
     #country-city-list-section-container {
         flex: 1;
+        min-height: 80vh;
+
     }
 
     .country-city-card {

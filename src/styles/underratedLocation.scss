@@ -57,7 +57,7 @@
         }
         & > #underrated-place-bg-name {
             width: 100%;
-            font-size: 8rem;
+            font-size: clamp(4rem, 7vw, 8rem);
             font-weight: 900;
             animation: hero-bg-heading-resize ease-in forwards;
             animation-timeline: view();
@@ -180,4 +180,15 @@
     & span {
         font-weight: 600;
     }
+}
+
+@media (max-width: 700px) {
+    #underrated-place-bg-section {
+        & > #underrated-place-bg-img {
+            animation: none;
+        }
+    }    
+    #underrated-place-hero-section {
+        width: 100%;
+        }
 }

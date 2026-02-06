@@ -90,20 +90,20 @@ export default function CountryMain() {
             </section>
             <section id="country-city-list-section">
                 <div id="country-city-list-section-bar">
-                    <div id="country-city-list-section-bar-container">
-                        {barList}
+                    {barList}
+                </div>
+                <div id="country-city-list-section-wrapper">
+                    <div id="country-city-list-section-container">
+                        {cityCards}
                     </div>
-                </div>
-                <div id="country-city-list-section-container">
-                    {cityCards}
-                </div>
-                <div id="country-city-update-btns">
-                    <i className="fa-solid fa-circle-chevron-up"
-                        onClick={updateCityUp}
-                    ></i>
-                    <i className="fa-solid fa-circle-chevron-down"
-                        onClick={updateCityDown}
-                    ></i>
+                    <div id="country-city-update-btns">
+                        <i className="fa-solid fa-circle-chevron-up"
+                            onClick={updateCityUp}
+                        ></i>
+                        <i className="fa-solid fa-circle-chevron-down"
+                            onClick={updateCityDown}
+                        ></i>
+                    </div>
                 </div>
             </section>
         </main>
