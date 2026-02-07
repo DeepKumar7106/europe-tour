@@ -8,13 +8,15 @@ export default function Expedition() {
 
     return (
         <main id="expedition-page-main">
-            <section id="expedition-page-hero-section">
-                <img src={`/expedition-webp/${expedition.name.split(' ').join('-')}.webp`} alt="" id="expedition-page-hero-img" />
-                <article id="expedition-page-hero-article">
-                    <h2 id="expedition-page-hero-article-name">{expedition.name}</h2>
-                    <p id="expedition-page-hero-usp">{expedition.usp}</p>
-                </article>
-            </section>
+            <div id="expedition-page-hero-section-wrapper">
+                <section id="expedition-page-hero-section">
+                    <img src={`/expedition-webp/${expedition.name.split(' ').join('-')}.webp`} alt="" id="expedition-page-hero-img" />
+                    <article id="expedition-page-hero-article">
+                        <h2 id="expedition-page-hero-article-name">{expedition.name}</h2>
+                        <p id="expedition-page-hero-usp">{expedition.usp}</p>
+                    </article>
+                </section>
+            </div>
             <section id="expedtion-page-breif-details">
                 <span id="expedtion-page-breif-details-duration"><i className="fa-regular fa-clock"></i><br />{expedition.duration}</span>
                 <span id="expedtion-page-breif-details-difficulty"><i className="fa-solid fa-chart-line"></i><br />{expedition.difficulty}</span>

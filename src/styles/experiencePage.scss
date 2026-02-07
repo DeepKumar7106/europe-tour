@@ -33,7 +33,9 @@
         color: $accent;
         font-size: clamp(3rem, 10vw, 8rem);
         position: absolute;
-        inset: 10rem auto auto 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        // inset: 0; 
         width: 100%;
         text-align: center;
         animation: hero-bg-txt-translate ease-in;
@@ -50,15 +52,20 @@
     } 
     100% {
         scale: 1.5;
+        filter: brightness(0.3);
+        filter: grayscale(1);
     }
 }
 
 @keyframes hero-bg-txt-translate {
+    10% {
+        width: 75%;
+    }
     20%, 100% {
-        inset: 10rem auto auto 1rem;
-        width: 50%;
+        // inset: 10rem auto auto 1rem;
         // text-align: left;
-        font-size: clamp(3rem, 10vw, 6rem);
+        width: 50%;
+        font-size: clamp(3rem, 8vw, 6rem);
     }
 }
 
@@ -78,10 +85,10 @@
     justify-content: start;
     gap: 1rem;
     & > * {
-        background: rgba(0,0,0, 0.6);
         width: 90%;
         border-radius: 1rem;
         padding: 1rem;
+        background: rgba(0,0,0, 0.6);
         box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.6);
     } 
     // & > article , 
@@ -90,7 +97,7 @@
         & > *, 
         .experience-hero-details-spot-lights-card {
             opacity: 0;
-            animation: und-page-detail-article cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: und-page-detail-article cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
             animation-range: cover 40% cover 80%;
             animation-timeline: view();
 
@@ -104,9 +111,13 @@
 @keyframes und-page-detail-article {
     0%, 100% {
         opacity: 0;
+        scale: 0.4;
+        transform: translateX(100%);
     }
-    20%, 80% {
+    40%, 80% {
+        scale: 1;
         opacity: 1;
+        transform: translateX(0%);
     }
 }
 
@@ -125,11 +136,18 @@
 #experience-hero-details-spot-lights {
     @include center(column);
     gap: 2rem; 
-    animation-range: cover 20% cover 100%;
+    // animation: none;
+    // background: none;
+    // box-shadow: none;
+    animation-range: cover;
     & > .experience-hero-details-spot-lights-card {
         @include center(row);
         gap: 1rem; 
         anchor-scope: --image;
+        background: rgba(0,0,0, 0.6);
+        box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.6);
+        border-radius: 1rem;
+        padding: 2%;
 
         & > .experience-hero-details-spot-lights-article{
             flex: 1;

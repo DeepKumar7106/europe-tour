@@ -68,13 +68,6 @@
     }
 }
 
-@keyframes hero-bg-txt-translate {
-    20%, 100% {
-        inset: 10rem auto auto 1rem;
-        width: 50%;
-        font-size: 200vw;
-    }
-}
 
 @keyframes hero-bg-heading-resize {
     20%, 100% {
@@ -102,19 +95,10 @@
     // inset: 0 0 0 auto;
     & > article {
         opacity: 0;
-        animation: und-page-detail-article cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: und-page-detail-article cubic-bezier(0.175, 0.885, 0.32, 1);
         animation-range: cover 50% cover 80%;
         animation-timeline: view();
         box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
-    }
-}
-
-@keyframes und-page-detail-article {
-    0%, 100% {
-        opacity: 0;
-    }
-    20%, 80% {
-        opacity: 1;
     }
 }
 
