@@ -3,11 +3,22 @@
 @use 'header';
 @use 'footer';
 
+
+@property --mask-size {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+  }
+
 #expedition-page-main {
     @include center(column);
     min-height: 100vh;
     width: 100%;
-
+    background: linear-gradient(
+            color.adjust($accent, $lightness: -25%),
+            color.adjust($accent, $lightness: -20%),
+            color.adjust($accent, $lightness: -15%) 
+    );
     // &  * {
     //     outline: 2px solid;
     // }
@@ -41,11 +52,42 @@
 
     & > #expedition-page-hero-article {
         position: absolute;
-        inset: auto auto 2rem 2rem;
+        width: max-content;
         color: $accent;
+        padding-inline: 1rem;
+        
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%);
+
+        // bottom: 2rem;
+        // text-align: left;
+        // transform:translateY(-50%);
+        animation:expd-hero-article-translate ease-in-out forwards;
+        animation-timeline: view();
+        animation-range: cover 50% cover 70%;
+        & > h2 {
+            font-size: clamp(2.5rem, 4.5vw, 5rem);
+        }
+        & > p {
+            font-size: clamp(1.1rem, 2.5vw, 2.55rem);
+        
+        }
+
     }
 }
 
+@keyframes expd-hero-article-translate {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-100%, 100%);
+    }
+}
 
 
 @keyframes expd-hero-scale-down {
@@ -67,17 +109,23 @@
 }
 
 #expedtion-page-breif-details {
+    $span-color:rgb(37, 37, 37);
+    --span-padding: 1rem;
     height: 20vh;
     width: 95%;
-    padding: 10px;
-    background:rgb(199, 199, 199);
-    border-radius: 1rem;
+    padding: var(--span-padding);
+    background: $span-color;
+    border-radius: calc(1rem + var(--span-padding) * 0.5);
     @include center(row);
     gap: 1rem;
     justify-content: start;
+    
+    box-shadow: 5px 5px 10px #000000c2,
+                -5px -5px 5px #4242429c inset,
+                5px 5px 15px #0000009c inset;
 
     & > span {
-        border-radius: calc(10px);
+        border-radius: calc(var(--span-padding));
         align-content: center;
         text-align: center;
         justify-items: center;
@@ -85,10 +133,24 @@
         width: 20%;
         color: $accent;
         font-size: clamp(1.1rem, 2vw, 1.5rem);
-        background: color.adjust(rgb(199, 199, 199), $lightness: -10%);
+        background: radial-gradient(color.adjust($span-color, $lightness: -5%), color.adjust($span-color, $lightness: -7%));
+        box-shadow: 2px 2px 5px #c2c1c144 inset,
+                    5px 5px 10px #000000c2;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+        &:hover {
+            scale: 1.1;
+            background: radial-gradient(color.adjust($primary, $lightness: 5%), color.adjust($primary, $lightness: -15%))
+        }
         
         & > i {
             margin: 1rem;
+        }
+    }
+
+    &:has(span:hover) {
+        gap: 0.8rem;
+        & > span:not(:hover) {
+            scale: 0.95;
         }
     }
 
@@ -100,7 +162,6 @@
     padding: 1rme;
     gap: 10px;
     margin: 1rem;
-    
 
     & > #expedition-page-description-section-brief-container {
         width: 95%;
@@ -110,9 +171,20 @@
         background: color.adjust($accent, $lightness:5%);
         // align-items: start;
         height: max-content;
-
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.425);
         & > #expedition-page-description-section-brief-article {
+            // mask-image: radial-gradient(circle at center, 
+            //         black calc(var(--mask-size) - 10%) , 
+            //         transparent var(--mask-size)
+            // );
+            transform: translateX(-100%);
+            opacity: 0;
             flex: 1;
+            animation: pop-in-from-left cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation-timeline: view();
+            animation-range: cover 20% cover 50%;
+            
+             
 
             & > #expedition-page-description-section-brief-heading {
                 width: 100%;
@@ -137,6 +209,7 @@
             aspect-ratio: 1 / 1;
             object-fit: cover;
             border-radius: inherit;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.425);
         }
     }
 
@@ -151,7 +224,7 @@
         border-radius: 1rem;
         height: 50vh;
         box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.425);
-        
+        // overflow-x: hidden;
         & > * {
             background: $accent;
             height: 100%;
@@ -160,6 +233,7 @@
             border-radius: inherit;
             text-align: left;
             width: 50%;
+            // clip-path: inset(0%);
             & p {
                 width: 90%;
                 padding-left:1.5rem ;
@@ -169,14 +243,28 @@
         }
 
         & > #expedition-page-description-features {
+            
+            animation: pop-in-from-left cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation-timeline: view();
+            animation-range: cover 20% cover 50%;
+            opacity: 0;
+            transform: translateX(-100%);
+
             & span {
                 color: red;
                 font-size: clamp(1.2rem, 1.5vw, 2.5rem);
             }
         }
         
-        // & > #expedition-page-description-highlights {
-        // }
+        & > #expedition-page-description-highlights {
+        
+            animation: pop-in-from-right cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation-timeline: view();
+            animation-range: cover 20% cover 50%;
+            opacity: 0;
+            transform: translateX(100%);
+            
+        }
         
         & h2 {
             font-size: clamp(2rem, 2.5vw, 3.5rem);
@@ -217,6 +305,13 @@
             left: calc(anchor(left --expd-route-card) + 2vw);
             bottom: calc(anchor(bottom --expd-route-card) + 1vw);
             padding: 1rem;
+            opacity: 0;
+            transform: translateX(-100%);
+
+            animation: pop-in-from-left cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation-timeline: view();
+            animation-range: cover 20% cover 50%;
+             
             & >  .expedition-page-route-card-day {
                 font-size: clamp(2rem, 3.5vw, 3rem);
             }
@@ -229,12 +324,21 @@
     }
 }
 
-.expedition-page-route-card:nth-child(even) {
-    & > .expedition-page-route-card-article {
-        text-align: right;
-        right: calc(anchor(right --expd-route-card) + 2vw);
-        & >  .expedition-page-route-card-activity {
-            margin-left: auto;
+#expedition-page-route-section {
+    & > .expedition-page-route-card:nth-child(even) {
+        & > .expedition-page-route-card-article {
+            text-align: right;
+            animation: pop-in-from-right cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            animation-timeline: view();
+            animation-range: cover 20% cover 50%;
+            opacity: 0;
+            transform: translateX(-100%);
+            right: calc(anchor(right --expd-route-card) + 2vw);
+            
+             
+            & >  .expedition-page-route-card-activity {
+                margin-left: auto;
+            }
         }
     }
 }
@@ -243,14 +347,19 @@
     margin-block: 1rem;
     justify-items: center;
     & > #expedition-page-information-requirements {
-        width: 70%;
         padding:1rem 5%;
         background: $primary;
         margin-block-end: 0.5rem;
-        border-radius: 10vw;
+        width: 100%;
+        border-radius: 0;
         justify-items: center;
         align-content: center;
         position: relative;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.425);
+
+        animation: expd-info-req-animation cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        animation-timeline: view();
+        animation-range: cover 30%;
         & > h2 {
             width: max-content;
             padding-inline: 2%;
@@ -298,6 +407,60 @@
     }
 }
 
+@keyframes expd-info-req-animation {
+    to {
+        width: 70%;
+        border-radius: 10vw;
+    }
+}
+
+@keyframes pop-in-from-left {
+    80% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pop-in-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    80% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes circular-fade-in {
+    0% {
+        // mask-image: radial-gradient(circle at top left, 
+        //                                 black, 
+        //                                 black 20%, 
+        //                                 transparent 20%
+        //     );
+            --mask-size: 20%;
+        }
+    20% {
+        // mask-image: radial-gradient(circle at center center, 
+        //                             black, 
+        //                             black 40%, 
+        //                             transparent 40%
+        // );
+        --mask-size: 40%;
+    }
+    100% {
+        --mask-size: 100%;
+        // mask-image: linear-gradient(black);
+    }
+}
 // expedition-page-description-requirements-para-container
 
 @media (max-width:700px) {
@@ -324,11 +487,32 @@
         }
     }
 
+    #expedtion-page-breif-details {
+        flex-direction: column;
+        height: max-content;
+        & > span {
+            width: 100%;
+            padding: 3%;
+        }
+    }
     
     #expedition-page-information-section {
         padding: 2%;
         & > #expedition-page-information-requirements {
             width: 90%;
+            animation: none;
+            border-radius: 2rem;
+        }
+    }
+
+    @keyframes expd-hero-article-translate {
+        0% {
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-50%, 110%);
         }
     }
 }
