@@ -244,15 +244,46 @@
     justify-items: center;
     & > #expedition-page-information-requirements {
         width: 70%;
-        padding: 1rem;
+        padding:1rem 5%;
+        background: $primary;
+        margin-block-end: 0.5rem;
+        border-radius: 10vw;
+        justify-items: center;
+        align-content: center;
+        position: relative;
+        & > h2 {
+            width: max-content;
+            padding-inline: 2%;
+            background: inherit;
+            text-align: center;
+            anchor-name: --expd-info-heading;
+            position: relative;
+            z-index: 1;
+            margin-block: 1vw;
+        }
+        
         & p {
             padding-left:1.5rem ;
             font-size: clamp(1rem, 1.4vw, 1.5rem);
         }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 1vh;
+            background: $accent;
+            z-index: 0;
+            top: calc(anchor(center --expd-info-heading) - 0.5vh);
+            left: 50%;
+            transform: translateX(-50%);
+            clip-path: polygon(0% 50%, 1% 0%, 99% 0%, 100% 50%, 99% 100%, 1% 100%, 0% 50%);
+            // margin-inline: auto;
+        }
     }
 
     & > #expedition-page-information-precautions {
-        background: rgb(255, 255, 0);
+        background: #ede901;
         width: 100%;
         font-size: clamp(1rem, 1.4vw, 1.5rem);
         // border-radius: 1rem;
@@ -266,6 +297,8 @@
         }
     }
 }
+
+// expedition-page-description-requirements-para-container
 
 @media (max-width:700px) {
     #expedition-page-description-section {
@@ -293,7 +326,9 @@
 
     
     #expedition-page-information-section {
-        width: 100%;
         padding: 2%;
+        & > #expedition-page-information-requirements {
+            width: 90%;
+        }
     }
 }

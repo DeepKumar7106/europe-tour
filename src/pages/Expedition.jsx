@@ -76,14 +76,16 @@ export default function Expedition() {
             <section id="expedition-page-information-section">
                 <article id="expedition-page-information-requirements">
                     <h2 id="expedition-page-description-requirements-heading">Requirements</h2>
-                    {expedition.requirements.map((req, index) => (
-                        <p className="expedition-page-description-requirements-para" 
-                            key={req[index]+String(index)} 
-                            id={req[index]+String(index)}
-                        >
-                            <i className="fa-solid fa-diamond"></i> {req}
-                        </p>
-                    ))}
+                    <div id="expedition-page-description-requirements-para-container">
+                        {expedition.requirements.map((req, index) => (
+                            <p className="expedition-page-description-requirements-para" 
+                                key={req[index]+String(index)} 
+                                id={req[index]+String(index)}
+                            >
+                                <i className="fa-solid fa-diamond"></i> {req}
+                            </p>
+                        ))}
+                    </div>
                 </article>
                 <article id="expedition-page-information-precautions">
                     <p id="expedition-page-information-precautions-para">
