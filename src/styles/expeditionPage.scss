@@ -239,10 +239,11 @@
     }
 }
 #expedition-page-information-section {
-    width: 70%;
+    width: 100%;
     margin-block: 1rem;
+    justify-items: center;
     & > #expedition-page-information-requirements {
-        width: 100%;
+        width: 70%;
         padding: 1rem;
         & p {
             padding-left:1.5rem ;
@@ -251,12 +252,18 @@
     }
 
     & > #expedition-page-information-precautions {
-        background: rgba(255, 255, 24, 0.425);
+        background: rgb(255, 255, 0);
         width: 100%;
         font-size: clamp(1rem, 1.4vw, 1.5rem);
-        border-radius: 1rem;
+        // border-radius: 1rem;
         padding: 1rem;
-        box-shadow: 0 0 0 2px rgb(141, 141, 0);
+        border-top: 5px dashed black;
+        border-bottom: 5px dashed black;
+        // box-shadow: 0 0 0 5px rgb(141, 141, 0) inset;
+        justify-items: center;
+        & > p {
+            width: 70%;
+        }
     }
 }
 

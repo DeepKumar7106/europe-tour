@@ -10,6 +10,7 @@
     padding: 1rem;
     // justify-content: space-evenly;
     background: linear-gradient($secondary, color.adjust($secondary, $lightness:-10%));
+    z-index: 1;
 
     @media (max-width: 700px) {
         flex-direction: column;

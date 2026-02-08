@@ -3827,11 +3827,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "the_statue_of_liberty",
+        "heading": "the statue of liberty",
         "brief": "The creator of the Statue of Liberty, Frédéric Auguste Bartholdi, was born here. You can find a 12-meter replica of the statue on the outskirts of town."
       },
       {
-        "heading": "little_venice",
+        "heading": "little venice",
         "brief": "The 'Petite Venise' district was formerly the center of the professional tanners, wine producers, and boatmen; the house colors once represented the type of shop inside."
       }
     ],
@@ -3853,11 +3853,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "the_cat_capital",
+        "heading": "the cat capital",
         "brief": "Kotor is famous for its cats. They are considered a symbol of good luck for having saved the city from the plague by killing rats centuries ago."
       },
       {
-        "heading": "1,350_steps",
+        "heading": "1,350 steps",
         "brief": "To get the best view, you must climb 1,350 steps to the Castle of San Giovanni. Most tourists stop halfway; the top is where the silence is absolute."
       }
     ],
@@ -3879,11 +3879,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "the_portara",
+        "heading": "the portara",
         "brief": "The massive marble gate you see on the harbor is 2,500 years old. It was meant to be a temple for Apollo but was never finished; it now stands as a 'doorway to nowhere'."
       },
       {
-        "heading": "mountain_villages",
+        "heading": "mountain villages",
         "brief": "Head to 'Apeiranthos'. It’s a village made entirely of marble, hidden high in the mountains where locals still wear traditional dress."
       }
     ],
@@ -3905,11 +3905,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "storks_on_cliffs",
+        "heading": "storks on cliffs",
         "brief": "This is the only place in the world where white storks nest on sea stacks directly above the crashing Atlantic surf."
       },
       {
-        "heading": "the_rota_vicentina",
+        "heading": "the rota vicentina",
         "brief": "A world-class hiking trail follows the coast. You can walk for hours without seeing a car, only seeing the occasional local fisherman perched on a 50-meter cliff."
       }
     ],
@@ -3931,11 +3931,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "the_vogel_cable_car",
+        "heading": "the vogel cable car",
         "brief": "Take the lift to Mt. Vogel; you get a bird’s eye view of the lake that makes it look like a heart carved into the mountains."
       },
       {
-        "heading": "savica_waterfall",
+        "heading": "savica waterfall",
         "brief": "A 20-minute hike leads to an A-shaped waterfall that emerges from a hidden underground cave system."
       }
     ],
@@ -3957,11 +3957,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "the_coffee_mine",
+        "heading": "the coffee mine",
         "brief": "Locals joke that coffee is mined like coal. Visit 'Lviv Coffee Manufacture' where you go underground into a 'mine' to see how they flame-roast the beans."
       },
       {
-        "heading": "the_yard_of_lost_toys",
+        "heading": "the yard of lost toys",
         "brief": "A strange, haunting, yet beautiful courtyard filled with abandoned toys found by a local resident—a true testament to the city's quirky soul."
       }
     ],
@@ -3983,11 +3983,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "the_bridge_jumpers",
+        "heading": "the bridge jumpers",
         "brief": "Local men have jumped from the 24-meter bridge into the icy river for centuries as a rite of passage. They won't jump until they've collected enough 'tips' from the crowd."
       },
       {
-        "heading": "the_crooked_bridge",
+        "heading": "the crooked bridge",
         "brief": "Just a few meters away is 'Kriva Ćuprija,' a miniature version of the main bridge that served as a prototype before the grand project was attempted."
       }
     ],
@@ -4009,11 +4009,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "the_mountain_porters",
+        "heading": "the mountain porters",
         "brief": "The High Tatras are the only mountains in Europe where 'Sherpas' (Slovak Porters) still carry hundreds of kilograms of food and beer on their backs to the mountain huts on foot."
       },
       {
-        "heading": "tatra_tea",
+        "heading": "tatra tea",
         "brief": "Ask for 'Tatratea'—a potent herbal tea liqueur. The strongest version is 72% alcohol and was originally used by mountain dwellers to stay warm."
       }
     ],
@@ -4035,11 +4035,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "the_symbols",
+        "heading": "the symbols",
         "brief": "Look at the white symbols painted on the roofs—some are Christian, but many are pagan or zodiac signs designed to ward off the 'evil eye' or bring good harvest."
       },
       {
-        "heading": "the_trullo_church",
+        "heading": "the trullo church",
         "brief": "The Church of Sant'Antonio is the only church in the world built in the Trullo style, featuring several massive cones and a unique circular layout."
       }
     ],
@@ -4061,11 +4061,11 @@ export const underrated = [
     },
     "tour_guide_secrets": [
       {
-        "heading": "kaali_meteor_crater",
+        "heading": "kaali meteor_crater",
         "brief": "About 3,500 years ago, a massive meteor hit the island. It was one of the last giant impacts in a populated area and is mentioned in ancient Finnish and Estonian myths."
       },
       {
-        "heading": "juniper_everything",
+        "heading": "juniper everything",
         "brief": "The island is covered in juniper bushes. Locals use the wood to make everything from butter knives to beer, giving the entire island a distinct, gin-like scent."
       }
     ],
@@ -4076,3 +4076,18 @@ export const underrated = [
   }
 ]
 
+const europeTranslations = [
+  "Europe",    // French, English
+  "Europa",    // German, Dutch, Italian, Spanish, Portuguese, Polish, Swedish
+  "Eurooppa",  // Finnish
+  "An Eoraip", // Irish
+  "Evrópa",    // Icelandic
+  "Ευρώπη",    // Greek
+  "Evropa",    // Czech, Albanian, Slovenian
+  "Ewropa",    // Maltese
+  "Европа",    // Russian, Ukrainian, Bulgarian, Serbian
+  "Európa",    // Hungarian, Slovak
+  "Avrupa",    // Turkish
+  "Avropa",    // Azerbaijani
+  "ევროპა"      // Georgian
+]

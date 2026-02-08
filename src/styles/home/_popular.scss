@@ -2,12 +2,14 @@
 @use '../config' as *;
 
 #home-popular-section {
-    background:linear-gradient(to top, $primary, color.adjust($primary, $lightness: 5%)) ;
+    background: linear-gradient(to top, $primary, color.adjust($primary, $lightness: 5%)) ;
     width: 100%;
     height: 100vh;
     @include center(column);
     justify-content: space-evenly;
     // border-radius:0 0 200% 200%;
+    -webkit-mask-image: url("/src/assets/masks/torn-paper.png");
+    mask-image:  url("/src/assets/masks/torn-paper.png"); 
 }
 
 #home-popular-heading {

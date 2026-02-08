@@ -1,6 +1,7 @@
 import '../styles/underratedLocation.scss'
 import { underrated } from '../scripts/data'
 import { useParams } from 'react-router-dom'
+import { replaceSpace } from '../App'
 
 export default function UnderratedPage() {
     const {undId} = useParams()
@@ -26,12 +27,15 @@ export default function UnderratedPage() {
                   </article>
                   <article id="underrated-place-hero-facts">
                     <ul id="underrated-place-hero-facts-ul">
-                        {location.tour_guide_secrets.map((item, index) => (
+                        {location.tour_guide_secrets.map((item, index) => {
+                            const heading = item.heading.replace('-', ' ')
+                            console.log(replaceSpace(heading))
+                            return(
                              <li className="underrated-place-hero-famous-li" key={index + item.heading}>
-                                <h2 className="underrated-place-hero-famous-li-heading">{item.heading}</h2>
+                                <h2 className="underrated-place-hero-famous-li-heading">{heading}</h2>
                                 <p className="underrated-place-hero-famous-li-breif">{item.brief}</p>
                             </li>
-                        ))}
+                        )})}
                     </ul>
                 </article>
                 <article id="underrated-place-hero-tips">

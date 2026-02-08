@@ -88,7 +88,8 @@
     width: 50%;
     @include center(column);
     gap: 1rem;
-    background: linear-gradient( color.adjust($accent, $lightness: -30%), color.adjust($accent, $lightness: -40%));
+    // background: linear-gradient( color.adjust($accent, $lightness: -30%), color.adjust($accent, $lightness: -40%));
+    background: radial-gradient(circle, color.adjust($secondary, $lightness: -5%),color.adjust($secondary, $lightness: 0%),color.adjust($secondary, $lightness: -10%),);
     padding-block: 20rem;
     // overflow-y: scroll;
     // position: absolute;
@@ -96,24 +97,50 @@
     & > article {
         opacity: 0;
         animation: und-page-detail-article cubic-bezier(0.175, 0.885, 0.32, 1);
-        animation-range: cover 50% cover 80%;
+        animation-range: cover 40% cover 80%;
         animation-timeline: view();
-        box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+        & > h2 {
+            text-align: center;
+        }
     }
 }
 
 #underrated-place-hero-famous {
-    background: color.adjust($accent, $lightness: -20%);
+    background: color.adjust($accent, $lightness: 15%);
+    box-shadow: 5px 5px 20px 0 rgba(199, 255, 95, 0.212);
     // outline: 2px solid;
     width: 90%;
     padding: 2rem;
     // border: 2px solid black;
     border-radius: 15px;
+    justify-items: center;
     & > #underrated-place-hero-famous-heading {
         font-size: clamp(1.1rem, 3vw, 3rem);
+        
+        padding-inline: 1%;
+        width: max-content;
+        background: inherit;
+        position: relative;
+        anchor-name: --und-article-h2;
+        &::after {
+            content: '';
+            width: 100%;
+            height:5px;
+            background-color: $primary;
+            padding-inline: 5%;
+            z-index: -1;
+            // border-bottom: 2px solid $secondary;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            // top: anchor(center, --und-article-h2);
+            // left:anchor(right, --und-article-h2);
+        }
     }
 
     & > #underrated-place-hero-famous-brief {
+        text-indent: 1rem;
         width: 100%;
         padding-top: 0.5rem;
         padding-left: 2rem;
@@ -123,7 +150,8 @@
 }
 
 #underrated-place-hero-history {
-    background: color.adjust($accent, $lightness: -19%);
+    background: color.adjust($accent, $lightness: 15%);
+    box-shadow: 5px 5px 20px 0 rgba(199, 255, 95, 0.212);
     width: 90%;
     padding: 2rem;
     border-radius: 15px;
@@ -141,28 +169,43 @@
     & > #underrated-place-hero-history-brief {
         font-size: clamp(1.1rem, 2vw, 1.6rem);
         padding: 1rem;
+        text-indent: 1rem;
     }
 }
 
 #underrated-place-hero-facts {
-    background: color.adjust($accent, $lightness: -18%);
-    // outline: 2px solid;
+    background: color.adjust($accent, $lightness: 15%);
+    box-shadow: 5px 5px 20px 0 rgba(199, 255, 95, 0.212);
+    
     width: 90%;
     padding: 2rem;
-    // border: 2px solid black;
     border-radius: 15px;
+    & h2 {
+        text-transform: capitalize;
+    }
+
+    & ul {
+        list-style: none;
+    }
+    & p {
+        text-indent: 1rem;
+    }
 }
 
 #underrated-place-hero-tips{
-    background: color.adjust(#137d5a, $lightness: 10%);
-    // outline: 2px solid;
+    background: color.adjust($primary, $lightness: -5%);
     width: 90%;
+    box-shadow: 5px 5px 10px 5px color.adjust($primary, $lightness: -40%) inset,
+                -0px -0px 5px 5px color.adjust($primary, $lightness: 30%) inset,
+                5px 5px 15px 2px color.adjust($secondary, $lightness: -10%);
     padding: 2rem;
     border-radius: 15px;
     font-size: clamp(1.1rem, 2vw, 1.6rem);
-
+    color: color.adjust($black, $alpha: -0.1);
+    text-indent: 0%;
     & span {
         font-weight: 600;
+        color: $black;
     }
 }
 

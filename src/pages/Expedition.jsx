@@ -86,7 +86,9 @@ export default function Expedition() {
                     ))}
                 </article>
                 <article id="expedition-page-information-precautions">
-                    {expedition.precaution}
+                    <p id="expedition-page-information-precautions-para">
+                        {expedition.precaution}
+                    </p> 
                 </article>
             </section>
         </main>
