@@ -162,6 +162,8 @@
     padding: 1rme;
     gap: 10px;
     margin: 1rem;
+    contain: paint;
+    overflow-x: clip;
 
     & > #expedition-page-description-section-brief-container {
         width: 95%;
@@ -286,6 +288,8 @@
 
 #expedition-page-route-section {
     width: 100%;
+    contain: paint;
+    overflow-x: clip;
     & >  .expedition-page-route-card {
         height: 40vh;
         width: 100%;
@@ -332,7 +336,7 @@
             animation-timeline: view();
             animation-range: cover 20% cover 50%;
             opacity: 0;
-            transform: translateX(-100%);
+            transform: translateX(100%);
             right: calc(anchor(right --expd-route-card) + 2vw);
             
              
