@@ -396,14 +396,15 @@
     }
 
     & > #expedition-page-information-precautions {
-        background: #ede901;
+        background: #fffb00;
         width: 100%;
         font-size: clamp(1rem, 1.4vw, 1.5rem);
         // border-radius: 1rem;
         padding: 1rem;
-        border-top: 5px dashed black;
-        border-bottom: 5px dashed black;
-        // box-shadow: 0 0 0 5px rgb(141, 141, 0) inset;
+        // border-top: 5px dashed black;
+        // border-bottom: 5px dashed black;
+        box-shadow: 5px 5px 15px rgb(141, 141, 0) inset,
+                    -5px -5px 10px #fffd71 inset;
         justify-items: center;
         & > p {
             width: 70%;
@@ -419,7 +420,13 @@
 }
 
 @keyframes pop-in-from-left {
+    0% {
+        scale: 0.5;
+        opacity: 0;
+        transform: translateX(-100%);
+    }
     80% {
+        scale: 0.8;
         opacity: 0.1;
     }
     100% {
@@ -430,13 +437,16 @@
 
 @keyframes pop-in-from-right {
     0% {
+        scale: 0.5;
         opacity: 0;
         transform: translateX(100%);
     }
     80% {
+        scale: 0.8;
         opacity: 0.1;
     }
     100% {
+        scale: 1;
         opacity: 1;
         transform: translateX(0);
     }
