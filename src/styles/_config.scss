@@ -94,6 +94,26 @@ h2 {
     color: $accent;
 }
 
+// h1::after,
+// h1::before {
+//     z-index: 1;
+//     content: "";
+//     position: absolute;
+//     top: calc(anchor(center --div) - 1%);
+//     /* top: 0; */
+//     width: 20%;
+//     height: 1vw;
+//     background: black;
+//     right:anchor(anchor(left --div)) ;
+//     clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 0% 0%);
+// }
 
+
+// h1::before {
+//     left:anchor(anchor(right --div));
+//     transform: translateX(-100%);
+//     clip-path: polygon(0% 50%, 5% 0%, 100% 0%, 100% 100%, 5% 100%, 0% 50%);
+    
+// }
 
 
