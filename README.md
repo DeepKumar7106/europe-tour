@@ -11,3 +11,5 @@ This site will expose you the
 Explore Europe on the basis of region or even down to country level 
 
 7106
+
+https://europe-tour-2eu.pages.dev
