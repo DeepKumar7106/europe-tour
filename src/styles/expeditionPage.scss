@@ -351,8 +351,12 @@
     margin-block: 1rem;
     justify-items: center;
     & > #expedition-page-information-requirements {
-        padding:1rem 5%;
+        padding:5rem;
         background: $primary;
+        background-image: url("/src/assets/paper-ruled.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
         margin-block-end: 0.5rem;
         width: 100%;
         border-radius: 0;
@@ -360,14 +364,19 @@
         align-content: center;
         position: relative;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.425);
-
+        mask-image: url("/src/assets/masks/mask-frame.png");
+        mask-size: 100% 100% ;
+        mask-position: center;
+        mask-repeat: no-repeat;
         animation: expd-info-req-animation cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
         animation-timeline: view();
         animation-range: cover 30%;
+        font-family: "Shadows Into Light Two", cursive;
+
         & > h2 {
             width: max-content;
             padding-inline: 2%;
-            background: inherit;
+            // background: inherit;
             text-align: center;
             anchor-name: --expd-info-heading;
             position: relative;
@@ -381,11 +390,11 @@
         }
 
         &::after {
-            content: "";
+            // content: "";
             position: absolute;
             width: 80%;
             height: 1vh;
-            background: $accent;
+            background: $secondary;
             z-index: 0;
             top: calc(anchor(center --expd-info-heading) - 0.5vh);
             left: 50%;
