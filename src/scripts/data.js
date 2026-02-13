@@ -1,6 +1,6 @@
-import Activities from "../components/home/Activities";
 
-export const regions = [
+
+ const regions = [
   { 
     id: "eur07", 
     scale:1,
@@ -75,7 +75,7 @@ export const regions = [
   },
 ];
 
-export const countries = [
+ const countries = [
   // --- Nordic Europe (eur01) ---
   { 
     id: "eu001", 
@@ -105,7 +105,7 @@ export const countries = [
     id: "eu005", 
     name: "Sweden", 
     region: "eur01", 
-    description: "The largest Nordic nation, famous for its vast forests, archipelagoes, and global exports in music and tech." 
+    description: "The largest Nordic nation, famous for its vast forests, archipelagoes, and global s in music and tech." 
   },
 
   // --- Western Europe (eur02) ---
@@ -401,7 +401,7 @@ export const countries = [
   }
 ];
 
-export const cities = [
+ const cities = [
   // --- AUSTRIA ---
   {
     id: "euc001",
@@ -2267,7 +2267,7 @@ export const cities = [
   
 ];
 
-export const experience = [
+ const experience = [
   {
     "id": "exp001",
     "activityName": "Paragliding",
@@ -2713,7 +2713,7 @@ export const experience = [
   },
 ]
 
-export const expeditions = [
+ const expeditions = [
   {
     "id": "expd001",
     "name": "Swiss Alps Adventure",
@@ -3370,7 +3370,7 @@ export const expeditions = [
   }
 ]
 
-export const attractions = [
+ const attractions = [
   {
     "id": "atc001",
     "name": "The Eiffel Tower",
@@ -3813,7 +3813,7 @@ export const attractions = [
   },
 ]
 
-export const underrated = [
+ const underrated = [
   {
     "id": "und001",
     "name": "Colmar Old Town",
@@ -4075,6 +4075,8 @@ export const underrated = [
     }
   }
 ]
+
+export {regions, countries, cities, expeditions, experience, attractions, underrated}
 
 const europeTranslations = [
   "Europe",    // French, English

@@ -350,6 +350,14 @@
     width: 100%;
     margin-block: 1rem;
     justify-items: center;
+    position: relative;
+    & > #expedition-page-information-requirements-wrapper {
+        & > #expedition-page-information-requirements-bg-img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
     & > #expedition-page-information-requirements {
         padding:5rem;
         background: $primary;

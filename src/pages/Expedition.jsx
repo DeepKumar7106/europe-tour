@@ -74,19 +74,22 @@ export default function Expedition() {
                 })}
             </section>
             <section id="expedition-page-information-section">
-                <article id="expedition-page-information-requirements">
-                    <h2 id="expedition-page-description-requirements-heading">Requirements</h2>
-                    <div id="expedition-page-description-requirements-para-container">
-                        {expedition.requirements.map((req, index) => (
-                            <p className="expedition-page-description-requirements-para" 
+                <div id="expedition-page-information-requirements-wrapper">
+                    <img src="/src/assets/paper-ruled.jpg" alt="" id="expedition-page-information-requirements-bg-img" />
+                    <article id="expedition-page-information-requirements">
+                        <h2 id="expedition-page-description-requirements-heading">Requirements</h2>
+                        <div id="expedition-page-description-requirements-para-container">
+                            {expedition.requirements.map((req, index) => (
+                                <p className="expedition-page-description-requirements-para" 
                                 key={req[index]+String(index)} 
                                 id={req[index]+String(index)}
-                            >
-                                <i className="fa-solid fa-diamond"></i> {req}
-                            </p>
-                        ))}
-                    </div>
-                </article>
+                                >
+                                    <i className="fa-solid fa-diamond"></i> {req}
+                                </p>
+                            ))}
+                        </div>
+                    </article>
+                </div>
                 <article id="expedition-page-information-precautions">
                     <p id="expedition-page-information-precautions-para">
                         {expedition.precaution}
